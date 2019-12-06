@@ -1,0 +1,58 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: svd_proj_final.aux
+The style file: IEEEtran.bst
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: thesis_bib.bib
+Repeated entry---line 1587 of file thesis_bib.bib
+ : @article{rao2008polynomial
+ :                           ,
+I'm skipping whatever remains of this entry
+-- IEEEtran.bst version 1.13 (2008/09/30) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty journal in hehyperspectral
+Warning--empty year in hehyperspectral
+
+Done.
+You've used 18 entries,
+            4039 wiz_defined-function locations,
+            918 strings with 10516 characters,
+and the built_in function-call counts, 15106 in all, are:
+= -- 1290
+> -- 310
+< -- 159
++ -- 184
+- -- 50
+* -- 744
+:= -- 2248
+add.period$ -- 39
+call.type$ -- 18
+change.case$ -- 18
+chr.to.int$ -- 354
+cite$ -- 20
+duplicate$ -- 1064
+empty$ -- 1116
+format.name$ -- 60
+if$ -- 3471
+int.to.chr$ -- 0
+int.to.str$ -- 18
+missing$ -- 162
+newline$ -- 77
+num.names$ -- 18
+pop$ -- 328
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 2
+skip$ -- 1183
+stack$ -- 0
+substring$ -- 874
+swap$ -- 934
+text.length$ -- 41
+text.prefix$ -- 0
+top$ -- 5
+type$ -- 18
+warning$ -- 2
+while$ -- 73
+width$ -- 20
+write$ -- 205
+(There was 1 error message)

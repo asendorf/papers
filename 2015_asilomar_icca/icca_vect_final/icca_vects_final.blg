@@ -1,0 +1,58 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: icca_vects_final.aux
+The style file: IEEEtran.bst
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: thesis_bib.bib
+Repeated entry---line 1161 of file thesis_bib.bib
+ : @article{correa2010canonical
+ :                             ,
+I'm skipping whatever remains of this entry
+-- IEEEtran.bst version 1.13 (2008/09/30) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty journal in spuler2013spatial
+Warning--empty journal in nadakuditi2014optshrink
+
+Done.
+You've used 12 entries,
+            4039 wiz_defined-function locations,
+            885 strings with 9706 characters,
+and the built_in function-call counts, 9913 in all, are:
+= -- 794
+> -- 225
+< -- 91
++ -- 126
+- -- 36
+* -- 478
+:= -- 1432
+add.period$ -- 29
+call.type$ -- 12
+change.case$ -- 12
+chr.to.int$ -- 216
+cite$ -- 14
+duplicate$ -- 703
+empty$ -- 810
+format.name$ -- 45
+if$ -- 2301
+int.to.chr$ -- 0
+int.to.str$ -- 12
+missing$ -- 114
+newline$ -- 59
+num.names$ -- 12
+pop$ -- 269
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 2
+skip$ -- 771
+stack$ -- 0
+substring$ -- 532
+swap$ -- 581
+text.length$ -- 19
+text.prefix$ -- 0
+top$ -- 5
+type$ -- 12
+warning$ -- 2
+while$ -- 49
+width$ -- 14
+write$ -- 135
+(There was 1 error message)

@@ -1,0 +1,7 @@
+#!/bin/sh
+pdflatex icca_vects_final.tex
+bibtex icca_vects_final
+bibtex icca_vects_final
+pdflatex icca_vects_final.tex
+pdflatex icca_vects_final.tex
+evince icca_vects_final.pdf

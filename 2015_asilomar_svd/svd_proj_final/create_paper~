@@ -1,0 +1,7 @@
+#!/bin/sh
+pdflatex svd_proj_proposal.tex
+bibtex svd_proj_proposal
+bibtex svd_proj_proposal
+pdflatex svd_proj_proposal.tex
+pdflatex svd_proj_proposal.tex
+evince svd_proj_proposal.pdf

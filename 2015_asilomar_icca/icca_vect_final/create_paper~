@@ -1,0 +1,7 @@
+#!/bin/sh
+pdflatex icca_vect_proposal.tex
+bibtex icca_vect_proposal
+bibtex icca_vect_proposal
+pdflatex icca_vect_proposal.tex
+pdflatex icca_vect_proposal.tex
+evince icca_vect_proposal.pdf

@@ -1,0 +1,883 @@
+
+%% bare_conf.tex
+%% V1.3
+%% 2007/01/11
+%% by Michael Shell
+%% See:
+%% http://www.michaelshell.org/
+%% for current contact information.
+%%
+%% This is a skeleton file demonstrating the use of IEEEtran.cls
+%% (requires IEEEtran.cls version 1.7 or later) with an IEEE conference paper.
+%%
+%% Support sites:
+%% http://www.michaelshell.org/tex/ieeetran/
+%% http://www.ctan.org/tex-archive/macros/latex/contrib/IEEEtran/
+%% and
+%% http://www.ieee.org/
+
+%%*************************************************************************
+%% Legal Notice:
+%% This code is offered as-is without any warranty either expressed or
+%% implied; without even the implied warranty of MERCHANTABILITY or
+%% FITNESS FOR A PARTICULAR PURPOSE!
+%% User assumes all risk.
+%% In no event shall IEEE or any contributor to this code be liable for
+%% any damages or losses, including, but not limited to, incidental,
+%% consequential, or any other damages, resulting from the use or misuse
+%% of any information contained here.
+%%
+%% All comments are the opinions of their respective authors and are not
+%% necessarily endorsed by the IEEE.
+%%
+%% This work is distributed under the LaTeX Project Public License (LPPL)
+%% ( http://www.latex-project.org/ ) version 1.3, and may be freely used,
+%% distributed and modified. A copy of the LPPL, version 1.3, is included
+%% in the base LaTeX documentation of all distributions of LaTeX released
+%% 2003/12/01 or later.
+%% Retain all contribution notices and credits.
+%% ** Modified files should be clearly indicated as such, including  **
+%% ** renaming them and changing author support contact information. **
+%%
+%% File list of work: IEEEtran.cls, IEEEtran_HOWTO.pdf, bare_adv.tex,
+%%                    bare_conf.tex, bare_jrnl.tex, bare_jrnl_compsoc.tex
+%%*************************************************************************
+
+% *** Authors should verify (and, if needed, correct) their LaTeX system  ***
+% *** with the testflow diagnostic prior to trusting their LaTeX platform ***
+% *** with production work. IEEE's font choices can trigger bugs that do  ***
+% *** not appear when using other class files.                            ***
+% The testflow support page is at:
+% http://www.michaelshell.org/tex/testflow/
+
+
+
+% Note that the a4paper option is mainly intended so that authors in
+% countries using A4 can easily print to A4 and see how their papers will
+% look in print - the typesetting of the document will not typically be
+% affected with changes in paper size (but the bottom and side margins will).
+% Use the testflow package mentioned above to verify correct handling of
+% both paper sizes by the user's LaTeX system.
+%
+% Also note that the "draftcls" or "draftclsnofoot", not "draft", option
+% should be used if it is desired that the figures are to be displayed in
+% draft mode.
+%
+\documentclass[conference]{IEEEtran}
+% Add the compsoc option for Computer Society conferences.
+%
+% If IEEEtran.cls has not been installed into the LaTeX system files,
+% manually specify the path to it like:
+% \documentclass[conference]{../sty/IEEEtran}
+
+
+
+
+
+% Some very useful LaTeX packages include:
+% (uncomment the ones you want to load)
+
+
+% *** MISC UTILITY PACKAGES ***
+%
+%\usepackage{ifpdf}
+% Heiko Oberdiek's ifpdf.sty is very useful if you need conditional
+% compilation based on whether the output is pdf or dvi.
+% usage:
+% \ifpdf
+%   % pdf code
+% \else
+%   % dvi code
+% \fi
+% The latest version of ifpdf.sty can be obtained from:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/oberdiek/
+% Also, note that IEEEtran.cls V1.7 and later provides a builtin
+% \ifCLASSINFOpdf conditional that works the same way.
+% When switching from latex to pdflatex and vice-versa, the compiler may
+% have to be run twice to clear warning/error messages.
+
+
+
+
+
+
+% *** CITATION PACKAGES ***
+%
+%\usepackage{cite}
+% cite.sty was written by Donald Arseneau
+% V1.6 and later of IEEEtran pre-defines the format of the cite.sty package
+% \cite{} output to follow that of IEEE. Loading the cite package will
+% result in citation numbers being automatically sorted and properly
+% "compressed/ranged". e.g., [1], [9], [2], [7], [5], [6] without using
+% cite.sty will become [1], [2], [5]--[7], [9] using cite.sty. cite.sty's
+% \cite will automatically add leading space, if needed. Use cite.sty's
+% noadjust option (cite.sty V3.8 and later) if you want to turn this off.
+% cite.sty is already installed on most LaTeX systems. Be sure and use
+% version 4.0 (2003-05-27) and later if using hyperref.sty. cite.sty does
+% not currently provide for hyperlinked citations.
+% The latest version can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/cite/
+% The documentation is contained in the cite.sty file itself.
+
+
+
+
+
+
+% *** GRAPHICS RELATED PACKAGES ***
+%
+\ifCLASSINFOpdf
+  % \usepackage[pdftex]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../pdf/}{../jpeg/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+\else
+  % or other class option (dvipsone, dvipdf, if not using dvips). graphicx
+  % will default to the driver specified in the system graphics.cfg if no
+  % driver is specified.
+  % \usepackage[dvips]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../eps/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.eps}
+\fi
+% graphicx was written by David Carlisle and Sebastian Rahtz. It is
+% required if you want graphics, photos, etc. graphicx.sty is already
+% installed on most LaTeX systems. The latest version and documentation can
+% be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/required/graphics/
+% Another good source of documentation is "Using Imported Graphics in
+% LaTeX2e" by Keith Reckdahl which can be found as epslatex.ps or
+% epslatex.pdf at: http://www.ctan.org/tex-archive/info/
+%
+% latex, and pdflatex in dvi mode, support graphics in encapsulated
+% postscript (.eps) format. pdflatex in pdf mode supports graphics
+% in .pdf, .jpeg, .png and .mps (metapost) formats. Users should ensure
+% that all non-photo figures use a vector format (.eps, .pdf, .mps) and
+% not a bitmapped formats (.jpeg, .png). IEEE frowns on bitmapped formats
+% which can result in "jaggedy"/blurry rendering of lines and letters as
+% well as large increases in file sizes.
+%
+% You can find documentation about the pdfTeX application at:
+% http://www.tug.org/applications/pdftex
+
+\usepackage[pdftex]{graphicx}
+\usepackage{epstopdf}
+
+\DeclareGraphicsRule{.eps}{pdf}{.pdf}
+     {`ps2pdf -dEmbedAllFonts=true -dSubsetFonts=true -dEPSCrop=true #1}
+
+
+% *** MATH PACKAGES ***
+%
+\usepackage[cmex10]{amsmath}
+% A popular package from the American Mathematical Society that provides
+% many useful and powerful commands for dealing with mathematics. If using
+% it, be sure to load this package with the cmex10 option to ensure that
+% only type 1 fonts will utilized at all point sizes. Without this option,
+% it is possible that some math symbols, particularly those within
+% footnotes, will be rendered in bitmap form which will result in a
+% document that can not be IEEE Xplore compliant!
+%
+% Also, note that the amsmath package sets \interdisplaylinepenalty to 10000
+% thus preventing page breaks from occurring within multiline equations. Use:
+%\interdisplaylinepenalty=2500
+% after loading amsmath to restore such page breaks as IEEEtran.cls normally
+% does. amsmath.sty is already installed on most LaTeX systems. The latest
+% version and documentation can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/required/amslatex/math/
+
+\usepackage{amssymb,graphicx}
+
+
+
+% *** SPECIALIZED LIST PACKAGES ***
+%
+%\usepackage{algorithmic}
+% algorithmic.sty was written by Peter Williams and Rogerio Brito.
+% This package provides an algorithmic environment fo describing algorithms.
+% You can use the algorithmic environment in-text or within a figure
+% environment to provide for a floating algorithm. Do NOT use the algorithm
+% floating environment provided by algorithm.sty (by the same authors) or
+% algorithm2e.sty (by Christophe Fiorio) as IEEE does not use dedicated
+% algorithm float types and packages that provide these will not provide
+% correct IEEE style captions. The latest version and documentation of
+% algorithmic.sty can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/algorithms/
+% There is also a support site at:
+% http://algorithms.berlios.de/index.html
+% Also of interest may be the (relatively newer and more customizable)
+% algorithmicx.sty package by Szasz Janos:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/algorithmicx/
+
+
+
+
+% *** ALIGNMENT PACKAGES ***
+%
+\usepackage{array}
+% Frank Mittelbach's and David Carlisle's array.sty patches and improves
+% the standard LaTeX2e array and tabular environments to provide better
+% appearance and additional user controls. As the default LaTeX2e table
+% generation code is lacking to the point of almost being broken with
+% respect to the quality of the end results, all users are strongly
+% advised to use an enhanced (at the very least that provided by array.sty)
+% set of table tools. array.sty is already installed on most systems. The
+% latest version and documentation can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/required/tools/
+
+
+%\usepackage{mdwmath}
+%\usepackage{mdwtab}
+% Also highly recommended is Mark Wooding's extremely powerful MDW tools,
+% especially mdwmath.sty and mdwtab.sty which are used to format equations
+% and tables, respectively. The MDWtools set is already installed on most
+% LaTeX systems. The lastest version and documentation is available at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/mdwtools/
+
+
+% IEEEtran contains the IEEEeqnarray family of commands that can be used to
+% generate multiline equations as well as matrices, tables, etc., of high
+% quality.
+
+
+%\usepackage{eqparbox}
+% Also of notable interest is Scott Pakin's eqparbox package for creating
+% (automatically sized) equal width boxes - aka "natural width parboxes".
+% Available at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/eqparbox/
+
+
+
+
+
+% *** SUBFIGURE PACKAGES ***
+%\usepackage[tight,footnotesize]{subfigure}
+% subfigure.sty was written by Steven Douglas Cochran. This package makes it
+% easy to put subfigures in your figures. e.g., "Figure 1a and 1b". For IEEE
+% work, it is a good idea to load it with the tight package option to reduce
+% the amount of white space around the subfigures. subfigure.sty is already
+% installed on most LaTeX systems. The latest version and documentation can
+% be obtained at:
+% http://www.ctan.org/tex-archive/obsolete/macros/latex/contrib/subfigure/
+% subfigure.sty has been superceeded by subfig.sty.
+
+
+
+%\usepackage[caption=false]{caption}
+%\usepackage[font=footnotesize]{subfig}
+% subfig.sty, also written by Steven Douglas Cochran, is the modern
+% replacement for subfigure.sty. However, subfig.sty requires and
+% automatically loads Axel Sommerfeldt's caption.sty which will override
+% IEEEtran.cls handling of captions and this will result in nonIEEE style
+% figure/table captions. To prevent this problem, be sure and preload
+% caption.sty with its "caption=false" package option. This is will preserve
+% IEEEtran.cls handing of captions. Version 1.3 (2005/06/28) and later
+% (recommended due to many improvements over 1.2) of subfig.sty supports
+% the caption=false option directly:
+
+\usepackage[caption=false,font=footnotesize]{subfig}
+%
+% The latest version and documentation can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/subfig/
+% The latest version and documentation of caption.sty can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/caption/
+
+
+
+
+% *** FLOAT PACKAGES ***
+%
+\usepackage{fixltx2e}
+% fixltx2e, the successor to the earlier fix2col.sty, was written by
+% Frank Mittelbach and David Carlisle. This package corrects a few problems
+% in the LaTeX2e kernel, the most notable of which is that in current
+% LaTeX2e releases, the ordering of single and double column floats is not
+% guaranteed to be preserved. Thus, an unpatched LaTeX2e can allow a
+% single column figure to be placed prior to an earlier double column
+% figure. The latest version and documentation can be found at:
+% http://www.ctan.org/tex-archive/macros/latex/base/
+
+
+
+%\usepackage{stfloats}
+% stfloats.sty was written by Sigitas Tolusis. This package gives LaTeX2e
+% the ability to do double column floats at the bottom of the page as well
+% as the top. (e.g., "\begin{figure*}[!b]" is not normally possible in
+% LaTeX2e). It also provides a command:
+%\fnbelowfloat
+% to enable the placement of footnotes below bottom floats (the standard
+% LaTeX2e kernel puts them above bottom floats). This is an invasive package
+% which rewrites many portions of the LaTeX2e float routines. It may not work
+% with other packages that modify the LaTeX2e float routines. The latest
+% version and documentation can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/sttools/
+% Documentation is contained in the stfloats.sty comments as well as in the
+% presfull.pdf file. Do not use the stfloats baselinefloat ability as IEEE
+% does not allow \baselineskip to stretch. Authors submitting work to the
+% IEEE should note that IEEE rarely uses double column equations and
+% that authors should try to avoid such use. Do not be tempted to use the
+% cuted.sty or midfloat.sty packages (also by Sigitas Tolusis) as IEEE does
+% not format its papers in such ways.
+
+
+
+
+
+% *** PDF, URL AND HYPERLINK PACKAGES ***
+%
+\usepackage{url,amsmath,amssymb}
+% url.sty was written by Donald Arseneau. It provides better support for
+% handling and breaking URLs. url.sty is already installed on most LaTeX
+% systems. The latest version can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/misc/
+% Read the url.sty source comments for usage information. Basically,
+% \url{my_url_here}.
+
+
+
+
+
+% *** Do not adjust lengths that control margins, column widths, etc. ***
+% *** Do not use packages that alter fonts (such as pslatex).         ***
+% There should be no need to do such things with IEEEtran.cls V1.6 and later.
+% (Unless specifically asked to do so by the journal or conference you plan
+% to submit to, of course. )
+
+
+% correct bad hyphenation here
+
+% MATH -----------------------------------------------------------
+\newcommand{\norm}[1]{\left\Vert#1\right\Vert}
+\newcommand{\abs}[1]{\left\vert#1\right\vert}
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\Real}{\mathbb R}
+\newcommand{\eps}{\varepsilon}
+%\newoperator{\arg}{\mathrm{arg}}{\nolimits}
+\newcommand{\To}{\longrightarrow}
+\newcommand{\BX}{\mathbf{B}(X)}
+%\newcommand{\A}{\mathcal{A}}
+\newcommand{\X}{\mathbf{X}}
+\newcommand{\Y}{\mathbf{Y}}
+\newcommand{\Ux}{{\mathbf{U}}_{{\rm X}}}
+\newcommand{\Uy}{{\mathbf{U}}_{{\rm Y}}}
+\newcommand{\Vx}{{\mathbf{V}}_{{\rm X}}}
+\newcommand{\Vy}{{\mathbf{V}}_{{\rm Y}}}
+\newcommand{\Vxt}{\widetilde{{\mathbf{V}}}_{{\rm X}}}
+\newcommand{\Vyt}{\widetilde{{\mathbf{V}}}_{{\rm Y}}}
+\newcommand{\Uc}{{\mathbf{U}}_{{\rm C}}}
+\newcommand{\Vc}{{\mathbf{V}}_{{\rm C}}}
+\newcommand{\Uct}{\widetilde{{\mathbf{U}}}_{{\rm C}}}
+\newcommand{\Vct}{\widetilde{{\mathbf{V}}}_{{\rm C}}}
+
+\newcommand{\Sigxh}{{\mathbf{\Sigma}}_{{\rm X}}}
+\newcommand{\Sigyh}{{\mathbf{\Sigma}}_{{\rm Y}}}
+
+\newcommand{\Sigch}{{\mathbf{\Sigma}}_{{\rm C}}}
+\newcommand{\Sigcht}{\widetilde{{\mathbf{\Sigma}}}_{{\rm C}}}
+
+\newcommand{\svdC}{\Uc\Sigch\Vc^{H}}
+\newcommand{\svdCt}{\Uct\Sigcht\Vct^{H}}
+
+\newcommand{\svdX}{\Ux\Sigxh\Vx^{H}}
+\newcommand{\svdY}{\Uy\Sigyh\Vy^{H}}
+\newcommand{\Vxto}{\widetilde{\mathcal{V}}_{x}}
+\newcommand{\Vyto}{\widetilde{\mathcal{V}}_{y}}
+\newcommand{\vx}{\mathbf{v}_{x}}
+\newcommand{\vy}{\mathbf{v}_y}
+
+\newcommand{\convas}{\overset{\textrm{a.s.}}{\longrightarrow}}
+
+\newtheorem{Th}{Theorem}[section]
+\newcommand{\x}{\mathbf{x}}
+\newcommand{\y}{\mathbf{y}}
+\newcommand{\z}{\mathbf{z}}
+\newcommand{\Sz}{\mathbf{\Sigma}_{zz}}
+\newcommand{\Szh}{\widehat{\mathbf{\Sigma}}_{zz}}
+\newcommand{\Sx}{\mathbf{\Sigma}_{xx}}
+\newcommand{\Sxh}{\widehat{\mathbf{\Sigma}}_{xx}}
+\newcommand{\Sy}{\mathbf{\Sigma}_{yy}}
+\newcommand{\Syh}{\widehat{\mathbf{\Sigma}}_{yy}}
+\newcommand{\Sxy}{\mathbf{\Sigma}_{xy}}
+\newcommand{\Syx}{\mathbf{\Sigma}_{yx}}
+\newcommand{\Sxyh}{\widehat{\mathbf{\Sigma}}_{xy}}
+\newcommand{\aaa}{\mathbf{a}}
+\newcommand{\bbb}{\mathbf{b}}
+\newcommand{\CC}{\mathbf{C}}
+\newcommand{\CCh}{\widehat{\mathbf{C}}}
+\newcommand{\Ctil}{\widetilde{{\bf C}}}
+\newcommand{\Ptil}{\widetilde{{\bf P}}}
+\newcommand{\Xtil}{\widetilde{{\bf X}}}
+\newcommand{\Util}{\widetilde{{\bf U}}}
+\newcommand{\argmax}{\operatornamewithlimits{\arg \max}}
+\newcommand{\svdblock}[1]{\begin{bmatrix} {\bf 0}  & {\bf {#1}} \\ {\bf {#1}}^{H} & {\bf 0} \end{bmatrix}}
+\newcommand{\svdCtil}{\svdblock{\Ctil}}
+\newcommand{\svdPtil}{\svdblock{\Ptil}}
+\newcommand{\svdChat}{\svdblock{\CCh}}
+\newcommand{\symChat}{\widehat{{\bf C}}_{\textrm{sym}}}
+\newcommand{\eye}[1][]{{\bf I}_{{#1}}}
+\newcommand{\Thb}{\bm{\Theta}}
+\newcommand{\binvCtil}{\left(z \eye - \dfrac{\Ctil \Ctil^{H}}{z}\right)^{-1}}
+\newcommand{\binvCtill}{\left(z^{2} \eye - \Ctil \Ctil^{H}\right)^{-1}}
+
+
+
+
+
+\begin{document}
+%
+% paper title
+% can use linebreaks \\ within to get better formatting as desired
+\title{Fundamental Finite-Sample Limit of Canonical Correlation Analysis Based Detection of Correlated High-Dimensional Signals in White Noise}
+
+
+% author names and affiliations
+% use a multiple column layout for up to three different
+% affiliations
+\author{\IEEEauthorblockN{Raj Rao Nadakuditi}
+\IEEEauthorblockA{Dept. of Electrical Engineering \& Computer Science\\
+University of Michigan, Ann Arbor, Michigan 48104\\
+Email: rajnrao@umich.edu}
+}
+
+% conference papers do not typically use \thanks and this command
+% is locked out in conference mode. If really needed, such as for
+% the acknowledgment of grants, issue a \IEEEoverridecommandlockouts
+% after \documentclass
+
+% for over three affiliations, or if they all won't fit within the width
+% of the page, use this alternative format:
+%
+%\author{\IEEEauthorblockN{Michael Shell\IEEEauthorrefmark{1},
+%Homer Simpson\IEEEauthorrefmark{2},
+%James Kirk\IEEEauthorrefmark{3},
+%Montgomery Scott\IEEEauthorrefmark{3} and
+%Eldon Tyrell\IEEEauthorrefmark{4}}
+%\IEEEauthorblockA{\IEEEauthorrefmark{1}School of Electrical and Computer Engineering\\
+%Georgia Institute of Technology,
+%Atlanta, Georgia 30332--0250\\ Email: see http://www.michaelshell.org/contact.html}
+%\IEEEauthorblockA{\IEEEauthorrefmark{2}Twentieth Century Fox, Springfield, USA\\
+%Email: homer@thesimpsons.com}
+%\IEEEauthorblockA{\IEEEauthorrefmark{3}Starfleet Academy, San Francisco, California 96678-2391\\
+%Telephone: (800) 555--1212, Fax: (888) 555--1212}
+%\IEEEauthorblockA{\IEEEauthorrefmark{4}Tyrell Inc., 123 Replicant Street, Los Angeles, California 90210--4321}}
+
+
+% use for special paper notices
+%\IEEEspecialpapernotice{(Invited Paper)}
+
+
+
+
+% make the title area
+\maketitle
+
+
+\begin{abstract}
+%\boldmath
+Canonical correlation analysis (CCA) based techniques are often used for detecting and estimating correlated signals buried in two multivariate datasets. In this paper, we highlight a fundamental asymptotic limit of CCA based detection and estimation of the number of weak, correlated high-dimensional signals in the white noise, sample size limited setting. Specifically, we show that if (eigen) SNR of the correlated signal(s) in \textit{both} datasets is above the respective threshold SNRs then reliable detection of the correlated signal(s), relative to the noise-only or correlated-signal-free scenario, is possible. The fundamental limit depends on the dimensionality of the dataset and sample-size but, perhaps surprisingly, \textit{not} on the degree of correlation between the signals. We develop a new test statistic that leads to an improved algorithm that attains this limit and that can be reliably used in the sample size deficient regime where previous authors have asserted otherwise. \end{abstract}
+% IEEEtran.cls defaults to using nonbold math in the Abstract.
+% This preserves the distinction between vectors and scalars. However,
+% if the conference you are submitting to favors bold math in the abstract,
+% then you can use LaTeX's standard command \boldmath at the very start
+% of the abstract to achieve this. Many IEEE journals/conferences frown on
+% math in the abstract anyway.
+
+% no keywords
+
+
+
+
+% For peer review papers, you can put extra information on the cover
+% page as needed:
+% \ifCLASSOPTIONpeerreview
+% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
+% \fi
+%
+% For peerreview papers, this IEEEtran command inserts a page break and
+% creates the second title. It will be ignored for other modes.
+\IEEEpeerreviewmaketitle
+
+
+
+
+% An example of a floating figure using the graphicx package.
+% Note that \label must occur AFTER (or within) \caption.
+% For figures, \caption should occur after the \includegraphics.
+% Note that IEEEtran v1.7 and later has special internal code that
+% is designed to preserve the operation of \label within \caption
+% even when the captionsoff option is in effect. However, because
+% of issues like this, it may be the safest practice to put all your
+% \label just after \caption rather than within \caption{}.
+%
+% Reminder: the "draftcls" or "draftclsnofoot", not "draft", class
+% option should be used if it is desired that the figures are to be
+% displayed while in draft mode.
+%
+%\begin{figure}[!t]
+%\centering
+%\includegraphics[width=2.5in]{myfigure}
+% where an .eps filename suffix will be assumed under latex,
+% and a .pdf suffix will be assumed for pdflatex; or what has been declared
+% via \DeclareGraphicsExtensions.
+%\caption{Simulation Results}
+%\label{fig_sim}
+%\end{figure}
+
+% Note that IEEE typically puts floats only at the top, even when this
+% results in a large percentage of a column being occupied by floats.
+
+
+% An example of a double column floating figure using two subfigures.
+% (The subfig.sty package must be loaded for this to work.)
+% The subfigure \label commands are set within each subfloat command, the
+% \label for the overall figure must come after \caption.
+% \hfil must be used as a separator to get equal spacing.
+% The subfigure.sty package works much the same way, except \subfigure is
+% used instead of \subfloat.
+%
+%\begin{figure*}[!t]
+%\centerline{\subfloat[Case I]\includegraphics[width=2.5in]{subfigcase1}%
+%\label{fig_first_case}}
+%\hfil
+%\subfloat[Case II]{\includegraphics[width=2.5in]{subfigcase2}%
+%\label{fig_second_case}}}
+%\caption{Simulation results}
+%\label{fig_sim}
+%\end{figure*}
+%
+% Note that often IEEE papers with subfigures do not employ subfigure
+% captions (using the optional argument to \subfloat), but instead will
+% reference/describe all of them (a), (b), etc., within the main caption.
+
+
+% An example of a floating table. Note that, for IEEE style tables, the
+% \caption command should come BEFORE the table. Table text will default to
+% \footnotesize as IEEE normally uses this smaller font for tables.
+% The \label must come after \caption as always.
+%
+%\begin{table}[!t]
+%% increase table row spacing, adjust to taste
+%\renewcommand{\arraystretch}{1.3}
+% if using array.sty, it might be a good idea to tweak the value of
+% \extrarowheight as needed to properly center the text within the cells
+%\caption{An Example of a Table}
+%\label{table_example}
+%\centering
+%% Some packages, such as MDW tools, offer better commands for making tables
+%% than the plain LaTeX2e tabular which is used here.
+%\begin{tabular}{|c||c|}
+%\hline
+%One & Two\\
+%\hline
+%Three & Four\\
+%\hline
+%\end{tabular}
+%\end{table}
+
+
+% Note that IEEE does not put floats in the very first column - or typically
+% anywhere on the first page for that matter. Also, in-text middle ("here")
+% positioning is not used. Most IEEE journals/conferences use top floats
+% exclusively. Note that, LaTeX2e, unlike IEEE journals/conferences, places
+% footnotes above bottom floats. This can be corrected via the \fnbelowfloat
+% command of the stfloats package.
+
+\section{Introduction}
+
+Canonical correlation analysis (CCA) is a powerful multivariate statistical technique for detecting and estimating weak, correlated signals buried in two multivariate datasets \cite{hotelling1936relations}. Given a set of $p$-dimensional measurements ${\bf X} = [{\bf x}_{1}, \ldots, {\bf x}_{n}]$ and another set of $q$-dimensional measurements ${\bf Y} = [{\bf y}_{1}, \ldots, {\bf y}_{n}]$, CCA returns vectors ${\bf a}$ and ${\bf b}$ that maximize the correlation between ${\bf a}^{H} {\bf X}$ and ${\bf b}^{H} {\bf Y}$. The canonical correlation coefficient returned corresponds to this maximum correlation value.
+
+Thus, a statistical test based on the correlation coefficients can be used for detecting correlated signals in both data sets \cite{akaike1976canonical}. The performance of CCA based detection of weak, correlated signals in white noise in the large sample setting where $n \gg p, q$ is well-understood - see \cite{gunderson1997estimating} for proofs of consistency.
+
+The performance in the high-dimensional-relatively-sample-size limited setting, \textit{i.e.} where $n = O(p), O(q)$ is the focus of this paper and has not been previously studied with the notable exception of the work by Pezeshki et al. \cite{pezeshki2005empirical}. There the authors explicitly analyze the sample-poor setting when $p+q<n$ and conclude that in this regime empirical CCA is ``defective and may not be used as estimates of the canonical correlations.''
+
+This assertion is seemingly justified by Figure \ref{fig:cca intro fig}-(a) where for $p = q = 160$, there is dramatic drop-off in the detectability of weak-yet-correlated-signals using CCA as $n$ approaches and dips below $p+q$. This manifests in the distribution of empirical canonical correlation coefficient in the correlated-signals-bearing setting being statistically indistinguishable from the noise-only setting for a wide swath of SNR values. It turns out that this can be overcome via the use of a \textit{new, mathematically justified test statistic} that allows correlated signals to be reliably discerned in both the sample-starved and sample-rich settings.  The solid white line in Figure \ref{fig:cca intro fig}-(a) \& (b) is the fundamental asymptotic limit associated with using a new test statistic (see (\ref{eq:tnew}) in Section \ref{sec:fun limit}). Figure \ref{fig:cca intro fig}-(b) shows the resulting performance, demonstrates the attainability of this limit, its effectiveness in the sample-poor regime and the fact that, when employed with this new test statistic, CCA \textit{can be used in the sample poor regime to detect weak correlated signals.}
+
+The derivation of the fundamental limit and the development of the new test statistic are our primary contributions. This paper is organized as follows. We start off in Section \ref{sec:cca} with a brief review of CCA and showcase the conventional test statistic for the detection of correlated signals in Section \ref{sec:cca detection}. We present the empirical variant in Section \ref{sec:emp cca detection} and highlight the origin of Pezeshki et al.'s claim of CCA's ineffectiveness in the sample-poor regime and our simple insight on how this may be readily overcome by considering an alternate test statistic. The fundamental limit associated with this new test statistic is presented in Section \ref{sec:fun limit} and its predictions are validated with simulations. We conclude in Section \ref{sec:conclusion} with some closing remarks.
+
+
+\begin{figure*}[!t]
+\centering
+\subfloat[Traditional CCA based detection: $\rho = 0.9$.]{
+\includegraphics[height=2.5in]{figures/cca_1src_alpha_0p9_nodr_ksdec.pdf}
+}
+\hfil
+\subfloat[New algorithm: $\rho = 0.9$.]{
+\includegraphics[height=2.5in]{figures/cca_1src_alpha_0p9_dr_ksdec.pdf}
+}
+\caption{A heat map of the Kolmogorov-Smirnov test comparing the distribution of the detection test decision in the correlated-signal-bearing (with correlation $\rho$) setting versus the noise-only setting over $500$ Monte-Carlo trials with $p = q = 160$ and various values of $n = \#$ number of samples and (eigen) SNR for the traditional (left panel) and new algorithm (right panel). A value of $1$ indicates that the distributions are different - implying that the presence of a correlated signal can be reliably detected with a significance level of $\alpha$. The solid white line is the fundamental asymptotic limit computed in this paper (see Theorem \ref{th:fun limit}).  (left panel) shows result when the conventional test statistic is used (right panel) shows result when the new test statistic (see Equation (\ref{eq:tnew}))is used. Here $\rho$ is the degree of correlation between signals; note the dramatically improved performance in the snapshot-poor regime where $p+q < n$ and the attainability of the fundamental limit.}
+\label{fig:cca intro fig}
+\vspace{-0.5cm}
+\end{figure*}
+
+\section{Canonical correlation analysis}\label{sec:cca}
+Assume that $\x$ and $\y$ are $p$-dimensional and $q$-dimensional random vectors. Consider the vector $\z = \begin{bmatrix}
+\x^{H} &
+\y^{H}
+\end{bmatrix}^{H}
+$. Assume that $\z$ has a joint distribution with mean zero and covariance $\Sz$ that may be partitioned as
+\[
+\Sz = \begin{bmatrix}
+\Sx & \Sxy \\
+\Syx & \Sy
+\end{bmatrix}.
+\]
+Consider arbitrary vectors $\aaa$ and $\bbb$ and the inner-products $U = \aaa^{H}\x$ and $V = \bbb^{H}\y$. The goal of CCA is to find the vectors $\aaa$ and $\bbb$ that results in $U$ and $V$ having maximum correlation. In order words:
+\begin{equation}\label{eq:ab argmax}
+(\aaa,\bbb) = \argmax_{\aaa \in \mathbb{C}^{p}, \bbb \in \mathbb{C}^{q}}  \dfrac{\aaa^{H}\Sxy \bbb}{\sqrt{\aaa^{H} \Sx \aaa}\sqrt{\bbb^{H} \Sy \bbb}}.
+\end{equation}
+Equation (\ref{eq:ab argmax}) can be posed as the following constrained optimization problem:
+\begin{equation*}
+\textrm{maximize} \quad \aaa^{H}\Sxy\bbb \textrm{ with: } \aaa^{H}\Sx \aaa = 1, \, \bbb^{H}\Sy \bbb = 1.
+\end{equation*}
+Its  solution using the technique of Lagrange multipliers yields the relationship $\bbb = (1/\lambda) \Sy^{-1} \Syx \aaa$, between the canonical correlation vectors $\aaa$ and $\bbb$. The vector $\aaa$ can be shown to satisfy the relationship:
+\begin{equation}\label{eq:a as eigvec}
+\Sxy \Sy^{-1} \Syx \aaa = \lambda^{2} \Sx \aaa.
+\end{equation}
+In other words $\aaa$ is the eigenvector of the matrix $\Sx^{-1} \Sxy \Sy \Syx $ corresponding to the eigenvalue $\lambda^{2}$. The correlation coefficient, which is the maximum value for the right hand side of (\ref{eq:ab argmax}) is then given by:
+\begin{align*}
+\aaa^{H}\Sxy \bbb &= \dfrac{1}{\lambda} \aaa^{H}\underbrace{\Sxy \Sy^{-1} \Syx \aaa}_{= \lambda^{2} \Sx \aaa \textrm{ by } (\ref{eq:a as eigvec})} = \dfrac{1}{\lambda} \cdot \lambda^{2}  \underbrace{\aaa^{H} \Sx \aaa}_{=1} = \lambda
+\end{align*}
+Equivalently, the square-root of the eigenvalues of the matrix $\Sx^{-1} \Sxy \Sy \Syx$ correspond precisely to the canonical correlation coefficients $\lambda$ while the canonical correlation vectors $\aaa$ and $\bbb$ are the eigenvectors of the matrices $\Sx^{-1} \Sxy \Sy \Syx$ and  $\Sy^{-1} \Syx \Sx \Sxy$, respectively.
+Consider the matrix
+\begin{equation}\label{eq:cca svd}
+\CC = \Sx^{-1/2} \Sxy \Sy^{-1/2}.
+ \end{equation}
+Note that ${\bf C}{\bf C}^{H} = \Sx^{-1/2} \Sxy Sy^{-1} \Syx \Sx^{-1} $ is related via a similarity transformation to the matrix $\Sx^{-1} \Sxy \Sy \Syx$. This implies that ${\bf C}{\bf C}^{H}$ and $\Sx^{-1} \Sxy \Sy \Syx$ share identical eigenvalues or equivalently that the squared singular values of $\CC$ yield the canonical correlation coefficients. As we shall see next, in the $n \gg p,q$ setting, the number of non-zero canonical correlation coefficients exactly equals the number of correlated signals.
+
+\section{CCA based detection of correlated signals}\label{sec:cca detection}
+Without loss of generality and for the sake of notational and expositional ease, let us assume we have one common correlated signal in both data sets so that the observation vectors may be modeled as:
+$$
+\x_i = \sigma_{x} {\bf s}_{x} z_{xi} + {\bf w}_{xi}  \qquad \y_i  = \sigma_{y} {\bf s}_{y} z_{yi} + {\bf w}_{yi},
+$$
+for $i = 1, \ldots n$. Here ${\bf s}_{x}$ and ${\bf s}_{y}$ are non-random, unit-norm vectors and w.l.o.g. ${\bf w}_{xi} \sim \mathcal{N}(0,{\bf I}_{p})$,  ${\bf w}_{yi} \sim \mathcal{N}(0,{\bf I}_{q})$, $z_{xi} \sim \mathcal{N}(0,1)$ and $z_{yi} \sim \mathcal{N}(0,1)$ are correlated with $E[z_{xi} z_{yi}] = \rho$. We assume that the additive noise vectors ${\bf w}_{xi}$ and ${\bf w}_{yi}$ are independent for all $i$ and $j$.
+
+Then, $\Sx = \sigma_{x}^{2} {\bf s}_{x}{\bf s}_{x}^{H} + {\bf I}_p$, $\Sy = \sigma_{y}^{2} {\bf s}_{y}{\bf s}_{y}^{H} + {\bf I}_q$ and  $\Sxy = \sigma_{x} \sigma_{y} \rho {\bf s}_{x} {\bf s}_{y}$ so that by (\ref{eq:cca svd}), the matrix:
+\begin{equation}\label{eq:true cca}
+\CC = \Sx^{-1/2} \Sxy \Sy^{-1/2} = \sqrt{\dfrac{\rho^2 \sigma_{x}^2\sigma^2_{y}}{(1+\sigma_x^{2})(1+\sigma_y^{2})}}  {\bf s}_{x} {\bf s}_{y}^{H},
+\end{equation}
+has rank one. An extension of this argument shows that when $\Sx$, $\Sxy$ and $\Sy$ are known, then the rank of $\CC$ which is equal to the number of non-zero singular values of $\CC$ is exactly equal to the number of correlated (linearly independent) signals present in both data sets.
+
+From (\ref{eq:true cca}), the canonical correlation coefficient $\lambda = \sqrt{\tfrac{\rho^2 \sigma_{x}^2\sigma^2_{y}}{(1+\sigma_x^{2})(1+\sigma_y^{2})}}$; this is a biased estimator of the signal correlation $\rho$ that performs poorly in the low SNR regime \cite{ge2009does}.
+
+In our problem we are concerned with whether, how and when the canonical correlation coefficients can be used to detect the presence of correlated signals in two data sets when the $\Sx$, $\Sxy$ and $\Sy$ matrices have to be estimated from a finite number of samples. We discuss this next.
+
+\section{Empirical CCA Based Detection}\label{sec:emp cca detection}
+In a practical setting we are given $n>(p+q)$ samples $\X = [\x_{1}, \ldots, \x_{n}]$, $\Y = [\y_{1}, \ldots, \y_{n}]$ and we form the matrix
+\begin{equation}\label{eq:ccah svd}
+\CCh = \Sxh^{-1/2} \Sxyh \Syh^{-1/2}
+\end{equation}
+where $\Sxh = \dfrac{1}{n} \X\X^{H}$, $\Syh = \dfrac{1}{n} \Y\Y^{H}$ and $\Sxyh = \dfrac{1}{n} \X\Y^{H}$. Let $\X = \svdX$ and $\Y = \svdY$ be the respective singular value decompositions. Then (\ref{eq:ccah svd}) may be rewritten as:
+\begin{multline*}
+\CCh = \Ux (\Sigxh \Sigxh^{H})^{-\tfrac{1}{2}} \underbrace{\Ux^{H} \Ux}_{{\bf I}_{p}} \Sigxh \Vx^{H} \Vy \Sigyh^{H} \\
+\cdot \underbrace{\Uy^{H} \Uy}_{{\bf I}_{q}} (\Sigyh \Sigyh^{H})^{-\tfrac{1}{2}} \Uy^{H} = \Ux \Sigxh^{\dagger} \Vx' \Vy \Sigyh^{\dagger} \Uy^{H},
+\end{multline*}
+where the $\dagger$ denotes the Moore-Penrose pseudoinverse. Simplifying this further gives us
+\begin{multline}
+ \CCh   = \\\Ux \begin{bmatrix}{\bf I}_{p} &\vdots  & {\bf 0}_{n-p} \end{bmatrix} \cdot \begin{bmatrix} \Vxt^{H} \\ \ldots \\ \Vxt^{\bot H}\end{bmatrix}
+      \begin{bmatrix} \Vyt & \vdots &\Vyt^{\bot}\end{bmatrix} \begin{bmatrix}{\bf I}_{q} \\ \ldots \\{\bf 0}_{n-p} \end{bmatrix} \Uy^{H}\\
+ = \Ux \Vxt^{H} \Vyt \Uy^{H} \label{eq:ccah master}
+\end{multline}
+The singular values of $\CCh$, $\{ \sigma_{i}(\CCh)\}$ are our \textit{empirical estimates} of the canonical correlation coefficients. Equation (\ref{eq:ccah master}) reveals that these canonical correlation coefficients are exactly the singular values of  $\Vxt^{H} \Vyt$. Here $\Vxt$ is the $n \times p$ matrix formed by taking the first $p$ columns of the $n \times n$ unitary (or orthogonal) matrix ${\bf V}_{X}$ while $\Vyt$ is the $n \times q$ matrix formed by taking the first $p$ columns of the $n \times n$ unitary (or orthogonal) matrix ${\bf V}_{Y}$.
+
+Consider the test-statistic:
+\begin{equation}\label{eq:told}
+t_{{\sf OLD}} =  \sigma_{1} (\CCh).
+\end{equation}
+Note that the $p \times q$ matrix  $\Vxt^{H} \Vyt$ is the product of (a subset of the columns) of two unitary matrices and so its singular values are bounded by one. Hence, $0 \leq t_{{\sf OLD}} \leq 1$ by purely algebraic arguments. The idea behind the algorithm in \cite{gunderson1997estimating} is that large or $O(1)$ values of $t_{{\sf OLD}}$ are indicative of the presence of  (at least) one correlated signal in both datasets (a rank based argument will not suffice because of limited samples). This choice of the test-statistic is flawed and, as we shall shortly see, leads to many false positives in high-dimensional settings.
+
+Consider the setting when both datasets are noise-only and contain no correlated signals. Let $c_1 = p/n$ and $c_2 = q/n$.  The result by Collins \cite{collins2005product} says that when $c_1 + c_2 < 1$, or equivalently, when $p + q < n$ we have that:
+$$t_{{\sf OLD}} \convas \sqrt{c_1 + c_2 - 2 c_1 c_2 + \sqrt{4 c_1 c_2 (1-c_1)(1-c_2)}}$$
+where $\convas$ denotes almost sure convergence. When $n < p + q$, corresponding to the sample-size poor setting analyzed by Pezeshki et al. \cite{pezeshki2005empirical}, we have that $t_{{\sf OLD}} = 1,$ identically.
+
+These results demonstrate that $t_{{\sf OLD}}$ is $O(1)$ (see Figure \ref{fig:told limit} for an illustration when $c_1 = c_2$) even when there is no correlated signal present thereby weakening the argument in  \cite{gunderson1997estimating} that testing for $O(1)$ values of $t_{{\sf OLD}}$ reveals the presence of a common correlated signal(s). Essentially, this is what prevents the empirical CCA based detection algorithm from operating efficiently in the sample-size poor setting (as evidenced in Figure \ref{fig:cca intro fig}-(a)). We now derive an alternate test statistic that is $o(1)$ when there are no signals and $O(1)$ when there are correlated signals.
+
+\begin{figure}
+\centering
+\includegraphics[height=2.5in]{figures/told_limit.pdf}
+\caption{Almost sure limit of the test statistic $t_{{\sf OLD}}$ in the noise-only setting.}
+\label{fig:told limit}
+\vspace{-0.5cm}
+\end{figure}
+
+\section{New test statistic \&  the detection limit}\label{sec:fun limit}
+
+Let ${\bf z}_{x} = \begin{bmatrix} z_{x1} & \ldots & z_{xn} \end{bmatrix}^{T}$ and ${\bf z}_{y} = \begin{bmatrix} z_{y1} & \ldots & z_{yn} \end{bmatrix}^{T}$ be the correlated signal vectors in each dataset. Then the results of \cite{benaych2009eigenvalues} provide insight on where the signals are encoded upon the singular decomposition of $\X$ and $\Y$.
+
+\flushleft \begin{Th}\label{th:right sing vector 1}
+As $p,n \longrightarrow \infty$ with $p/n \to c_1$ we have that:
+$$ \left| \left\langle \dfrac{{\bf z}_{x}}{||{\bf z}_{x}||_{2}}, \Vxt(:,1) \right\rangle \right| \convas
+\begin{cases}
+\varphi_{x} &\textrm{ if } \sigma_{x} > c_{1}^{1/4}\\
+0 &\textrm{ otherwise,}\end{cases},$$
+where $\varphi_{1}:=\sqrt{1 - (c_1 +\sigma_x^{2})/(\sigma_x^{2}(\sigma_x^{2} +1 ))}$ \cite{benaych2009eigenvalues}.
+\end{Th}
+
+\flushleft \begin{Th}\label{th:right sing vector 2}
+As $q,n \longrightarrow \infty$ with $q/n \to c_2$ we have that:
+$$ \left| \left\langle \dfrac{{\bf z}_{y}}{||{\bf z}_{y}||_{2}}, \Vyt(:,1) \right\rangle \right| \convas
+\begin{cases}
+\varphi_{2} &\textrm{ if } \sigma_{y} > c_{2}^{1/4}\\
+0 &\textrm{ otherwise,}\end{cases},$$
+where $\varphi_{y}:=\sqrt{1 - (c_2 +\sigma_x^{2})/(\sigma_x^{2}(\sigma_x^{2} +1 ))}$ \cite{benaych2009eigenvalues}.
+\end{Th}
+
+The expressions above for the \textit{right} singular vectors are new; related works in the literature \cite{paul2007asymptotics,mestre2008asymptotic,nadler2008finite} consider the left singular vectors (in effect).      Theorems \ref{th:right sing vector 1} and \ref{th:right sing vector 2} reveal that if there are correlated signals present then the largest right singular vectors of $\X$ and $\Y$ will have an inner-product that is $O(1)$ so long as each signals is above its critical SNRs. Hence, instead of looking for correlations between \textit{all} inner-products of the right singular vectors by forming $\CCh$ as in (\ref{eq:ccah master}) we form the $p \times q$ (reduced dimension)  matrix:
+$$\CCh_{k_1,k_2} =\Ux(:,1:k_1) \Vxt(:,1:k_1)^{H} \Vyt(:,1:k_2) \Uy(:,1:k_2)^{H}$$
+whose singular values are identical to the singular values of the $k_1 \times k_2$ matrix $\Vxt(:,1:k_1)^{H} \Vyt(:,1:k_2)$. Here $k_1 << p,n$ and $k_2 << q,n$ are the estimated number of signals in each of the data-sets (which may be over-estimated). The new test-statistic is then:
+\begin{equation} \label{eq:tnew}
+t_{{\sf NEW}} =   \sigma_{1} (\CCh_{k_1,k_2})
+\end{equation}
+for $\min(k_1,k_2) << p,q,n$. Now $k_1/n, k_2/n \to 0$ so that the results of Collins imply that in the noise-only setting, $t_{{\sf NEW}} \convas 0$. In contrast, we prove the following result for the setting where we have one correlated signal in both datasets.
+
+\flushleft \begin{Th}\label{th:fun limit}
+As $p,q,n \longrightarrow \infty$ with $p/n \to c_1$ and $q/n \to c_2$, we have that:
+$$
+t_{{\sf NEW}} \convas
+\begin{cases}
+\rho \,\varphi_{x} \, \varphi_{y} &\textrm{ if } \sigma_{x} > c_{1}^{1/4} \textrm{ and } \sigma_{y} > c_{2}^{1/4}\\
+0 &\textrm{ otherwise.}\end{cases}$$
+\end{Th}
+Thus, we have shown that the new test statistic is $o(1)$ when there are no correlated signals and $O(1)$ when there are correlated signals whose (eigen) SNR's are above the respective threshold's that are independent of the degree of correlation and represent the fundamental limit of CCA based signal detection.
+
+Note  that $t_{{\sf NEW}}$ displays these desirable properties in the sample size deficient regime as well, \textit{i.e.}, when $c_1, c_2 > 1$ so that its use in the sample deficient regime is now mathematically justified. The algorithm  in \cite{gunderson1997estimating} can be used with this new test-statistic to reliably detect correlated signals near the predicted limit.
+
+
+Figures \ref{fig:cca intro fig}-(b) and Figure \ref{fig:fig2}-(a),(b) illustrate the agreement between the fundamental asymptotic limit predicted in Theorem \ref{th:fun limit} and numerical simulations for moderately sized systems. Figure \ref{fig:fig2} confirms the accuracy of our statement that (asymptotically) the degree of correlation does not affect the CCA based detection limit.
+
+\begin{figure}[!t]
+\subfloat[New algorithm: $\rho = 0.9$]{
+\includegraphics[width=3.4in]{figures/cca_1src_alpha_0p9_dr_ksdist.pdf}
+}
+%\hfil
+\\[-0.35cm]
+\subfloat[New algorithm: $\rho = 0.7$.]{
+\includegraphics[width=3.4in]{figures/cca_1src_alpha_0p7_dr_ksdec.pdf}
+}
+\caption{We are in the same setting as in Figure \ref{fig:cca intro fig}; here we plot the heat map of the logarithm of the raw (empirically computed) Kolmogorov-Smirnov distance. A value of $0$ (on the log scale) indicates that the distribution of the new test-statistic in the signal-bearing scenario is statistically distinguishable from the new test-statistic in the noise-only scenario; smaller values indicate otherwise. The upper panel corresponds to a setting where the signal correlation equals $\rho = 0.9$; in the lower panel $\rho = 0.7$. The solid white line is the predicted fundamental limit; the plot reveals the accuracy of the predicted limit and our assertion that the signal correlation does not affect the detectability of weak correlated signals (with the use of new test statistic).}
+\label{fig:fig2}
+\vspace{-0.7cm}
+\end{figure}
+
+
+
+\section{Conclusion}\label{sec:conclusion}
+
+Theorem \ref{th:fun limit} provides a closed-form expression for the  fundamental asymptotic limit of CCA based detection of weak, correlated high-dimensional signals in the white noise, sample size limited setting. The new test statistic presented in (\ref{eq:tnew}) can be used to attain the limit and allows reliable CCA-based detection in the sample size deficient regime where previous authors have asserted otherwise \cite{pezeshki2005empirical,ge2009does}.
+
+
+
+
+% trigger a \newpage just before the given reference
+% number - used to balance the columns on the last page
+% adjust value as needed - may need to be readjusted if
+% the document is modified later
+%\IEEEtriggeratref{8}
+% The "triggered" command can be changed if desired:
+%\IEEEtriggercmd{\enlargethispage{-5in}}
+
+% references section
+
+% can use a bibliography generated by BibTeX as a .bbl file
+% BibTeX documentation can be easily obtained at:
+% http://www.ctan.org/tex-archive/biblio/bibtex/contrib/doc/
+% The IEEEtran BibTeX style support page is at:
+% http://www.michaelshell.org/tex/ieeetran/bibtex/
+%\bibliographystyle{IEEEtran}
+% argument is your BibTeX string definitions and bibliography database(s)
+%\bibliography{IEEEabrv,../bib/paper}
+%
+% <OR> manually copy in the resultant .bbl file
+% set second argument of \begin to the number of references
+% (used to reserve space for the reference number labels box)
+
+
+%\bibliographystyle{IEEEtran}
+%\bibliography{cca}
+
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{#1}
+\csname url@samestyle\endcsname
+\providecommand{\newblock}{\relax}
+\providecommand{\bibinfo}[2]{#2}
+\providecommand{\BIBentrySTDinterwordspacing}{\spaceskip=0pt\relax}
+\providecommand{\BIBentryALTinterwordstretchfactor}{4}
+\providecommand{\BIBentryALTinterwordspacing}{\spaceskip=\fontdimen2\font plus
+\BIBentryALTinterwordstretchfactor\fontdimen3\font minus
+  \fontdimen4\font\relax}
+\providecommand{\BIBforeignlanguage}[2]{{%
+\expandafter\ifx\csname l@#1\endcsname\relax
+\typeout{** WARNING: IEEEtran.bst: No hyphenation pattern has been}%
+\typeout{** loaded for the language `#1'. Using the pattern for}%
+\typeout{** the default language instead.}%
+\else
+\language=\csname l@#1\endcsname
+\fi
+#2}}
+\providecommand{\BIBdecl}{\relax}
+\BIBdecl
+
+\bibitem{hotelling1936relations}
+H.~Hotelling, ``{Relations between two sets of variates},'' \emph{Biometrika},
+  vol.~28, no. 3-4, p. 321, 1936.
+
+\bibitem{akaike1976canonical}
+H.~Akaike, ``{Canonical correlation analysis of time series and the use of an
+  information criterion},'' \emph{Math. in Science and Eng.}, vol.
+  126, pp. 27--96, 1976.
+
+\bibitem{gunderson1997estimating}
+B.~Gunderson and R.~Muirhead, ``{On Estimating the Dimensionality in Canonical
+  Correlation Analysis},'' \emph{J. of Multi. Anal.}, vol.~62,
+  no.~1, pp. 121--136, 1997.
+
+\bibitem{pezeshki2005empirical}
+A.~Pezeshki, L.~Scharf, M.~Azimi-Sadjadi, and M.~Lundberg, ``{Empirical
+  canonical correlation analysis in subspaces},'' in \emph{Proc. of the Asil. Conf. on Sig. and Sys., 2004}, vol.~1.\hskip 1em plus 0.5em minus 0.4em\relax, 2005, pp. 994--997.
+
+\bibitem{ge2009does}
+H.~Ge, I.~Kirsteins, and X.~Wang, ``{Does canonical correlation analysis
+  provide reliable information on data correlation in array processing?}'' in
+  \emph{Proc. of ICASSP 2009.}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE,
+  2009, pp. 2113--2116.
+
+\bibitem{collins2005product}
+B.~Collins, ``{Product of random projections, Jacobi ensembles and universality
+  problems arising from free probability},'' \emph{Prob. theory and
+  related fields}, vol. 133, no.~3, pp. 315--344, 2005.
+
+\bibitem{benaych2009eigenvalues}
+F.~Benaych-Georges and R.~Nadakuditi, ``{The singular values and singular vectors of
+low rank perturbations of large random matrices},'' \texttt{http://arxiv.org/abs/1103.2221}, Preprint.
+
+%\bibitem{benaych2009svd}
+%F.~Benaych-Georges and R.~Nadakuditi, ``{The singular values and singular vectors of
+%low rank perturbations of large random matrices},'' \emph{J. of Mult. Anal.}, under review.
+
+\bibitem{paul2007asymptotics}
+D.~Paul, ``{Asymptotics of sample eigenstructure for a large dimensional spiked
+  covariance model},'' \emph{Statistica Sinica}, vol.~17, no.~4, p. 1617, 2007.
+
+\bibitem{mestre2008asymptotic}
+X.~Mestre, ``{On the asymptotic behavior of the sample estimates of eigenvalues
+  and eigenvectors of covariance matrices},'' \emph{Sig. Proc., IEEE
+  Trans. on}, vol.~56, no.~11, pp. 5353--5368, 2008.
+
+\bibitem{nadler2008finite}
+B.~Nadler, ``{Finite sample approximation results for principal component
+  analysis: A matrix perturbation approach},'' \emph{The Ann. of Stat.},
+  vol.~36, no.~6, pp. 2791--2817, 2008.
+
+\end{thebibliography}
+
+
+
+
+
+% that's all folks
+\end{document}
+
+
