@@ -1,0 +1,297 @@
+\begin{abstract}
+%\boldmath
+We consider a stochastic  matched subspace detection problem in high dimensions where the low-rank signal subspace is estimated by taking the eigenvalue decomposition of the sample covariance matrix of noisy labeled training data. In moderate to low signal-to-noise ratio (SNR) settings, the performance of typical plug-in detectors degrades because of subspace estimation errors due to limited noisy training samples. We use random matrix theory to derive an optimal matched subspace detector which accounts for these estimation errors. We develop an effective problem dimension, $k_{\text{eff}}$, which represents the number of signal eigenvalues above a critical threshold. An ROC analysis illustrates the improved performance of the optimal detector over the plug-in detector. We demonstrate that this improved performance results from the optimality of only using the effective number of dimensions. A theoretical derivation of ROC curves for each detector is also provided.
+\end{abstract}
+
+\section{Introduction}
+
+\IEEEPARstart{M}{any} signal processing and machine learning problems involve training a detector to distinguish between a known number of classes. Subspace-based methods constitute a powerful and widely used class of algorithms for this purpose \cite{hastie2001elements,laaksonen1996subspace,scharf1994matched,jin2005cfar,mcwhorter2003matched}. Matched subspace detectors solve this problem when the signals can be modeled as residing on a low-dimensional subspace buried in noise. \cite{scharf1994matched,jin2005cfar,mcwhorter2003matched} all consider the case when this low-dimensional signal subspace is known. \cite{scharf1994matched} concludes that the generalized likelihood ratio test (GLRT) is optimal for solving matched subspace detection problems while \cite{mcwhorter2003matched} extend this work to the stochastic setting to conclude that the optimal detector in the known noise case is a matched subspace detector.
+
+The focus of this paper will extend the stochastic matched subspace detector to the setting where the low-dimensional signal subspace is unknown. When labeled training data is available, an estimate of this low-dimensional signal subspace can be formed. Standard plug-in detectors form a GLRT by simply substituting this subspace estimate for the true signal subspace used in an oracle detector \cite{mcwhorter2003matched,jin2005cfar}. However, when the dataset is noisy and there are limited labeled training samples, these subspace estimates will also be noisy. Recent results from random matrix theory precisely quantify the errors in subspace estimation.  By deriving a matched subspace detector which systematically accounts for these subspace estimation errors, we realize improved detection ability over the standard plug-in detector.
+
+The main contribution of this work is the development of effective dimension estimate which we call $k_{\text{eff}}$, defined to be the number of signal eigenvalues above a critical threshold. This estimate arises from the derivation of an optimal matched subspace detector which accounts for subspace estimation errors. This optimal detector improves overall detection ability compared to the standard plug-in detector. We show that $k_{\text{eff}}$ is the optimal dimension estimate for a matched subspace detector. $k_{\text{eff}}$, rather than individual dimension shrinkage (or re-weighting), is shown to be the reason why the optimal detector outperforms the plug-in detector.
+
+The paper is organized as follows. Section \ref{sec:prob} formally states the detection problem. Section \ref{sec:params} pertinent results from random matrix theory. Then, Section \ref{sec:detectors} mathematically derives an oracle, plug-in, and optimal matched subspace detector. Section \ref{sec:roc} discusses a saddlepoint approximation for a theoretical ROC curve for the plug-in and optimal detectors. Simulations highlight the importance of $k_{\text{eff}}$, which is discussed in Section \ref{sec:disc}. Concluding remarks are provided in Section \ref{sec:concl}.
+
+
+\section{Problem Statement}\label{sec:prob}
+We consider the detection problem where our observed data, $y$, may be one of two classes, $H_0$ or $H_1$. We may either observe signal in the presence of noise ($H_1$), or simply noise itself ($H_0$). Our setup is as follows:
+
+\begin{equation}\label{eq:prob state}
+y=\left\{
+\begin{aligned}
+&z
+&& y\in H_0\\
+&U_1x+z
+&& y\in H_1\\
+\end{aligned}\right.
+\end{equation}
+
+where $z\sim\mathcal{N}(0,I)$, $U_1\in\reals^{n\times k}$ is unknown with orthonormal columns, and $x\sim\mathcal{N}(0,\Sigma_1)$ where $\Sigma_1=\diag(\sigma_1^2,\dots,\sigma_k^2)$ with $\sigma_i^2$ unknown. The dimension of our subspace, $k$, is unknown and $k\ll n$. We also assume that $x$ and $z$ are independent.
+
+To estimate our unknown parameters, $U_1$ and $\Sigma_1$, we are given independent signal bearing training data $\{y_1,\dots,y_m\}$, with $y_i\in H_1 \text{ for } i=1,\dots,m$ and an estimate, $\widehat{k}$ of our unknown dimension, $k$. After forming our subspace estimate, $\widehat{U}_1$,  we consider the test data $w=\widehat{U}_1^Ty\in\reals^{\widehat{k}}$. Our goal is to determine a detector, $g(w)\to\{H_0,H_1\}$ which solves the following problem for an unlabeled testing point, $w$:
+
+\begin{equation}\label{eq:maximization}
+\begin{aligned}
+&\text{maximize}
+&& P_D=P\left(g(w)\to H_1 | w\in H_1\right)\\
+&\text{subject to}
+&& P_F=P\left(g(w)\to H_1 | w\in H_0\right)\leq\alpha\\
+\end{aligned}
+\end{equation}
+
+where $\alpha\in[0,1]$.
+
+\section{Pertinent Results From Random Matrix Theory}\label{sec:params}
+The first step in any detector derivation is to form estimates $\widehat{U}_1$ and $\widehat{\Sigma}_1$ to use in a GLRT. We are given signal bearing training data $\{y_1,\dots,y_m\}$ where $y_i\in H_1$, for $i=1,\dots,m$. which are stacked as columns in a matrix $Y=[y_1,\dots,y_m]$. To form maximum-likelihood (ML) estimates of $U_1$ and $\Sigma_1$, we may take the eigenvalue decomposition of the sample covariance matrix, $S_1=\frac{1}{m}YY^T$. Recent results from random matrix theory allow us to classify the accuracy of eigenvectors and eigenvalues of $S_1$. After some algebra, we apply theorem 4 of \cite{paul2007asymptotics} to our problem.
+
+\begin{Th}\label{th:angles}
+As $n,m \longrightarrow \infty$ with $n/m \to c$ we have that:
+\begin{equation*}
+\begin{aligned}
+&|\langle u_i,\widehat{u}_i\rangle|^2\convas
+\begin{cases}
+\frac{\widehat{\sigma}^4-c}{\widehat{\sigma}_{i}^4+\widehat{\sigma}_{i}^2c} & \text{ if } \widehat{\sigma}_{i}^2>\sqrt{c}\\
+0 & \text{ if } \widehat{\sigma}_{i}^2\leq\sqrt{c}\\
+\end{cases}\\
+&\text{and for } i\neq j\\
+&|\langle u_i,\widehat{u}_j\rangle|^2\convas 0 \\
+\end{aligned}
+\end{equation*}
+\end{Th}
+
+The proof of the case where $i\neq j$ will appear in a later journal publication \cite{asendorf}. Notice that when a signal eigenvalue drops below a critical value, the corresponding eigenvector estimate is junk (i.e. $|\langle u_i,\widehat{u}_i\rangle|^2=0$). The cosine-squared term arises in other applications such as array processing \cite{cox1973resolving}. Intuition says that we don't want to include such dimensions in a detector. We formally define the effective dimension of the problem, $k_\text{eff}$, to be the number of signal eigenvalues above the phase transition. That is,
+
+\begin{equation}
+\boxed{k_\text{eff} = \text{Number of } \sigma_i^2\geq\sqrt{c}}
+\end{equation}
+
+We now turn to the signal eigenvalue estimation. Since we are only interested in the signal eigenvalues above the critical value, we apply theorem 3 of \cite{paul2007asymptotics} to our problem.
+
+\begin{Th}\label{th:eigenvalues}
+As $n,m \longrightarrow \infty$ with $n/m \to c$, when $\sigma_i^2 > \sqrt{c}$, we have that:
+\begin{equation*}
+\widehat{\sigma}_i^2\sim f_{\widehat{\sigma}_i^2}=\mathcal{N}\left(\left(c+\sigma_i^2+\frac{c}{\sigma_i^2}\right),\frac{2\left(\sigma_i^2+1\right)^2}{n}\left(1-\frac{c}{\sigma_i^4}\right)\right)
+\end{equation*}
+\end{Th}
+
+To improve the estimate of $\sigma_i^2$, we maximizing the log likelihood of $\widehat{\sigma}_i^2$. When $\sigma_i^2 > \sqrt{c}$ the signal variance estimate becomes
+
+\begin{equation}\label{eq:cov}
+\widehat{\sigma}^2_{i_\text{rmt}} = \argmax_{\sigma_i^2} \log\left(f_{\widehat{\sigma}_i^2}\right)
+\end{equation}
+
+However, (\ref{eq:cov}) depends on whether $\sigma_i^2 > \sqrt{c}$ which is unknown. To determine the number of $\sigma_i^2$ which are larger than $\sqrt{c}$, we utilize the monotonicity property of eigenvalues which requires $\widehat{\sigma}^2_{1_\text{rmt}}\geq \widehat{\sigma}^2_{2_\text{rmt}}\geq\dots\geq\widehat{\sigma}^2_{\widehat{k}_\text{rmt}}$. We calculate (\ref{eq:cov}) for $i=1,\dots,\widehat{k}$ and determine the first index for which the monotonicity requirement fails. The estimated signal variance at this index, and all subsequent indices, is set to 0. More complex methods for determining the number of significant factors exists (see algorithm 2 of \cite{nadakuditi2010fundamental}). However, the algorithm provided here is completely data driven based on our random matrix theory estimates and would have no effect if applied to the eigenvalues of the sample covariance matrix as these are already monotonic.
+
+\section{Family of Matched Subspace Detectors}\label{sec:detectors}
+
+The Neyman Pearson Lemma (see \cite{van1968detection}) states that the solution to (\ref{eq:maximization}) is a likelihood ratio test (LRT)
+
+\begin{equation*}
+\Lambda(w) \detgtrless \eta
+\end{equation*}
+
+where $\Lambda(w) = \frac{f(w|H_1)}{f(w|H_0)}$ and $\eta$ satisfies $P(\Lambda(w)\leq\eta|H_0)=\alpha$. The LRT needs the conditional distribution of our test statistic under each hypothesis. By properties of Gaussian random variables,
+
+\begin{equation*}
+\begin{aligned}
+&w|H_0\sim\mathcal{N}(0,I_{\widehat{k}})\\
+&w|H_1\sim\mathcal{N}(0, \widehat{U}_1^TU_1\Sigma_1U_1^T\widehat{U}_1 +I_{\widehat{k}})\\
+\end{aligned}
+\end{equation*}
+
+\subsection{Detectors Considered}\label{sec:main results}
+
+We will consider 3 different detectors for our test data $w$. The first is an oracle detector, which will assume that $U_1$ and $\Sigma_1$ are known. The purpose of this is to give an upper bound on a detector's performance. The second is a plug-in detector which will approximate the oracle classifier by simply plugging in ML estimates of $\widehat{U}_1$  and $\widehat{\Sigma}_1$ for our unknown $U_1$ and $\Sigma_1$. The third is an optimal detector which uses  random matrix theory to form an approximation to the oracle classifier. It will utilize the fact that the parameter estimates are indeed noisy estimates of the true parameters and will only include $k_\text{eff}$ dimensions of our estimated subspace. Table \ref{table: main results} summarizes the main results of the detector derivation includeing the statistic for each detector as well as its distribution under each hypothesis.
+
+\begin{table*}[!ht]
+\centering
+\begin{tabular}{cclclcl}\toprule
+ Detector & \phantom{a} & Detector Statistic $\Lambda(w)$ & \phantom{a} & Null Hypothesis Distribution $\Lambda|H_0$& \phantom{a} & Simple Hypothesis Distribution $\Lambda|H_1$\\
+\midrule
+Oracle && $ w^T\left[I-\left(\widehat{U}_1^TU_1\Sigma_1U_1^T\widehat{U}_1+I\right)^{-1}\right]w$ &&  && \\
+Plug-in && $\sum_{i=1}^{\widehat{k}}w_i^2\frac{\widehat{\sigma}_i^2}{\widehat{\sigma}_i^2+1}$ && $\sum_{i=1}^{\widehat{k}}\left(\frac{\sigma_i^2}{1+\sigma_i^2}\right)\chi^2_{1i}$ && $\sum_{i=1}^{\widehat{k}}\left(\frac{\sigma_i^2\left(\sigma^2_i|\langle u_i,\widehat{u}_i\rangle|^2+1\right)}{1+\sigma_i^2}\right)\chi^2_{1i}$\\
+%Energy &&$\sum_{i=1}^{\widehat{k}} w_i^2 $ && $\chi^2_{{\widehat{k}}}$ && $\sum_{i=1}^{\widehat{k}}\left(\sigma^2_i|\langle u_i,\widehat{u}_i\rangle|^2+1\right)\chi^2_{1i}$\\
+ Optimal&& $\sum_{i=1}^{k_\text{eff}}w_i^2\frac{|\langle u_i,\widehat{u}_i\rangle|^2_{\text{rmt}}\widehat{\sigma}_{i_\text{rmt}}^2}{|\langle u_i,\widehat{u}_i\rangle|^2_{\text{rmt}}\widehat{\sigma}_{i_\text{rmt}}^2 + 1}$ && $\sum_{i=1}^{k_\text{eff}}\left(\frac{\sigma_i^2|\langle u_i,\widehat{u}_i\rangle|^2_{\text{rmt}}}{1+\sigma_i^2|\langle u_i,\widehat{u}_i\rangle|^2_{\text{rmt}}}\right)\chi^2_{1i}$ && $\sum_{i=1}^{k_\text{eff}}\left(\sigma^2_i|\langle u_i,\widehat{u}_i\rangle|^2_{\text{rmt}}\right)\chi^2_{1i}$\\
+\bottomrule
+\end{tabular}
+\caption{Main results of the detector derivation. Of particular note is the appearance of $k_\text{eff}$ in the optimal detector.}
+\label{table: main results}
+\end{table*}
+
+\subsection{Oracle Detector}\label{sec:oracle}
+
+The oracle detector assumes that $\Sigma_1$ and $U_1$ are both known. The LRT statistic for our processed data $w$ is
+
+\begin{equation*}
+\Lambda(w)=\frac{\mathcal{N}(0,\widehat{U}_1^TU_1\Sigma_1U_1^T\widehat{U}_1 +I)}{\mathcal{N}(0,I_{\widehat{k}})}
+\end{equation*}
+
+After simplification of this expression using the natural logarithm operator as a monotonic operation, the oracle statistic becomes
+
+\begin{equation}\label{eq:oracle stat}
+\boxed{\Lambda_{\text{oracle}}(w) = w^T\left[I-\left(\widehat{U}_1^TU_1\Sigma_1U_1^T\widehat{U}_1+I\right)^{-1}\right]w}
+\end{equation}
+
+and the oracle detector is
+
+\begin{equation}\label{eq:oracle classifier}
+\boxed{\Lambda_{\text{oracle}}(w) \detgtrless \ln(\eta_{\text{oracle}})}
+\end{equation}
+
+where $\eta_{\text{oracle}}$ satisfies $P(\Lambda_{\text{oracle}}(w)\leq\ln\left(\eta_{\text{oracle}}\right)|H_0)=\alpha$.
+
+\subsection{Plug-in Detector}\label{sec:plugin}
+
+As is the case in this particular problem, $U_1$ and $\Sigma_1$ are unknown, and therefore (\ref{eq:oracle stat}) cannot be computed directly. It is common practice to plug in ML estimates for the unknown parameters in the oracle detector to form a GLRT as similarly done in \cite{jin2005cfar} and \cite{mcwhorter2003matched}. With some algebra, the ML estimates for $U_1$ and $\Sigma_1$ are 
+
+\begin{equation}\label{eq:param estims}
+\begin{aligned}
+&\widehat{U}_1=[v_1 \dots v_{\widehat{k}}]\\
+&\widehat{\sigma}_i^2 = \lambda_i -1 \text{ for } i=1,\dots,\widehat{k}\\
+\end{aligned}
+\end{equation}
+
+where $\lambda_1,\dots,\lambda_{\widehat{k}}$ are the largest $\widehat{k}$ eigenvalues of $S_1$ and $v_1,\dots,v_{\widehat{k}}$ are the corresponding eigenvectors. Define the signal covariance matrix estimate as $\widehat{\Sigma}_1=\diag(\widehat{\sigma}_1^2,\dots,\widehat{\sigma}_{\widehat{k}}^2)$.
+
+By replacing the unknown parameters in (\ref{eq:oracle stat}) with the estimated parameters in (\ref{eq:param estims}), the plug-in detector statistic becomes:
+
+\begin{equation*}
+\Lambda_{\text{plugin}}(w)= w^T\left(I-\left[\widehat{U}_1^T\widehat{U}_1\widehat{\Sigma}_1\widehat{U}_1^T\widehat{U}_1 + I\right]^{-1}\right)w\\
+\end{equation*}
+
+This simplifies to
+
+\begin{equation}\label{eq:plugin stat}
+\boxed{\Lambda_{\text{plugin}}(w) = w^T\diag\left(\frac{\widehat{\sigma}^2_i}{1+\widehat{\sigma}^2_i}\right)w=\sum_{i=1}^{\widehat{k}}w_i^2\frac{\widehat{\sigma}_i^2}{\widehat{\sigma}_i^2+1}}
+\end{equation}
+
+and our detector becomes
+
+\begin{equation}\label{eq:plugin classifier}
+\boxed{\Lambda_{\text{plugin}}(w) \detgtrless \ln(\eta_{\text{plugin}})}
+\end{equation}
+
+where $\eta_{\text{plugin}}$ satisfies $P(\Lambda_{\text{plugin}}(w)\leq\ln\left(\eta_{\text{plugin}}\right)|H_0)=\alpha$.
+
+The plug-in detector assumes that the estimated signal subspace $\widehat{U}_1$ is equal to the true subspace $U_1$ and that the estimated signal covariance $\widehat{\Sigma}_1$ is equal to the true signal subspace $\Sigma_1$. It also assumes that the provided subspace dimension estimate $\widehat{k}$ is also equal to the true underlying dimension of our signal subspace $k$. However, as shown in Section \ref{sec:params}, these assumptions are incorrect and are later shown to lead to the sub-optimality of the plug-in detector.
+
+\subsection{Optimal Detector}\label{sec:optimal}
+
+Consider the covariance matrix of the conditional distribution $w|H_1$. By Theorem \ref{th:angles}, we have
+
+\begin{equation}\label{eq:cov mat}
+\widehat{U}_1^TU_1\Sigma_1 U_1^T\widehat{U}_1+I = \diag\left(|\langle u_i,\widehat{u}_i\rangle|^2\sigma_i^2 + 1\right) + o(1)
+\end{equation}
+
+The plug-in detector assumes that $|\langle u_i,\widehat{u}_i\rangle|^2=1$ and $\widehat{\sigma}_i^2=\sigma_i^2$. Theorems \ref{th:angles} and\ref{th:eigenvalues} shows that this assumption is invalid because these eigenvalue and eigenvector estimates are inaccurate. Although, $\sigma_i^2$ and $|\langle u_i,\widehat{u}_i\rangle|^2$ are unknown, we already derived an improved signal variance estimate in (\ref{eq:cov}). We plug this estimate into Theorem \ref{th:angles} to obtain an estimate for $|\langle u_i,\widehat{u}_i\rangle|^2$. We then derive an optimal detector by substituting these random matrix theory estimates into the diagonal covariance matrix (\ref{eq:cov mat}) and using this covariance matrix in the GLRT. After simplification of the GLRT, the optimal statistic is
+
+\begin{equation*}
+\Lambda_{\text{optimal}}(w)= \sum_{i=1}^{\widehat{k}}w_i^2\frac{|\langle u_i,\widehat{u}_i\rangle|^2_{\text{rmt}}\widehat{\sigma}_{i_\text{rmt}}^2}{|\langle u_i,\widehat{u}_i\rangle|^2_{\text{rmt}}\widehat{\sigma}_{i_\text{rmt}}^2 + 1}
+\end{equation*}
+
+However, as $|\langle u_i,\widehat{u}_i\rangle|^2=0$ when $\widehat{\sigma}_{i_\text{rmt}}^2$ drops below $\sqrt{c}$, this sum ignores all indices whose signal eigenvalue estimate is below this critical value. Instead, the optimal detector only sums those components with significant signal eigenvalues. The number of significant signal eigenvalues was defined as $k_\text{eff}$. Our final optimal statistic is
+
+\begin{equation}\label{eq:rmt stat}
+\boxed{\Lambda_{\text{optimal}}(w)= \sum_{i=1}^{k_\text{eff}}w_i^2\frac{|\langle u_i,\widehat{u}_i\rangle|^2_{\text{rmt}}\widehat{\sigma}_{i_\text{rmt}}^2}{|\langle u_i,\widehat{u}_i\rangle|^2_{\text{rmt}}\widehat{\sigma}_{i_\text{rmt}}^2 + 1}}
+\end{equation}
+
+and the optimal detector becomes
+
+\begin{equation}\label{eq:rmt classifier}
+\boxed{\Lambda_{\text{optimal}}(w) \detgtrless \ln(\eta_{\text{optimal}})}
+\end{equation}
+
+where $\eta_{\text{optimal}}$ satisfies $P(\Lambda_{\text{optimal}}(w)\leq\eta_{\text{optimal}}|H_0)=\alpha$.
+
+\section{Theoretical ROC Curve Derivation}\label{sec:roc}
+
+A standard way to compare the plug-in and optimal detectors derived in (\ref{eq:plugin classifier}) and (\ref{eq:rmt classifier}) respectively is to compute their ROC curves \cite{fawcett2006introduction}. For a particular statistic $\Lambda(w)$, to compute theoretical ROC curves, we must compute
+
+\begin{equation}\label{eq:target cdf}
+\begin{aligned}
+&P_D = P(\Lambda(w) \geq y| w\in H_1)\\
+&P_F = P(\Lambda(w) \geq y| w\in H_0)\\
+\end{aligned}
+\end{equation}
+
+for $-\infty<y<\infty$. To do this, we explore the conditional CDF under each hypothesis for the statistics (\ref{eq:plugin stat}) and (\ref{eq:rmt stat}).
+
+The conditional distributions of our test samples under each hypothesis are $w|H_0\sim\mathcal{N}(0,I)$ and $w|H_1\sim\mathcal{N}(0,\widehat{U}^T_1U_1\Sigma_1U_1^T\widehat{U}_1+I)$. Because of the diagonal covariance matrix under $H_0$, $w_i|H_0\sim\mathcal{N}(0,1)$ are i.i.d for $i=1,\dots,\widehat{k}$ and $w_i^2|H_0\sim\chi_1^2$ are i.i.d for $i=1,\dots,\widehat{k}$. By making a diagonal approximation of the  covariance matrix under $H_1$,  $w_i|H_1\approx\mathcal{N}(0,\sigma^2_i|\langle u_i,\widehat{u}_i\rangle|^2+1)$ are i.i.d for $i=1,\dots,\widehat{k}$. Therefore, for $i=1,\dots,\widehat{k}$
+
+\begin{equation*}
+\frac{w_i^2|H_1}{\sigma^2_i|\langle u_i,\widehat{u}_i\rangle|^2+1}\sim\chi_1^2
+\end{equation*}
+
+We use these two conditional distributions to determine the distribution of each detector under each hypothesis. Table \ref{table: main results} summarizes the results after substituting the conditional distributions for $w$ into each detector's statistic.
+
+Evident in Table \ref{table: main results}, all distributions are a weighted sum of independent chi-square random variables with 1 degree of freedom. That is the distributions take the form
+
+\begin{equation*}
+\Lambda = \sum_{i=1}^r\lambda_i\chi^2_{1i}
+\end{equation*}
+
+where $\lambda_i$ is the appropriate weighting, unique to each statistic under each hypothesis. The CDF of a chi-square random variable is known in closed form. However, the CDF of a weighted sum of independent chi-square random variables is not known in closed form. To evaluate (\ref{eq:target cdf}), we use a saddlepoint approximation of the CDF of $\Lambda$ by employing the generalized Lugannani-Rice formula proposed in \cite{wood1993saddlepoint}. To then compute a theoretical ROC curve, $y$ is swept over $(0,\infty)$ and for each value of $y$, the saddlepoint approximation of the CDF under each hypothesis is computed. This generates a set of points $(P_F,P_D)$ which approximate the theoretical ROC curve.
+
+\begin{figure}
+\centering
+\includegraphics[width=3.5in]{figures/roc_curves.png}
+\caption{Empirical and theoretical ROC curves for the oracle, plug-in, and optimal matched subspace detectors. Empirical ROC curves were simulated with $n=100$, $m=50$, $k=2$, $\widehat{k}=2$, $\sigma_1=5$, $\sigma_2=0.5$. However, as $\sigma_2$ is below the critical threshold, $k_{\text{eff}} = 1$. The empirical ROC curves were computed using 2000 test samples and averaged over 25 trials using algorithms 2 and 4 of \cite{fawcett2006introduction}. The theoretical ROC curves were computed as described in Section \ref{sec:roc}. Because $\widehat{k}\neq k_{\text{eff}}$, we observe a performance gain when using the optimal detector. In fact, the optimal detector operates at almost the same $(P_F, P_D)$ as the oracle detector. The theoretical ROC curves match the empirical ones for each detector.}
+\label{fig:roc}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=3.5in]{figures/k_hat_graph.png}
+\caption{Empirical exploration of the achieved probability of detection, $P_D$, for a fixed probability of false alarm, $P_F=0.01$, for various $\widehat{k}$. For the simulation, $n=100$, $m=50$, $k=6$, $\Sigma^{1/2} = \diag({\bf{5,4,3,2}},0.6,0.5)$ so that $k_{\text{eff}}=4$. $P_D$ calculation was computed using 2000 test samples and averaged over 25 trials. The optimal $\widehat{k}$ resulting in the largest $P_D$ is not the true $k$, but rather $k_\text{eff}$.}
+\label{fig:khat}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=3.5in]{figures/samples_graph.png}
+\caption{Empirical exploration of the number of test samples required to achieve a desired $P_F=0.001$ for different $P_D$. In this setup, $N$ test samples are averaged together and then sent to each detector. For the simulation, $n=100$, $m=50$, $k=6$, $\widehat{k}=6$,$\Sigma^{1/2} = \diag({\bf{3,2}},0.5,0.4,0.3,0.2)$ so that $k_{\text{eff}}=2$. $P_D$ calculation was computed using 2000 test samples and averaged over 10 trials. Because the optimal detector only uses $k_\text{eff}$ dimensions, it requires less test samples to achieve a desired $(P_F, P_D)$ than the plug-in detector.}
+\label{fig:samples}
+\end{figure}
+
+\section{Simulation Results and Discussion}\label{sec:disc}
+
+\subsection{ROC curves}
+
+Evident in Figure \ref{fig:roc}, the theoretical ROC curves match the empirical ROC curves. Our saddlepoint approximation to the CDF of a weighted sum of independent chi square random variables is valid. As evident by their ROC curves, the optimal detector operates at almost the same $(P_F, P_D)$ as the oracle detector. Therefore, the random matrix theory approximations of unknown parameters are very accurate. Finally, we note the sub-optimality of the plug-in detector. This is expected as it incorrectly assumes that estimated eigenvalues and eigenvectors are exact.
+
+\subsection{Optimality of $k_\text{eff}$}
+
+Evident in Figure \ref{fig:khat}, the optimal $\widehat{k}$ id $k_\text{eff}$. Underestimating $k_\text{eff}$ drastically decreases performance for both detectors. However, the plug-in and optimal detectors operates at roughly the same $P_D$ showing that the different shrinkage weights applied by each detector do not make a difference in detection ability. When overestimating $k_\text{eff}$, the plug-in detector observes a decrease in performance while the optimal detector maintains the same performance as if $\widehat{k}=k_\text{eff}$. Thus, we do not pay a price for overestimating our dimension with the optimal detector. This makes sense because the optimal detector will only sum to a maximum of $k_\text{eff}$ indices as evident in (\ref{eq:rmt stat}). As if often the case, the dimension is purposefully overestimated to ensure that all signal dimensions are included. However as evident in Figure \ref{fig:khat}, doing so with the plug-in detector will degrade performance. In fact, even if $\widehat{k}=k$, the plug-in detector still is suboptimal in this example. Only when $\widehat{k}=k_\text{eff}$ will the optimal performance be achieved. 
+
+\subsection{Averaging over Test Samples}
+
+As evident in Figure \ref{fig:samples}, the optimal detector requires less samples than the plug-in detector to achieve a desired $(P_F, P_D)$. This arises from the fact that the optimal detector ignores noisy signal components while the plug-in detector uses them. Because each test sample is pruned to ignore noisy components, we can average less samples to achieve a desired accuracy.
+
+\section{Conclusion}\label{sec:concl}
+We have derived three stochastic matched subspace detectors. Through an ROC analysis, we have demonstrated the sub-optimality of the plug-in detector. This arises from the false assumption that estimated eigenvalues and eigenvectors of the sample signal covariance matrix are exact estimates of the true eigenvalues and eigenvectors of our signal covariance matrix. By using random matrix theory to characterize the accuracy of eigenvalues and eigenvectors estimates from limited training data, we have derived an optimal detector. ROC analysis demonstrated that the optimal detector outperforms the plug-in detector. This arises from the optimal detector using the effective number of signal subspace dimensions, $k_\text{eff}$, which was shown to be the optimal dimension estimate for a matched subspace detection problem. Reweighing (or shrinking) dimensions was shown to have little effect on detector performance which is controlled by using the effective dimension, $k_\text{eff}$.
+
+
+% if have a single appendix:
+%\appendix[Proof of the Zonklar Equations]
+% or
+%\appendix  % for no appendix heading
+% do not use \section anymore after \appendix, only \section*
+% is possibly needed
+
+% use \appendices with more than one appendix
+% then use \section to start each appendix
+% you must declare a \section before using any
+% \subsection or using \label (\appendices by itself
+% starts a section numbered zero.)
+%
+
+
+%\appendices
+%\section{Proof of the First Zonklar Equation}
+%Appendix one text goes here.
+%
+%% you can choose not to have a title for an appendix
+%% if you want by leaving the argument blank
+%\section{}
+%Appendix two text goes here. 

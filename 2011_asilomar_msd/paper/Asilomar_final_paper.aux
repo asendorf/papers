@@ -1,0 +1,88 @@
+\relax 
+\citation{hastie2001elements,laaksonen1996subspace,scharf1994matched,jin2005cfar,mcwhorter2003matched}
+\citation{scharf1994matched,jin2005cfar,mcwhorter2003matched}
+\citation{scharf1994matched}
+\citation{mcwhorter2003matched}
+\citation{mcwhorter2003matched,jin2005cfar}
+\@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}}
+\@writefile{toc}{\contentsline {section}{\numberline {II}Problem Statement}{1}}
+\newlabel{sec:prob}{{II}{1}}
+\newlabel{eq:prob state}{{1}{1}}
+\citation{paul2007asymptotics,asendorf,benaych2011eigenvalues}
+\citation{asendorf}
+\citation{cox1973resolving}
+\citation{nadakuditi2008sample}
+\citation{paul2007asymptotics}
+\citation{nadakuditi2010fundamental}
+\citation{van1968detection}
+\newlabel{eq:maximization}{{2}{2}}
+\@writefile{toc}{\contentsline {section}{\numberline {III}Pertinent Results from RMT}{2}}
+\newlabel{sec:params}{{III}{2}}
+\newlabel{th:angles}{{III.1}{2}}
+\newlabel{eq:keff}{{3}{2}}
+\newlabel{th:eigenvalues}{{III.2}{2}}
+\newlabel{eq:cov}{{4}{2}}
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Family of Matched Subspace Detectors}{2}}
+\newlabel{sec:detectors}{{IV}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}}Detectors Considered}{2}}
+\newlabel{sec:main results}{{\unhbox \voidb@x \hbox {IV-A}}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}}Oracle Detector}{2}}
+\newlabel{sec:oracle}{{\unhbox \voidb@x \hbox {IV-B}}{2}}
+\citation{jin2005cfar}
+\citation{mcwhorter2003matched}
+\citation{asendorf}
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Given an observation vector $y$ we form the vector $w=\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle U$}\mathaccent "0362{U}^Hy$ where $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle U$}\mathaccent "0362{U}$ is an estimate of the signal subspace. The table summarizes the test statistic associated with each detector and the associated distribution under $H_0$ and $H_1$. In the CFAR setting, the threshold is set to obtain the desired false alarm probability. Note the appearance of $k_\text  {eff}$ in the optimal detector.}}{3}}
+\newlabel{table: main results}{{I}{3}}
+\newlabel{eq:oracle stat}{{5}{3}}
+\newlabel{eq:oracle classifier}{{6}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-C}}Plug-in Detector}{3}}
+\newlabel{sec:plugin}{{\unhbox \voidb@x \hbox {IV-C}}{3}}
+\newlabel{eq:param estims}{{7}{3}}
+\newlabel{eq:plugin stat}{{8}{3}}
+\newlabel{eq:plugin classifier}{{9}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-D}}Optimal Detector}{3}}
+\newlabel{sec:optimal}{{\unhbox \voidb@x \hbox {IV-D}}{3}}
+\newlabel{eq:cov mat}{{10}{3}}
+\newlabel{eq:rmt stat}{{11}{3}}
+\newlabel{eq:rmt classifier}{{12}{3}}
+\citation{fawcett2006introduction}
+\citation{wood1993saddlepoint}
+\citation{fawcett2006introduction}
+\citation{fawcett2006introduction}
+\@writefile{toc}{\contentsline {section}{\numberline {V}Theoretical ROC Curve Derivation}{4}}
+\newlabel{sec:roc}{{V}{4}}
+\newlabel{eq:target cdf}{{13}{4}}
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Simulation Results and Discussion}{4}}
+\newlabel{sec:disc}{{VI}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VI-A}}ROC curves}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Empirical and theoretical ROC curves for the oracle, plug-in, and optimal matched subspace detectors. Empirical ROC curves were simulated with $n=100$, $m=50$, $k=2$, $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle k$}\mathaccent "0362{k}=2$, $\sigma _1=5$, $\sigma _2=0.5$. However, as $\sigma _2$ is below the critical threshold, $k_{\text  {eff}} = 1$. The empirical ROC curves were computed using $2000$ test samples and averaged over 25 trials using algorithms 2 and 4 of \cite  {fawcett2006introduction}. The theoretical ROC curves were computed as described in Section V\hbox {}. Since we chose $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle k$}\mathaccent "0362{k} > k_{\text  {eff}}$, we observe a performance gain when using the optimal detector. In fact, the optimal detector operates at almost the same $(P_F, P_D)$ as the oracle detector. The theoretically predicted ROC curves match the empirical results reflecting the accuracy of the approximations employed. }}{4}}
+\newlabel{fig:roc}{{1}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Empirical exploration of the achieved probability of detection, $P_D$, for a fixed probability of false alarm, $P_F=0.01$, for various $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle k$}\mathaccent "0362{k}$. For the simulation, $n=100$, $m=50$, $k=6$, $\Sigma ^{1/2} = \mathop {\bf  diag}({\bf  {5,4,3,2}},0.6,0.5)$ so that $k_{\text  {eff}}=4$. $P_D$ calculation was computed using 2000 test samples and averaged over 25 trials. The optimal $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle k$}\mathaccent "0362{k}$ resulting in the largest $P_D$ is not the true $k$, but rather $k_\text  {eff}$.}}{4}}
+\newlabel{fig:khat}{{2}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VI-B}}Optimality of $k_\text  {eff}$}{4}}
+\citation{nadakuditi2008sample}
+\citation{johnstone2001distribution,el2007tracy,nadakuditi2010fundamental}
+\bibstyle{IEEEtran}
+\bibdata{Asilomar_bib}
+\bibcite{hastie2001elements}{1}
+\bibcite{laaksonen1996subspace}{2}
+\bibcite{scharf1994matched}{3}
+\bibcite{jin2005cfar}{4}
+\bibcite{mcwhorter2003matched}{5}
+\bibcite{paul2007asymptotics}{6}
+\bibcite{asendorf}{7}
+\bibcite{benaych2011eigenvalues}{8}
+\bibcite{cox1973resolving}{9}
+\bibcite{nadakuditi2008sample}{10}
+\bibcite{nadakuditi2010fundamental}{11}
+\bibcite{van1968detection}{12}
+\bibcite{fawcett2006introduction}{13}
+\bibcite{wood1993saddlepoint}{14}
+\bibcite{johnstone2001distribution}{15}
+\bibcite{el2007tracy}{16}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {VI-C}}Averaging over Test Samples}{5}}
+\@writefile{toc}{\contentsline {section}{\numberline {VII}Conclusion}{5}}
+\newlabel{sec:concl}{{VII}{5}}
+\@writefile{toc}{\contentsline {section}{References}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Empirical exploration of the number of test samples required to achieve a desired $P_F=0.001$ for different $P_D$. In this setup, the test statistic for each detector is averaged over multiple independent test samples. For the simulation, $n=100$, $m=50$, $k=6$, $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle k$}\mathaccent "0362{k}=6$ and $\Sigma ^{1/2} = \mathop {\bf  diag}({\bf  {3,2}},0.5,0.4,0.3,0.2)$ so that $k_{\text  {eff}}=2$. $P_D$ calculation was computed using $2000$ test samples and averaged over $10$ trials. Because the optimal detector only uses $k_\text  {eff}$ components, it requires less test samples to achieve a desired $(P_F, P_D)$ than the plug-in detector.}}{5}}
+\newlabel{fig:samples}{{3}{5}}
