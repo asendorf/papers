@@ -1,0 +1,7 @@
+#!/bin/sh
+pdflatex ieee_tit_icca.tex
+bibtex ieee_tit_icca
+bibtex ieee_tit_icca
+pdflatex ieee_tit_icca.tex
+pdflatex ieee_tit_icca.tex
+evince ieee_tit_icca.pdf

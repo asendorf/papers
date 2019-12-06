@@ -21,4 +21,9 @@ random matrix theory to create better matched subspace detectors.
 [Here](https://ieeexplore.ieee.org/abstract/document/6415288) is a link
 to it.
 
-### 
+### Informative Canonical Correlation Analysis
+
+The `2015_ieee_tit` directory contains files to compile a journal article in IEEE
+Transactions on Information Theory. This article focuses on how to detect correlated
+signals in low rank plus noise
+datasets. [Here](https://ieeexplore.ieee.org/abstract/document/7903598) is a link to it.

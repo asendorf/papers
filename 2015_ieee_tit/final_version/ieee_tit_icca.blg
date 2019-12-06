@@ -1,0 +1,57 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: ieee_tit_icca.aux
+The style file: IEEEtran.bst
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: IEEEabrv.bib
+Database file #2: thesis_bib.bib
+Repeated entry---line 1183 of file thesis_bib.bib
+ : @article{correa2010canonical
+ :                             ,
+I'm skipping whatever remains of this entry
+-- IEEEtran.bst version 1.13 (2008/09/30) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+
+Done.
+You've used 47 entries,
+            4039 wiz_defined-function locations,
+            1482 strings with 24329 characters,
+and the built_in function-call counts, 41308 in all, are:
+= -- 3466
+> -- 907
+< -- 438
++ -- 528
+- -- 138
+* -- 1988
+:= -- 5986
+add.period$ -- 107
+call.type$ -- 47
+change.case$ -- 47
+chr.to.int$ -- 1020
+cite$ -- 47
+duplicate$ -- 2874
+empty$ -- 3155
+format.name$ -- 171
+if$ -- 9610
+int.to.chr$ -- 0
+int.to.str$ -- 47
+missing$ -- 445
+newline$ -- 164
+num.names$ -- 47
+pop$ -- 937
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 2
+skip$ -- 3234
+stack$ -- 0
+substring$ -- 2469
+swap$ -- 2528
+text.length$ -- 98
+text.prefix$ -- 0
+top$ -- 5
+type$ -- 47
+warning$ -- 0
+while$ -- 210
+width$ -- 49
+write$ -- 496
+(There was 1 error message)
