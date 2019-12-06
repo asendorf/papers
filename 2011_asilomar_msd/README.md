@@ -1,4 +1,4 @@
-# SVD Detection of Random Projections of Signals
+# Performance of Stochastic Matched Subspace Detectors
 
 This directory contains LaTeX files to build my Asilomar article titled "Improving and
 Characterizing the Performance of Stochastic Matched Subspace Detectors When Using Noisy
