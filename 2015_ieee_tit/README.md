@@ -1,6 +1,8 @@
 # IEEE Transactioins on Information Theory
 
-This directory contains LaTeX files to build my IEEE TIT journal article titled "Improved detection of correlated signals in low-rank-plus-noise type datasets using Informative Canonical Correlation Analysis (ICCA)". If you'd like to cite it,
+This directory contains LaTeX files to build my IEEE TIT journal article titled "Improved
+detection of correlated signals in low-rank-plus-noise type datasets using Informative
+Canonical Correlation Analysis (ICCA)". If you'd like to cite it,
 [here](https://ieeexplore.ieee.org/abstract/document/7903598) is a link to it.
 
 The paper is `ieee_tit_icca.pdf` and the folder `final_version` contains

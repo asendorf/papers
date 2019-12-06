@@ -1,0 +1,7 @@
+#!/bin/sh
+pdflatex mcca_final.tex
+bibtex mcca_final
+bibtex mcca_final
+pdflatex mcca_final.tex
+pdflatex mcca_final.tex
+evince mcca_final.pdf

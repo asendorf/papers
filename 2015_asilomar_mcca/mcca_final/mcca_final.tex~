@@ -1,0 +1,164 @@
+
+\documentclass[conference]{IEEEtran}
+
+\include{my_header}
+
+\usepackage{accents}
+
+\newcommand{\twr}{{\sf TW}_\reals}
+\newcommand{\twc}{{\sf TW}_\complex}
+\newcommand{\sx}{s_{x,i}}
+\newcommand{\sy}{s_{y,i}}
+\newcommand{\zx}{z_{x,i}}
+\newcommand{\zy}{z_{y,i}}
+\newcommand{\Zx}{Z_x}
+\newcommand{\Zy}{Z_y}
+\newcommand{\Ux}{U_x}
+\newcommand{\Uy}{U_y}
+\newcommand{\Vx}{V_x}
+\newcommand{\Vy}{V_y}
+\newcommand{\Pxy}{P_{xy}}
+\newcommand{\kx}{k_x}
+\newcommand{\ky}{k_y}
+\newcommand{\kxhat}{\widehat{k}_x}
+\newcommand{\kyhat}{\widehat{k}_y}
+\newcommand{\khatcca}{\widehat{k}_{\text{cca}}}
+\newcommand{\khaticca}{\widehat{k}_{\text{icca}}}
+\newcommand{\Uxhat}{\widehat{U}_x}
+\newcommand{\Uyhat}{\widehat{U}_y}
+\newcommand{\Sigxhat}{\widehat{\Sigma}_x}
+\newcommand{\Sigyhat}{\widehat{\Sigma}_y}
+\newcommand{\Vxhat}{\widehat{V}_x}
+\newcommand{\Vyhat}{\widehat{V}_y}
+\newcommand{\Uxtil}{\widetilde{U}_x}
+\newcommand{\Uytil}{\widetilde{U}_y}
+\newcommand{\Vxtil}{\widetilde{V}_x}
+\newcommand{\Vytil}{\widetilde{V}_y}
+\newcommand{\Uxcir}{\accentset{\circ}{U}_x}
+\newcommand{\Uycir}{\accentset{\circ}{U}_y}
+\newcommand{\Sigxcir}{\accentset{\circ}{\Sigma}_x}
+\newcommand{\Sigycir}{\accentset{\circ}{\Sigma}_y}
+\newcommand{\Sigxtil}{\widetilde{\Sigma}_x}
+\newcommand{\Sigytil}{\widetilde{\Sigma}_y}
+\newcommand{\Vxcir}{\accentset{\circ}{V}_x}
+\newcommand{\Vycir}{\accentset{\circ}{V}_y}
+\newcommand{\kapcir}{\accentset{\circ}{\kappa}}
+\newcommand{\xii}{x_i}
+\newcommand{\yii}{y_i}
+\newcommand{\Tx}{\Theta_x}
+\newcommand{\Ty}{\Theta_y}
+\newcommand{\Txhat}{\widehat{\Theta}_x}
+\newcommand{\Tyhat}{\widehat{\Theta}_y}
+\newcommand{\tx}{\theta^{(x)}}
+\newcommand{\ty}{\theta^{(y)}}
+\newcommand{\Kxy}{K_{xy}}
+\newcommand{\Kxytil}{\widetilde{K}_{xy}}
+\newcommand{\Uktil}{U_{\widetilde{K}}}
+\newcommand{\Vktil}{V_{\widetilde{K}}}
+\newcommand{\Uktilhat}{\widehat{U}_{\widetilde{K}}}
+\newcommand{\Vktilhat}{\widehat{V}_{\widetilde{K}}}
+\newcommand{\kxy}{k^{xy}}
+\newcommand{\defeq}{=:}
+\newcommand{\Rxx}{R_{xx}}
+\newcommand{\Ryy}{R_{yy}}
+\newcommand{\Rxy}{R_{xy}}
+\newcommand{\Rxxhat}{\widehat{R}_{xx}}
+\newcommand{\Ryyhat}{\widehat{R}_{yy}}
+\newcommand{\Rxyhat}{\widehat{R}_{xy}}
+\newcommand{\wx}{w_x}
+\newcommand{\wy}{w_y}
+\newcommand{\wxt}{\widetilde{w}_x}
+\newcommand{\wyt}{\widetilde{w}_y}
+\newcommand{\wxicca}{\widehat{w}_x^{\text{icca}}}
+\newcommand{\wyicca}{\widehat{w}_y^{\text{icca}}}
+\newcommand{\wxticca}{\widetilde{w}_x^{\text{icca}}}
+\newcommand{\wyticca}{\widetilde{w}_y^{\text{icca}}}
+\newcommand{\wxhaticca}{\widehat{w}_x}
+\newcommand{\wyhaticca}{\widehat{w}_y}
+\newcommand{\Ccca}{C_{\text{cca}}}
+\newcommand{\Cccahat}{\widehat{C}_{\text{cca}}}
+\newcommand{\Ciccahat}{\widehat{C}_{\text{icca}}}
+\newcommand{\Ciccat}{\widetilde{C}_{\text{icca}}}
+\newcommand{\rank}{\text{rank}}
+\newcommand{\taucca}{\tau_{\text{cca}}^\alpha}
+\newcommand{\tauicca}{\tau_{\text{icca}}^\alpha}
+\newcommand{\simiid}{\overset{\text{i.i.d.}}{\sim}}
+\newcommand{\rhocca}{\rho_\text{cca}}
+\newcommand{\rhohatcca}{\widehat{\rho}_\text{cca}}
+\newcommand{\rhohaticca}{\widehat{\rho}_\text{icca}}
+\newcommand{\rhoeff}{k_{\text{eff}}^{xy}}
+
+\newcommand{\iccap}{ICCA\texttt{+} }
+\newcommand{\iccaps}{ICCA\texttt{+}}
+
+\newcommand{\Rmcca}{C_{\text{mcca}}}
+\newcommand{\Rmccahat}{\widehat{R}_{\text{mcca}}}
+\newcommand{\Rmccatil}{\widehat{R}_{\text{imcca}}}
+\newcommand{\Ucir}{\accentset{\circ}{U}}
+\newcommand{\Vcir}{\accentset{\circ}{V}}
+
+\newcommand{\Sww}{S_{ww}}
+\newcommand{\Swy}{S_{wy}}
+\newcommand{\Syw}{S_{yw}}
+\newcommand{\Sxx}{S_{xx}}
+\newcommand{\Syy}{S_{yy}}
+\newcommand{\Sxy}{S_{xy}}
+\newcommand{\Syx}{S_{yx}}
+\newcommand{\wxhat}{\widehat{w}_x}
+\newcommand{\wyhat}{\widehat{w}_y}
+\newcommand{\ttu}{\widetilde{\widetilde{u}}}
+
+\begin{document}
+%
+% paper title
+% can use linebreaks \\ within to get better formatting as desired
+\title{Improving Multiset Canonical Correlation Analysis in High Dimensional Sample
+  Deficient Settings}
+
+
+% author names and affiliations
+% use a multiple column layout for up to three different
+% affiliations
+\author{\IEEEauthorblockN{Nicholas Asendorf}
+\IEEEauthorblockA{Department of Electrical and Computer Engineering\\
+University of Michigan\\
+Ann Arbor, Michigan 48105\\
+Email: asendorf@umich.edu}
+\and
+\IEEEauthorblockN{Raj Rao Nadakuditi}
+\IEEEauthorblockA{Department of Electrical and Computer Engineering\\
+University of Michigan\\
+Ann Arbor, Michigan 48105\\
+Email: rajnrao@umich.edu}}
+
+% conference papers do not typically use \thanks and this command
+% is locked out in conference mode. If really needed, such as for
+% the acknowledgment of grants, issue a \IEEEoverridecommandlockouts
+% after \documentclass
+
+% make the title area
+\maketitle
+% For peer review papers, you can put extra information on the cover
+% page as needed:
+% \ifCLASSOPTIONpeerreview
+% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
+% \fi
+%
+% For peerreview papers, this IEEEtran command inserts a page break and
+% creates the second title. It will be ignored for other modes.
+\IEEEpeerreviewmaketitle
+
+%\input{mcca.tex}
+\input{nips_mcca.tex}
+
+
+\section*{Acknowledgment}
+
+Work supported by the ONR Young Investigator Award under Grant N00014-11-1-0660.
+
+\bibliographystyle{IEEEtran}
+\bibliography{thesis_bib}
+
+\end{document}
+
+
