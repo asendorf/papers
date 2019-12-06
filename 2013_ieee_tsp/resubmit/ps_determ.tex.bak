@@ -1,0 +1,13 @@
+We now turn to the deterministic setting where the observation vector $y_i \in \mathbb{C}^{n \times 1}$ is modeled as follows:
+\begin{equation}\label{eq:problem}
+y_i=\left\{
+\begin{aligned}
+&z_i
+&& y_i\in H_0\\
+&U\Sigma x_i+z_i
+&& y_i\in H_1\\
+\end{aligned}\right.
+\end{equation}
+where $z_i\overset{\text{i.i.d}}{\sim}\mathcal{CN}(0,I_n)$, $U$ is an unknown $n\times k$ (real or complex) matrix with orthonormal columns, $\Sigma=\diag(\sigma_1,\dots,\sigma_k)$ with $\sigma_1>\sigma_2>\dots>\sigma_k>0$ unknown, and $x_i\in\mathbb{C}^{k\times 1}$ is an unknown deterministic vector. Again, the dimension of our subspace, $k$, is unknown with $k\ll n$. We similarly assume that $x_i$ and $z_i$ are independent for all $i$.
+
+To estimate our unknown subspace, $U$, we are again given independent signal-bearing training data $\{y_1,\dots,y_m\}$, with $y_i\in H_1 \text{ for } i=1,\dots,m$ and an estimate, $\widehat{k}$, of our unknown dimension, $k$. Each $y_i$ is assumed to be generated from a unique $x_i$. Given an unlabeled test vector, $y$, we use our subspace estimate, $\widehat{U}$,  we generate a $\widehat{k} \times 1$ test vector $w=\widehat{U}^Hy$. Our objective is to formulate a detector, $g(w)\to\{H_0,H_1\}$ which maximizes the probability of detection subject to a specified false alarm rate  $\alpha$. 

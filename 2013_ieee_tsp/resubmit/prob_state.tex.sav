@@ -1,0 +1,55 @@
+\subsection{Training Data}\label{sec:training_data}
+We assume that we are given $m$ signal-bearing training vectors $y_i\in\complex^{n\times 1}$, $i=1,\dots,m$, modeled as
+\begin{equation*}
+y_i=Ux_i+z_i
+\end{equation*}
+where $z_i\overset{\text{i.i.d.}}{\sim}\mathcal{CN}(0,I_n)$, $U$ is an unknown $n\times k$ (real or complex) matrix with orthonormal columns, and $x_i\overset{\text{i.i.d.}}{\sim}\mathcal{N}(0,\Sigma)$ where $\Sigma=\diag(\sigma_1^2,\dots,\sigma_k^2)$ with $\sigma_1>\sigma_2>\dots>\sigma_k>0$ unknown. For each observation, $x_i$ and $z_i$ are independent. The dimension, $k$, of our subspace is unknown and $k\ll n$. Given a dimension estimate, $\widehat{k}$, and the signal bearing training data $\{y_1,\dots,y_m\}$, we form a subspace estimate $\widehat{U}\in\complex^{n\times\widehat{k}}$ and signal covariance estimate $\widehat{\Sigma}\in\reals^{\widehat{k}\times\widehat{k}}$.
+
+\subsection{Problem Statement}
+In a testing setting, we are given an independent unlabeled test observation $y$, and must decide between the following two hypotheses,
+\begin{equation*}
+\begin{aligned}
+&H_0: y \text{ is strictly noise}\\
+&H_1: y \text{ contains signal}.
+\end{aligned}
+\end{equation*}
+We first use $\widehat{U}$ to generate a $\widehat{k}\times 1$ test vector $w=\widehat{U}^Hy$. Formally, we want to derive a detector, $g(w)\to\{H_0,H_1\}$, which solves
+\begin{equation}\label{eq:maximization}
+\begin{aligned}
+&\text{maximize}
+&& P_D=P\left(g(w)\to H_1 | w\in H_1\right)\\
+&\text{subject to}
+&& P_F=P\left(g(w)\to H_1 | w\in H_0\right)\leq\alpha\\
+\end{aligned}
+\end{equation}
+where $\alpha\in[0,1]$.
+
+\subsection{Testing Data}
+In the stochastic setting, the test observation $y\in\complex^{n\times 1}$ is modeled as
+\begin{equation}\label{eq:stoch_steup}
+y=\left\{
+\begin{aligned}
+&z
+&& y\in H_0\\
+&Ux+z
+&& y\in H_1\\
+\end{aligned}\right.
+\end{equation}
+where $U$, $z$, and $x$ are modeled the same as in Section \ref{sec:training_data}. This assumes that the signal, $Ux$, may lie anywhere in the subspace and whose position in the subspace is governed by the signal covariance matrix $\Sigma$. In the deterministic setting, the test observation vector $y\in\complex^{n\times 1}$ is modeled as
+\begin{equation}\label{eq:determ_setup}
+y=\left\{
+\begin{aligned}
+&z
+&& y\in H_0\\
+&U\Sigma^{1/2} x+z
+&& y\in H_1\\
+\end{aligned}\right.
+\end{equation}
+where $U$, $\Sigma$, and $z$ are modeled the same as Section \ref{sec:training_data}. However, in this setting, we view $x$ as a fixed deterministic vector. This assumes that the signal, $U\Sigma^{1/2}x$, lies at a fixed point in the subspace.
+
+\subsection{Detectors Considered}
+The Neyman-Pearson Lemma (see \cite{van1968detection}) states that the solution to (\ref{eq:maximization}) is a likelihood ratio test (LRT)
+\begin{equation*}
+\Lambda(w) \detgtrless \eta
+\end{equation*}
+where $\Lambda(w) = \frac{f(w|H_1)}{f(w|H_0)}$ and $\eta$ satisfies $P(\Lambda(w)\leq\eta|H_0)=\alpha$. For each setting, we will derive three detectors, $\Lambda(w)$, for our test data $w$. The first is an oracle detector, which assumes that $U$, $\Sigma$, and $k$ are known. The purpose of this is to give an upper bound on a detector's performance. However, as $U$, $\Sigma$, and $k$ are unknown, we employ the generalized likelihood ratio test (GLRT) in the subsequent detectors. The second detector is a plug-in detector which substitutes estimates $\widehat{U}$  and $\widehat{\Sigma}$ for the unknown $U$ and $\Sigma$ in the oracle test statistic. The plug-in detector assumes that $\widehat{U} = U$, $\widehat{\Sigma} = \Sigma$, and $\widehat{k} = k$. The third is a new, random matrix theory detector, which relies on the subspace accuracy estimates presented in Theorem \ref{th:angles}. This detector only utilizes $\min(\widehat{k},k_\text{eff})$ subspace components to form an approximation to the oracle classifier.

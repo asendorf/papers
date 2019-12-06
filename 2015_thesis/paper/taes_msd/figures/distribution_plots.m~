@@ -1,0 +1,40 @@
+function [] = distribution_plots()
+
+    step = 0.001;
+    x = step:step:10;
+    d = 1;
+    delta = 2;
+    
+    Pf_dist = chi2pdf(x,d);
+    Pd_dist = ncx2pdf(x,d,delta);
+    
+    figure; hold on;
+    my_plot(x,Pf_dist,'b');
+    my_plot(x,Pd_dist,'r');
+    set_fig_params('\Lambda(w)','pdf','',{'H_0','H_1'});
+    ylim([0 0.5]);
+    
+    % Increase d
+    Pf_dist = chi2pdf(x,d+1);
+    Pd_dist = ncx2pdf(x,d+1,delta);
+    
+    figure; hold on;
+    my_plot(x,Pf_dist,'b');
+    my_plot(x,Pd_dist,'r');
+    set_fig_params('\Lambda(w)','pdf','',{'H_0','H_1'});
+    ylim([0 0.5]);
+    
+    % Increase delta
+    Pf_dist = chi2pdf(x,d+1);
+    Pd_dist = ncx2pdf(x,d+1,delta+1);
+    
+    figure; hold on;
+    my_plot(x,Pf_dist,'b');
+    my_plot(x,Pd_dist,'r');
+    set_fig_params('\Lambda(w)','pdf','',{'H_0','H_1'});
+    ylim([0 0.5]);
+    
+P    
+    
+    figure; hold 
+end

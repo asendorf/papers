@@ -1,0 +1,22 @@
+\section{Introduction}\label{sec:intro}
+\input{taes_msd/intro.tex}
+
+\section{Problem Formulation}\label{sec:energy_detector}
+\input{taes_msd/prob_form.tex}
+
+\section{Useful Components In Energy Detectors}\label{sec:useful}
+\input{taes_msd/useful.tex}
+
+\section{Useful Components in Deterministic Matched Subspace Detectors}\label{sec:msd}
+\input{taes_msd/msd.tex}
+
+\section{Extension - Weighted Energy Detector}\label{sec:ext}
+\input{taes_msd/extensions.tex}
+
+\input{msd_missing/ssp_input5.tex}
+
+\section{Conclusion}\label{sec:conclusion}
+\input{taes_msd/conclusion.tex}
+
+%\bibliographystyle{IEEEtran}
+%\bibliography{IEEEabrv,taes_useful.bib}

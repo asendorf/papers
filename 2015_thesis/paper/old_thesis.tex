@@ -1,0 +1,86 @@
+%\documentclass[11pt,oneside, onecolumn]{report}
+\documentclass[thesis]{thesis-umich}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage[font=small,labelfont=bf]{caption}
+
+\author{Nicholas A. Asendorf}
+\chair{Professor Raj Rao Nadakuditi}
+\committee{Professor Raj Rao Nadakuditi, Chair\\
+Professor Laura Balzano\\
+Professor Alfred O. Hero\\}
+\title{Informative Data Fusion:\\ Beyond Canonical Correlation Analysis}
+\year=2013
+\department{Electrical Engineering: Systems}
+
+\include{my_header}
+
+% CCA things
+\newcommand{\xI}{x_1}
+\newcommand{\xII}{x_2}
+\newcommand{\xIhat}{\widehat{x}_1}
+\newcommand{\xIIhat}{\widehat{x}_2}
+\newcommand{\yI}{y_1}
+\newcommand{\yII}{y_2}
+\newcommand{\RI}{R_{11}}
+\newcommand{\RII}{R_{22}}
+\newcommand{\RIII}{R_{12}}
+\newcommand{\RIhat}{\widehat{R}_{11}}
+\newcommand{\RIIhat}{\widehat{R}_{22}}
+\newcommand{\RIIIhat}{\widehat{R}_{12}}
+\newcommand{\wI}{w_1}
+\newcommand{\wII}{w_2}
+\newcommand{\Creg}{C_{\text{reg}}}
+\newcommand{\Creghat}{\widehat{C}_{\text{reg}}}
+\newcommand{\Cregtil}{\widetilde{C}_{\text{reg}}}
+\newcommand{\Ckcca}{C_{\text{kcca}}}
+\newcommand{\Ckccatil}{\widetilde{C}_{\text{kcca}}}
+
+\newcommand{\figwidth}{2.9in}
+
+\abstract{\input{abstract.tex}}
+
+\begin{document}
+
+\chapter{Introduction}\label{sec:intro}
+\input{intro.tex}
+
+
+\chapter{Performance of Matched Subspace Detectors Using Finite Training Data}
+\input{ieee_msd/IEEE_RMT_MSD.tex}
+
+\chapter{Useful Subspace Components in Deterministic Matched Subspace
+  Detectors}\label{sec:taes_useful}
+\input{taes_msd/taes_useful.tex}
+
+\chapter{Background: Canonical Correlation Analysis (CCA)}\label{sec:cca}
+\input{cca.tex}
+
+\chapter{Low-Rank Gauss-Gauss Detection with Two Datasets}\label{sec:cca_detec}
+\input{detection.tex}
+
+\chapter{Regularized CCA (RCCA)}\label{sec:rcca}
+\input{rcca.tex}
+
+\chapter{Significance Tests}\label{sec:sig_tests}
+\input{sig_tests.tex}
+
+\chapter{Kernel CCA (KCCA)}\label{sec:kcca}
+\input{kcca.tex}
+
+\chapter{Multiset CCA (MCCA)}\label{sec:mcca}
+\input{mcca.tex}
+
+\chapter{Future Work}\label{sec:fw}
+\input{future_work.tex}
+
+ \appendix
+
+\chapter{Theoretical and Empirical MCCA Derivations}\label{sec:mcca_derivs}
+ \input{appendix.tex}
+
+\bibliographystyle{IEEEtran}
+\bibliography{IEEEabrv,thesis_bib,taes_msd/taes_useful,ieee_msd/IEEE_RMT_MSD_bib}
+
+\end{document} 

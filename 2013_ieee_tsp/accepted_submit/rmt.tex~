@@ -1,0 +1,100 @@
+In Section \ref{sec:param_estim} we formed estimates $\widehat{U}$ and $\widehat{\Sigma}$ of the unknown $U$ and $\Sigma$ by taking the eigen-decomposition of the sample covariance matrix $S$ of the training data matrix $Y$. These estimates are inaccurate because the training data is noisy and contains only a finite number of observations. The following analysis specifically quantifies the accuracy of these estimates and is necessary to derive a new detector and predict ROC performance curves of detectors with the form of (\ref{eq:detector_form}).
+
+\subsection{Eigenvector Aspects}\label{sec:eigvect_aspects}
+
+The subspace estimate $\widehat{U}$ is formed from the eigenvectors corresponding to the $\widehat{k}$ largest eigenvalues of $S$. For an arbitrary non-random diagonal matrix $D$, we will be particularly interested in the matrix $\widehat{U}^HUDU^H\widehat{U}$ that appears in detector derivations and the ROC performance analysis in Sections \ref{sec:rmt_detecs} and \ref{sec:roc_theory}. The following proposition characterizes the limiting behavior (up to an arbitrary phase) of the diagonal entries of the matrix $\widehat{U}^HU$.
+
+\begin{prop}\label{th:angles}
+Assume that the columns of the training data matrix $Y$ were generated as described in Section \ref{sec:training_data}. Let $\widehat{u}_{i}$ denote the eigenvector associated with the $i$-th largest eigenvalue of $S$. Then for $i = 1, \ldots, k$ and $n, m \longrightarrow \infty$ with $n/m \to c$, we have that
+\begin{equation}\label{eq:angles}
+|\langle u_i,\widehat{u}_i\rangle|^2 \convas
+\begin{cases}
+\dfrac{\sigma_i^4-c}{\sigma_{i}^4+\sigma_{i}^2c} & \text{ if } \sigma_{i}^2>\sqrt{c}\\
+0 & \textrm{otherwise}\\
+\end{cases}.
+\end{equation}
+\end{prop}
+\begin{proof}
+This follows from Theorem 4 of \cite{paul2007asymptotics} when $\gamma=c$, $\ell_\nu-1=\sigma_\nu^2$, $\widetilde{e}_\nu=u_v$, and $p_\nu=\widehat{u}_\nu$. This result also appears in Theorem 2.2 of \cite{benaych2011eigenvalues}.
+\end{proof}
+
+We note that $\convas$ denotes almost sure convergence. The key insight from Proposition \ref{th:angles} is that only the eigenvectors corresponding to the signal variances, $\sigma_i^2$, lying above the phase transition $\sqrt{c}$ are \textit{informative}. When a signal variance drops below this critical threshold, the corresponding eigenvector estimate is essentially noise-like  (i.e. $|\langle u_i,\widehat{u}_i\rangle|^2=o_{p}(1)$ meaning $|\langle u_i,\widehat{u}_i\rangle|^2\overset{p}{\to}0$ as $n\to\infty$, denoting convergence in probability) and thus \textit{uninformative}. Decreasing the amount of training data, $m$, increases $c$, thereby decreasing the value of $|\langle u_i,\widehat{u}_i\rangle|^2$; if this quantity became $0$, the associated subspace component would become uninformative.
+
+The term $|\langle u_i,\widehat{u}_i\rangle|^2$ quantifies mismatch between the estimated and underlying eigenvectors and will play an important role in deriving a new RMT detector and in characterizing detector performance; a similar term also appears in the analysis of the resolving power of arrays due to model mismatch such as in \cite{cox1973resolving}.
+
+
+Following \cite{nadakuditi2008sample}, we define the effective number of (asymptotically) identifiable subspace components $k_\text{eff}$ as:
+\begin{equation}\label{eq:keff}
+\boxed{k_\text{eff} = \text{Number of } \sigma_i^2 > \sqrt{c}}.
+\end{equation}
+We can form an estimate of $k_\text{eff}$, $\widehat{k}_{\text{eff}}$, using  `Algorithm 2' of  \cite{nadakuditi2010fundamental}. This algorithm assumes the same model of a low-rank signal buried in high dimensional noise as our training data. Given a desired significance level, the algorithm estimates the number of signals present in a finite number of samples. When the noise covariance matrix is not known a priori, we would instead use `Algorithm 1' of \cite{nadakuditi2010fundamental}. Both algorithms rely on the Tracy-Widom distribution. Note that $\widehat{k}_{\text{eff}} \leq k$ but that we allow $\widehat{k} \geq \widehat{k}_{\text{eff}}$ so we may understand the impact of a play-it-safe overestimation of the signal subspace dimension estimate $\widehat{k}_{\text{eff}}$  returned using RMT based detectors \cite{nadakuditi2010fundamental,johnstone2001distribution,el2007tracy}.
+
+Proposition \ref{th:angles} only characterizes the limiting behavior (up to an arbitrary phase) of  the diagonal entries of the matrix $\widehat{U}^HU$. We now state a new theorem characterizing the limiting behavior of the off-diagonal entries in $\widehat{U}^HU$.
+
+\begin{Th}\label{th:other angles}
+Assume the same hypothesis as in Proposition \ref{th:angles}. Let $\widehat{k}=\keff=k$. For $i=1,\dots,\widehat{k}$, $j=1,\dots,k$, and $i\neq j$, as $n,m\to\infty$ with $n/m\to c$, $\langle u_j,\widehat{u}_i\rangle \convas 0.$
+\end{Th}
+\begin{proof}
+This is a new result. See Appendix for proof.
+\end{proof}\vskip0.25cm
+
+\begin{Conj}\label{conj:angles}
+Assume the same hypothesis as in Proposition \ref{th:angles}. For $i=1,\dots,\widehat{k} >  k$, $j=1,\dots,k$, and $i\neq j$, as $n,m\to\infty$ with $n/m\to c$, $\langle u_j,\widehat{u}_i\rangle \convas 0$.
+\end{Conj}
+\begin{Remark}
+See Appendix for a brief discussion of this claim.
+\end{Remark}
+
+Together, Proposition \ref{th:angles} and Claim \ref{conj:angles} characterize the limiting behavior of the entries of $\widehat{U}^HU$. This permits approximation, in the large matrix limit, of  $\widehat{U}^HU D U^H\widehat{U}$ by a suitable diagonal matrix.
+
+\begin{Corr}\label{corr:matrix}
+Suppose $\widehat{k}\leq k$ and let $D$ be a $k \times k$ (non-random) diagonal matrix such that $D=\diag(d_1,\ldots,d_{k})$, independent of $\widehat{U}$. Then as $n,m \longrightarrow \infty$ with $n/m \to c$, we have that
+\begin{equation*}
+\widehat{U}^HU D U^H\widehat{U}\convas \diag(d_1 |\langle u_1,\widehat{u}_1\rangle|^2,\dots, d_{\widehat{k}} |\langle u_{\widehat{k}},\widehat{u}_{\widehat{k}}\rangle|^2)
+\end{equation*}
+where for $i=1,\dots,\widehat{k}$ the quantity $|\langle u_i,\widehat{u}_i\rangle|^2$ is given in Proposition \ref{th:angles}.
+\end{Corr}
+\begin{proof}
+This follows directly by applying Proposition \ref{th:angles} and Claim \ref{conj:angles} to the entries of the matrix $U^H\widehat{U}$.
+\end{proof}
+
+This diagonal approximation of $\widehat{U}^HU D U^H\widehat{U}$ will be used in detector derivations and ROC performance analyses in Sections \ref{sec:rmt_detecs} and \ref{sec:roc_theory}.
+
+\subsection{Eigenvalue Aspects}
+
+The signal covariance estimate $\widehat{\Sigma}$ is formed from the largest $\widehat{k}$ eigenvalues of $S$. To characterize the ROC performance curves of plug-in detectors that use $\widehat{\Sigma}$ as the signal covariance estimate, we will also need to characterize the limiting behavior of $\widehat{\Sigma}$.  The following proposition gives the limiting behavior of these signal variance estimates.
+\begin{prop}\label{th:eigvals_rmt}
+As $n,m \longrightarrow \infty$ with $n/m \to c$ we have that:
+\begin{equation*}
+\widehat{\sigma}_i^2\convas
+\begin{cases}
+ \sigma_i^2 + c + \frac{c}{\sigma_i^2} & \text{ if } \sigma_i^2 > \sqrt{c}\\
+ c + 2\sqrt{c} & \text{ if } \sigma_i^2 \leq \sqrt{c}
+\end{cases}.
+\end{equation*}
+\end{prop}
+\begin{proof}
+This follows from Theorems 1 and 2 in \cite{paul2007asymptotics} for the real setting for $c<1$ when $\gamma=c$, $\ell_\nu-1=\sigma_\nu^2$, and $\widehat{\ell}_\nu -1 = \widehat{\sigma}_\nu^2$. See Theorem 2.6 in \cite{benaych2011singular} for the complete result.
+\end{proof}
+These limiting values will be used in Section \ref{sec:roc_theory} when deriving the ROC performance of the plug-in detectors.
+
+When only finite training data is available, $c$ is non-zero and Proposition \ref{th:eigvals_rmt} shows that $\widehat{\sigma}_i^2$ is biased. We wish to derive an improved signal variance estimate to use in a new RMT detector and to estimate $|\langle u_i,\widehat{u}_i\rangle|^2$ in (\ref{eq:angles}). As seen in Proposition \ref{th:angles}, when $\sigma_i^2\leq\sqrt{c}$ the eigenvector estimate is uninformative and we would not want to include that subspace component in a detector; the associated signal variance estimate is therefore unnecessary. For the $\widehat{k}_{\text{eff}}$ subspace components that are informative (i.e. when $\sigma_i^2 > \sqrt{c}$) we form an improved signal variance estimate using the following proposition that characterizes the fluctuations of these signal variance estimates.
+\begin{prop}\label{th:eigenvalues}
+As $n,m \longrightarrow \infty$ with $n/m \to c$, we have that for $i = 1, \ldots, \keff$
+\begin{equation*}
+\sqrt{n}\left(\widehat{\sigma}_i^2-\left(\sigma_i^2+c+\frac{c}{\sigma_i^2}\right)\right)\Rightarrow\mathcal{N}\left(0,\frac{2\left(\sigma_i^2+1\right)^2}{\beta }\left(1-\frac{c}{\sigma_i^4}\right)\right),
+\end{equation*}
+where $\beta = 1$ when the data is real-valued and $\beta = 2$ when the data is complex-valued.
+\end{prop}
+\begin{proof}
+This follows from Theorem 3 in \cite{paul2007asymptotics} for the real setting for $c<1$ when $\gamma=c$, $\ell_\nu-1=\sigma_\nu^2$, $\widehat{\ell}_\nu-1=\widehat{\sigma}_\nu^2$, and $p_\nu$ is the limit of Theorem 2 of \cite{paul2007asymptotics}. See Theorem 2.15 in \cite{benaych2011singular} for the complete result.
+\end{proof}
+For the $\widehat{k}_{\text{eff}}$ informative subspace components we form an improved estimate, $\widehat{\sigma}^2_{i_\text{rmt}}$, of the unknown signal variance, $\sigma_{i}^{2}$, by employing maximum-likelihood (ML) estimation on the distribution in Proposition \ref{th:eigenvalues}. Specifically, for only the $\widehat{k}_{\text{eff}}$ signal eigenvalues, we form the RMT estimate:
+\begin{equation}\label{eq:cov}
+\widehat{\sigma}^2_{i_\text{rmt}} = \argmax_{\sigma_i^2} \log\left(f_{\widehat{\sigma}_i^2}(\sigma_i^2)\right)
+\end{equation}
+where
+\begin{equation*}
+f_{\widehat{\sigma}_i^2}(\sigma_i^2):=\mathcal{N}\left(\left(\sigma_i^2+c+\frac{c}{\sigma_i^2}\right),\frac{2\left(\sigma_i^2+1\right)^2}{n\beta }\left(1-\frac{c}{\sigma_i^4}\right)\right).
+\end{equation*}
+We may then estimate $|\langle u_i,\widehat{u}_i\rangle|^2$ in (\ref{eq:angles}) by substituting the improved signal variance estimates, $\widehat{\sigma}^2_{i_\text{rmt}}$, for the unknown $\sigma_i^2$ in Proposition \ref{th:angles}. We refer to this estimate as $|\langle u_i,\widehat{u}_i\rangle|^2_{\text{rmt}}$. For the $\widehat{k}-\widehat{k}_{\text{eff}}$ uninformative subspace components, we set $|\langle u_i,\widehat{u}_i\rangle|^2_{\text{rmt}}=0$.

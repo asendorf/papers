@@ -1,0 +1,42 @@
+In this chapter, we considered the problem of designing a signal-plus-noise versus noise
+detector when the signal is assumed to be a fixed deterministic vector. In such a setting,
+the GLRT detector is an energy detector, whose statistic is the squared norm of the
+observation. By examining how the conditional distributions of this test statistic shift
+when adding additional components, we derived and defined the number of useful components,
+$\kuse$, that maximize detection ability.
+
+When adding a component to an energy detector, there is a tradeoff between increasing the
+noise variance and increasing the signal variance by increasing the non centrality
+parameter. For a component to be one of the $\kuse$ components, the increase in
+non-centrality parameter must overcome the added noise variance. We explored the necessary
+increase in non-centrality parameter needed for a component to be useful in Figure
+\ref{fig:nc_lines}.
+
+We applied the idea of using only $\kuse$ components to deterministic matched subspace
+detection where the unknown signal subspace is estimated from finite, noisy,
+signal-bearing training data. Both the standard plug-in detector using $k$ subpsace
+components and RMT detector using $\keff$ subspace components (as defined by
+(\ref{eq:keff})) are energy detectors. We demonstrated that the new useful subspace
+detector outperforms both the plug-in and RMT detectors. Importantly, we showed that while
+a subspace component may be informative ($|\langle u_i,\widehat{u}_i\rangle|^2 >0$), using
+that component in a detector may decrease performance.
+
+As detectors using $\kuse$ components assume knowledge of the unknown signal vector, they
+are not realizable. We showed that $\keff$ may be used as an upper bound for $\kuse$,
+however, deriving other estimates for $\kuse$ that can be used in applications other than
+matched subspace detection is a focus of future work. We also provided a disucssion about
+the more general weighted energy detector and showed that such a detector can improve
+detection performance. Determining an efficient algorithm to compute the optimal weighting
+matrix to use in the weighted energy detector is an important area of future
+research. Extending the performance analysis of the useful matched subspace detector to
+the case of unknown $\Sigma$ or complex valued data is within reach. The work in
+\cite{asendorf2013performance} on eigen-SNR accuracy, estimating $\keff$, and estimating
+$|\langle u_i,\widehat{u}_i\rangle|^2$ is directly applicable.
+
+Finally, we considered a deterministic MSD problem where the unknown low-rank signal subspace is
+estimated from noisy, limited, signal-bearing training data with missing entries.  We used
+RMT to characterize the resulting performance and showed that using $k_\text{eff} \leq k$
+subspace components is optimal. The relationship between $k_{\text{eff}}$ and $p$ was made
+explicit in Theorem \ref{th:angles} and we showed that detection better than random
+guessing (in the large system limit) is only achievable for $p > p_{\text{crit.}} : =
+\sqrt{c}/\max_{i}(\sigma_{i}^{2})$.

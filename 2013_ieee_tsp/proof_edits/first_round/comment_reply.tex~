@@ -1,0 +1,146 @@
+\documentclass[11pt]{article}
+\usepackage{times,geometry,algorithm,algorithmic,amsmath,amssymb,amstext,color}
+\geometry{letterpaper, tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\title{Proof Edits}
+\author{Nicholas Asendorf and Raj Rao Nadakuditi}
+\date{T-SP-13946-2012 - IEEE Transactions on Signal Processing - ``The Performance of a Matched Subspace Detector that Uses Subspaces Estimated from Finite, Noisy, Training Data"}
+
+\input{IEEE_RMT_MSD_header.tex}
+
+\begin{document}
+\maketitle
+
+\noindent{To whom it may concern,}
+
+Could you please make the following changes to the proof
+\begin{itemize}
+  \item Please replace ``an'' in the title with ``a''. It should read ``The Performance of
+    a Matched Subspace Detector That Uses Subspaces Estimated From Finite, Noisy, Training
+    Data''.
+  \item Page 1, Introduction, Third paragraph. The second reference to [13] should read
+    ``[13, Table 10.1, pp. 121],''. Please delete the extra brackets and place the comma
+    on the outside of bracket.
+  \item Page 2, Figure 1, If the labels ``Stochastic setting'' and ``Deterministic
+    setting'' cannot be placed directly under each subfigure, please remove them from
+    the last line of the caption.
+  \item Page 2, Figure 2. The reference to equation (19) in the caption should reference
+    equation (13).
+  \item Page 3, Section II.A, can ``$\sigma_1>\sigma_2>\dots>\sigma_k>0$'' all be on one
+    line?
+  \item Page 3, Section II.B, please place both equation lines of equation (1) in the same
+    column. i.e. please don't split $\widehat{U}$ and $\widehat{\sigma}_i^2$ in different
+    columns.
+  \item Page 4 - Can the equation labels for (7), (8), (10), and (12) be vertically centered with
+    their respective boxed equation? Thy are all a little low.
+  \item Page 5, Section IV.A - Can the two lines of the indented statement ``Design a new
+    detector...subspace estimation accuracy.'' please be left aligned to eachother (but
+    still indented from the normal paragraph). Currently the first line is extra indented.
+  \item Page 5, first paragraph in second column starting with ``The detector
+    derivations...'' - This is a continuation of the previous paragraph. Please delete the
+    indentation.
+  \item Page 6 - Please vertically center the equation label (16) with the boxed
+    equation. It is a little low.
+  \item Page 6, There is a ``1)'' immediately before the Claim 5.1. Please remove ``1)''.
+  \item Page 7, equation (18) - Can the split of the equation happen after the ``and'' so
+    that the second line of the equation is ``$\widehat{w}|H_1\sim\mathcal{N}...$''. Can
+    the two lines then be horizontally centered?
+  \item Page 7, Please vertically center the equation label (20) with the boxed
+    equation. It is a little low.
+  \item Page 7, Section VI.B, the equation ``$\Lambda(\widehat{w})...$''. Can you please make
+    this equation fit on one line by doing the following: Place
+    ``$\Lambda(\widehat{w})=$'' inline immediately after ``becomes'', so it reads
+    ``becomes $\Lambda(\widehat{w})=$''. The remaining equation should fit on one
+    line. Please remove the $\times$ that was added to the equation at the point at which    
+    it was split up.
+  \item Page 8, first column, first equation beginning with
+    ``$\Lambda(\widehat{w})$''. Please remove the $\times$ in the middle of this equation.
+  \item Page 8, equation (22). Please don't split the two lines of equation (22) across
+    columns. Please have the $P_F$ and $P_D$ immediately following one another.
+  \item Page 8, equation (23). Please split this equation after the column and
+    horizontally align the equations so it looks like.
+    \begin{equation*}
+      \begin{aligned}
+        & \Lambda(\widehat{w})|H_0\sim\sum_{i=1}^{\widehat{k}}d_i\chi_{1i}^2,\\
+        & \Lambda(\widehat{w})|H_1\sim\sum_{i=1}^{\widehat{k}}d_i\left(\sigma_i^2|\langle
+          u_i, \widehat{u}_i\rangle|^2 +1\right)\chi_{1i}^2\\
+      \end{aligned}
+    \end{equation*}
+  \item Page 9, equation (26). Can both lines of the equation be horizontally centered?
+  \item Page 9, section VIII.B, second column, first paragraph. The phrase ``plot three
+    empirical ROC curves for $n=50 200 1000$'' should read ``plot three
+    empirical ROC curves for $n=50, 200, 1000$''. Please add the commas between the
+    numbers.
+  \item Page 10, Figure 3, caption. Please remove ``(a) $k=2,c=1$ (b) $k=4,c=10$'' from
+    the last line of the caption.
+  \item Page 10, Figure 4, The reference to equation (22) should be equation(16).
+  \item Page 10, Figure 4, caption. Please remove ``(a) Stochastic (b) Deterministic''
+    from the last line of the caption.
+  \item Page 11, Figure 5, caption. Please remove ``(a) $m=5000$ (b)$m=250$ ''
+    from the last line of the caption.
+  \item Page 11, first full paragraph of first column. The sentence ``Fig. 5 chooses
+    $20m=n$ so that $c=20$...'' should begin ``Fig. 5(b)...''.
+  \item Page 11, Figure 6, caption. The reference to (19) should be (13).
+  \item Page 11, Figure 6, caption. Please remove ``(a) Stochastic (b) Deterministic ''
+    from the last line of the caption.
+  \item Page 12, Section IX, second paragraph. The sentence ``In setting where a
+    practitioner might play-it-safe and set $\widehat{k}>\widehat{k}_{\text{eff}}$, the
+    performance loss in significant'' should read ``In setting where a
+    practitioner might play-it-safe and set $\widehat{k}>\widehat{k}_{\text{eff}}$, the
+    performance loss \textbf{is} significant''. Replace ``in'' with ``is''. 
+  \item Page 13, equation (27). There are two dots after this equation. There should only
+    be one period. The equation label is also low.
+  \item Page 13, equation (28). There are two dots after this equation. There should only
+    be one period. The equation number is also low.
+  \item Page 13, equation (30). Can you please make the break before the diag so that
+    $M_n\left(\widehat{\lambda}_i\right)\convas$ is on the first line, leaving
+    $\diag\left(...\right)$ on the second line?
+  \item Page 14, Reference [11] new bibtex entry:\\
+    @inproceedings\{mcwhorter2003matched,
+  title=\{Matched subspace detectors for stochastic signals\},
+  author=\{McWhorter, L. T.  and Scharf, L. L.\},
+  booktitle=\{Proc. 11th Ann. Workshop on Adaptive Sensor Array Process. (ASAP)\},
+  year=\{2003\},
+  organization=\{Lexington, MA, Mar. 11-13\}
+\}
+  \item Page 14, Reference [20] new bibtex entry:\\
+@article\{benaych2011eigenvalues,
+  title=\{The eigenvalues and eigenvectors of finite, low rank perturbations of large random matrices\},
+  author=\{Benaych-Georges, Florent and Nadakuditi, Raj Rao\},
+  journal=\{Advances in Mathematics\},
+  volume=\{227\},
+  number=\{1\},
+  pages=\{494--521\},
+  year=\{2011\},
+  publisher=\{Elsevier\}
+\}
+  \item Page 14, Reference [22] new bibtex entry:\\
+@inproceedings\{asendorf2011improving,
+  title=\{Improving and characterizing the performance of stochastic matched subspace detectors when using noisy estimated subspaces\},
+  author=\{Asendorf, Nicholas and Nadakuditi, Raj Rao\},
+  booktitle=\{Signals, Systems and Computers (ASILOMAR), 2011 Conference Record of the Forty Fifth Asilomar Conference on\},
+  pages=\{1893--1897\},
+  year=\{2011\},
+  organization=\{IEEE\}
+\}
+\end{itemize}
+
+
+Thank you very much. Please do not hesitate to email or call me directly at
+asendorf@umich.edu or 443-605-3018.
+
+\noindent{Sincerely,}
+
+The authors
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

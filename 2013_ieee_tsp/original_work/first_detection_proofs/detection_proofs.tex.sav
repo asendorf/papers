@@ -1,0 +1,149 @@
+\documentclass[english]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{amstext}
+\usepackage{babel,color}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\parskip = 0.03in
+
+\newtheorem{theorem}{Theorem}
+
+\input my_header.tex
+
+\begin{document}
+
+\section*{Balanced Setting Nearest Neighbor Proof}
+
+We consider the following binary classification problem:
+
+\begin{equation}
+y=\left\{
+\begin{aligned}
+&U_1x+z
+&& y\in H_1\\
+&U_2x+z
+&& y\in H_2\\
+\end{aligned}\right.
+\end{equation}
+
+where $z\sim\mathcal{N}(0,\sigma^2I), x\sim\mathcal{N}(0,\Sigma)$ with known diagonal $\Sigma$. We assume $U_1,U_2\in\mathbb{C}^{p\times k}$ are known and have column rank $k$, which is also known.
+
+As $x$ is unknown, we consider the generalized likelihood ratio test (GLRT)
+
+\begin{equation}\label{eq:glrt}
+\begin{aligned}
+&\Lambda(y)=\frac{\max_xf_2(y)}{\max_xf_1(y)}
+\end{aligned}
+\end{equation}
+
+where
+\begin{equation}
+\begin{aligned}
+&\text{Declare } H_1 \text{ if}
+&& \Lambda(y) < \eta\\
+& \text{Declare } H_2 \text{ if}
+&& \Lambda(y) > \eta
+\end{aligned}
+\end{equation}
+
+where $\eta = \frac{\text{Prob}(H_1)}{\text{Prob}(H_2)}$. We assume that $H_1$ and $H_2$ are equally likely so that $\eta = 1$.
+
+Now, under $H_1,y_1\sim\mathcal{N}(U_1x,\sigma^2I)$ and under $H_2,y_2\sim\mathcal{N}(U_2x,\sigma^2)$.
+
+To solve $\max_xf_i(y)$ we find the MLE estimate of $x$. We have
+
+\begin{equation}
+f_i(y;x) = (2\pi\sigma^2)^{-p/2}\exp\{-\frac{1}{2\sigma^2}(y-U_ix)^H(y-U_ix)\}
+\end{equation}
+
+and
+
+\begin{equation}\label{eq:log like}
+\ln(f_i(y;x)) = -(p/2)(2\pi\sigma^2)-\frac{1}{2\sigma^2}(y-U_ix)^H(y-U_ix)
+\end{equation}
+
+The first term of (\ref{eq:log like}) is constant. As we wish to maximize (\ref{eq:log like}), this is equivalent to minimizing $(y-U_ix)^H(y-U_ix)$. Noticing that is this is the error of the the least-squares solution, we recognize that
+
+\begin{equation}\label{eq:mle}
+\hat{x}_{MLE} = (U_i^HU_i)^{-1}U_i^Hy
+\end{equation}
+
+Plugging our MLE estimates (\ref{eq:mle}) into our GLRT (\ref{eq:glrt}) we have
+
+\begin{equation}
+\Lambda(y) = \frac{(2\pi\sigma^2)^{-p/2}\exp\{-\frac{1}{2\sigma^2}(y-U_2(U_2^HU_2)^{-1}U_2^Hy)^H(y-U_2(U_2^HU_2)^{-1}U_2^Hy)\}}{(2\pi\sigma^2)^{-p/2}\exp\{-\frac{1}{2\sigma^2}(y-U_1(U_1^HU_1)^{-1}U_1^Hy)^H(y-U_1(U_1^HU_1)^{-1}U_1^Hy)\}}
+\end{equation}
+
+which simplifies to
+
+\begin{equation}
+\hat{\Lambda}(y)=\|(I-U_1(U_1^HU_1)^{-1}U_1^H)y\|_F^2 -\|(I-U_2(U_2^HU_2)^{-1}U_2^H)y\|_F^2
+\end{equation}
+
+where
+
+\begin{equation}
+\begin{aligned}
+&\text{Declare } H_1 \text{ if}
+&& \hat{\Lambda}(y) < 2\ln(\eta)\\
+& \text{Declare } H_2 \text{ if}
+&& \hat{\Lambda}(y) > 2\ln(\eta)
+\end{aligned}
+\end{equation}
+
+Recalling that $\eta=1$ this reduces to
+
+\begin{equation}
+i_{\text{oracle}}=\argmin_{i\in\{1,2\}}\|((I-U_i(U_i^HU_i)^{-1}U_i^H)y\|_F^2
+\end{equation}
+
+If we further assume that the columns of $U_1,U_2$ are orthonormal, this reduces to
+
+\begin{equation}
+i_{\text{oracle}}=\argmin_{i\in\{1,2\}}\|((I-U_iU_i^H)y\|_F^2
+\end{equation}
+
+\section*{Isotropically Random Noise Detector Proof}
+
+We consider the following binary classification problem:
+
+\begin{equation}
+Y=\left\{
+\begin{aligned}
+&U_1X+W
+&& Y\in H_1\\
+&U_2X+W
+&& Y\in H_2\\
+\end{aligned}\right.
+\end{equation}
+
+where $W\in\mathbb{C}^{p\times n}$ is isotropically random noise such that $f(W) = f(Z^HWV)$ where $Z\in\mathbb{C}^{p\times p}, V\in\mathbb{C}^{n\times n}$ are orthogonal. X=$\left[x_1,\dots,x_n\right]$ such that $x_i\sim\mathcal{N}(0,\Sigma)$ for $i=1,\dots n$ with known diagonal $\Sigma\in\mathbb{C}^{p\times p}$. We assume $U_1,U_2\in\mathbb{C}^{p\times k}$ are known and have column rank $k$, which is also known.
+
+As $x$ is unknown, we consider the generalized likelihood ratio test (GLRT)
+
+\begin{equation}\label{eq:glrt}
+\begin{aligned}
+&\Lambda(y)=\frac{\max_xf_2(y)}{\max_xf_1(y)}
+\end{aligned}
+\end{equation}
+
+where
+\begin{equation}
+\begin{aligned}
+&\text{Declare } H_1:
+&& \Lambda(y) < \eta\\
+& \text{Declare } H_2:
+&& \Lambda(y) > \eta
+\end{aligned}
+\end{equation}
+
+where $\eta = \frac{\text{Prob}(H_1)}{\text{Prob}(H_2)}$. We assume that $H_1$ and $H_2$ are equally likely so that $\eta = 1$.
+
+
+\end{document}

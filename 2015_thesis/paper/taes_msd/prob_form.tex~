@@ -1,0 +1,104 @@
+We wish to design a detector that discriminates between the $H_0$ hypothesis that an
+observation is purely noise and the $H_1$ hypothesis that the observation contains an
+unknown signal.  We model the observation $w\in\reals^{k\times 1}$ as in
+(\ref{eq:general_setup}) where $\delta=[\delta_1,\dots,\delta_k]^T\in\reals^{k\times 1}$,
+with $\delta_i\neq 0$, is an unknown deterministic vector,
+$z\sim\mathcal{N}\left(0,I_k\right)$ is additive white Gaussian noise (AWGN), and $k$ is
+known. See
+\cite{cui2013performance,santiago2013noise,arribas2013antenna,chen2013adaptive,gorji2013widely,zhou2013space,kwon2013multi,hu2013doa,liao2013direction}
+for similar signal-plus-noise models in signal and array processing.  In the
+Neyman-Pearson detection setting (see \cite{van1968detection}), the detector for this data
+model is the likelihood ratio test (LRT)
+\beq\label{eq:lrt_form}
+\Lambda(w) = \frac{f\left(w\,|\, H_1\right)}{f\left(w\,|\, H_0\right)} \detgtrless \eta.
+\eeq
+Here $f\left(\cdot\right)$ is the appropriate conditional probability density function
+(p.d.f.) of the observation and $\eta$ is a scalar threshold set so that $\Prob{\Lambda(w)
+  > \eta\,|\, w\in H_0} = \alpha$ where $\alpha\in[0,1]$ is a desired false alarm rate.
+
+The conditional distributions of $w$ modeled as in (\ref{eq:general_setup}) are
+$w|H_0\sim\mathcal{N}\left(0,I_k\right)$ and
+$w|H_1\sim\mathcal{N}\left(\delta,I_k\right)$. However, as $\delta$ is unknown, we cannot
+substitute the p.d.f. of $w|H_1$ into (\ref{eq:lrt_form}). Instead, we use the generalized
+LRT (GLRT), which maximizes $f(w|H_1)$ with respect to any unknown parameters. The GLRT
+for our problem is 
+\be \Lambda(w) = \frac{\max_{\delta}f\left(w\,|\,
+    H_1\right)}{f\left(w\,|\, H_0\right)} \detgtrless \eta.  
+\ee
+The conditional p.d.f. of $w$ under the $H_1$ hypothesis is
+\be
+f\left(w\,|\,H_1\right) = \left(2\pi\right)^{-k/2}\exp\left\{ -\frac{1}{2}\left(w-\delta\right)^T\left(w-\delta\right)\right\}.
+\ee
+This p.d.f. is maximized when $\delta=w$ with the maximum value of
+$(2\pi)^{-k/2}$. Substituting this into the GLRT yields
+\be
+\Lambda(w) = \exp\{\frac{1}{2}w^Tw\}
+\ee
+Taking the natural logarithm results in the test statistic
+\beq\label{eq:energy_detector}
+\Lambda_{\text{energy}}(w) = w^Tw = \sum_{i=1}^k w_i^2
+\eeq
+where $w=[w_1,\dots,w_k]^T$. This is an energy detector as its test statistic sums the
+energy residing in each component (or dimension) of the given observation.
+
+\subsection{ROC Curve Analysis}
+
+To compare the performance of multiple detectors, we will compare their receiver operating
+characteristic (ROC) curves. A ROC curve is a collection of points ($P_F,P_D$) where for
+$-\infty<\eta<\infty$,
+\beq\label{eq:roc}\ba
+&P_F=\Prob{\Lambda(w) > \eta \,|\, w\in H_0},\\
+&P_D=\Prob{\Lambda(w) > \eta \,|\, w\in H_1}.\\
+\ea\eeq
+For $0\leq P_F\leq 1$ we want to express the probability of detection $P_D$ as a function
+of the false alarm rate, $P_F$, while noting that $P_F$ is a function of
+$\eta$. To make analytical progress, we assume that $\delta$ is known for ROC
+derivations. First, we compute the conditional distributions of the statistic in
+(\ref{eq:energy_detector}). The conditional distributions of the components in $w$ are
+simply 
+$w_i|H_0\overset{\text{i.i.d.}}{\sim}\mathcal{N}\left(0,1\right)$ and
+$w_i|H_1\overset{\text{i.i.d.}}{\sim}\mathcal{N}\left(\delta_i,1\right)$. Therefore,
+$w_i^2|H_0\overset{\text{i.i.d.}}{\sim}\chi^2_1$ and
+$w_i^2|H_1\overset{\text{i.i.d.}}{\sim}\chi^2_1\left(\delta_i^2\right)$ where $\chi^2_1$
+is a chi-square random variable with one degree of freedom and $\chi^2_1(\delta_i^2)$ is a
+non-central chi-square random variable with one degree of freedom and non-centrality
+parameter $\delta_i^2$. As each component $w_i$ is independent,
+\beq\label{eq:distr_energy} \ba
+&\Lambda(w)|H_0\sim\chi^2_k,\\
+&\Lambda(w)|H_1\sim\chi^2_k\left(\delta^T\delta\right), 
+\ea \eeq 
+where $\chi^2_k$ is a chi-square random variable with $k$ degrees of freedom and $\chi^2_k(\delta^T\delta)$ is a
+non-central chi-square random variable with $k$ degrees of freedom and non-centrality
+parameter $\delta^T\delta = \sum_{i=1}^k\delta_i^2$. Armed with these characterizations in
+(\ref{eq:distr_energy}) and solving for $\eta$ in (\ref{eq:roc}), we can relate $P_D$ to
+$P_F$ using the expression
+\begin{equation}\label{eq:roc_energy}
+\begin{aligned}
+&P_{D_\text{energy}}(P_F,k)=1-Q_{\chi_{k}^2(\lambda_k)}\left(Q^{-1}_{\chi^2_{k}}\left(1-P_F\right)\right).\\
+\end{aligned}
+\end{equation}
+In (\ref{eq:roc_energy}), $Q_{\chi_{k}^2}(\lambda_k)$ is the cumulative distribution function (c.d.f.) of a
+non-central chi-square random variable with $k$ degrees of freedom and non-centrality
+parameter $\lambda_k=\sum_{i=1}^k\delta_i^2$ and $Q_{\chi_{k}^2}$ is the c.d.f. of a chi-square random
+variable with $k$ degrees of freedom. See \cite{cui2013performance,arribas2013antenna,zhou2013space} for similar ROC
+performance curve derivations.
+
+\subsection{Problem Statement}\label{sec:prob_state}
+
+As practitioners, we can control which signal components that the energy detector in
+(\ref{eq:energy_detector}) uses. Without loss of generality, we assume that the entries of
+$\delta$ are ordered (i.e. $|\delta_1| \geq |\delta_2| \geq\dots|\delta_k|$). With this
+assumption, we can decide how many signal components, $d$, to use in the energy detector
+\beq\label{eq:the_detector} 
+\Lambda_d(w) = \sum_{i=1}^d w_i^2.
+\eeq 
+Specifically, we wish to answer the following question:
+\begin{quote}
+  Given a signal vector $\delta$ and a desired false alarm rate $P_F$, how many signal
+  components, $d$, maximize $P_{D_{\text{energy}}}(P_F,d)$ in (\ref{eq:roc_energy}) for an
+  energy detector with the form of (\ref{eq:the_detector}) derived from observations
+  as in (\ref{eq:general_setup})? 
+\end{quote}
+Answering this question will provide some surprising results. We will show that if the
+components $\delta_i$ are too small in magnitude, including them in a detector actually
+degrades performance.

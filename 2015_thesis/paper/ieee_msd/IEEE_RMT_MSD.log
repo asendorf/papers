@@ -1,0 +1,987 @@
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.6.27)  10 JAN 2013 17:28
+entering extended mode
+ %&-line parsing enabled.
+**IEEE_RMT_MSD.tex
+(./IEEE_RMT_MSD.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, loaded.
+(./IEEEtran.cls
+Document Class: IEEEtran 2007/03/05 V1.7a by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+\@IEEEtrantmpdimenA=\dimen102
+\@IEEEtrantmpdimenB=\dimen103
+\@IEEEtrantmpcountA=\count79
+\@IEEEtrantmpcountB=\count80
+\@IEEEtrantmptoksA=\toks14
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 366.
+
+(/usr/share/texmf-texlive/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+-- Using 8.5in x 11in (letter) paper.
+-- Using PDF output.
+\@IEEEnormalsizeunitybaselineskip=\dimen104
+-- This is a 10 point document.
+\CLASSINFOnormalsizebaselineskip=\dimen105
+\CLASSINFOnormalsizeunitybaselineskip=\dimen106
+\IEEEnormaljot=\dimen107
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
+\IEEEilabelindentA=\dimen108
+\IEEEilabelindentB=\dimen109
+\IEEEilabelindent=\dimen110
+\IEEEelabelindent=\dimen111
+\IEEEdlabelindent=\dimen112
+\IEEElabelindent=\dimen113
+\IEEEiednormlabelsep=\dimen114
+\IEEEiedmathlabelsep=\dimen115
+\IEEEiedtopsep=\skip41
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@IEEEsubequation=\count85
+\abovecaptionskip=\skip42
+\belowcaptionskip=\skip43
+\c@figure=\count86
+\c@table=\count87
+\@IEEEeqnnumcols=\count88
+\@IEEEeqncolcnt=\count89
+\@IEEEtmpitemindent=\dimen116
+\c@IEEEbiography=\count90
+\@IEEEtranrubishbin=\box26
+) (/usr/share/texmf-texlive/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks15
+\ex@=\dimen117
+))
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip44
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen118
+)
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count91
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count92
+\leftroot@=\count93
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count94
+\DOTSCASE@=\count95
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box27
+\strutbox@=\box28
+\big@size=\dimen119
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count96
+\c@MaxMatrixCols=\count97
+\dotsspace@=\muskip10
+\c@parentequation=\count98
+\dspbrk@lvl=\count99
+\tag@help=\toks16
+\row@=\count100
+\column@=\count101
+\maxfields@=\count102
+\andhelp@=\toks17
+\eqnshift@=\dimen120
+\alignsep@=\dimen121
+\tagshift@=\dimen122
+\tagwidth@=\dimen123
+\totwidth@=\dimen124
+\lineht@=\dimen125
+\@envbody=\toks18
+\multlinegap=\skip45
+\multlinetaggap=\skip46
+\mathdisplay@stack=\toks19
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+(/usr/share/texmf-texlive/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2009/06/22 v3.00
+
+(/usr/share/texmf-texlive/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+))
+(/usr/share/texmf-texlive/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks20
+)
+(/usr/share/texmf-texlive/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/etc/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/share/texmf-texlive/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2010/03/12 v0.04p Graphics/color for pdfTeX
+\Gread@gobject=\count103
+))
+\Gin@req@height=\dimen126
+\Gin@req@width=\dimen127
+)
+(/usr/share/texmf-texlive/tex/latex/oberdiek/epstopdf.sty
+Package: epstopdf 2009/10/17 v2.4 Conversion with epstopdf on the fly (HO)
+
+(/usr/share/texmf-texlive/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2009/10/17 v2.4 Base part for package epstopdf
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2007/09/09 v1.2 Providing info/warning/message (HO)
+)
+(/usr/share/texmf-texlive/tex/latex/oberdiek/grfext.sty
+Package: grfext 2007/09/30 v1.0 Managing graphics extensions (HO)
+)
+(/usr/share/texmf-texlive/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2009/08/13 v3.4 Keyval support for LaTeX options (HO)
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2009/07/30 v1.5 Key value parser with default handler suppor
+t (HO)
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2007/12/12 v1.2 Prefix for e-TeX command names (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+(/usr/share/texmf-texlive/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2009/09/23 v0.6 LuaTeX support for pdfTeX utility functions
+ (HO)
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2009/04/17 v1.2 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2009/08/05 v1.0 Some LaTeX kernel commands for general use (HO
+)
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+)
+
+Package epstopdf Warning: Shell escape feature is not enabled.
+
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 433.
+(/usr/share/texmf-texlive/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2009/10/26 v1.1 Configuration of epstopdf for TeX Live
+)))
+(/usr/share/texmf-texlive/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(/usr/share/texmf-texlive/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count104
+\float@exts=\toks21
+\float@box=\box29
+\@float@everytoks=\toks22
+\@floatcapt=\box30
+)
+(/usr/share/texmf-texlive/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks23
+\c@algorithm=\count105
+)
+(/usr/share/texmf-texlive/tex/latex/algorithms/algorithmic.sty
+Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
+\c@ALC@unique=\count106
+\c@ALC@line=\count107
+\c@ALC@rem=\count108
+\c@ALC@depth=\count109
+\ALC@tlm=\skip47
+\algorithmicindent=\skip48
+)
+(/usr/share/texmf-texlive/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2005/04/14 v1.61803 publication quality tables
+\heavyrulewidth=\dimen128
+\lightrulewidth=\dimen129
+\cmidrulewidth=\dimen130
+\belowrulesep=\dimen131
+\belowbottomsep=\dimen132
+\aboverulesep=\dimen133
+\abovetopsep=\dimen134
+\cmidrulesep=\dimen135
+\cmidrulekern=\dimen136
+\defaultaddspace=\dimen137
+\@cmidla=\count110
+\@cmidlb=\count111
+\@aboverulesep=\dimen138
+\@belowrulesep=\dimen139
+\@thisruleclass=\count112
+\@lastruleclass=\count113
+\@thisrulewidth=\dimen140
+)
+(/usr/share/texmf-texlive/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip49
+\subfigcapskip=\skip50
+\subfigcaptopadj=\dimen141
+\subfigbottomskip=\skip51
+\subfigcapmargin=\dimen142
+\subfiglabelskip=\skip52
+\c@subfigure=\count114
+\c@lofdepth=\count115
+\c@subtable=\count116
+\c@lotdepth=\count117
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/share/texmf-texlive/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip53
+\subfig@bottom=\skip54
+)
+(/usr/share/texmf-texlive/tex/latex/comment/comment.sty
+\CommentStream=\write3
+
+Excluding comment 'comment')
+(/usr/share/texmf-texlive/tex/latex/graphics/color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+(/etc/texmf/tex/latex/config/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
+) (./IEEE_RMT_MSD_header.tex
+\c@prop=\count118
+\c@conj=\count119
+\c@Th=\count120
+\c@Corr=\count121
+\c@Conj=\count122
+\c@Remark=\count123
+)
+(./IEEE_RMT_MSD.aux)
+\openout1 = `IEEE_RMT_MSD.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+ (/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count124
+\scratchdimen=\dimen143
+\scratchbox=\box31
+\nofMPsegments=\count125
+\nofMParguments=\count126
+\everyMPshowfont=\toks24
+\MPscratchCnt=\count127
+\MPscratchDim=\dimen144
+\MPnumerator=\count128
+\everyMPtoPDFconversion=\toks25
+) (./abstract.tex
+LaTeX Font Info:    Try loading font information for U+msa on input line 1.
+ (/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 1.
+
+(/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+))
+Underfull \hbox (badness 3792) in paragraph at lines 64--66
+[]\OT1/ptm/b/it/9 Index Terms\OT1/ptm/b/n/9 ---Matched sub-space de-tec-tor, de
+-ter-min-is-tic,
+ []
+
+(./introduction.tex
+
+LaTeX Warning: Citation `scharf1991statistical' on page 1 undefined on input li
+ne 4.
+
+
+LaTeX Warning: Citation `friedman2001elements' on page 1 undefined on input lin
+e 4.
+
+
+LaTeX Warning: Citation `besson2005matched' on page 1 undefined on input line 4
+.
+
+
+LaTeX Warning: Citation `besson2006cfar' on page 1 undefined on input line 4.
+
+
+LaTeX Warning: Citation `bandiera2007adaptive' on page 1 undefined on input lin
+e 4.
+
+
+LaTeX Warning: Citation `bandiera2007glrt' on page 1 undefined on input line 4.
+
+
+
+LaTeX Warning: Citation `maris2003resampling' on page 1 undefined on input line
+ 4.
+
+
+LaTeX Warning: Citation `soong1995principal' on page 1 undefined on input line 
+4.
+
+
+LaTeX Warning: Citation `besson2005matched' on page 1 undefined on input line 4
+.
+
+
+LaTeX Warning: Citation `besson2006cfar' on page 1 undefined on input line 4.
+
+
+LaTeX Warning: Citation `bandiera2007adaptive' on page 1 undefined on input lin
+e 4.
+
+
+LaTeX Warning: Citation `bandiera2007glrt' on page 1 undefined on input line 4.
+
+
+
+LaTeX Warning: Citation `scharf1994matched' on page 1 undefined on input line 4
+.
+
+
+LaTeX Warning: Citation `vincent2008matched' on page 1 undefined on input line 
+4.
+
+
+LaTeX Warning: Citation `mcwhorter2003matched' on page 1 undefined on input lin
+e 4.
+
+
+LaTeX Warning: Citation `jin2005cfar' on page 1 undefined on input line 4.
+
+
+LaTeX Warning: Citation `scharf1994matched' on page 1 undefined on input line 6
+.
+
+
+LaTeX Warning: Citation `elden2007matrix' on page 1 undefined on input line 8.
+
+
+LaTeX Warning: Citation `hwritingurl' on page 1 undefined on input line 8.
+
+
+LaTeX Warning: Citation `elden2007matrix' on page 1 undefined on input line 8.
+
+
+LaTeX Warning: Citation `thai2002invariant' on page 1 undefined on input line 8
+.
+
+
+LaTeX Warning: Citation `healey1999models' on page 1 undefined on input line 8.
+
+
+
+LaTeX Warning: Citation `kwon2006kernel' on page 1 undefined on input line 8.
+
+
+LaTeX Warning: Citation `nadakuditi2008sample' on page 1 undefined on input lin
+e 10.
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+
+]
+
+LaTeX Warning: Reference `fig:stoch_theory_epsilon' on page 2 undefined on inpu
+t line 12.
+
+
+LaTeX Warning: Reference `fig:determ_theory_epsilon' on page 2 undefined on inp
+ut line 12.
+
+
+LaTeX Warning: Citation `paul2007asymptotics' on page 2 undefined on input line
+ 14.
+
+
+LaTeX Warning: Citation `benaych2011eigenvalues' on page 2 undefined on input l
+ine 14.
+
+
+LaTeX Warning: Citation `benaych2011singular' on page 2 undefined on input line
+ 14.
+
+
+LaTeX Warning: Citation `asendorf2011msd' on page 2 undefined on input line 14.
+
+
+
+LaTeX Warning: Reference `sec:conclusion' on page 2 undefined on input line 16.
+
+
+) (./data_models.tex
+
+LaTeX Warning: Citation `besson2005matched' on page 2 undefined on input line 1
+.
+
+
+LaTeX Warning: Citation `besson2006cfar' on page 2 undefined on input line 1.
+
+
+LaTeX Warning: Citation `bandiera2007adaptive' on page 2 undefined on input lin
+e 1.
+
+
+LaTeX Warning: Citation `bandiera2007glrt' on page 2 undefined on input line 1.
+
+
+
+LaTeX Warning: Citation `maris2003resampling' on page 2 undefined on input line
+ 1.
+
+
+LaTeX Warning: Citation `soong1995principal' on page 2 undefined on input line 
+1.
+
+
+LaTeX Warning: Citation `thai2002invariant' on page 2 undefined on input line 1
+.
+
+
+LaTeX Warning: Citation `healey1999models' on page 2 undefined on input line 1.
+
+
+
+LaTeX Warning: Citation `kwon2006kernel' on page 2 undefined on input line 1.
+
+
+LaTeX Warning: Citation `healey1999models' on page 2 undefined on input line 1.
+
+
+
+LaTeX Warning: Citation `kwon2006kernel' on page 2 undefined on input line 1.
+
+
+LaTeX Warning: Citation `bandiera2007adaptive' on page 2 undefined on input lin
+e 5.
+
+
+LaTeX Warning: Citation `bandiera2007glrt' on page 2 undefined on input line 5.
+
+
+
+LaTeX Warning: Citation `thai2002invariant' on page 2 undefined on input line 5
+.
+
+
+LaTeX Warning: Citation `healey1999models' on page 2 undefined on input line 5.
+
+
+
+LaTeX Warning: Citation `zhu2006automatic' on page 2 undefined on input line 9.
+
+
+
+LaTeX Warning: Citation `nadakuditi2010fundamental' on page 2 undefined on inpu
+t line 9.
+
+
+LaTeX Warning: Citation `johnstone2001distribution' on page 2 undefined on inpu
+t line 9.
+
+
+LaTeX Warning: Citation `el2007tracy' on page 2 undefined on input line 9.
+
+
+LaTeX Warning: Citation `muirhead1982aspects' on page 2 undefined on input line
+ 11.
+
+
+Underfull \hbox (badness 1635) in paragraph at lines 11--12
+[]\OT1/ptm/m/n/10 Given $[]$ and the sig-nal bear-ing train-ing data $\OML/cmm/
+m/it/10 Y \OT1/cmr/m/n/10 =
+ []
+
+[2]
+Overfull \hbox (19.67429pt too wide) detected at line 45
+[]\OML/cmm/m/it/9 y \OT1/cmr/m/n/9 = [] \OML/cmm/m/it/9 ;
+ []
+
+) (./std_detec.tex
+
+LaTeX Warning: Citation `van1968detection' on page 3 undefined on input line 1.
+
+
+
+LaTeX Warning: Citation `scharf1991statistical' on page 3 undefined on input li
+ne 12.
+
+
+LaTeX Warning: Citation `mcwhorter2003matched' on page 3 undefined on input lin
+e 27.
+
+
+LaTeX Warning: Citation `jin2005cfar' on page 3 undefined on input line 27.
+
+
+Overfull \hbox (27.89063pt too wide) has occurred while \output is active
+[]\OT1/ptm/m/n/7 ASENDORF AND NADAKUDITI: THE PERFORMANCE OF A MATCHED SUBSPACE
+ DETECTOR THAT USES SUBSPACES ESTIMATED FROM FINITE, NOISY, TRAINING DATA 3
+ []
+
+[3]
+
+LaTeX Warning: Citation `scharf1991statistical' on page 4 undefined on input li
+ne 54.
+
+<figures/asend1a.pdf, id=33, 463.7325pt x 377.41pt>
+File: figures/asend1a.pdf Graphic file (type pdf)
+ <use figures/asend1a.pdf>
+<figures/asend1b.pdf, id=34, 466.74374pt x 378.41376pt>
+File: figures/asend1b.pdf Graphic file (type pdf)
+
+<use figures/asend1b.pdf>
+
+LaTeX Warning: Citation `fawcett2006introduction' on page 4 undefined on input 
+line 78.
+
+
+LaTeX Warning: Citation `fawcett2006introduction' on page 4 undefined on input 
+line 78.
+
+[4 <./figures/asend1a.pdf> <./figures/asend1b.pdf>]
+<figures/asend2.pdf, id=55, 472.76625pt x 378.41376pt>
+File: figures/asend2.pdf Graphic file (type pdf)
+
+<use figures/asend2.pdf>
+
+LaTeX Warning: Citation `fawcett2006introduction' on page 5 undefined on input 
+line 97.
+
+
+LaTeX Warning: Citation `fawcett2006introduction' on page 5 undefined on input 
+line 97.
+
+) (./prob_state.tex) (./rmt.tex
+** ATTENTION: \proof is deprecated (line 17). Use \IEEEproof instead.
+
+LaTeX Warning: Citation `paul2007asymptotics' on page 5 undefined on input line
+ 18.
+
+
+LaTeX Warning: Citation `benaych2011eigenvalues' on page 5 undefined on input l
+ine 18.
+
+
+Overfull \hbox (27.89063pt too wide) has occurred while \output is active
+[]\OT1/ptm/m/n/7 ASENDORF AND NADAKUDITI: THE PERFORMANCE OF A MATCHED SUBSPACE
+ DETECTOR THAT USES SUBSPACES ESTIMATED FROM FINITE, NOISY, TRAINING DATA 5
+ []
+
+[5 <./figures/asend2.pdf>]
+
+LaTeX Warning: Citation `cox1973resolving' on page 6 undefined on input line 23
+.
+
+
+LaTeX Warning: Citation `nadakuditi2008sample' on page 6 undefined on input lin
+e 26.
+
+
+LaTeX Warning: Citation `nadakuditi2010fundamental' on page 6 undefined on inpu
+t line 30.
+
+
+LaTeX Warning: Citation `nadakuditi2010fundamental' on page 6 undefined on inpu
+t line 30.
+
+
+LaTeX Warning: Citation `nadakuditi2010fundamental' on page 6 undefined on inpu
+t line 30.
+
+
+LaTeX Warning: Citation `johnstone2001distribution' on page 6 undefined on inpu
+t line 30.
+
+
+LaTeX Warning: Citation `el2007tracy' on page 6 undefined on input line 30.
+
+** ATTENTION: \proof is deprecated (line 37). Use \IEEEproof instead.
+** ATTENTION: \proof is deprecated (line 57). Use \IEEEproof instead.
+** ATTENTION: \proof is deprecated (line 76). Use \IEEEproof instead.
+
+LaTeX Warning: Citation `paul2007asymptotics' on page 6 undefined on input line
+ 77.
+
+
+LaTeX Warning: Citation `benaych2011singular' on page 6 undefined on input line
+ 77.
+
+
+Overfull \hbox (22.21152pt too wide) detected at line 86
+[] [] \OMS/cmsy/m/n/10 ) N [] \OML/cmm/m/it/10 ;
+ []
+
+** ATTENTION: \proof is deprecated (line 89). Use \IEEEproof instead.
+
+LaTeX Warning: Citation `paul2007asymptotics' on page 6 undefined on input line
+ 90.
+
+
+LaTeX Warning: Citation `paul2007asymptotics' on page 6 undefined on input line
+ 90.
+
+
+LaTeX Warning: Citation `benaych2011singular' on page 6 undefined on input line
+ 90.
+
+[6]) (./rmt_detecs.tex
+Overfull \hbox (7.50148pt too wide) detected at line 10
+[] []
+ []
+
+
+LaTeX Warning: Citation `nadakuditi2010fundamental' on page 7 undefined on inpu
+t line 16.
+
+
+Overfull \hbox (19.0527pt too wide) detected at line 54
+\OT1/cmr/m/n/10 ^^C([]) = [] [] []\OML/cmm/m/it/10 :
+ []
+
+
+Overfull \hbox (29.0519pt too wide) detected at line 59
+\OML/cmm/m/it/9 B[] \OT1/cmr/m/n/9 := [] \OML/cmm/m/it/9 ;  A[] \OT1/cmr/m/n/9 
+:= [] \OML/cmm/m/it/9 :
+ []
+
+
+Overfull \hbox (27.89063pt too wide) has occurred while \output is active
+[]\OT1/ptm/m/n/7 ASENDORF AND NADAKUDITI: THE PERFORMANCE OF A MATCHED SUBSPACE
+ DETECTOR THAT USES SUBSPACES ESTIMATED FROM FINITE, NOISY, TRAINING DATA 7
+ []
+
+[7]
+Underfull \hbox (badness 2293) in paragraph at lines 65--67
+\OT1/ptm/m/n/10 We use (17[]) and Propo-si-tion VI.1[] to es-ti-mate $\OML/cmm/
+m/it/10 a[] \OT1/cmr/m/n/10 =
+ []
+
+) (./roc_theory.tex
+
+LaTeX Warning: Citation `fawcett2006introduction' on page 8 undefined on input 
+line 5.
+
+
+Overfull \hbox (1.0723pt too wide) detected at line 24
+[] []
+ []
+
+
+LaTeX Warning: Citation `wood1993saddlepoint' on page 8 undefined on input line
+ 27.
+
+[8]) (./results.tex
+
+LaTeX Warning: Citation `fawcett2006introduction' on page 9 undefined on input 
+line 8.
+
+
+LaTeX Warning: Citation `fawcett2006introduction' on page 9 undefined on input 
+line 8.
+
+<figures/asend3a.pdf, id=80, 463.7325pt x 381.425pt>
+File: figures/asend3a.pdf Graphic file (type pdf)
+ <use figures/asend3a.pdf>
+<figures/asend3b.pdf, id=81, 463.7325pt x 378.41376pt>
+File: figures/asend3b.pdf Graphic file (type pdf)
+
+<use figures/asend3b.pdf>
+
+LaTeX Warning: Citation `fawcett2006introduction' on page 9 undefined on input 
+line 23.
+
+
+LaTeX Warning: Citation `fawcett2006introduction' on page 9 undefined on input 
+line 23.
+
+
+Overfull \hbox (27.89063pt too wide) has occurred while \output is active
+[]\OT1/ptm/m/n/7 ASENDORF AND NADAKUDITI: THE PERFORMANCE OF A MATCHED SUBSPACE
+ DETECTOR THAT USES SUBSPACES ESTIMATED FROM FINITE, NOISY, TRAINING DATA 9
+ []
+
+[9] <figures/asend4a.pdf, id=85, 465.74pt x 396.48125pt>
+File: figures/asend4a.pdf Graphic file (type pdf)
+
+<use figures/asend4a.pdf>
+<figures/asend4b.pdf, id=86, 484.81125pt x 396.48125pt>
+File: figures/asend4b.pdf Graphic file (type pdf)
+
+<use figures/asend4b.pdf>
+<figures/asend5a.pdf, id=87, 461.725pt x 378.41376pt>
+File: figures/asend5a.pdf Graphic file (type pdf)
+
+<use figures/asend5a.pdf>
+<figures/asend5b.pdf, id=88, 463.7325pt x 376.40625pt>
+File: figures/asend5b.pdf Graphic file (type pdf)
+
+<use figures/asend5b.pdf> [10 <./figures/asend3a.pdf> <./figures/asend3b.pdf> <
+./figures/asend4a.pdf> <./figures/asend4b.pdf>]
+Underfull \vbox (badness 2376) has occurred while \output is active []
+
+
+
+LaTeX Warning: Reference `fig:stoch_m_effect' on page 11 undefined on input lin
+e 81.
+
+
+LaTeX Warning: Reference `fig:stoch_theory_epsilon' on page 11 undefined on inp
+ut line 81.
+
+
+LaTeX Warning: Reference `fig:determ_theory_epsilon' on page 11 undefined on in
+put line 81.
+
+
+LaTeX Warning: Reference `fig:stoch_theory_epsilon' on page 11 undefined on inp
+ut line 83.
+
+
+LaTeX Warning: Reference `fig:determ_theory_epsilon' on page 11 undefined on in
+put line 83.
+
+<figures/asend6a.pdf, id=130, 471.7625pt x 378.41376pt>
+File: figures/asend6a.pdf Graphic file (type pdf)
+
+<use figures/asend6a.pdf>
+<figures/asend6b.pdf, id=131, 471.7625pt x 378.41376pt>
+File: figures/asend6b.pdf Graphic file (type pdf)
+
+<use figures/asend6b.pdf>
+<figures/asend7.pdf, id=132, 468.75125pt x 389.455pt>
+File: figures/asend7.pdf Graphic file (type pdf)
+ <use figures/asend7.pdf>
+
+LaTeX Warning: Reference `fig:khat_graphs' on page 11 undefined on input line 1
+43.
+
+
+LaTeX Warning: Reference `fig:khat_graphs' on page 11 undefined on input line 1
+47.
+
+)
+Overfull \hbox (31.39063pt too wide) has occurred while \output is active
+[]\OT1/ptm/m/n/7 ASENDORF AND NADAKUDITI: THE PERFORMANCE OF A MATCHED SUBSPACE
+ DETECTOR THAT USES SUBSPACES ESTIMATED FROM FINITE, NOISY, TRAINING DATA 11
+ []
+
+[11 <./figures/asend5a.pdf> <./figures/asend5b.pdf>] (./conclusion.tex
+
+LaTeX Warning: Reference `fig:stoch_theory_epsilon' on page 12 undefined on inp
+ut line 3.
+
+
+LaTeX Warning: Reference `fig:determ_theory_epsilon' on page 12 undefined on in
+put line 3.
+
+
+LaTeX Warning: Citation `nadakuditi2010fundamental' on page 12 undefined on inp
+ut line 3.
+
+
+LaTeX Warning: Citation `johnstone2001distribution' on page 12 undefined on inp
+ut line 3.
+
+
+LaTeX Warning: Citation `el2007tracy' on page 12 undefined on input line 3.
+
+
+LaTeX Warning: Citation `benaych2011singular' on page 12 undefined on input lin
+e 5.
+
+) (./appendix.tex
+** ATTENTION: \proof is deprecated (line 2). Use \IEEEproof instead.
+[12 <./figures/asend6a.pdf> <./figures/asend6b.pdf> <./figures/asend7.pdf>]
+
+LaTeX Warning: Reference `eq:eval_master' on page 13 undefined on input line 12
+.
+
+
+LaTeX Warning: Reference `eq:eval_master2' on page 13 undefined on input line 1
+8.
+
+
+LaTeX Warning: Reference `eq:t_trans' on page 13 undefined on input line 22.
+
+
+Underfull \hbox (badness 3815) in paragraph at lines 21--23
+\OT1/ptm/m/n/10 where for $\OML/cmm/m/it/10 r \OT1/cmr/m/n/10 = 1\OML/cmm/m/it/
+10 ; [] ; k$\OT1/ptm/m/n/10 , $\OML/cmm/m/it/10 j \OT1/cmr/m/n/10 = 1\OML/cmm/m
+/it/10 ; [] ; k$\OT1/ptm/m/n/10 , $\OML/cmm/m/it/10 ^^V[] \OT1/cmr/m/n/10 =
+ []
+
+
+LaTeX Warning: Citation `benaych2011eigenvalues' on page 13 undefined on input 
+line 27.
+
+
+Overfull \hbox (7.10568pt too wide) detected at line 34
+\OML/cmm/m/it/10 M[] [] [] [] [] :
+ []
+
+
+LaTeX Warning: Citation `benaych2011eigenvalues' on page 13 undefined on input 
+line 35.
+
+
+Overfull \hbox (3.52538pt too wide) detected at line 38
+\OML/cmm/m/it/8 M[] [] [] [] []
+ []
+
+
+LaTeX Warning: Reference `eq:Mn' on page 13 undefined on input line 39.
+
+
+LaTeX Warning: Citation `silverstein1985smallest' on page 13 undefined on input
+ line 77.
+
+
+LaTeX Warning: Citation `barvinok2005measure' on page 13 undefined on input lin
+e 79.
+
+
+Overfull \hbox (31.39063pt too wide) has occurred while \output is active
+[]\OT1/ptm/m/n/7 ASENDORF AND NADAKUDITI: THE PERFORMANCE OF A MATCHED SUBSPACE
+ DETECTOR THAT USES SUBSPACES ESTIMATED FROM FINITE, NOISY, TRAINING DATA 13
+ []
+
+[13]) (./IEEE_RMT_MSD.bbl)
+** ATTENTION: \biography is deprecated (line 130). Use \IEEEbiography instead.
+<figures/asend.png, id=187, 1428.08531pt x 1349.79282pt>
+File: figures/asend.png Graphic file (type png)
+
+<use figures/asend.png>
+File: figures/asend.png Graphic file (type png)
+ <use figures/asend.png>
+** ATTENTION: \biography is deprecated (line 138). Use \IEEEbiography instead.
+<figures/nadak.jpg, id=190, 130.4875pt x 160.6pt>
+File: figures/nadak.jpg Graphic file (type jpg)
+ <use figures/nadak.jpg>
+File: figures/nadak.jpg Graphic file (type jpg)
+
+<use figures/nadak.jpg> [14 <./figures/asend.png (PNG copy)> <./figures/nadak.j
+pg>] (./IEEE_RMT_MSD.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 3733 strings out of 495061
+ 52850 string characters out of 1182621
+ 132092 words of memory out of 3000000
+ 6771 multiletter control sequences out of 15000+50000
+ 53245 words of font info for 107 fonts, out of 3000000 for 9000
+ 31 hyphenation exceptions out of 8191
+ 41i,16n,37p,1799b,315s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texli
+ve/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-texlive/fonts/ty
+pe1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-texlive/fonts/type1/public/a
+msfonts/cm/cmex10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cme
+xtra/cmex7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cmextra/cm
+ex8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cmextra/cmex9.pfb
+></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
+e/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-texl
+ive/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-texlive/fonts/ty
+pe1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-texlive/fonts/type1/public/a
+msfonts/cm/cmmi8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/c
+mmi9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
+sr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texm
+f-texlive/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-texlive/fon
+ts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-texlive/fonts/type1/publ
+ic/amsfonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/c
+m/cmr9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/
+texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-texliv
+e/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-texlive/fonts/type
+1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-texlive/fonts/type1/public/ams
+fonts/symbols/msam10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/
+symbols/msbm10.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb><
+/usr/share/texmf-texlive/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-te
+xlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/ur
+w/times/utmri8a.pfb>
+Output written on IEEE_RMT_MSD.pdf (14 pages, 7799154 bytes).
+PDF statistics:
+ 285 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 95 words of extra memory for PDF output out of 10000 (max. 10000000)
+

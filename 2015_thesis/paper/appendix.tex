@@ -1,0 +1,760 @@
+We use the following notation. Let $Y_i$ for $i=1,\dots, m$ denote the $d_i \times n$ data
+matrix, with each column an observation from the $i$th dataset. Let $Y=[Y_1^H \dots
+Y_m^H]^H\in\complex^{d\times n} $ be the entire observation matrix made by stacking $Y_i$
+on top of each other. Let $U_i\Sigma_i V_i^H$ be the individual data SVDs of $Y_i$. Let
+$\widehat{R} = \frac{1}{n}Y^HY$ be the sample covariance matrix. Defining $U =
+\blkdiag(U_1,\dots, U_m)\in\complex^{d\times dm}$, $\Sigma = \blkdiag(\Sigma_1, \dots,
+\Sigma_m)\in\complex^{d\times nm}$, $V=[V_1,\dots, V_m]\in\complex^{n\times nm}$, we can
+write $\widehat{R}=U\Sigma V^H V \Sigma U^H$. Similarly, define $\widehat{R}_D =
+\frac{1}{n}\blkdiag(Y_i^TY_i) = U\Sigma\Sigma^H U^H$. Recall that $x=[x_1^H\dots x_m^H]^H$
+is the vector of canonical vectors.
+
+\hiddensection{Problem 1a}
+%\subsection{Theory}
+\hiddensubsection{Theory}
+Our optimization problem is
+\begin{equation}\label{eq:1a_prob}
+\begin{aligned}
+&\argmax_{x_1,\dots,x_m}&&\sum_{i=1}^m\sum_{j=1}^mx_i^HR_{ij}x_j=x^HRx\\
+&\text{s.t.} &&x_i^Hx_i  = 1,\,\,\,\,\,\, i=1,\dots,m.
+\end{aligned}
+\end{equation}
+The Lagrangian for this problem is
+\begin{equation*}
+\begin{aligned}
+&L(x,\underline{\lambda}) &&= x^H R x -  \sum_{i=1}^m\lambda_i\left(x_i^Hx_i - 1\right).\\
+\end{aligned}
+\end{equation*}
+Define $\Lambda = \blkdiag(\lambda_1I_{d_1},\dots,\lambda_mI_{d_m})$ to be the matrix with
+the Lagrange multipliers on the diagonal. The derivative of the Lagrangian is
+\begin{equation*}
+\frac{\partial L}{\partial x} = 2R x - 2\Lambda_Dx.
+\end{equation*}
+Setting the derivative equal to the zero vector results in the following non-normal
+generalized eigensystem.
+\begin{equation*}
+R\widetilde{x} = \Lambda_D\widetilde{x},
+\end{equation*}
+where $\widetilde{x}$ is a unit norm vector that may be decomposed as $\widetilde{x} =
+[\widetilde{x}_1^H,\dots,\widetilde{x}_m^H]^H$ with $\widetilde{x}_i\in\complex^{d_i}$
+Therefore, the canonical vectors are
+\begin{equation*}
+  x = \left[\begin{array}{ccc}\|\widetilde{x}_1\|^{-1} I_{d_1} &0&0\\ 0&\ddots &0 \\
+      0&0&\|\widetilde{x}_m\|^{-1}I_{d_m}\\ \end{array}\right]\widetilde{x}.
+\end{equation*}
+To obtain the canonical correlation, we substitute the canonical vectors into the
+objective function. 
+
+\hiddensubsection{Empirical}
+
+As shown in the previous section, the solution to (\ref{eq:1a_prob}) is a non-normal
+eigenvalue system. To solve this problem, we use the manopt software package to solve cost
+functions on manifolds. The manifold for this problem is the product of $m$ sphere
+manifolds constraining the canonical vectors $x_i$ to lie on the $\complex^{d_i}$ unit
+sphere. We use the SUMCORR cost function and its gradient
+\be
+\frac{\partial}{\partial x}= 2Rx
+\ee
+in the manopt solution.
+
+\hiddensection{Problem 1b}
+\hiddensubsection{Theory}
+Our optimization problem is
+\begin{equation*}
+\begin{aligned}
+&\argmax_{x_1,\dots,x_m}&&\sum_{i=1}^m\sum_{j=1}^mx_i^HR_{ij}x_j=x^HRx\\
+&\text{s.t.} &&x^Hx  = 1.
+\end{aligned}
+\end{equation*}
+The Lagrangian for this problem is
+\begin{equation*}
+\begin{aligned}
+&L(x,\lambda) &&= x^HR x + \lambda(1-x^Hx).\\
+\end{aligned}
+\end{equation*}
+The derivative of the Lagrangian is
+\begin{equation*}
+\frac{\partial L}{\partial x} = 2Rx - 2x.
+\end{equation*}
+Setting the derivative equal to the zero vector results in the following eigensystem.
+\begin{equation}\label{eq:prob1b}
+  Rx = \lambda x
+\end{equation}
+From this relationship, if we substitute this solution into the objective function, we
+obtain
+\begin{equation}\label{eq:rho1b}
+  \rho = x^H R x = x^H(\lambda x) = \lambda.
+\end{equation}
+
+\hiddensubsection{Empirical}
+We plug in $\widehat{R}$ into (\ref{eq:prob1b}) for $R$ and solve the eigenvalue
+decomposition. The eigenvector $x$ is the canonical vector and the eigenvalue $\lambda$ is
+the canonical correlation. This problem is typically ill-posed as the maximum solution is
+typically found by setting only one $x_i$ to be nonzero corresponding to the $R_{ii}$ with
+the largest variance. We advise to not use this formulation of MCCA.
+
+\hiddensection{Problem 1c}
+\hiddensubsection{Theory}
+Our optimization problem is
+\begin{equation*}
+\begin{aligned}
+&\argmax_{x_1,\dots,x_m}&&\sum_{i=1}^m\sum_{j=1}^mx_i^HR_{ij}x_j=x^HRx\\
+&\text{s.t.} &&x_i^HR_{ii}x_i  = 1.
+\end{aligned}
+\end{equation*}
+The Lagrangian for this problem is
+\begin{equation*}
+\begin{aligned}
+&L(x,\underline{\lambda}) &&= x^HR x - \sum_{i=1}^m\lambda_i\left(x_i^HR_{ii}x_i\right).\\
+\end{aligned}
+\end{equation*}
+Define $\Lambda_D\in\complex^{d \times d}=\blkdiag(\lambda_1I_{d_1},\dots,\lambda_mI_{d_m})$. The derivative of the Lagrangian is
+\begin{equation*}
+\frac{\partial L}{\partial x} = 2R x - 2\Lambda_DR_Dx.
+\end{equation*}
+Setting the derivative equal to the zero vector results in the non-normal generalized eigensystem.
+\be\ba
+&R\widetilde{x} &&= \Lambda_DR_D\widetilde{x}.\\
+\ea\ee
+To obtain the canonical vectors, we make the transformation
+\be
+x_i = \frac{R_{ii}^{-1/2}\widetilde{x}_i}{\|\widetilde{x}_i\|}.
+\ee
+
+\hiddensubsection{Empirical}
+
+Making the transformation 
+\be
+x_i = R_{ii}^{-1/2}\widetilde{x}_i,
+\ee
+our optimization problem becomes
+\begin{equation*}
+\begin{aligned}
+&\argmax_{\widetilde{x}}&&\widetilde{x}^HR_D^{-1/2}RR_D^{-1/2}\widetilde{x}\\
+&\text{s.t.} &&\widetilde{x}_i^H\widetilde{x}_i = 1.\\
+\end{aligned}
+\end{equation*}
+
+As shown in the previous section, the solution to this problem is a non-normal eigenvalue
+system. To solve the above problem, we use the manopt software package to solve cost
+functions on manifolds. The manifold for this problem is the product of $m$ sphere
+manifolds constraining each canonical vector to lie on the $\complex^{d_i}$ unit sphere.
+We use the SUMCORR cost function and the derivative
+\be
+\frac{\partial}{\partial \widetilde{x}}= 2R_D^{-1/2}RR_D^{-1/2}\widetilde{x}.
+\ee
+ We substitute the empirical sample covariances 
+\be
+\widehat{R} = \frac{1}{n}YY^T,\,\,\, \widehat{R}_D = \frac{1}{n}\blkdiag(Y_iY_i^T)
+\ee
+ for the unknown $R$ and $R_D$ in the cost and gradient functions. To obtain the canonical
+ vectors $x_i$, we make the transformation
+\be
+x_i = R_{ii}^{-1/2}\widetilde{x}_i.
+\ee
+
+Using our notation for $R$ and $R_D$ from the data SVDs, we have
+\be
+R_D^{-1/2}RR_D^{-1/2} = UV^HVU^H
+\ee
+and
+\be
+x = U\Sigma^{-1}U^H \widetilde{x}.
+\ee
+The canonical correlation is
+\be
+\widehat{\rho} = x^HR_D^{-1/2}RR_D^{-1/2}x = \widetilde{x}^HUV^HVU^H\widetilde{x}.
+\ee
+
+\hiddensection{Problem 1d}
+\hiddensubsection{Theory}
+Our optimization problem is
+\begin{equation*}
+\begin{aligned}
+&\argmax_{x_1,\dots,x_m}&&\sum_{i=1}^m\sum_{j=1}^mx_i^HR_{ij}x_j=x^H Rx\\
+&\text{s.t.} &&x^HR_D x  = 1.\\
+\end{aligned}
+\end{equation*}
+The Lagrangian for this problem is
+\begin{equation*}
+L(x,\lambda) = x^HR x + \lambda(1-x^HR_Dx).
+\end{equation*}
+The derivative of the Lagrangian is
+\begin{equation*}
+\frac{\partial L}{\partial x} = 2Rx - 2\lambda R_Dx.
+\end{equation*}
+Setting the derivative equal to the zero vector results in the following generalized eigensystem.
+\begin{equation*}
+R_D^{-1}Rx = \lambda x.
+\end{equation*}
+Let $\widetilde{x}= R_D^{1/2}x$  so that the eigensystem becomes
+\be
+R_D^{-1/2}R R_D^{-1/2}\widetilde{x}=\lambda \widetilde{x}
+\ee
+where $\|\widetilde{x}\|_2=1$. The canonical vectors are $x=R_D^{-1/2}\widetilde{x}$ and
+the canonical correlation is $\rho = \lambda$.
+
+\hiddensubsection{Empirical}
+Our empirical eigen-problem is
+$\widehat{R}_D^{-1/2}\widehat{R}\widehat{R}_D^{-1/2}\widetilde{x}=\lambda
+\widetilde{x}$. Using data SVDs, 
+\be
+\widehat{R}_D^{-1/2}\widehat{R}\widehat{R}_D^{-1/2}= UV^HVU^H.\\
+\ee
+Let $Q\Lambda Q^H$ be the eigenvalue decomposition of $UV^H VU^H$.  To obtain canonical
+vectors consistent with the the constraint function, we make the transformation
+\be
+x = U\Sigma^{-1}U^HQ.
+\ee
+Substituting this expression into the objective function, we obtain
+\be
+\widehat{\rho} = \lambda.
+\ee
+
+\hiddensection{Problem 2a}
+
+\hiddensubsection{Theory}
+Our optimization problem is
+\begin{equation*}
+\begin{aligned}
+&\argmax_{x}&&\sum_{i=1}^m\sum_{j=1}^m(x_i^HR_{ij}x_j)^2=\|X^HRX\|_F^2\\
+&\text{s.t.} &&x_i^Hx_i = 1, i=1,\dots,m.\\
+\end{aligned}
+\end{equation*}
+
+To calculate the gradient of the cost function, we use the double summation version of the
+cost function. We have that
+\beq\label{eq:2a_grad}\ba
+&\frac{\partial}{\partial x_i} &&= 4\sum_{j=1}^m (x_i^H R_{ij}x_j) R_{ij}x_j\\
+&&& = R_{i,:} X (X^HR X)_{:,i}\\
+\ea\eeq
+where 
+\be
+R_{i,:} = [R_{i,1},\dots, R_{i,m}],\,\,\,\, (X^H RX)_{:,i} = [x_1^HR_{1,i}x_i, \dots, x_m^H R_{m,i}x_i]^H.
+\ee
+Thus
+\be
+\frac{\partial}{\partial x} = \left[\begin{array}{c} \frac{\partial}{\partial x_1}\\ \vdots \\
+    \frac{\partial}{\partial x_m}\end{array}\right].
+\ee
+If we try to use a Lagrangian method to solve this problem, we end up with an eigenvalue
+problem of the form $\widetilde{R}(x)x = \Lambda_D x$. As the matrix $\widetilde{R}(x)$ is
+dependent on the eigenvector $x$ and $\Lambda_D= \diag(\lambda_1 I_{d1},\dots,\lambda_m
+I_{dm})$, this is a highly non regular eigenvalue problem. 
+
+\hiddensubsection{Empirical}
+
+To solve the problem above, we use the manopt software package to solve cost functions on
+manifolds. Each of our canonical vectors are constrained on the $d_i$ unit sphere. We use
+the SSQCORR cost function and the derivative in (\ref{eq:2a_grad}). We substitute the empirical
+sample covariance 
+\be
+\widehat{R} = \frac{1}{n}YY^T
+\ee
+for the unknown $R$ in the cost and gradient functions.
+
+\hiddensection{Problem 2b}
+
+\hiddensubsection{Theory}
+Our optimization problem is
+\begin{equation*}
+\begin{aligned}
+&\argmax_{x}&&\sum_{i=1}^m\sum_{j=1}^m(x_i^HR_{ij}x_j)^2\\
+&\text{s.t.} &&x^Hx  = 1\\
+\end{aligned}
+\end{equation*}
+
+The derivative of our cost function is the same as in (\ref{eq:2a_grad}). If we try to use
+a Lagrangian method to solve this problem, we end up with an eigenvalue problem of the
+form $\widetilde{R}(x)x = \lambda x$. As the matrix $\widetilde{R}(x)$ is dependent on the
+eigenvector $x$, this is a highly non regular eigenvalue problem. 
+
+\hiddensubsection{Empirical}
+
+To solve the problem above, we use the manopt software package to solve cost functions on
+manifolds. Our manifold is simpler as we only have one constraint that $x^Hx=1$. We use
+the SSQCORR cost function and the derivative in (\ref{eq:2a_grad}). We substitute the empirical
+sample covariance 
+\be
+\widehat{R} = \frac{1}{n}YY^T
+\ee
+for the unknown $R$ in the cost and gradient functions. However, the solution to this
+problem will typically set the only one $x_i$ to be non-zero corresponding to the $R_{ii}$
+with the largest eigenvalue. We advise not to use this formulation of MCCA.
+
+
+\hiddensection{Problem 2c}
+
+\hiddensubsection{Theory}
+Our optimization problem is
+\begin{equation*}
+\begin{aligned}
+&\argmax_{x}&&\sum_{i=1}^m\sum_{j=1}^m(x_i^HR_{ij}x_j)^2\\
+&\text{s.t.} &&x_i^HR_{ii}x_i=1.\\
+\end{aligned}
+\end{equation*}
+
+The derivative of our cost function is the same as in (\ref{eq:2a_grad}). If we try to use
+a Lagrangian method to solve this problem, we end up with an eigenvalue problem of the
+form $\widetilde{R}(x)x = \Lambda_D R_D x$. As the matrix $\widetilde{R}(x)$ is dependent
+on the eigenvector $x$ and and $\Lambda_D= \diag(\lambda_1 I_{d1},\dots,\lambda_m
+I_{dm})$, this is a highly non regular eigenvalue problem. 
+
+
+\hiddensubsection{Empirical}
+
+We first make the transformation 
+\be
+x_i = R_{ii}^{-1/2}\widetilde{x}_i. 
+\ee
+Our optimization problem becomes
+\begin{equation*}
+\begin{aligned}
+&\argmax_{\widetilde{x}}&&\|\widetilde{X}^HR_D^{-1/2}RR_D^{-1/2}\widetilde{X}\|_F^2\\
+&\text{s.t.} &&\widetilde{x}_i^H\widetilde{x}_i = 1, i=1,\dots,m\\
+\end{aligned}
+\end{equation*}
+This is the same type of optimization problem as Problem 2a if we replace $R$ with
+$R_D^{-1/2}RR_D^{-1/2}$.
+
+To solve this problem above, we use the manopt software package to solve cost functions on
+manifolds. Our manifold consists of $m$ constraints, $\widetilde{x}^H_i\widetilde{x}_i=1$,
+that is $m$ vectors constrained on the $d_i$ unit sphere. We use the SSQCORR cost function
+and the derivative in (\ref{eq:2a_grad}). We substitute the empirical sample covariances 
+\be
+\widehat{R} = \frac{1}{n}YY^T,\,\,\, \widehat{R}_D = \frac{1}{n}\blkdiag(Y_iY_i^T)
+\ee
+ for the unknown $R$ and $R_D$ in the cost and gradient functions.
+
+To obtain the canonical vectors $x_i$, we make the transformation
+\be
+x_i = R_{ii}^{-1/2}\widetilde{x}_i.
+\ee
+
+Using our notation for $R$ and $R_D$ from the data SVDs, we have
+\be
+R_D^{-1/2}RR_D^{-1/2} = UV^HVU^H
+\ee
+and
+\be
+x = U\Sigma^{-1}U^H \widetilde{x}.
+\ee
+
+
+\hiddensection{Problem 2d}
+
+\hiddensubsection{Theory}
+Our optimization problem is
+\begin{equation*}
+\begin{aligned}
+&\argmax_{x}&&\sum_{i=1}^m\sum_{j=1}^m(x_i^HR_{ij}x_j)^2\\
+&\text{s.t.} &&x^HR_Dx  = m.\\
+\end{aligned}
+\end{equation*}
+
+The derivative of our cost function is the same as in (\ref{eq:2a_grad}). If we try to use
+a Lagrangian method to solve this problem, we end up with an eigenvalue problem of the
+form $\widetilde{R}(x)x = \lambda R_D x$. As the matrix $\widetilde{R}(x)$ is dependent on
+the eigenvector $x$ and, this is a highly non regular eigenvalue problem. 
+
+\hiddensubsection{Empirical}
+
+We first make the transformation 
+\be
+x_i = R_{ii}^{1/2}\widetilde{x}_i. 
+\ee
+Our optimization problem becomes
+\begin{equation*}
+\begin{aligned}
+&\argmax_{\widetilde{x}}&&\|\widetilde{X}^HR_D^{-1/2}RR_D^{-1/2}\widetilde{X}\|_F^2\\
+&\text{s.t.} &&\widetilde{x}^H\widetilde{x} = 1\\
+\end{aligned}
+\end{equation*}
+This is the same type of optimization problem as Problem 2b if we replace $R$ with
+$R_D^{-1/2}RR_D^{-1/2}$.
+
+To solve this problem above, we use the manopt software package to solve cost functions on
+manifolds. Our manifold consists of only one constraint, $\widetilde{x}^H\widetilde{x} =
+1$, which is a vector constrained on the $\reals^d$ unit sphere. We use the SSQCORR cost function
+and the derivative in (\ref{eq:2a_grad}). We substitute the empirical sample covariances 
+\be
+\widehat{R} = \frac{1}{n}YY^T,\,\,\, \widehat{R}_D = \frac{1}{n}\blkdiag(Y_iY_i^T)
+\ee
+ for the unknown $R$ and $R_D$ in the cost and gradient functions.
+
+To obtain the canonical vectors $x_i$, we make the transformation
+\be
+x = R_d^{-1/2}\widetilde{x}
+\ee
+
+Using our notation for $R$ and $R_D$ from the data SVDs, we have
+\be
+\widetilde{X}^HR_D^{-1/2}RR_D^{-1/2} = UV^HVU^H
+\ee
+and
+\be
+x = U\Sigma^{-1}U^H \widetilde{x}.
+\ee
+
+\hiddensection{Problem 3a}
+\hiddensubsection{Theory}
+Our optimization problem is
+\begin{equation*}
+\begin{aligned}
+&\argmax_{x}&&\lambda_1\\
+&\text{s.t.} && x_i^Hx_i = 1, i=1,\dots,m\\
+&&& \Phi(x) a = \lambda_1 a\\
+&&& a^Ha=1.\\
+\end{aligned}
+\end{equation*}
+We may write $\Phi(x) = X^HRX$. Using this fact and third constraint of this optimization,
+the second constraint may be written as $a^HX^HR Xa=\lambda_1$. Define
+$\widetilde{a}=Xa$. As a consequence of the first constraint function,
+\begin{equation*}
+\|\widetilde{a}\|^2=a^HX^HXa = a^Ha=1.
+\end{equation*}
+Our modified optimization problem is
+\begin{equation*}
+\begin{aligned}
+&\argmax_{\tilde{a}}&&\lambda_1\\
+&\text{s.t}&& \tilde{a}^HR\tilde{a} = \lambda_1\\
+&&& \widetilde{a}^H\widetilde{a}=1.\\
+\end{aligned}
+\end{equation*}
+Therefore, $\widetilde{a}$ is the unit norm eigenvector corresponding to the largest
+eigenvalue of $R$. To solve for the canonical coefficients, we have $\widetilde{a} = Xa$
+which implies $x_i=\frac{\widetilde{a}_i}{a_i}$. As $a_i$ is a scalar, and $x_i$ is
+required to have unit norm, we have that
+$x_i=\frac{\widetilde{a}_i}{\|\widetilde{a}_i\|}$. This implies
+$x=\Lambda_{\widetilde{a}}^{-1}\widetilde{a}$ where
+$\Lambda_{\widetilde{a}}\in\complex^{d\times d}=\blkdiag(\|\widetilde{a}_i\|I_{d_i})$. The
+canonical correlation is simply $\rho = \lambda_1$.
+
+\hiddensubsection{Empirical}
+Our empirical eigen-system is $\widehat{R}\widetilde{a}=\lambda_1\widetilde{a}$ where
+$\widehat{R}= \frac{1}{n}YY^H$ is the sample covariance matrix. Let $Q\Lambda Q^H$ be
+the eigenvalue decomposition of $\widehat{R}$. Let $q$ be the leftmost column of $Q$ and
+decomposed as $q^H=[q_1^H,\dots,q_m^H]$ with $q_i\in\complex^{d_i}$. Then
+\be\ba
+& \widehat{\rho} = \lambda_1\\
+& \widehat{x}= \Lambda_{\widetilde{q}}^{-1}q\\
+\ea
+\ee
+where $\Lambda_{\widetilde{q}}\in\complex^{d\times d}=\blkdiag(\|\widetilde{q}_i\|I_{d_i})$.
+
+\hiddensection{Problem 3b}
+
+\hiddensubsection{Theory}
+Our optimization problem is
+\begin{equation*}
+\begin{aligned}
+&\argmax_{x}&&\lambda\\
+&\text{s.t.} &&x^Hx  = 1\\
+&&& \Phi(x) a = \lambda a\\
+&&& a^Ha=1.\\
+\end{aligned}
+\end{equation*}
+We may write $\Phi(x) = X^HR X$. Using this fact and third constraint of this
+optimization, the second constraint may be written as $a^HX^H R Xa=\lambda$.
+
+Let $R=U\Sigma V^HV\Sigma^H U^H$ be a decomposition of $R$ using the block SVDs of the
+individual covariance matrices $R_{ii}$. Let $\widetilde{a}=Xa$. We wish to maximize
+$\lambda=\widetilde{a}^H R\widetilde{a}$, with $\|\widetilde{a}\|=1$. This is equivalent
+to
+\be\ba
+&\argmax_{\widetilde{a}}&&\|R^{1/2}\widetilde{a}\|_2\\
+&\text{s.t.} &&\|\widetilde{a}\|=1.
+\ea\ee
+Now
+\be\ba
+&\|R^{1/2}\widetilde{a}\|_2 && = \|P\Sigma U^H\widetilde{a}\|_2\\
+\ea\ee
+where $P\in\complex^{d\times d}$ is composed of sub-matrices $P_{ij}\in\complex^{d_i\times
+  d_j}=\text{corr}(y_i,y_j)$. Note that $P_{ii}=I_{d_i}$. The entries of $P$ are all
+between $-1$ and $1$.  Now since $U$ is an orthonormal matrix and the largest entries in
+$P$ have norm 1, to maximize this norm, $\widetilde{a}$ should be the column of $U$
+corresponding to the largest value in $\Sigma$. Since $U$ is block diagonal,
+$\widetilde{a}=[0^H\dots 0^H u_{i1}^H 0^H]^H$ where $u_{i1}$ is the leftmost left singular
+vector of $R_{ii}$ where $i$ is the dataset with the largest singular value. Therefore,
+$\rho=\widetilde{a}^HU\Sigma
+PP^T\Sigma^HU^H\widetilde{a}=\sigma_{i1}^2P_{ii}=\sigma_{i1}^2$ as $P_{ii}=1$. Therefore,
+the canonical vectors are
+\be
+x_i = \begin{cases} u_{i1} & \text{dataset } i \text{ has largest singular value}\\
+0 & \text{otherwise}\\ \end{cases}
+\ee
+This is obviously undesirable as all but one canonical vector is 0. We advise to not use
+this formulation of MCCA.
+
+\hiddensubsection{Empirical}
+In the empirical setting, we substitute $\widehat{R}$ as the sample covariance
+estimate. Recall that $\widehat{R} = U\Sigma V^H V \Sigma^HU^H$. Letting $\widetilde{a} =
+Xa$, our optimization problem is
+\be\ba
+&\argmax_{\widetilde{a}}&&\|R^{1/2}\widetilde{a}\|_2\\
+&\text{s.t.} &&\|\widetilde{a}\|=1
+\ea\ee
+We can rewrite this as
+\be\ba
+&\|R^{1/2}\widetilde{a}\|_2 && = \|V\Sigma U^H\widetilde{a}\|_2.\\
+\ea\ee
+Now since $U$ is an orthogonal matrix and the columns of $V$ are unit norm, to maximize
+this norm, $\widetilde{a}$ should be the column of $U$ corresponding to the largest value
+in $\Sigma$. Since $U$ is block diagonal, $\widetilde{a}=[0^H\dots 0^H u_{i1}^H 0^H]^H$
+where $u_{i1}$ is the leftmost left singular vector of $R_{ii}$ where $i$ is the dataset
+whose sample covariance matrix has the largest singular value. The value of
+$\widehat{\rho}$ is the value of the largest singular value squared. This formulation of MCCA
+results in canonical vectors that are 0 for all but one dataset. This obviously is very
+undesirable and we advise to not use this formulation for MCCA.
+
+\hiddensection{Problem 3c}
+
+\hiddensubsection{Theory}
+Our optimization problem is
+\begin{equation*}
+\begin{aligned}
+&\argmax_{x}&&\lambda\\
+&\text{s.t.} &&x_i^HR_{ii}x_i  = 1\,\,,1\leq i\leq m\\
+&&& \Phi(x) a = \lambda a\\
+&&& a^Ha=1.\\
+\end{aligned}
+\end{equation*}
+We may write $\Phi(x) = X^H R X$. Using this fact and third constraint of this
+optimization, the second constraint may be written as $a^HX^H R Xa=\lambda$. If we assume
+that $R_D$ is positive definite (which requires it to be full rank), we can rewrite this
+as $a^HX^HR_D^{1/2}R_D^{-1/2}RR_D^{-1/2}R_D^{1/2}Xa=\lambda$. Let
+$\widetilde{a}=R_D^{1/2}Xa$. Now by the first and third constraints
+\begin{equation*}
+\|\tilde{a}\|^2 = a^HX^HR_DXa=a^H I_m a = a^Ha = 1.
+\end{equation*}
+Our modified optimization problem is
+\begin{equation*}
+\begin{aligned}
+&\argmax_{\widetilde{a}}&&\lambda\\
+&\text{s.t}&& \widetilde{a}^HR_D^{-1/2}RR_D^{-1/2}\widetilde{a} = \lambda\\
+&&& \widetilde{a}^H\widetilde{a}=1.\\
+\end{aligned}
+\end{equation*}
+Therefore, $\widetilde{a}$ is the eigenvector corresponding to the largest eigenvalue of
+$R_D^{-1/2}RR_D^{-1/2}$. To solve for our original canonical coefficients, recall that
+$\widetilde{a}=R_D^{1/2}Xa$. As $R_D$ and $X$ are block diagonal, we have
+$\widetilde{a}_i=R_{ii}^{1/2}x_ia_i$, implying $x_i =
+\frac{1}{a_i}R_{ii}^{-1/2}\widetilde{a}_i$. By the first constraint, 
+\be
+x_i^HR_{ii}x_i  = \frac{\widetilde{a}_i^H\widetilde{a}_i}{a_i^2} =1.
+\ee
+Letting $a_i = \|\widetilde{a}_i\|$ satisfies this constraint. Therfore, the canonical vector is
+\be
+x_i = \frac{R_{ii}^{-1/2}\widetilde{a}_i}{\|\widetilde{a}_i\|}.
+\ee
+Thus
+\be
+x = \Lambda_{\widetilde{a}}^{-1}R_D^{-1/2}\widetilde{a}
+\ee
+where $\Lambda_{\widetilde{a}}\in\complex^{d\times d}=\blkdiag(\|\widetilde{a}_i\|I_{d_i})$.
+
+%This seems related to the SUMCORR problems.
+%\begin{equation*}
+%\begin{aligned}
+%&\Sigma_D^{-1/2}\Sigma\Sigma_D^{-1/2}\tilde{a}&&=\lambda\tilde{a}\\
+%&\Sigma_D^{-1/2}\Sigma\Sigma_D^{-1/2}(\Sigma_D^{1/2}\Lambda_{\tilde{a}}w)&&=\lambda\Sigma_D^{1/2}\Lambda_{\tilde{%a}}w\\
+%&\Sigma_D^{-1/2}\Sigma\Lambda_{\tilde{a}}w&&=\lambda\Sigma_D^{1/2}\Lambda_{\tilde{a}}w\\
+%&\Sigma\Lambda_{\tilde{a}}w&&=\lambda\Sigma_D\Lambda_{\tilde{a}}w\\
+%\end{aligned}
+%\end{equation*}
+
+\hiddensubsection{Empirical}
+Our empirical eigen-system is
+$\widehat{R}_D^{-1/2}\widehat{R}\widehat{R}_D^{-1/2}\widetilde{a} =
+\widehat{\rho}\widetilde{a}$. Using the SVD notation for our empirical data matrices, we
+have that
+\begin{equation*}
+\begin{aligned}
+&\widehat{R}_D^{-1/2}\widehat{R}\widehat{R}_D^{-1/2}&&=\left(U\Sigma\Sigma^HU^H\right)^{-1/2}\left(U\Sigma V^HV\Sigma^H U^H\right)\left(U\Sigma\Sigma^HU^H\right)^{-1/2}\\
+&&&=U(\Sigma\Sigma^H)^{-1/2}U^HU\Sigma V^HV\Sigma^HU^HU(\Sigma\Sigma^H)^{-1/2}U^H\\
+&&& = U(\Sigma\Sigma^H)^{-1/2}\Sigma V^HV\Sigma^H(\Sigma\Sigma^H)^{-1/2}U^H\\
+&&&=U\widetilde{V}^H\widetilde{V}U^H
+\end{aligned}
+\end{equation*}
+where $\tilde{V}\in\complex^{n\times d}=[V_1(:,1:d_1),\dots,V_m(:,1:d_m)]$. Defining $\widehat{C} = \widetilde{V}^H\widetilde{V}$ and its eigenvalue decomposition $\widehat{C} = \widehat{F}\widehat{K}\widehat{F}^H$, then we have that the MCCA empirical solution is
+\be\ba
+& \widehat{\rho} = \widehat{k}_1\\
+& \widehat{x} = U \widetilde{\Sigma}^{-1}\Lambda_{\widehat{f}_1}^{-1}\widehat{f}_1
+\ea\ee
+where $\widetilde{\Sigma} = \blkdiag\left(\Sigma_1(1:d_1,1:d_1),\dots, \Sigma_m(1:d_m,1:d_m)\right)$.
+
+\hiddensection{Problem 3d}
+\hiddensubsection{Theory}
+We proceed very similarly as above. Our optimization problem is
+\begin{equation*}
+\begin{aligned}
+&\argmax_{x}&&\lambda\\
+&\text{s.t.} &&xR_Dx  = 1\\
+&&& \Phi(x) a = \lambda a\\
+&&& a^Ha=1.\\
+\end{aligned}
+\end{equation*}
+Substituting  $\widetilde{x} = R_D^{1/2}x$ into the above problem yields
+\begin{equation*}
+\begin{aligned}
+&\argmax_{x}&&\lambda\\
+&\text{s.t.} &&\widetilde{x}^H\widetilde{x}= 1\\
+&&& \widetilde{X}^HR_D^{-1/2}RR_d^{-1/2}\widetilde{X} a = \lambda a\\
+&&& a^Ha=1.\\
+\end{aligned}
+\end{equation*}
+This is now the same problem as 3b except we replace $R$ with
+$R_D^{-1/2}RR_D^{-1/2}$. Using the SVD notation as in 3b, we have that
+$R_D^{-1/2}RR_D^{-1/2}=UP^TPU^H$. Recall that the diagonals of $P$ are 1 and that every
+entry of $P$ has a norm of no greater than 1. We can clearly see that this problem does
+not have a unique solution. We can set any $x_i=u_i/\sigma_i$ where $u_i$ is any left singular
+vector or $R_{ii}$ corresponding to the singular value $\sigma_i$. We then set all other
+$x_i=0$. Choosing canonical vectors in this fashion results in $\rho=1$. This solution is
+non-unique and clearly undesirable. Therefore, the canonical vectors are
+\be
+x_i = \begin{cases} u_{i}/\sigma_i & \text{for one dataset}\\
+0 & \text{for all others}\\ \end{cases}.
+\ee
+We advise to not use this formulation of MCCA.
+
+\hiddensubsection{Empirical}
+The solutions to this problem are not unique. Take the data SVD of one dataset $Y_i$ and
+set $x_i = u_i/\sigma_i$ and all others equal to 0. 
+
+\hiddensection{Problem 4a}
+
+The optimization problem is 
+\begin{equation*}
+\begin{aligned}
+&\argmin_{x}&&\lambda\\
+&\text{s.t.} &&x_i^Hx_i  = 1, i=1,\dots,m\\
+&&& \Phi(x) a = \lambda a\\
+&&& a^Ha=1.\\
+\end{aligned}
+\end{equation*}
+
+Here we proceed exactly as in problem 3a except that we choose the eigenvector
+corresponding to the smallest, (potentially zero) eigenvalue.
+
+\hiddensection{Problem 4b}
+\hiddensubsection{Theory}
+The optimization problem is 
+\begin{equation*}
+\begin{aligned}
+&\argmin_{x}&&\lambda\\
+&\text{s.t.} &&x^Hx  = 1\\
+&&& \Phi(x) a = \lambda a\\
+&&& a^Ha=1.\\
+\end{aligned}
+\end{equation*}
+Choosing the canonical vectors the same way as in 3b makes $\Phi(x)$ singular. Therefore
+we can achieve an eigenvalue of 0. This is optimal as $\Phi(x)$ is positive
+semi-definite. This solution is not unique and undesirable. 
+
+\hiddensubsection{Empirical}
+The solutions to this problem are not unique. Take the data SVD of one dataset $Y_i$ and
+set $x_i = u_i/\sigma_i$ and all others equal to 0 for any dataset and any singular
+vector/value pair.
+
+\hiddensection{Problem 4c}
+
+The optimization problem is 
+\begin{equation*}
+\begin{aligned}
+&\argmin_{x}&&\lambda\\
+&\text{s.t.} &&x_i^HR_{ii}x_i  = 1, i=1,\dots,m\\
+&&& \Phi(x) a = \lambda a\\
+&&& a^Ha=1.\\
+\end{aligned}
+\end{equation*}
+
+Here we proceed exactly as in problem 3c except that we choose the eigenvector
+corresponding to the smallest, nonzero eigenvalue.
+
+\hiddensection{Problem 4d}
+
+\hiddensubsection{Theory}
+
+The optimization problem is 
+\begin{equation*}
+\begin{aligned}
+&\argmin_{x}&&\lambda\\
+&\text{s.t.} &&x^HR_Dx  = 1\\
+&&& \Phi(x) a = \lambda a\\
+&&& a^Ha=1.\\
+\end{aligned}
+\end{equation*}
+Choosing the canonical vectors the same way as in 3d makes $\Phi(x)$ singular. Therefore
+we can achieve an eigenvalue of 0. This is optimal as $\Phi(x)$ is positive
+semi-definite. This solution is not unique and undesirable. 
+
+\hiddensubsection{Empirical}
+The solutions to this problem are not unique. Take the data SVD of one dataset $Y_i$ and
+set $x_i = u_i/\sigma_i$ and all others equal to 0 for any dataset and any singular
+vector/value pair.
+
+\hiddensection{Problems 5a-d Theory}
+
+The GENVAR problem does not offer a closed form solution. To solve these problems we use
+the manopt software package. The cost function is
+\beq\label{eq:genvar_cost}
+|X^HRX|
+\eeq
+where $X=\blkdiag(x_1,\dots,x_m)$. The gradient with respect to the matrix $X$ is
+\be
+\frac{\partial}{\partial X} = 2|X^H RX|RX(X^HRX)^{-1}.
+\ee
+Let $\ones_{d_i}\in\complex^{d_i}$ be the vector of all ones. Let
+$A=\blkdiag(\ones_{d_1},\dots,\ones_{d_m})$. Then the gradient with respect to the vector
+$x$ can be extracted via
+\beq\label{eq:genvar_grad}
+\frac{\partial}{\partial x} = 2|X^H RX|RX(X^HRX)^{-1}\odot A
+\eeq
+where $\odot$ represents element-wise multiplication. Choosing the appropriate cost
+function manifolds completes the solution using manopt as we see below in the empirical
+versions. 
+
+\hiddensection{Problem 5a Empirical}
+The canonical vectors are each constrained on the $\complex^{d_i}$ unit sphere. The
+manifold for the problem is the product of $m$ of these sphere manifolds. We use the
+sample covariance matrix $\widehat{R}$ for the unknown $R$ in (\ref{eq:genvar_cost}) and
+(\ref{eq:genvar_grad}). 
+
+\hiddensection{Problem 5b Empirical}
+The canonical vectors are each constrained on the $\complex^{d}$ unit sphere. The
+manifold for the problem is therefore one sphere manifolds. We use the
+sample covariance matrix $\widehat{R}$ for the unknown $R$ in (\ref{eq:genvar_cost}) and
+(\ref{eq:genvar_grad}). 
+
+\hiddensection{Problem 5c Empirical}
+The constraints for this problem are $x_i^HR_{ii}x_i = 1$ for $i=1,\dots,m$. Here we make
+the transformation
+\be
+\widetilde{x} = R_{ii}^{1/2}x
+\ee
+which results in the constraints $\widetilde{x}^H_i\widetilde{x}_i = 1$ for
+$i=1,\dots,m$. The cost function becomes
+\be
+|X^HRX| = |\widetilde{X}^HR_D^{-1/2}RR_D^{-1/2}\widetilde{X}|.
+\ee
+We see that this is the same type of problem as 5a with $\widetilde{x}$ replacing $x$ and
+$R_D^{-1/2}RR_D^{-1/2}$ replacing $R$. We make this substitution and use the sample
+covariance matrices $\widehat{R}$ and $\widehat{R}_D$ in (\ref{eq:genvar_cost}) and
+(\ref{eq:genvar_grad}). The manifold for this problem is the product of $m$
+$\complex^{d_i}$ sphere manifolds.
+
+\hiddensection{Problem 5d Empirical}
+The single constraint for this problem is $x^HR_Dx = 1$. Here we make
+the transformation
+\be
+\widetilde{x} = R_{ii}^{1/2}x
+\ee
+which results in the constraint $\widetilde{x}^H\widetilde{x} = 1$ for
+$i=1,\dots,m$. The cost function becomes
+\be
+|X^HRX| = |\widetilde{X}^HR_D^{-1/2}RR_D^{-1/2}\widetilde{X}|.
+\ee
+We see that this is the same type of problem as 5a with $\widetilde{x}$ replacing $x$ and
+$R_D^{-1/2}RR_D^{-1/2}$ replacing $R$. We make this substitution and use the sample
+covariance matrices $\widehat{R}$ and $\widehat{R}_D$ in (\ref{eq:genvar_cost}) and
+(\ref{eq:genvar_grad}). The manifold for this problem is one $\complex^{d}$ sphere manifold.

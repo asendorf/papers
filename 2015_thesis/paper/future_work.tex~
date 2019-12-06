@@ -1,0 +1,46 @@
+In the first part of this dissertation, we considered the classical problem of matched
+subspace detection. Using insights from random matrix theory about the accuracy of
+subspaces in the low-sample, high dimensional regime, we showcased the suboptimality of
+the standard plug-in detector and derived a new detector that can avoid some of this
+performance loss. It is amazing that random matrix theory reveals new surprises is
+classically solved problems. We hope this application will continue to accelerate this
+trend and that others will similarly reconsider other classical signal processing
+applications in the low-sample high-dimensionality regime.
+
+In the second part of this dissertation, we explored detecting correlations in multi-modal
+datasets. Motivated by the suboptimality of canonical correlation analysis in the sample
+deficient regime, we proposed informative CCA (ICCA). With this new algorithm, it is
+possible to detect correlations in high-dimensional small-sample datasets. Using insights
+from random matrix theory, we derived improved estimates of the canonical vectors returned
+by ICCA. Finally, we extended these ideas to algorithms that handle more than two datasets
+and proposed an informative version of such algorithms. We verified these informative
+correlation algorithms on new low-rank real-world datasets that we created.
+
+The correlation algorithms considered herein are all linear. The work presented in this
+thesis unifies and completes much of the theory on linear correlation detection in the
+sample deficient regime. However, if there are nonlinear correlations present between the
+datasets, ICCA and IMCCA are the wrong algorithms to use. An important area of future
+research is to extend these insights from random matrix theory to the kernel versions of
+CCA (KCCA). While KCCA has been used in practice, the theoretical limits of it are
+generally unknown. An important first step is to develop a universal data model that
+encodes non-linear correlations. Ideally, similar to the work present in this thesis, we
+would like to see a fundamental limit dependent on the system dimensionality, number of
+samples, data SNR, and choice of kernel parameters. One can expect KCCA to have a similar
+poor behavior in this sample deficient regime as CCA and so an informative version of
+KCCA seems within reach.
+
+Finally, we hope that the work on MCCA presented in the final chapter will serve as a
+springboard for future research in the area. We showcased that reliable detection of
+correlations between more than two datasets is possible in the sample deficient
+regime. However, further investigation into the theoretical properties of such algorithms
+is necessary. In the thesis we touched on the close relationship between the algorithms
+MAXVAR and MINVAR. Further exploration of this relationship is very important as it may
+reveal structure in the problem that we can exploit. Similar to the work presented for
+ICCA, improved estimates of MCCA canonical vectors seems within reach.
+
+Today's technological landscape offers the ability to collect as much data as possible. It
+is our job as machine learning and statistical signal processing specialists to
+theoretically fuse such a wide variety of data. We hope that the work presented in this
+thesis serves as a starting point for such a discussion. 
+
+

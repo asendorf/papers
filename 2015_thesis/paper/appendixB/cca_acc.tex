@@ -1,0 +1,726 @@
+In this appendix we first derive the almost sure limit of the top empirical CCA
+correlation estimates using the low-rank signal-plus-noise data model presented in Chapter
+4. This is a recent result by \cite{bao2014canonical} but we present a similar derivation using
+our data model and our random matrix theory notation. We then consider the accuracy of the
+corresponding canonical vectors returned by empirical CCA. We derive a non-closed form
+expression for this vector accuracy and discuss the approximations we make to compute the
+needed terms. Finding a closed form expression for the canonical vector accuracy remains
+future work.
+
+\hiddensection{Model}
+
+We repeat the data model from Chapter 4 for simplicity. Let $\xii\in\complex^{p\times 1}$
+and $\yii\in\complex^{q\times 1}$ be modeled as
+\beq\ba\label{eq:appen3:data_model}
+&\xii = \Ux\sx + \zx\\
+&\yii = \Uy\sy + \zy,\\
+\ea\eeq
+where $\Ux^H\Ux=I_{\kx}$, $\Uy^H\Uy=I_{\ky}$, $\zx\simiid\mathcal{CN}(0,I_p)$ and
+$\zy\simiid\mathcal{CN}(0,I_q)$. Furthermore, assume that
+\be\ba
+&\sx\sim\mathcal{CN}(0,\Tx)\\
+&\sy\sim\mathcal{CN}(0,\Ty),\\
+\ea\ee
+where $\Tx=\diag\left(\left(\tx_1\right)^2,\dots,\left(\tx_{\kx}\right)^2\right)$ and
+$\Ty=\diag\left(\left(\ty_{1}\right)^2,\dots,\left(\ty_{\ky}\right)^2\right)$. Assume that $\zx$ and $\zy$ are
+mutually independent and independent from both $\sx$ and $\sy$. Finally, assume that
+\be
+\E{\sx \sy^H} \defeq \Kxy = \Tx^{1/2}\Pxy\Ty^{1/2}
+\ee
+where the entries of $\Pxy$ are $-1\leq \rho_{kj} \leq 1$ and represent the correlation
+between $\sx^{(k)}$ and $\sy^{(j)}$. For reasons to be made clear later, define 
+\be
+\Kxytil = \left(\Tx+I_{\kx}\right)^{-1/2}\Kxy\left(\Ty+I_{\ky}\right)^{-1/2}
+\ee
+and define the singular values of $\Kxytil$ as
+$\kappa_1,\dots,\kappa_{\min(\kx,\ky)}$. Under this model, we define the following 
+covariance matrices  
+\beq\label{eq:true_scm}\ba
+&\E{\xii\xii^H} = \Ux\Tx\Ux^H + I_p \defeq \Rxx\\
+&\E{\yii\yii^H} = \Uy\Ty\Uy^H + I_q \defeq \Ryy\\
+&\E{\xii\yii^H} = \Ux\Kxy\Uy^H \defeq \Rxy.\\
+\ea\eeq
+We define the rank of $\Rxy$ to be $k$.
+
+
+\hiddensection{Almost Sure Limit of CCA Eigenvalues}
+
+Bao et. al \cite{bao2014canonical} solve for the canonical correlation estimates in the following
+setting
+\beq\label{eq:bao}
+\left[\begin{array}{c}X \\ Y\end{array}\right] = \left[\begin{array}{cc}I_p & R \\ R^H & I_q\end{array}\right]^{1/2}\left[\begin{array}{c}W_1 \\ W_2\end{array}\right]
+\eeq
+where $W_1$ has independent columns that are $\mathcal{N}(0,I_p)$ and $W_2$ has
+independent columns that are $\mathcal{N}(0,I_q)$; $W_1$ is independent of $W_2$ and $R =
+\diag(\sqrt{r_1},\dots,\sqrt{r_k},0,\dots 0)$. In this setup, $[X^H\,\,\, Y^H]^H$ has covariance
+matrix 
+\be
+\left[\begin{array}{cc}I_p & R \\ R^H & I_q\end{array}\right]
+\ee
+and we may view (\ref{eq:bao}) as a sample from this covariance matrix. Here, we first show
+that the above data model in (\ref{eq:appen3:data_model}) can be transformed via
+invertible transformations to achieve the 
+form of (\ref{eq:bao}). Using our own notation, we then provide an alternative but
+equivalent derivation to Bao et al. for the almost sure limit of the correlation estimates of
+empirical CCA. In this setting, we assume that $n>p+q$ as below this limit, we know via simple
+geometric arguments that $\rhohatcca=1$ deterministically.
+
+We now show that our data model in (\ref{eq:appen3:data_model}) may be formulated as (\ref{eq:bao}). In
+our model, 
+\be
+\left[\begin{array}{c}X \\ Y\end{array}\right] = \left[\begin{array}{cc}R_{xx} & R_{xy} \\ R_{yx} & R_{yy}\end{array}\right]^{1/2}\left[\begin{array}{c}W_1 \\ W_2\end{array}\right]
+\ee
+where $W_1$ and $W_2$ are the same as above. This views the data matrices as a sample from a
+covariance matrix. 
+Define
+\be
+\left[\begin{array}{c}\widetilde{X} \\ \widetilde{Y}\end{array}\right] =
+\left[\begin{array}{cc}\Rxx & 0 \\ 0 &
+    \Ryy\end{array}\right]^{-1/2}\left[\begin{array}{c}X \\ Y\end{array}\right]. 
+\ee
+In this setup, $[X^H\,\,\, Y^H]^H$ has covariance matrix 
+\be
+\left[\begin{array}{cc}I_p & M \\ M^H & I_q\end{array}\right]
+\ee
+where 
+\be
+M = \Rxx^{-1/2}\Rxy\Ryy^{-1/2}.
+\ee
+With the definitions of the population covariance matrices for our data model,
+\be
+M = \Ux\left(\Tx+I_{\kx}\right)^{1/2}\Tx^{1/2}\Pxy\Ty^{1/2}\left(\Ty+I_{\ky}\right)^{-1/2}\Uy^H.
+\ee
+Define $F_MD_MG_M^H$ to be the SVD of M, noting that $D_M$ has at most $k$ nonzero
+singular values. Then make the transformation
+\be\ba
+&\left[\begin{array}{c}\widetilde{\widetilde{X}} \\ \widetilde{\widetilde{Y}}\end{array}\right] &&=
+\left[\begin{array}{cc}F_M^H & 0 \\ 0 &
+    G_M^H\end{array}\right]^{1/2}\left[\begin{array}{c}\widetilde{X} \\
+    \widetilde{Y}\end{array}\right] =  \left[\begin{array}{cc}F_M^H\Rxx^{-1/2} & 0 \\ 0 &
+    G_M^H\Ryy^{-1/2}\end{array}\right]^{1/2}\left[\begin{array}{c} X \\
+    Y \end{array}\right]\\
+&&& = \left[\begin{array}{cc}I_p & D_M \\ D_M^H &
+    I_q\end{array}\right]^{1/2}\left[\begin{array}{c}W_1 \\ W_2\end{array}\right].
+\ea\ee
+Therefore, from this transformation, we are in the same setting as Bao et al. with, for
+$i=1,\dots,k$,
+\be
+d_i = \sqrt{r_i}.
+\ee
+We note that $d_i$ are the singular values of $\Kxytil$, which we defined as
+$\kappa_1,\dots,\kappa_k$. If we are in the special case where $\Pxy=\diag(\rho_1,\dots,\rho_{k})$, then 
+\be
+d_i =
+ \frac{\tx_i\ty_i\rho_i}{\sqrt{\left(\tx_i\right)^2+1}\sqrt{\left(\ty_i\right)^2+1}}.
+\ee
+
+Next we proceed with an analogous proof of Bao et al. As noted in their paper, transforming $X$
+and $Y$ to $\widetilde{\widetilde{X}}$ and $\widetilde{\widetilde{Y}}$ preserves the
+canonical correlation estimates because the transformation matrix is
+non-singular. Our target matrix in CCA is
+\beq\label{eq:cca_target}
+\Ccca = \Rxx^{-1}\Rxy\Ryy^{-1}\Rxy^H.
+\eeq
+Clearly, making invertible transformations of $X$ and $Y$ preserves the eigenvalues of
+(\ref{eq:cca_target}). We proceed assuming $X$ and $Y$ are the transformed versions
+$\widetilde{\widetilde{X}}$ and $\widetilde{\widetilde{Y}}$ to ease notation.
+
+First for $i=1,\dots,k$, define
+\be
+\alpha_i = \frac{\sqrt{1+d_i}+\sqrt{1-d_i}}{2},\,\,\,\beta_i=\frac{\sqrt{1+d_i}-\sqrt{1-d_i}}{2}
+\ee
+and the matrices 
+\be
+P_1 = \left[\begin{array}{cc}\diag(\alpha_1,\dots,\alpha_k) & 0 \\ 0 &
+    I_{p-k}\end{array}\right], P_2 = \left[\begin{array}{cc}\diag(\alpha_1,\dots,\alpha_k)
+    & 0 \\ 0 & I_{q-k}\end{array}\right],\,\,
+\ee
+\be
+P_3 = \left[\begin{array}{cc}\diag(\beta_1,\dots,\beta_k)  & 0 \\ 0 & 0\end{array}\right].
+\ee
+With these definitions, we observe that
+\be
+\left[\begin{array}{cc}I_p & D_M \\ D_M^H &
+    I_q\end{array}\right]^{1/2} = \left[\begin{array}{cc}P_1 & P_3 \\ P_3^H &
+    P_2\end{array}\right].
+\ee
+Defining the transformation (again re-using notation for simplicity)
+\be
+\left[\begin{array}{c}X \\ Y\end{array}\right] =
+\left[\begin{array}{cc}P_1^{-1} & 0 \\ 0 &
+    P_2^{-1}\end{array}\right]\left[\begin{array}{c}X \\ Y\end{array}\right], 
+\ee
+we have that 
+\be
+\left[\begin{array}{c}X \\ Y\end{array}\right] =
+\left[\begin{array}{cc}I_p & P \\ P &
+    I_q\end{array}\right]\left[\begin{array}{c}W_1 \\ W_2\end{array}\right], 
+\ee
+where 
+\be
+P = \left[\begin{array}{cc}\diag(\tau_1,\dots,\tau_k) & 0 \\ 0 &
+    0\end{array}\right],
+\ee
+with $\tau_i=\beta_i/\alpha_i$. Next, define
+\be
+Q = \left[\begin{array}{cc}\diag(2\tau_1/\left(1+\tau_1^2\right),\dots,2\tau_k/\left(1+\tau_k^2\right)) & 0 \\ 0 &
+    0\end{array}\right],
+\ee
+and
+\be
+W = \left(I-QP^H\right)W_1 + (P-Q)W_2,
+\ee
+so that by construction $W$ and $Y$ are independent and
+\be
+X = W + QY.
+\ee
+The covariance matrices for $Y$ and $W$ are
+\be\ba
+&R_W = \E{\frac{1}{n}WW^H} = \left[\begin{array}{cc}\diag(1+\frac{\tau_1^4-3\tau_1^2}{1+\tau_1^2},\dots,1+\frac{\tau_k^4-3\tau_k^2}{1+\tau_k^2}) & 0 \\ 0 &
+    I_{p-k}\end{array}\right]\\
+&R_Y = \E{\frac{1}{n}YY^H} = \left[\begin{array}{cc}\diag(1+\tau_1,\dots,1+\tau_k) & 0 \\ 0 &
+    I_{q-k}\end{array}\right].
+\ea\ee
+Finally making the transformation
+\be
+\left[\begin{array}{c}\widetilde{X} \\ \widetilde{Y}\end{array}\right] =
+\left[\begin{array}{cc}R_W^{-1/2} & 0 \\ 0 &
+    R_Y^{-1/2}\end{array}\right]\left[\begin{array}{c}X \\ Y\end{array}\right], 
+\ee
+yields
+\begin{enumerate}
+\item $\widetilde{Y}$ has independent columns that are $\mathcal{N}(0,I_q)$
+\item $\widetilde{W}=R_W^{-1/2}W$ has independent columns that are $\mathcal{N}(0,I_p)$.
+\item $\widetilde{X}$ has independent columns that are
+  $\mathcal{N}(0,R_W^{-1/2}QR_YQ^HR_W^{-1/2})$
+\item $\widetilde{W}$ and $\widetilde{Y}$ are independent.
+\end{enumerate}
+Denoting
+\be
+T = R_W^{-1/2}QR_Y^{1/2} = \left[\begin{array}{cc}\diag(t_1,\dots,t_k) & 0 \\ 0 &
+    0\end{array}\right],
+\ee
+with $t_i = 2\tau_i/(1-\tau_i^2)$, we finally arrive at the setting (again dropping the tildes)
+\beq\label{eq:cca_reduced}
+\left[\begin{array}{c}X \\ Y \end{array}\right] = \left[\begin{array}{c}W+TY \\
+    Y \end{array}\right]. 
+\eeq
+This is wonderful because we now have a perturbation model for $X$ and $Y$. Defining the
+sample covariance matrices of our matrices as
+\be\ba
+&\Sxx = \frac{1}{n}XX^H\\
+&\Syy = \frac{1}{n}YY^H\\
+&\Sxy = \frac{1}{n}XY^H\\
+&\Syx = \frac{1}{n}YX^H\\
+&\Sww = \frac{1}{n}WW^H\\
+&\Swy = \frac{1}{n}WY^H\\
+&\Syw = \frac{1}{n}YW^H,\\
+\ea\ee
+we have the relationship. that
+\be\ba
+& \Sxx = \Sww + T\Syw + \Swy T^H + T^H\Syy T^H\\
+& \Sxy = \Swy + T\Syy\\
+& \Syx = \Syw + \Syy T^H.\\
+\ea\ee
+Therefore the CCA matrix in (\ref{eq:cca_target}) becomes a low rank matrix plus a product
+of independent noise matrices. We show this beginning with the characteristic equation for
+(\ref{eq:cca_target}). 
+\be\ba
+&0 &&= \det\left(\Sxx^{-1}\Sxy\Syy^{-1}\Syx - \lambda I\right)\\
+&&& = \det\left(\Sxy\Syy^{-1}\Syx - \lambda \Sxx\right)\\
+&&& = \det\left(\left(\Swy + T\Syy\right)\Syy^{-1}\left(\Syw + \Syy T^H\right) - \lambda
+  \left(\Sww + T\Syw + \Swy T^H + T^H\Syy T^H\right)\right)\\
+&&& = \det\left(\Swy\Syy^{-1}\Syw - \lambda\Sww + (1-\lambda)\underbrace{\left(T\Syw+\Swy T^H + T\Syy T^H\right)}_{\Delta}\right)\\
+\ea\ee
+This give a nice low rank perturbation of a random matrix product. Therefore, if $\lambda$
+is not an eigenvalue of $\Sww^{-1}\Swy\Syy^{-1}\Syw$. we have
+\be
+0=\det\left(I_p + (1-\lambda)\left(\Swy\Syy^{-1}\Syw - \lambda\Sww\right)^{-1}\Delta\right).
+\ee
+Examining $T$, we see that the rank of $T$ is at most $k$ as therefore $\Delta$ will be
+low rank. The structure of $\Delta$ is ugly but necessary for the remainder of the proof
+and we slightly alter the notation of Bao et al. We have that
+\be
+\Delta = UV^H
+\ee
+where
+\be\ba
+&U = \left[A_1,\dots,A_k,F_1,\dots,F_k\right]\\
+&V = \left[B_1,\dots,B_k,C_1,\dots,C_k\right]\\
+\ea\ee
+where
+\be\ba
+& A_i = \left[\chi_{ii}e_i, t_ie_i,t_iu_i\right]\\
+& B_i = \left[e_i,u_i,e_i\right]\\
+& C_i = \left[\underbrace{e_i,\dots,e_i}_{k-1}\right]\\
+& F_1 = \left[\chi_{12}e_1,\dots,\chi_{1k}e_k\right]\\
+& F_i = \left[\chi_{i1}e1,\dots\chi_{i,i-1}e_{i-1},\chi_{i,i+1}e_{i+1},\dots,\chi_{ik}e_k\right]\\
+\ea\ee
+where $e_i$ is $i$-th elementary vector, $u_i$ is the $i$-th column of $\Swy$ and
+$\chi_{ij}=t_it_j\Syy(i,j)$. With these definitions, and using the identity that
+$\det(I+AB)=\det(I+BA)$, we have that 
+\be
+0 = \det(I_{k^2+2k} + (1-\lambda)V^H\left(\Swy\Syy^{-1}\Syw - \lambda\Sww\right)^{-1}U).
+\ee
+In this form, we have our standard characteristic equation of a low rank perturbation of a
+random matrix. In this case $\Delta$ is our perturbation and $\Sww^{-1}\Swy\Syy^{-1}\Syw$
+is the random matrix. This highlights the importance of the previous transformations
+needed to write $X=W+TY$. The random matrix product is now of independent components and
+we can therefore compute statistics on its eigenvalues.
+
+First define
+\beq\label{eq:M}
+M(\lambda)= I_{k^2+2k} + (1-\lambda)V^H\left(\Swy\Syy^{-1}\Syw - \lambda\Sww\right)^{-1}U
+\eeq
+and based on the structure of $U$ and $V$, we have that 
+\be
+M(\lambda) = I_{k^2+2k} + (1-\lambda)\blkdiag(G_1(\lambda),\dots,G_k(\lambda),0,\dots,0),
+\ee
+where 
+\be
+G_i(\lambda) = \left[\begin{array}{ccc}t_i^2f(\lambda) & t_if(\lambda) & 0 \\
+  0 & 0 & t_i h(\lambda)\\ t_i^2 f(\lambda) &t_i f(\lambda) & 0\end{array}\right]
+\ee
+with
+\be\ba
+& f(\lambda) = e_i^H\left(\Swy\Syy^{-1}\Syw - \lambda\Sww\right)^{-1}e_i^H\\
+& h(\lambda) = u_i^H\left(\Swy\Syy^{-1}\Syw - \lambda\Sww\right)^{-1}u_i^H.\\ 
+\ea\ee
+We get such a nice structure for $M(\lambda)$ in (\ref{eq:M}) due to many cancellations of
+terms such as
+\be\ba
+& e_i^H\left(\Swy\Syy^{-1}\Syw - \lambda\Sww\right)^{-1}e_j^H\\
+& u_i^H\left(\Swy\Syy^{-1}\Syw - \lambda\Sww\right)^{-1}u_j^H\\ 
+& e_i^H\left(\Swy\Syy^{-1}\Syw - \lambda\Sww\right)^{-1}u_j^H.\\ 
+\ea\ee
+Therefore, to solve our characteristic equation, we may look at the sub-blocks of $M$ of
+the form $I_3+(1-\lambda)G_i(\lambda)$. The determinant of this $3\times 3$ matrix is
+\beq\label{eq:det}
+1 + (1-\lambda)t_i^2f(\lambda) - (1-\lambda)^2t_i^2f(\lambda)h(\lambda).
+\eeq
+To complete the proof, we must find closed form expressions for $f(\lambda)$ and $h(\lambda)$ and
+substitute them into (\ref{eq:det}) to solve for $\lambda$. 
+
+First, define the projection matrix $P_Y= Y^H\left(YY^H\right)^{-1}Y$ and the matrices $E
+= \frac{1}{n}WP_YW^H$ and $H=\frac{1}{n}W(I-P_Y)W^H$. Therefore, with these definitions
+\be
+\left(\Swy\Syy^{-1}\Syw - \lambda\Sww\right)^{-1} = \left(E - \lambda(E+H)\right)^{-1} =
+\left((1-\lambda)E - \lambda H\right)^{-1}.
+\ee
+These definitions are wonderful because $E$ and $H$ are independent by construction and 
+\be\ba
+& E\sim \text{Wishart}_p(I_p,q)\\
+& H\sim \text{Wishart}_p(I_p,n-q).\\
+\ea\ee
+This formulation is sufficient for $f(\lambda)$ but not $h(\lambda)$. Examining
+$h(\lambda)$, we have that
+\be
+h(\lambda) = u_1^H\left(\Swy\Syy^{-1}\Syw - \lambda\Sww\right)^{-1}u_1 =
+e_1^H\Syw\left(\Swy\Syy^{-1}\Syw - \lambda\Sww\right)^{-1}\Swy e_1.
+\ee
+Next, we attempt to get a similar expression for this additional matrix product. Defining 
+\be
+\Phi(\lambda)=\Syw\left(\Swy\Syy^{-1}\Syw - \lambda\Sww\right)^{-1}\Swy 
+\ee
+and applying the Woodbury matrix identity, we have
+\be\ba
+& \Phi(\lambda) && =
+\Syw\Sww^{-1/2}\left(\Sww^{-1/2}\Swy\Syy^{-1}\Syw\Sww^{-1/2} -
+  \lambda I_p\right)^{-1}\Sww^{-1/2}\Swy \\
+&&& = \Syw\Sww^{-1/2}\left[-\frac{1}{\lambda} -
+  \frac{1}{\lambda^2}\Sww^{-1/2}\Swy\left(\Syy -
+    \frac{1}{\lambda}\Syw\Sww^{-1}\Swy\right)^{-1}\Swy\Sww^{-1/2}\right]\Sww^{-1/2}\Swy .
+\ea\ee
+Next define $A=\Syw\Sww^{-1}\Swy=\frac{1}{n}YP_wY^H$ and $B=\frac{1}{n}Y(I-P_w)Y^H$,
+similar to above. Recall that with these definitions,
+\be\ba
+& A\sim \text{Wishart}_q(I_q,p)\\
+& B\sim \text{Wishart}_q(I_q,n-p).\\
+\ea\ee
+With these definitions, we have
+\be\ba
+& \Syw\left(\Swy\Syy^{-1}\Syw - \lambda\Sww\right)^{-1}\Swy && = -\frac{1}{\lambda}A +
+\frac{1}{\lambda}A\left(A-\lambda(A+B)\right)^{-1}A\\ 
+&&& = -\frac{1}{\lambda}A +
+\frac{1}{\lambda}A\left((1-\lambda)A-\lambda B\right)^{-1}A\\
+\ea\ee
+After another application of the Woodbury matrix identity, we have that
+\be\ba
+& \Phi(\lambda)
+&& = -\frac{1}{\lambda}A +
+\frac{1}{\lambda}A\left[\frac{1}{1-\lambda}A^{-1}-\frac{1}{(1-\lambda)^2}A^{-1}\left(-\frac{1}{\lambda}B^{-1}
+  + \frac{1}{1-\lambda}A^{-1}\right)^{-1}A^{-1}\right]A\\
+&&& = \frac{1}{1-\lambda}A - \frac{1}{\lambda(1-\lambda)^2}\left(-\frac{1}{\lambda}B^{-1}
+  +\frac{1}{1-\lambda}A^{-1}\right)^{-1}\\
+&&& = \frac{1}{1-\lambda}A + \frac{1}{1-\lambda}\left((1-\lambda)B^{-1} -\lambda
+  A^{-1}\right)^{-1}.\\ 
+\ea\ee
+While this may look ugly, it is quite useful.
+
+Recall that the Stieltjes transform of a spectral distribution of a matrix X with
+eigenvalues $\gamma_1,\dots,\gamma_n$ is
+\beq\label{eq:stiel}\ba
+&m_{\mu_X}(z) &&= \int\frac{1}{\gamma-z}d_{\mu_X}\\
+&&& =\frac{1}{n}\Tr(\left(X-z I\right)^{-1})\,\,\,\text{in the finite case}\\
+&&&=\frac{1}{n}\sum_{i=1}^n\frac{1}{\gamma_i-z}
+\ea\eeq
+In addition, recall the R-transform of a spectral distribution is 
+\beq\label{eq:r_trans}
+R_{\mu_X}(z) = K_{\mu_X}(z) - \frac{1}{z},
+\eeq
+where $K_{\mu_X}$ is the Blue function of the spectral distribution with the property
+\beq\label{eq:blue}
+-m_{\mu_X}(K_{\mu_X}(z)) = K_{\mu_X}(-m_{\mu_X}(z)) = z.
+\eeq
+Specifically, we have the relationship that
+\be\ba
+&R_{\mu_X}(-m_{\mu_X}(z)) &&= K_{\mu_X}(-m_{\mu_X}(z)) +\frac{1}{m_{\mu_X}(z)}\\
+&&& = z + \frac{1}{m_{\mu_X}(z)}.\\
+\ea\ee
+Therefore we can recover the Stieltjes transform from the R-transform. A very nice property
+of the R-transform is free additive convolution. Mainly, if we have matrices $X_1$ and $X_2$, 
+\beq\label{eq:r_plus}
+R_{X_1+X_2}(z) = R_{X_1}(z) + R_{X_2}(z).
+\eeq
+
+With these definitions in mind, we first note that $m_{\mu_X}(0) =
+\frac{1}{n}\Tr(X^{-1})$. This is extremely helpful for our problem! Define the matrices
+\be\ba
+& J = (1-\lambda)E + \lambda H\\
+& \widetilde{J} = (1-\lambda)B^{-1} + \lambda A^{-1}.\\
+\ea\ee
+To solve for $f(\lambda)$ and $h(\lambda)$, we need so solve for the Stieltjes transforms
+of $J$ and $\widetilde{J}$. To accomplish this, we first will solve for the Stieltjes
+transforms of the component matrices, find the associated R-transform, use
+(\ref{eq:r_plus}) to find the R-transform of the sum, and then transform back to Stieltjes
+transforms. Recall that $E,H,A,B$ are all Wishart random matrices. The basic Stieltjes
+transform for a Wishart random matrix $X$ with parameter $c$ is
+\be
+m_{\mu_X}(z) = \frac{(1-c) - z + \sqrt{\left(z-1-c\right)^2-4c}}{2cz}.
+\ee
+We define $\widetilde{E} = (1-\lambda)E$, $\widetilde{H} = -\lambda H$, $\widetilde{B} =
+(1-\lambda)B^{-1}$, and $\widetilde{A}=-\lambda A^{-1}$. The Stieltjes transforms of the
+limiting spectral densities of these matrices are (through change of variables and some
+calculation)
+\be\small\ba
+&m_{\mu_{\widetilde{E}}}(z) = \frac{(1-\lambda)(c_y-c_x) - z +
+  \sqrt{(z-(1-\lambda)(c_x+c_y))^2 - 4(1-\lambda)^2c_xc_y}}{2(1-\lambda)c_x z}\\
+&m_{\mu_{\widetilde{H}}}(z) = \frac{\lambda(1-c_y-c_x) + z -
+  \sqrt{(z+\lambda(1+c_x-c_y))^2 - 4c_x(\lambda)^2(1-c_y)}}{2\lambda c_x z}\\
+&m_{\mu_{\widetilde{A}}}(z) = -z^{-1} - \frac{c_x-c_y +\lambda z^{-1} -
+  \sqrt{(z^{-1}\lambda +c_x+c_y)^2 - 4c_xc_y}}{2c_y z}\\
+&m_{\mu_{\widetilde{B}}}(z) = -z^{-1} - \frac{1-c_x-c_y -(1-\lambda) z^{-1} +
+  \sqrt{(z^{-1}(1-\lambda) -(1-c_x+c_y))^2 - 4(1-c_x)c_y}}{2c_y z}\\
+\ea\ee
+Using (\ref{eq:r_trans}) and (\ref{eq:blue}), we have that the R-transforms of these
+expressions are
+\be\ba
+& R_{\mu_{\widetilde{E}}}(w) = \frac{(1-\lambda)c_y}{1-(1-\lambda)c_xw}\\
+& R_{\mu_{\widetilde{H}}}(w) = -\frac{\lambda (1-c_y)}{1+\lambda c_xw}\\
+& R_{\mu_{\widetilde{A}}}(w) = \frac{c_x-c_y-\sqrt{(c_x-c_y)^2+4\lambda c_y w}}{2c_yw}\\
+& R_{\mu_{\widetilde{B}}}(w) = \frac{1-c_x-c_y - \sqrt{(1-c_x-c_y)^2+4(\lambda-1)c_y w}}{2c_yw}\\
+\ea\ee
+
+By observation we have that
+\be
+f(\lambda) \to m_{\mu_J}(0).
+\ee
+We know by definition of $J$ and using (\ref{eq:r_plus}), (\ref{eq:r_trans}), and
+(\ref{eq:blue}) that 
+\be\ba
+&R_{\mu_J}(w) &&= R_{\mu_{\widetilde{E}}}(w) + R_{\mu_{\widetilde{H}}}(w)\\
+&R_{\mu_J}(-m_{\mu_J}(0)) &&= R_{\mu_{\widetilde{E}}}(-m_{\mu_J}(0)) +
+R_{\mu_{\widetilde{H}}}(-m_{\mu_J}(0))\\ 
+& K_{\mu_{J}}(-m_{\mu_J}(0)) + \frac{1}{m_{\mu_J}(0)} && = \frac{(1-\lambda)c_y}{1+(1-\lambda)c_x m_{\mu_J}(0)}-\frac{\lambda
+  (1-c_y)}{1-\lambda c_x m_{\mu_J}(0)}\\
+& \frac{1}{m_{\mu_J}(0)} && = \frac{(1-\lambda)c_y}{1+(1-\lambda)c_x m_{\mu_J}(0)}-\frac{\lambda
+  (1-c_y)}{1-\lambda c_x m_{\mu_J}(0)} \\
+\ea\ee
+Solving the above for $m_{\mu_J}(0)$ yields an expression for $f(\lambda)$
+\beq\label{eq:f_lam}
+f(\lambda) = \frac{-(c_y-c_x+2\lambda c_x - \lambda) - \sqrt{\lambda^2 + (4c_xc_y
+    -2c_x-2c_y)\lambda + (c_x-c_y)^2}}{2\lambda(1-\lambda)(c_x^2-c_x)}.
+\eeq
+
+We proceed similarly to get an expression for $h(\lambda)$. However, we note that
+\be\ba
+&h(\lambda) &&= \frac{1}{1-\lambda}e_i^HAe_i +
+\frac{1}{1-\lambda}e_1\left((1-\lambda)B^{-1} + \lambda A^{-1}\right)^{-2}e_1\\
+&&& \to c_x+\frac{1}{1-\lambda}m_{\mu_{\widetilde{J}}}(0)\\
+\ea\ee
+as $e_i^HAe_i$ converges to the expected value of the limiting spectral density of $A$. As
+$A$ is Wishart with parameter $c_x$, we know that this expectation is simply
+$c_x$. Therefore, we are left to solve for $m_{\mu_{\widetilde{J}}}(0)$. We solve this
+again via the R-transform
+\be\ba
+&R_{\mu_{\widetilde{J}}}(w) &&= R_{\mu_{\widetilde{A}}}(w) + R_{\mu_{\widetilde{B}}}(w)\\
+&R_{\mu_{\widetilde{J}}}(-m_{\mu_{\widetilde{J}}}(0)) &&=
+  R_{\mu_{\widetilde{A}}}(-m_{\mu_{\widetilde{J}}}(0))
+    +R_{\mu_{\widetilde{B}}}(-m_{\mu_{\widetilde{J}}}(0))\\  
+& K_{\mu_{\widetilde{J}}}(-m_{\mu_{\widetilde{J}}}(0)) +
+\frac{1}{m_{\mu_{\widetilde{J}}}(0)} && =  -\frac{c_x-c_y-\sqrt{(c_x-c_y)^2-4\lambda c_y
+    m_{\mu_{\widetilde{J}}}(0)}}{2c_y m_{\mu_{\widetilde{J}}}(0)}\\
+&&& - \frac{1-c_x-c_y -
+  \sqrt{(1-c_x-c_y)^2-4(\lambda-1)c_y m_{\mu_{\widetilde{J}}}(0)}}{2c_y m_{\mu_{\widetilde{J}}}(0)}\\
+& \frac{1}{m_{\mu_{\widetilde{J}}}(0)} && =-\frac{c_x-c_y-\sqrt{(c_x-c_y)^2-4\lambda c_y
+    m_{\mu_{\widetilde{J}}}(0)}}{2c_y m_{\mu_{\widetilde{J}}}(0)}\\
+&&& - \frac{1-c_x-c_y -
+  \sqrt{(1-c_x-c_y)^2-4(\lambda-1)c_y m_{\mu_{\widetilde{J}}}(0)}}{2c_y m_{\mu_{\widetilde{J}}}(0)}.\\\\
+\ea\ee
+Solving the above for $m_{\mu_{\widetilde{J}}}(0)$ yields
+\be
+m_{\mu_{\widetilde{J}}}(0) = \frac{c_x+c_y-2c_xc_y -\lambda + \sqrt{\lambda^2 + (4c_xc_y -
+    2c_x-2c_y)\lambda + (c_x-c_y)^2}}{2c_y}
+\ee 
+Therefore, we have
+\beq\label{eq:h_lam}
+h(\lambda) = \frac{c_x}{1-\lambda} + \frac{c_x+c_y-2c_xc_y -\lambda + \sqrt{\lambda^2 + (4c_xc_y -
+    2c_x-2c_y)\lambda + (c_x-c_y)^2}}{2c_y(1-\lambda)}.
+\eeq
+To conclude, we must substitute (\ref{eq:h_lam}) and (\ref{eq:f_lam}) into (\ref{eq:det})
+and solve for $\lambda$. This is largely an algebra problem and we point the reader to Bao
+et al.
+if interested. After some calculation we arrive at the final result
+\be
+\rhohatcca^{(i)} \convas \begin{cases} \sqrt{d_i^2\left(1-c_x+\frac{c_x}{d_i^2}\right)\left(1-c_y+\frac{c_y}{d_i^2}\right)} & d_i^2 \geq r_c \\ \sqrt{d_r} &d_i^2<r_c\end{cases}
+\ee
+where
+\be\ba
+& r_c = \frac{c_xc_y+\sqrt{c_yc_y(1-c_x)(1-c_y)}}{(1-c_x)(1-c_y) + \sqrt{c_xc_y(1-c_x)(1-c_y)}}\\
+& d_r = c_x+c_y-2c_xc_y+2\sqrt{c_xc_y(1-c_x)(1-c_y)}.
+\ea\ee
+
+\hiddensection{Canonical Vectors}
+
+We now solve for the accuracy of the canonical vectors in empirical CCA. We consider,
+without loss of generality, the accuracy of the canonical vector of only one dataset. Let
+$X$ and $Y$ be drawn from (\ref{eq:appen3:data_model}). With the same definition of the
+target matrix $\Ccca$, the estimated canonical vectors, $\wxhat^{(i)}$ solves the
+generalized eigenvalue problem $C\wxhat^{(i)} = \rhohatcca^2\wxhat^{(i)}$. Recall from
+Chapter 5 that the unit-norm
+population canonical vector that we are trying to estimate is
+\be
+\wx^{(i)} = \frac{\Rxx^{-1/2}\Ux
+  U_{\widetilde{K}}(:,i)}{\sqrt{U_{\widetilde{K}}(:,i)^H\Ux^H\Rxx^{-1}\Ux
+    U_{\widetilde{K}}(:,i)}} 
+\ee
+where $U_{\widetilde{K}}$ are the left singular vectors of $\Kxytil$. In this section, we want to
+find a closed form expression for $|\langle \wx^{(i)}, \wxhat^{(i)}\rangle|^2$. We first introduce the change of variables
+similar to the correlation computation
+\be\ba
+& \widetilde{X} = F_M^H\Rxx^{-1/2}X\\
+& \widetilde{Y} = G_M^H\Ryy^{-1/2}Y\\
+\ea\ee
+where $F_MD_MG_M^H$ is the SVD of $M$, defined above. Then with this transformation, we have
+\be
+\Ccca = \left(R_{xx}^{1/2}F_M\right)\underbrace{\left(\widetilde{X}\widetilde{X}^H\right)^{-1}\widetilde{X}\widetilde{Y}^H\left(\widetilde{Y}\widetilde{Y}^H\right)^{-1}\widetilde{Y}\widetilde{X}^H}_{\widetilde{C}}\left(F_M^HR_{xx}^{1/2}\right).
+\ee
+Then, if $\widetilde{u}^{(i)}$ is a unit-norm eigenvector of $\widetilde{C}$, via the similarity
+transform, 
+\be
+\wxhat^{(i)} = \frac{\left(F_M^HR_{xx}^{1/2}\right)^{-1}\widetilde{u}^{(i)}}{
+   \sqrt{\widetilde{u}^{(i)H}\left(F_M^HR_{xx}^{1/2}\right)^{-H}\left(F_M^HR_{xx}^{1/2}\right)^{-1}
+     \widetilde{u}^{(i)}}}.  
+\ee
+ Therefore
+\beq\label{eq:cca_ip}\ba
+&|\langle \wx^{(i)}, \wxhat^{(i)}\rangle|^2 && =
+\frac{\left(U_{\widetilde{K}}(:,i)^H\Ux^H\Rxx^{-1/2}\left(F_M^HR_{xx}^{1/2}\right)^{-1}\widetilde{u}^{(i)}\right)^2}{\left(U_{\widetilde{K}}(:,i)^H\Ux^H\Rxx^{-1}\Ux
+    U_{\widetilde{K}}(:,i)\right)\left(\widetilde{u}^{(i)H}\left(F_M^HR_{xx}^{1/2}\right)^{-T}\left(F_M^HR_{xx}^{1/2}\right)^{-1}
+     \widetilde{u}^{(i)}\right)}\\
+&&& = \frac{\left(U_{\widetilde{K}}(:,i)^H\Ux^H\Rxx^{-1}F_M\widetilde{u}^{(i)}\right)^2}{\left(U_{\widetilde{K}}(:,i)^H\Ux^H\Rxx^{-1}\Ux
+    U_{\widetilde{K}}(:,i)\right)\left(\widetilde{u}^{(i)H}F_M^HR_{xx}^{-1}F_M\widetilde{u}^{(i)}\right)}.\\ 
+\ea\eeq
+Now due to the structure of $\Kxytil$ and $M$, we have that
+\be
+F_M = \left[\Ux U_{\widetilde{K}}\,\,\, \left(\Ux U_{\widetilde{K}}\right)^\perp \right],
+\ee
+which allows us to rewrite
+\be
+ |\langle \wx^{(i)}, \wxhat^{(i)}\rangle|^2 = \frac{\left(e_i^HF_M^H\Rxx^{-1}F_M\widetilde{u}^{(i)}\right)^2}{\left(e_i^HF_M^H\Rxx^{-1}F_Me_i\right)\left(\widetilde{u}^{(i)H}F_M^HR_{xx}^{-1}F_M\widetilde{u}^{(i)}\right)}.
+\ee
+Also note that we can write our unit norm eigenvector as
+\be
+\widetilde{u}^{(i)} = \sum_{j=1}^p (\widetilde{u}^{(i)H}e_j)e_j.
+\ee
+We note that by the Theorem \ref{th:w_ip}, for $j=1,\dots,\kx, j\neq i$,
+$(\widetilde{u}^{(i)H}e_j)\convas 0$. Examining the structure of the population covariance
+matrix of our data model, the final $p-\kx$ eigenvalues of $\Rxx$ are 1 so
+we have that the last term in the denominator above is
+\be
+\widetilde{u}^{(i)H}F_M^HR_{xx}^{-1}F_M\widetilde{u}^{(i)} \convas
+\left(e_i^HF_M^H\Rxx^{-1}F_Me_i\right)\left(\widetilde{u}^{(i)H}e_i\right)^2 +
+\left[1-\left(\widetilde{u}^{(i)H}e_i\right)^2\right].
+\ee
+By a similar argument, the term in the numerator is
+\be
+e_i^HF_M^H\Rxx^{-1}F_M\widetilde{u}^{(i)}\convas e_i^HF_M^H\Rxx^{-1}F_Me_i\left(\widetilde{u}^{(i)H}e_i\right).
+\ee
+Therefore, (\ref{eq:cca_ip}) becomes
+\beq\label{eq:cca_ip_red}
+|\langle \wx^{(i)}, \wxhat^{(i)}\rangle|^2 \convas \frac{\gamma_i
+  \left(\widetilde{u}^{(i)H}e_i\right)^2}{(\gamma_i-1)\left(\widetilde{u}^{(i)H}e_i\right)^2+1},
+\eeq
+where
+\be
+\gamma_i = e_i^HF_M^H\Rxx^{-1}F_Me_i.
+\ee
+Thus, it suffices to find the accuracy of $\widetilde{u}^{(i)}$ with respect to $e_i$ to
+solve (\ref{eq:cca_ip_red}).
+
+We proceed by first noting that in the above CCA correlation derivation, we first
+transformed $\widetilde{X}$ and $\widetilde{Y}$ by a series of invertible linear
+transformations to get the final matrix perturbation form. While this does not affect the
+eigenvalues of the target matrix, it does affect the eigenvectors and so we correct for
+that here via similarity transformations. These transformations may be done in one step
+and since the transformation matrices are all diagonal, it makes the story a little
+easier. Specifically we have
+\be\ba
+& \widetilde{\widetilde{X}} = M_x\widetilde{X}\\
+& \widetilde{\widetilde{Y}} = M_y\widetilde{Y}\\
+\ea\ee
+where
+\be
+M_x = \left[\begin{array}{cc}\diag(m_{x1},\dots,m_{x\kx}) & 0 \\ 0 & I_{p-\kx}\end{array}\right], M_y = \left[\begin{array}{cc}\diag(m_{y1},\dots,m_{y\ky}) & 0 \\ 0 & I_{q-\ky}\end{array}\right]
+\ee
+with
+\be
+m_{xi} = \frac{1}{\alpha_i\sqrt{1+\sqrt{\frac{\tau_i^4-3\tau_i^2}{1+\tau_i^2}}}},\,\,\, m_{yi} =
+\frac{1}{\alpha_i\sqrt{1+\tau_i^2}},
+\ee
+where these parameter were defined in the correlation derivation. After these
+transformations, our target matrix is 
+\be
+\widetilde{C} = M_x^{-1}\widetilde{\widetilde{C}}M_x. 
+\ee
+Again via a similarity transform, we
+see that if $\widetilde{\widetilde{u}}$ is an eigenvector of $\widetilde{\widetilde{C}}$,
+then $\widetilde{u} =
+\frac{M_x\widetilde{\widetilde{u}}}{\sqrt{\widetilde{\widetilde{u}}^HM_x^2\widetilde{\widetilde{u}}}}$. Then
+via a similar computation, we have
+\be
+\left|\langle e_i, \widetilde{u}^{(i)}\rangle\right|^2 =
+\frac{m_{xi}^2\left(e_i^H\widetilde{\widetilde{u}}^{(i)}\right)^2}{\left(m_{xi}^2-1\right)\left(e_i^H\widetilde{\widetilde{u}}^{(i)}\right)^2+1}.
+\ee
+Therefore, solving for the eigenvector accuracy of $\widetilde{\widetilde{u}}$ we can
+recover the accuracy of our canonical vector via
+\beq\label{eq:cca_wx_acc}
+\left|\langle \wx^{(i)}, \wxhat^{(i)}\rangle\right|^2=\frac{\gamma_im_{xi}^2\left|\langle e_i, \ttu^{(i)}\rangle\right|^2}{\left|\langle e_i, \ttu^{(i)}\rangle\right|^2\left(m_{xi}^2\left(\gamma_i-1\right)+m_{xi}^2-2\right)+1}.
+\eeq
+As $\gamma_i$ and $m_{xi}$ are parameters of our problems, what is left is to determine
+the eigenvector accuracy of $\widetilde{\widetilde{u}}^{(i)}$. We proceed using the same
+matrix perturbation model as in the eigenvalue derivation. Our master equation is
+\be\ba
+&\widetilde{\widetilde{C}}\ttu &&= \lambda\ttu\\
+&S_{xy}S_{yy}^{-1}S_{yx}\ttu &&= \lambda S_{xx}\ttu\\
+\ea\ee
+We made these specific transformations to achieve the setting of
+(\ref{eq:cca_reduced}). Using similar derivations as the eigenvalue setting, we arrive at
+the low-rank matrix we desire, which just so happens to have a component of $e_i$.
+\be\ba
+&\left(S_{wy}S_{yy}^{-1}S_{yw} -\lambda S_{ww} + (1-\lambda)UV^H\right)\ttu^{(i)} && = 0
+\ea\ee
+The low rank matrix $UV^H$ will contain terms of the form $e_iu_i^H$, $u_ie_i^H$, and
+$e_ie_i^H$. As shown in Theorem 2.7 c) in \cite{benaych2012singular}, the energy of $\ttu^{(i)}$ lying in orthogonal
+components of $e_{j\neq i}$ will be zero and hence for notational simplicity, we ignore
+them going forward. Proceeding, we have
+\be\ba
+&\left(S_{wy}S_{yy}^{-1}S_{yw} -\lambda S_{ww} + (1-\lambda)t_i(e_iu_i^H + u_ie_i^H) +
+  (1-\lambda)t_i^2S_{yy}(i,i)e_ie_i^H\right)\ttu^{(i)} &&= 0\\
+\ea\ee
+\be\ba
+&\left(S_{wy}S_{yy}^{-1}S_{yw} -\lambda S_{ww} + (1-\lambda)t_i(e_iu_i^H + u_ie_i^H) \right)\ttu^{(i)} &&= (\lambda-1)t_i^2S_{yy}(i,i)e_ie_i^H\ttu^{(i)}.\\
+\ea\ee
+Noticing that the right hand side is a scaled version of the vector $e_1$, we have that 
+\be
+\ttu^{(i)} = \left(S_{wy}S_{yy}^{-1}S_{yw} -\lambda S_{ww} + (1-\lambda)t_i(e_iu_i^H + u_ie_i^H) \right)^{-1}e_i,
+\ee 
+but this vector may not be unit norm, and we divide by it's norm. Define
+$\Psi(\lambda)=S_{wy}S_{yy}^{-1}S_{yw} -\lambda S_{ww}$. Then
+\beq\label{eq:utt}
+\left|\langle e_i, \ttu^{(i)}\rangle\right|^2
+ = \frac{\left(e_i^H\left(\Psi(\lambda) + (1-\lambda)t_i(e_iu_i^H + u_ie_i^H) \right)^{-1}e_i\right)^2}{e_i^H\left(\Psi(\lambda) + (1-\lambda)t_i(e_iu_i^H + u_ie_i^H) \right)^{-2}e_i}.
+\eeq
+We notice that the matrix inverse is a rank-2 addition to $\Phi(\lambda)$ and so can be simplified
+with the matrix inversion lemma. Also, define $\Phi(\lambda) = A^{-1}$ and $f(\lambda) =
+e_i^H\Phi(\lambda)e_1$, $h(\lambda) = u_i^H\Phi(\lambda)u_i$ with $u_i = S_{wy}(:,i)$,
+$q(\lambda)= e_i^H\Phi(\lambda)^2e_i$ and $s(\lambda)= u_i^H\Phi(\lambda)^2u_i$. From the
+correlation derivation above, we recall that $e_1^H\Phi(\lambda)u_1=0$. With this notation and
+the Woodubry inversion lemma, we have that the numerator is
+\beq\label{eq:utt_num}
+e_i^H\left(\Psi(\lambda) + (1-\lambda)t_i(e_iu_i^H + u_ie_i^H) \right)^{-1}e_i = \frac{f(\lambda)}{1-(1-\lambda)^2t_i^2f(\lambda)h(\lambda)}
+\eeq
+and that the denominator
+\beq\label{eq:utt_den}\begin{split}
+e_i^H&\left(\Psi + (1-\lambda)t_i(e_iu_i^H + u_ie_i^H) + \right)^{-2}e_i =  q(\lambda) +\\ &
+\frac{2f(\lambda)h(\lambda)q(\lambda)}{\frac{1}{(1-\lambda)^2t_i^2} -
+  f(\lambda)h(\lambda)} + \left(\frac{1}{(1-\lambda)^2t_i^2} -
+  f(\lambda)h(\lambda)\right)^2\left(f(\lambda)^2h(\lambda)^2q(\lambda) +
+  \frac{f(\lambda)^2s(\lambda)}{(1-\lambda)^2t_i^2}\right)
+\end{split}
+\eeq
+We derived expressions for $f(\lambda)$ and $h(\lambda)$ in the correlation derivation,
+specifically, (\ref{eq:f_lam}) and (\ref{eq:h_lam}). Therefore, we need expressions for
+$q(\lambda)$ and $s(\lambda)$. Let's begin with $q(\lambda)$.
+
+Similar to our correlation derivation, define the projection matrix 
+\be
+P_Y=Y^H(YY^H)^{-1}Y,
+\ee
+and matrices $B_1 = WPW^H$ and $B_2=W(I-P)W^H$. Then $\Psi= (1-\lambda)B_1 - 
+\lambda B_2$. As discussed before, $B_1$ and $B_2$ are independent Wishart matrices. Then 
+\be
+q(\lambda) = e_1^H\left((1-\lambda)B_1 -\lambda B_2\right)^{-2}e_1.
+\ee
+Let $(1-\lambda)B_1 -\lambda B_2$ have limiting eigenvalue distribution
+$\sigma(w)$. Then
+\be
+q(\lambda)\convas \int\frac{1}{x^2}d_{\mu_\Psi}(x).
+\ee
+Let $m_{\mu_\Psi}(z)$ be the Stieltjes transform of $\Psi$. Then we see that 
+\be
+m_{\mu_\Psi}(z) = \int\frac{1}{x-z}d_{\mu_\Psi}(x), \,\, m_{\mu_\Psi}^\prime(z) = -\int\frac{1}{(x-z)^2}d_{\mu_\Psi}(x)
+\ee
+Therefore, 
+\be
+q(\lambda)\to -m^\prime_{\mu_\Psi}(0).
+\ee
+To compute this, we use the R-transform trick that we employed in the correlation
+derivation. First define $R_{b_1}(w)$ and $R_{b_2}(w)$ as the R-transforms of
+$(1-\lambda)B_1$ and $-\lambda B_2$. From Bao et al. and above, we have
+\be\ba
+& R_{b_1}(w) = \frac{(1-\lambda)c_y}{1-(1-\lambda)c_xw}\\
+& R_{b_2}(w) = \frac{-\lambda(1-c_y)}{1+\lambda c_xw}
+\ea\ee\
+By (\ref{eq:r_plus}), $R_\Psi = R_{b_1} + R_{b_2}$. 
+Substituting $w = -m_{\mu_\Psi}(z)$ and using the relationship (\ref{eq:blue}), we have
+\beq\label{eq:R_eigv}\ba
+& R_{\Psi}(-m_{\mu_\Psi}(z)) && = R_{b_1}(-m_{\mu_\Psi}(z)) + R_{b_2}(-m_{\mu_\Psi}(z))\\
+& z + \frac{1}{m_{\mu_\Psi}(z)} && = R_{b_1}(-m_{\mu_\Psi}(z)) + R_{b_2}(-m_{\mu_\Psi}(z)).
+\ea\eeq
+Plugging in the expressions for the individual R-transforms into (\ref{eq:R_eigv}), and doing
+some algebra yields the following equality
+\be\begin{split}
+\lambda(1-\lambda)(c_x^2-c_x)m^2_{\mu_\Psi}(z) + &(cy-cx+2\lambda c_x-\lambda)m_{\mu_\Psi}(z) -1 =\\
+&zm_{\mu_\Psi}(z)\left(1+c_xm_{\mu_\Psi}(z) -2\lambda
+  c_xm_{\mu_\Psi}(z)-\lambda(1-\lambda)c_x^2m^2_{\mu_\Psi}(z)\right). 
+\end{split}
+\ee
+Taking the derivative of both sides with respect to $z$, setting $z=0$ and solving for
+$m_{\mu_\Psi}^\prime(0)$ yields 
+\be
+q(\lambda) = m_{\mu_\Psi}^\prime(0) = \frac{m_{\mu_\Psi}(0) + c_xm^2_{\mu_\Psi}(0)
+  -2\lambda c_xm^2_{\mu_\Psi}(0)
+  -\lambda(1-\lambda)c_x^2m^3_{\mu_\Psi}(0)}{\lambda(1-\lambda)(c_x^2-c_x)2m_{\mu_\Psi}(0) +
+  c_y-c_x+2\lambda c_1-\lambda}.
+\ee
+We know from the correlation derivation that $m_{\mu_\Psi}(0) = f(\lambda)$, which completes
+the derivation for $q(\lambda)$. 
+
+A closed form expression for $s(\lambda)$ remains an open problem. However, substituting
+empirically realizations of $\frac{1}{p}\Tr(e_i^H\Phi(\lambda)^2e_i)$ into
+(\ref{eq:utt_den}) combined with the other closed form expressions to complete
+(\ref{eq:utt_den}) and (\ref{eq:utt_num}) result in a good approximation of
+(\ref{eq:utt}). This good approximation then can be used to solve for the canonical vector
+accuracy in (\ref{eq:cca_wx_acc})
+

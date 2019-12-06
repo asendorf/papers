@@ -1,0 +1,2626 @@
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.8.7)  12 MAY 2015 17:10
+entering extended mode
+ %&-line parsing enabled.
+**thesis.tex
+(./thesis.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, loaded.
+(/usr/share/texmf-texlive/tex/latex/base/report.cls
+Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texmf-texlive/tex/latex/base/size12.clo
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (./rac.sty
+ 
+Substyle `rac' for Rackham dissertation.
+ 
+\c@map=\count88
+) (/usr/share/texmf-texlive/tex/latex/setspace/setspace.sty
+Package: setspace 2000/12/01 6.7 Contributed and Supported LaTeX2e package
+
+Package: `setspace' 6.7 <2000/12/01>
+) (/usr/share/texmf/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texmf/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/share/texmf/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks14
+)
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box26
+
+(/usr/share/texmf-texlive/tex/latex/ms/everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfrcs.code.tex
+Package: pgfrcs 2010/10/25 v2.10 (rcs-revision 1.24)
+))
+Package: pgf 2008/01/15 v2.10 (rcs-revision 1.12)
+
+(/usr/share/texmf/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/share/texmf-texlive/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+(/usr/share/texmf-texlive/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/etc/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/share/texmf-texlive/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2010/03/12 v0.04p Graphics/color for pdfTeX
+\Gread@gobject=\count89
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/share/texmf/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2010/06/30 v2.10 (rcs-revision 1.37)
+
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks16
+\pgfkeys@temptoks=\toks17
+
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
+\pgfkeys@tmptoks=\toks18
+))
+\pgf@x=\dimen105
+\pgf@y=\dimen106
+\pgf@xa=\dimen107
+\pgf@ya=\dimen108
+\pgf@xb=\dimen109
+\pgf@yb=\dimen110
+\pgf@xc=\dimen111
+\pgf@yc=\dimen112
+\w@pgf@writea=\write3
+\r@pgf@reada=\read1
+\c@pgf@counta=\count90
+\c@pgf@countb=\count91
+\c@pgf@countc=\count92
+\c@pgf@countd=\count93
+
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
+)
+Package pgfsys Info: Driver file for pgf: pgfsys-pdftex.def on input line 900.
+
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2009/05/22  (rcs-revision 1.26)
+
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2008/05/19  (rcs-revision 1.10)
+)))
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2008/07/18  (rcs-revision 1.7)
+\pgfsyssoftpath@smallbuffer@items=\count94
+\pgfsyssoftpath@bigbuffer@items=\count95
+)
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+))
+(/usr/share/texmf/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/etc/texmf/tex/latex/config/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2010/04/11 v2.10 (rcs-revision 1.7)
+
+(/usr/share/texmf/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathcalc.code.tex
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen113
+\pgfmath@count=\count96
+\pgfmath@box=\box27
+\pgfmath@toks=\toks19
+\pgfmath@stack@operand=\toks20
+\pgfmath@stack@operation=\toks21
+)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.code.tex
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.random.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.base.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.round.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex)))
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count97
+))
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2010/04/09  (rcs-revision 1.20)
+\pgf@picminx=\dimen114
+\pgf@picmaxx=\dimen115
+\pgf@picminy=\dimen116
+\pgf@picmaxy=\dimen117
+\pgf@pathminx=\dimen118
+\pgf@pathmaxx=\dimen119
+\pgf@pathminy=\dimen120
+\pgf@pathmaxy=\dimen121
+\pgf@xx=\dimen122
+\pgf@xy=\dimen123
+\pgf@yx=\dimen124
+\pgf@yy=\dimen125
+\pgf@zx=\dimen126
+\pgf@zy=\dimen127
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2010/08/03  (rcs-revision 1.24)
+\pgf@path@lastx=\dimen128
+\pgf@path@lasty=\dimen129
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2008/04/22  (rcs-revision 1.12)
+\pgf@shorten@end@additional=\dimen130
+\pgf@shorten@start@additional=\dimen131
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2010/09/08  (rcs-revision 1.34)
+\pgfpic=\box28
+\pgf@hbox=\box29
+\pgf@layerbox@main=\box30
+\pgf@picture@serial@count=\count98
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2008/04/22  (rcs-revision 1.9)
+\pgflinewidth=\dimen132
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2009/06/10  (rcs-revision 1.11)
+\pgf@pt@x=\dimen133
+\pgf@pt@y=\dimen134
+\pgf@pt@temp=\dimen135
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2008/10/09  (rcs-revision 1.8)
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2008/04/23  (rcs-revision 1.11)
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2008/11/23  (rcs-revision 1.13)
+\pgf@max=\dimen136
+\pgf@sys@shading@range@num=\count99
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2010/03/25  (rcs-revision 1.16)
+
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2010/09/01  (rcs-revision 1.17)
+\pgfexternal@startupbox=\box31
+))
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2010/08/27  (rcs-revision 1.2)
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2008/01/17  (rcs-revision 1.2)
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2009/07/02  (rcs-revision 1.3)
+)))
+(/usr/share/texmf/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2010/09/09  (rcs-revision 1.13)
+\pgfnodeparttextbox=\box32
+)
+(/usr/share/texmf/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2010/10/22  (rcs-revision 1.8)
+)
+(/usr/share/texmf/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2007/07/03 v2.10 (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen137
+\pgf@nodesepend=\dimen138
+)
+(/usr/share/texmf/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2007/07/23 v2.10 (rcs-revision 1.1)
+))
+(/usr/share/texmf/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texmf/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/usr/share/texmf/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2010/03/23 v2.10 (rcs-revision 1.18)
+\pgffor@iter=\dimen139
+\pgffor@skip=\dimen140
+\pgffor@stack=\toks22
+\pgffor@toks=\toks23
+))
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2010/10/13 v2.10 (rcs-revision 1.76)
+
+(/usr/share/texmf/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2010/05/31 v2.10 (rcs-revision 1.15)
+\pgf@plot@mark@count=\count100
+\pgfplotmarksize=\dimen141
+)
+\tikz@lastx=\dimen142
+\tikz@lasty=\dimen143
+\tikz@lastxsaved=\dimen144
+\tikz@lastysaved=\dimen145
+\tikzleveldistance=\dimen146
+\tikzsiblingdistance=\dimen147
+\tikz@figbox=\box33
+\tikz@tempbox=\box34
+\tikztreelevel=\count101
+\tikznumberofchildren=\count102
+\tikznumberofcurrentchild=\count103
+\tikz@fig@count=\count104
+
+(/usr/share/texmf/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2010/08/24  (rcs-revision 1.4)
+\pgfmatrixcurrentrow=\count105
+\pgfmatrixcurrentcolumn=\count106
+\pgf@matrix@numberofcolumns=\count107
+)
+\tikz@expandcount=\count108
+
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopat
+hs.code.tex
+File: tikzlibrarytopaths.code.tex 2008/06/17 v2.10 (rcs-revision 1.2)
+)))
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryarrow
+s.code.tex
+File: tikzlibraryarrows.code.tex 2008/01/09 v2.10 (rcs-revision 1.1)
+
+(/usr/share/texmf/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
+File: pgflibraryarrows.code.tex 2008/10/27 v2.10 (rcs-revision 1.9)
+\arrowsize=\dimen148
+))
+(/usr/share/texmf-texlive/tex/latex/caption/caption.sty
+Package: caption 2009/10/09 v3.1k Customizing captions (AR)
+
+(/usr/share/texmf-texlive/tex/latex/caption/caption3.sty
+Package: caption3 2009/10/09 v3.1k caption3 kernel (AR)
+\captionmargin=\dimen149
+\captionmargin@=\dimen150
+\captionwidth=\dimen151
+\caption@indent=\dimen152
+\caption@parindent=\dimen153
+\caption@hangindent=\dimen154
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used on input line 1068.
+)
+
+Package caption Warning: Unsupported document class (or package) detected,
+(caption)                usage of the caption package is not recommended.
+See the caption package documentation for explanation.
+
+Package caption Info: \@makecaption = \long macro:#1#2-> \vskip 10pt \setbox \@
+tempboxa \hbox {#1: #2} \ifdim \wd \@tempboxa >\hsize \setbox \@tempboxa \hbox 
+{#1: } \def \@tempdimj {\hsize } \advance \@tempdimj -\wd \@tempboxa \hbox to\h
+size {#1: \parbox [t]{\@tempdimj }{#2}} \else \hbox to\hsize {\hfill \box \@tem
+pboxa \hfill } \fi .
+\c@ContinuedFloat=\count109
+)
+\@input{thesis_header.aux}
+\openout2 = `thesis_header.aux'.
+
+(./thesis_header.tex (/usr/share/texmf-texlive/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks24
+\ex@=\dimen155
+))
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen156
+)
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count110
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count111
+\leftroot@=\count112
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count113
+\DOTSCASE@=\count114
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box35
+\strutbox@=\box36
+\big@size=\dimen157
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count115
+\c@MaxMatrixCols=\count116
+\dotsspace@=\muskip10
+\c@parentequation=\count117
+\dspbrk@lvl=\count118
+\tag@help=\toks25
+\row@=\count119
+\column@=\count120
+\maxfields@=\count121
+\andhelp@=\toks26
+\eqnshift@=\dimen158
+\alignsep@=\dimen159
+\tagshift@=\dimen160
+\tagwidth@=\dimen161
+\totwidth@=\dimen162
+\lineht@=\dimen163
+\@envbody=\toks27
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks28
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+(/usr/share/texmf-texlive/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2009/06/22 v3.00
+
+(/usr/share/texmf-texlive/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+))
+(/usr/share/texmf-texlive/tex/latex/amscls/amsthm.sty
+Package: amsthm 2004/08/06 v2.20
+\thm@style=\toks29
+\thm@bodyfont=\toks30
+\thm@headfont=\toks31
+\thm@notefont=\toks32
+\thm@headpunct=\toks33
+\thm@preskip=\skip46
+\thm@postskip=\skip47
+\thm@headsep=\skip48
+\dth@everypar=\toks34
+)
+(/usr/share/texmf-texlive/tex/latex/algorithm2e/algorithm2e.sty
+Package: algorithm2e 2005/10/04 v3.9 algorithms environments
+\c@AlgoLine=\count122
+
+(/usr/share/texmf-texlive/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texmf-texlive/tex/latex/tools/xspace.sty
+Package: xspace 2006/05/08 v1.12 Space after command names (DPC,MH)
+)
+********************************************************
+Package `algorithm2e' Release 3.9 -- october 04 2005 --
+- algorithm2e-announce@lirmm.fr mailing list for announcement about releases
+- algorithm2e-discussion@lirmm.fr mailing list for discussion about package
+subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
+- Author: Christophe Fiorio (fiorio@lirmm.fr)
+********************************************************
+\skiptotal=\skip49
+\skiprule=\skip50
+\skiphlne=\skip51
+\skiptext=\skip52
+\skiplength=\skip53
+\algomargin=\skip54
+\skipalgocfslide=\skip55
+\algowidth=\dimen164
+\inoutsize=\dimen165
+\inoutline=\dimen166
+\algocf@inoutbox=\box37
+\algocf@inputbox=\box38
+\AlCapSkip=\skip56
+\AlCapHSkip=\skip57
+\algocf@capbox=\box39
+\c@algocfline=\count123
+\c@algocf=\count124
+\algocf@algoframe=\box40
+\algocf@algobox=\box41
+) (/usr/share/texmf-texlive/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2005/04/14 v1.61803 publication quality tables
+\heavyrulewidth=\dimen167
+\lightrulewidth=\dimen168
+\cmidrulewidth=\dimen169
+\belowrulesep=\dimen170
+\belowbottomsep=\dimen171
+\aboverulesep=\dimen172
+\abovetopsep=\dimen173
+\cmidrulesep=\dimen174
+\cmidrulekern=\dimen175
+\defaultaddspace=\dimen176
+\@cmidla=\count125
+\@cmidlb=\count126
+\@aboverulesep=\dimen177
+\@belowrulesep=\dimen178
+\@thisruleclass=\count127
+\@lastruleclass=\count128
+\@thisrulewidth=\dimen179
+)
+(/usr/share/texmf-texlive/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip58
+\subfigcapskip=\skip59
+\subfigcaptopadj=\dimen180
+\subfigbottomskip=\skip60
+\subfigcapmargin=\dimen181
+\subfiglabelskip=\skip61
+\c@subfigure=\count129
+\c@lofdepth=\count130
+\c@subtable=\count131
+\c@lotdepth=\count132
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/share/texmf-texlive/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip62
+\subfig@bottom=\skip63
+)
+(/usr/share/texmf-texlive/tex/latex/comment/comment.sty
+\CommentStream=\write4
+
+Excluding comment 'comment')
+(/usr/share/texmf-texlive/tex/latex/bbm-macros/bbm.sty
+Package: bbm 1999/03/15 V 1.2 provides fonts for set symbols - TH
+LaTeX Font Info:    Overwriting math alphabet `\mathbbm' in version `bold'
+(Font)                  U/bbm/m/n --> U/bbm/bx/n on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
+(Font)                  U/bbmss/m/n --> U/bbmss/bx/n on input line 35.
+)
+\mytemplen=\skip64
+\mytempbox=\box42
+\c@prop=\count133
+\c@conj=\count134
+\c@Th=\count135
+\c@Corr=\count136
+\c@Assum=\count137
+\c@Def=\count138
+\c@Conj=\count139
+\c@Remark=\count140
+\c@Lem=\count141
+)
+(/usr/share/texmf-texlive/tex/latex/bezos/accents.sty
+Package: accents 2006/05/12 v1.3 Math Accent Tools
+\cc@skew=\dimen182
+\cc@wd=\dimen183
+\cc@code=\count142
+\cc@group=\count143
+\cc@skewchar=\count144
+)
+(/usr/share/texmf-texlive/tex/latex/tools/array.sty
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen184
+\extrarowheight=\dimen185
+\NC@list=\toks35
+\extratabsurround=\skip65
+\backup@length=\skip66
+) (./thesis.aux
+
+LaTeX Warning: Label `sec:intro' multiply defined.
+
+
+LaTeX Warning: Label `eq:roc' multiply defined.
+
+
+LaTeX Warning: Label `fig:chpt4:flashing_left_cca' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:chpt4:flashing_left_cca' multiply defined.
+
+
+LaTeX Warning: Label `fig:chpt4:flashing_right_cca' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:chpt4:flashing_right_cca' multiply defined.
+
+
+LaTeX Warning: Label `fig:chpt4:flashing_left_cca' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:chpt4:flashing_left_cca' multiply defined.
+
+
+LaTeX Warning: Label `fig:chpt4:flashing_right_cca' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:chpt4:flashing_right_cca' multiply defined.
+
+
+LaTeX Warning: Label `fig:chpt4:ul1' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:chpt4:ul1' multiply defined.
+
+
+LaTeX Warning: Label `fig:chpt4:ul2' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:chpt4:ul2' multiply defined.
+
+
+LaTeX Warning: Label `fig:chpt5:khat13' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:chpt5:khat13' multiply defined.
+
+
+LaTeX Warning: Label `fig:chpt4:aa1_full_spec' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:chpt4:aa1_full_spec' multiply defined.
+
+
+LaTeX Warning: Label `fig:chpt4:aa1_spec_zoom' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:chpt4:aa1_spec_zoom' multiply defined.
+
+
+LaTeX Warning: Label `fig:chpt4:aa2_full_spec' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:chpt4:aa2_full_spec' multiply defined.
+
+
+LaTeX Warning: Label `fig:chpt4:aa2_spec_zoom' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:chpt4:aa2_spec_zoom' multiply defined.
+
+
+LaTeX Warning: Label `fig:chpt6:rcca1' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:chpt6:rcca1' multiply defined.
+
+
+LaTeX Warning: Label `fig:chpt6:rcca2' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:chpt6:rcca2' multiply defined.
+
+
+LaTeX Warning: Label `fig:chpt6:rcca1' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:chpt6:rcca1' multiply defined.
+
+
+LaTeX Warning: Label `fig:chpt6:rcca2' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:chpt6:rcca2' multiply defined.
+
+
+LaTeX Warning: Label `eq:chpt9:cca_svd_sol' multiply defined.
+
+
+LaTeX Warning: Label `sec:results' multiply defined.
+
+
+LaTeX Warning: Label `fig:chpt10:mcca_mid_u1' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:chpt10:mcca_mid_u1' multiply defined.
+
+
+LaTeX Warning: Label `fig:chpt10:mcca_mid_overlay' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:chpt10:mcca_mid_overlay' multiply defined.
+
+)
+\openout1 = `thesis.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 164.
+LaTeX Font Info:    ... okay on input line 164.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 164.
+LaTeX Font Info:    ... okay on input line 164.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 164.
+LaTeX Font Info:    ... okay on input line 164.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 164.
+LaTeX Font Info:    ... okay on input line 164.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 164.
+LaTeX Font Info:    ... okay on input line 164.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 164.
+LaTeX Font Info:    ... okay on input line 164.
+ ABD: EveryShipout initializing macros
+(/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count145
+\scratchdimen=\dimen186
+\scratchbox=\box43
+\nofMPsegments=\count146
+\nofMParguments=\count147
+\everyMPshowfont=\toks36
+\MPscratchCnt=\count148
+\MPscratchDim=\dimen187
+\MPnumerator=\count149
+\everyMPtoPDFconversion=\toks37
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfigure package is loaded.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Try loading font information for U+msa on input line 172.
+ (/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 172.
+
+(/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+) [1
+
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+<figures/secret_truth.jpg, id=10, 722.7pt x 417.56pt>
+File: figures/secret_truth.jpg Graphic file (type jpg)
+
+<use figures/secret_truth.jpg> [0 <./figures/secret_truth.jpg>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 182.
+
+
+(/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 182.
+ [1] [2]
+(./acknowledgements.tex [3] [4]) [5] (./thesis.toc [6] [7] [8] [9] [10])
+\tf@toc=\write5
+\openout5 = `thesis.toc'.
+
+
+[11] (./thesis.lof
+Underfull \hbox (badness 10000) in paragraph at lines 1--2
+
+ []
+
+[12]
+Overfull \hbox (39.65466pt too wide) in paragraph at lines 19--19
+ \OT1/cmr/m/n/12 over 100 tri-als with $\OML/cmm/m/it/12 n \OT1/cmr/m/n/12 = 10
+00$, $\OML/cmm/m/it/12 m \OT1/cmr/m/n/12 = 500$, and $^^F = []([]\OML/cmm/m/it/
+12 ; \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 75\OML/cmm/m/it/12 ; \O
+T1/cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 5\OML/cmm/m/it/12 ; \OT1/cmr/m
+/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 25)$ 
+ []
+
+[13]
+Overfull \hbox (0.33803pt too wide) in paragraph at lines 26--26
+ [][] []\OT1/cmr/m/n/12 Minimum in-crease in non-centrality pa-ram-e-ter nec-es
+-sary for in-creased 
+ []
+
+
+Overfull \hbox (11.66122pt too wide) in paragraph at lines 27--27
+ \OT1/cmr/m/n/12 ber of train-ing sam-ples. In this ex-per-i-ment $\OML/cmm/m/i
+t/12 n \OT1/cmr/m/n/12 = 200$, $^^F = [](5\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 2\
+OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 5)$, 
+ []
+
+[14] [15] [16] [17] [18] [19] [20] [21] [22] [23] [24] [25] [26])
+\tf@lof=\write6
+\openout6 = `thesis.lof'.
+
+ [27] [28]
+(./thesis.lot
+Underfull \hbox (badness 10000) in paragraph at lines 1--2
+
+ []
+
+[29])
+\tf@lot=\write7
+\openout7 = `thesis.lot'.
+
+ [30] (./thesis.loa)
+\tf@loa=\write8
+\openout8 = `thesis.loa'.
+
+ [31] (./abstract.tex [32]) [33]
+CHAPTER I.
+(./intro.tex [1
+
+
+
+] [2] [3] [4] [5] [6]) [7]
+CHAPTER II.
+(./ieee_msd/IEEE_RMT_MSD.tex (./ieee_msd/introduction.tex [8
+
+] [9] [10])
+(./ieee_msd/data_models.tex [11]) [12] (./ieee_msd/std_detec.tex [13] [14]
+<ieee_msd/figures/asend1a.pdf, id=182, 463.7325pt x 377.41pt>
+File: ieee_msd/figures/asend1a.pdf Graphic file (type pdf)
+
+<use ieee_msd/figures/asend1a.pdf>
+<ieee_msd/figures/asend1b.pdf, id=183, 466.74374pt x 378.41376pt>
+File: ieee_msd/figures/asend1b.pdf Graphic file (type pdf)
+
+<use ieee_msd/figures/asend1b.pdf> [15] [16 <./ieee_msd/figures/asend1a.pdf> <.
+/ieee_msd/figures/asend1b.pdf>]
+<ieee_msd/figures/asend2.pdf, id=202, 472.76625pt x 378.41376pt>
+File: ieee_msd/figures/asend2.pdf Graphic file (type pdf)
+
+<use ieee_msd/figures/asend2.pdf>) (./ieee_msd/prob_state.tex [17] [18 <./ieee_
+msd/figures/asend2.pdf>]) (./ieee_msd/rmt.tex [19] [20] [21])
+(./ieee_msd/rmt_detecs.tex [22] [23] [24] [25]) (./ieee_msd/roc_theory.tex
+[26] [27] [28]) (./ieee_msd/results.tex
+<ieee_msd/figures/asend3a.pdf, id=251, 463.7325pt x 381.425pt>
+File: ieee_msd/figures/asend3a.pdf Graphic file (type pdf)
+
+<use ieee_msd/figures/asend3a.pdf>
+<ieee_msd/figures/asend3b.pdf, id=252, 463.7325pt x 378.41376pt>
+File: ieee_msd/figures/asend3b.pdf Graphic file (type pdf)
+
+<use ieee_msd/figures/asend3b.pdf> [29]
+<ieee_msd/figures/asend4a.pdf, id=257, 465.74pt x 396.48125pt>
+File: ieee_msd/figures/asend4a.pdf Graphic file (type pdf)
+
+<use ieee_msd/figures/asend4a.pdf>
+<ieee_msd/figures/asend4b.pdf, id=258, 484.81125pt x 396.48125pt>
+File: ieee_msd/figures/asend4b.pdf Graphic file (type pdf)
+
+<use ieee_msd/figures/asend4b.pdf> [30]
+<ieee_msd/figures/asend5a.pdf, id=262, 461.725pt x 378.41376pt>
+File: ieee_msd/figures/asend5a.pdf Graphic file (type pdf)
+
+<use ieee_msd/figures/asend5a.pdf>
+<ieee_msd/figures/asend5b.pdf, id=263, 463.7325pt x 376.40625pt>
+File: ieee_msd/figures/asend5b.pdf Graphic file (type pdf)
+
+<use ieee_msd/figures/asend5b.pdf> [31]
+<ieee_msd/figures/asend6a.pdf, id=267, 471.7625pt x 378.41376pt>
+File: ieee_msd/figures/asend6a.pdf Graphic file (type pdf)
+
+<use ieee_msd/figures/asend6a.pdf>
+<ieee_msd/figures/asend6b.pdf, id=268, 471.7625pt x 378.41376pt>
+File: ieee_msd/figures/asend6b.pdf Graphic file (type pdf)
+
+<use ieee_msd/figures/asend6b.pdf>
+<ieee_msd/figures/asend7.pdf, id=269, 468.75125pt x 389.455pt>
+File: ieee_msd/figures/asend7.pdf Graphic file (type pdf)
+
+<use ieee_msd/figures/asend7.pdf>) [32] (./ieee_msd/conclusion.tex) [33])
+[34] [35 <./ieee_msd/figures/asend3a.pdf> <./ieee_msd/figures/asend3b.pdf>]
+[36 <./ieee_msd/figures/asend4a.pdf> <./ieee_msd/figures/asend4b.pdf>] [37 <./i
+eee_msd/figures/asend5a.pdf> <./ieee_msd/figures/asend5b.pdf>] [38 <./ieee_msd/
+figures/asend6a.pdf> <./ieee_msd/figures/asend6b.pdf>] [39 <./ieee_msd/figures/
+asend7.pdf>]
+CHAPTER III.
+(./taes_msd/taes_useful.tex (./taes_msd/intro.tex [40
+
+] [41])
+(./taes_msd/prob_form.tex [42] [43]) (./taes_msd/useful.tex [44]
+Overfull \hbox (26.43723pt too wide) in paragraph at lines 58--58
+[] [] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 60
+[][]
+ []
+
+[45] [46] <taes_msd/figures/dist1.pdf, id=401, 538.01pt x 462.72874pt>
+File: taes_msd/figures/dist1.pdf Graphic file (type pdf)
+
+<use taes_msd/figures/dist1.pdf>
+<taes_msd/figures/dist2.pdf, id=402, 538.01pt x 462.72874pt>
+File: taes_msd/figures/dist2.pdf Graphic file (type pdf)
+
+<use taes_msd/figures/dist2.pdf>
+<taes_msd/figures/dist3.pdf, id=403, 538.01pt x 462.72874pt>
+File: taes_msd/figures/dist3.pdf Graphic file (type pdf)
+
+<use taes_msd/figures/dist3.pdf>
+<taes_msd/figures/dist_roc.pdf, id=404, 541.02126pt x 462.72874pt>
+File: taes_msd/figures/dist_roc.pdf Graphic file (type pdf)
+
+<use taes_msd/figures/dist_roc.pdf> [47 <./taes_msd/figures/dist1.pdf> <./taes_
+msd/figures/dist2.pdf> <./taes_msd/figures/dist3.pdf>]
+<taes_msd/figures/nc_lines.pdf, id=436, 549.05125pt x 463.7325pt>
+File: taes_msd/figures/nc_lines.pdf Graphic file (type pdf)
+
+<use taes_msd/figures/nc_lines.pdf>) (./taes_msd/msd.tex [48 <./taes_msd/figure
+s/dist_roc.pdf>] [49 <./taes_msd/figures/nc_lines.pdf>] [50] [51] [52]
+<taes_msd/figures/taes_pd_v_m.pdf, id=471, 570.13pt x 463.7325pt>
+File: taes_msd/figures/taes_pd_v_m.pdf Graphic file (type pdf)
+
+<use taes_msd/figures/taes_pd_v_m.pdf>
+<taes_msd/figures/taes_d_v_m.pdf, id=472, 569.12625pt x 463.7325pt>
+File: taes_msd/figures/taes_d_v_m.pdf Graphic file (type pdf)
+
+<use taes_msd/figures/taes_d_v_m.pdf>) (./taes_msd/extensions.tex [53] [54 <./t
+aes_msd/figures/taes_pd_v_m.pdf> <./taes_msd/figures/taes_d_v_m.pdf>] [55]
+<taes_msd/figures/weights_easy.pdf, id=495, 564.1075pt x 471.7625pt>
+File: taes_msd/figures/weights_easy.pdf Graphic file (type pdf)
+
+<use taes_msd/figures/weights_easy.pdf>
+<taes_msd/figures/weights_hard.pdf, id=496, 555.07375pt x 463.7325pt>
+File: taes_msd/figures/weights_hard.pdf Graphic file (type pdf)
+
+<use taes_msd/figures/weights_hard.pdf>) [56 <./taes_msd/figures/weights_easy.p
+df> <./taes_msd/figures/weights_hard.pdf>] (./msd_missing/ssp_input5.tex
+[57] [58] <msd_missing/figures/basic_roc.pdf, id=525, 578.16pt x 407.5225pt>
+File: msd_missing/figures/basic_roc.pdf Graphic file (type pdf)
+
+<use msd_missing/figures/basic_roc.pdf> [59]
+<msd_missing/figures/sparsity.pdf, id=529, 579.16376pt x 406.51875pt>
+File: msd_missing/figures/sparsity.pdf Graphic file (type pdf)
+
+<use msd_missing/figures/sparsity.pdf>) (./taes_msd/conclusion.tex [60 <./msd_m
+issing/figures/basic_roc.pdf>] [61 <./msd_missing/figures/sparsity.pdf>]))
+[62]
+CHAPTER IV.
+(./chpt4_det_corr/cca_detect.tex
+Overfull \hbox (12.35315pt too wide) in paragraph at lines 34--45
+[]\OT1/cmr/m/n/12 This chap-ter shows that de-tect-ing cor-re-la-tions in this 
+low-sample high-dimensionality
+ []
+
+[63
+
+] [64] [65] [66] [67] [68] [69] [70]
+LaTeX Font Info:    Try loading font information for U+bbm on input line 330.
+
+(/usr/share/texmf-texlive/tex/latex/bbm-macros/ubbm.fd
+File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
+) [71] [72]
+Overfull \hbox (11.85759pt too wide) detected at line 416
+[] \OT1/cmr/m/n/12 = [][] [] = [] [] \OML/cmm/m/it/12 :
+ []
+
+[73] [74] [75] [76] [77] [78] [79] [80] [81]
+
+LaTeX Warning: Command \j invalid in math mode on input line 859.
+
+[82] [83] [84] [85]
+<chpt4_det_corr/figs/cca_rho7.pdf, id=626, 579.16376pt x 463.7325pt>
+File: chpt4_det_corr/figs/cca_rho7.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/cca_rho7.pdf>
+<chpt4_det_corr/figs/cca_rho9.pdf, id=627, 579.16376pt x 463.7325pt>
+File: chpt4_det_corr/figs/cca_rho9.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/cca_rho9.pdf>
+<chpt4_det_corr/figs/icca_rho7.pdf, id=628, 579.16376pt x 463.7325pt>
+File: chpt4_det_corr/figs/icca_rho7.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/icca_rho7.pdf>
+<chpt4_det_corr/figs/icca_rho9.pdf, id=629, 579.16376pt x 463.7325pt>
+File: chpt4_det_corr/figs/icca_rho9.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/icca_rho9.pdf>
+<chpt4_det_corr/figs/contours_cca.pdf, id=630, 574.145pt x 463.7325pt>
+File: chpt4_det_corr/figs/contours_cca.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/contours_cca.pdf>
+<chpt4_det_corr/figs/contours_icca.pdf, id=631, 574.145pt x 463.7325pt>
+File: chpt4_det_corr/figs/contours_icca.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/contours_icca.pdf>
+<chpt4_det_corr/figs/theta_theta_heatmap.pdf, id=632, 537.00626pt x 461.725pt>
+File: chpt4_det_corr/figs/theta_theta_heatmap.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/theta_theta_heatmap.pdf> [86] [87 <./chpt4_det_corr/fi
+gs/cca_rho7.pdf> <./chpt4_det_corr/figs/cca_rho9.pdf> <./chpt4_det_corr/figs/ic
+ca_rho7.pdf> <./chpt4_det_corr/figs/icca_rho9.pdf>] [88 <./chpt4_det_corr/figs/
+contours_cca.pdf> <./chpt4_det_corr/figs/contours_icca.pdf> <./chpt4_det_corr/f
+igs/theta_theta_heatmap.pdf>]
+<chpt4_det_corr/figs/wilks_comp.pdf, id=724, 553.06625pt x 456.70625pt>
+File: chpt4_det_corr/figs/wilks_comp.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/wilks_comp.pdf> [89 <./chpt4_det_corr/figs/wilks_comp.
+pdf>] [90]
+<chpt4_det_corr/figs/cca_missing_7_1200.pdf, id=740, 579.16376pt x 463.7325pt>
+File: chpt4_det_corr/figs/cca_missing_7_1200.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/cca_missing_7_1200.pdf>
+<chpt4_det_corr/figs/cca_missing_9_1200.pdf, id=741, 579.16376pt x 463.7325pt>
+File: chpt4_det_corr/figs/cca_missing_9_1200.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/cca_missing_9_1200.pdf>
+<chpt4_det_corr/figs/icca_missing_7_1200.pdf, id=742, 579.16376pt x 463.7325pt>
+File: chpt4_det_corr/figs/icca_missing_7_1200.pdf Graphic file (type pdf)
+<use chpt4_det_corr/figs/icca_missing_7_1200.pdf>
+<chpt4_det_corr/figs/icca_missing_9_1200.pdf, id=743, 579.16376pt x 463.7325pt>
+File: chpt4_det_corr/figs/icca_missing_9_1200.pdf Graphic file (type pdf)
+<use chpt4_det_corr/figs/icca_missing_9_1200.pdf>
+<chpt4_det_corr/figs/flashing_left_sources.png, id=744, 193.523pt x 109.208pt>
+File: chpt4_det_corr/figs/flashing_left_sources.png Graphic file (type png)
+
+<use chpt4_det_corr/figs/flashing_left_sources.png>
+<chpt4_det_corr/figs/flashing_right_sources.png, id=745, 193.523pt x 109.208pt>
+File: chpt4_det_corr/figs/flashing_right_sources.png Graphic file (type png)
+<use chpt4_det_corr/figs/flashing_right_sources.png>
+<chpt4_det_corr/figs/flashing_lsv.pdf, id=746, 544.0325pt x 485.815pt>
+File: chpt4_det_corr/figs/flashing_lsv.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/flashing_lsv.pdf>
+<chpt4_det_corr/figs/flashing_rsv.pdf, id=747, 534.99875pt x 485.815pt>
+File: chpt4_det_corr/figs/flashing_rsv.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/flashing_rsv.pdf>
+<chpt4_det_corr/figs/flashing_ul1.pdf, id=748, 506.89375pt x 285.065pt>
+File: chpt4_det_corr/figs/flashing_ul1.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/flashing_ul1.pdf>
+<chpt4_det_corr/figs/flashing_ul2.pdf, id=749, 492.84125pt x 285.065pt>
+File: chpt4_det_corr/figs/flashing_ul2.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/flashing_ul2.pdf>
+<chpt4_det_corr/figs/flashing_ul3.pdf, id=750, 492.84125pt x 285.065pt>
+File: chpt4_det_corr/figs/flashing_ul3.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/flashing_ul3.pdf>
+<chpt4_det_corr/figs/flashing_left_pca.png, id=751, 193.523pt x 109.208pt>
+File: chpt4_det_corr/figs/flashing_left_pca.png Graphic file (type png)
+
+<use chpt4_det_corr/figs/flashing_left_pca.png>
+<chpt4_det_corr/figs/flashing_ur1.pdf, id=752, 506.89375pt x 285.065pt>
+File: chpt4_det_corr/figs/flashing_ur1.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/flashing_ur1.pdf>
+<chpt4_det_corr/figs/flashing_ur2.pdf, id=753, 506.89375pt x 285.065pt>
+File: chpt4_det_corr/figs/flashing_ur2.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/flashing_ur2.pdf>
+<chpt4_det_corr/figs/flashing_ur3.pdf, id=754, 506.89375pt x 285.065pt>
+File: chpt4_det_corr/figs/flashing_ur3.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/flashing_ur3.pdf>
+<chpt4_det_corr/figs/flashing_right_pca.png, id=755, 193.523pt x 109.208pt>
+File: chpt4_det_corr/figs/flashing_right_pca.png Graphic file (type png)
+
+<use chpt4_det_corr/figs/flashing_right_pca.png> [91] [92 <./chpt4_det_corr/fig
+s/cca_missing_7_1200.pdf> <./chpt4_det_corr/figs/cca_missing_9_1200.pdf> <./chp
+t4_det_corr/figs/icca_missing_7_1200.pdf> <./chpt4_det_corr/figs/icca_missing_9
+_1200.pdf>] [93 <./chpt4_det_corr/figs/flashing_left_sources.png (PNG copy)> <.
+/chpt4_det_corr/figs/flashing_right_sources.png (PNG copy)> <./chpt4_det_corr/f
+igs/flashing_lsv.pdf> <./chpt4_det_corr/figs/flashing_rsv.pdf>] [94 <./chpt4_de
+t_corr/figs/flashing_ul1.pdf> <./chpt4_det_corr/figs/flashing_ul2.pdf> <./chpt4
+_det_corr/figs/flashing_ul3.pdf> <./chpt4_det_corr/figs/flashing_left_pca.png (
+PNG copy)>] [95 <./chpt4_det_corr/figs/flashing_ur1.pdf> <./chpt4_det_corr/figs
+/flashing_ur2.pdf> <./chpt4_det_corr/figs/flashing_ur3.pdf> <./chpt4_det_corr/f
+igs/flashing_right_pca.png (PNG copy)>]
+<chpt4_det_corr/figs/flashing_cca_corrs.pdf, id=886, 556.0775pt x 456.70625pt>
+File: chpt4_det_corr/figs/flashing_cca_corrs.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/flashing_cca_corrs.pdf>
+<chpt4_det_corr/figs/flashing_icca_corrs.pdf, id=887, 556.0775pt x 456.70625pt>
+File: chpt4_det_corr/figs/flashing_icca_corrs.pdf Graphic file (type pdf)
+<use chpt4_det_corr/figs/flashing_icca_corrs.pdf>
+<chpt4_det_corr/figs/flashing_icca_sig.pdf, id=888, 562.1pt x 456.70625pt>
+File: chpt4_det_corr/figs/flashing_icca_sig.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/flashing_icca_sig.pdf>
+<chpt4_det_corr/figs/flashing_icca_sig_zoom.pdf, id=889, 555.07375pt x 456.7062
+5pt>
+File: chpt4_det_corr/figs/flashing_icca_sig_zoom.pdf Graphic file (type pdf)
+ <use chpt4_det_corr/figs/flashing_icca_sig_zoom.pdf>
+<chpt4_det_corr/figs/flashing_left_cca.png, id=890, 193.523pt x 109.208pt>
+File: chpt4_det_corr/figs/flashing_left_cca.png Graphic file (type png)
+
+<use chpt4_det_corr/figs/flashing_left_cca.png>
+<chpt4_det_corr/figs/flashing_right_cca.png, id=891, 193.523pt x 109.208pt>
+File: chpt4_det_corr/figs/flashing_right_cca.png Graphic file (type png)
+
+<use chpt4_det_corr/figs/flashing_right_cca.png>
+<chpt4_det_corr/figs/flashing_left_icca.png, id=892, 193.523pt x 109.208pt>
+File: chpt4_det_corr/figs/flashing_left_icca.png Graphic file (type png)
+
+<use chpt4_det_corr/figs/flashing_left_icca.png>
+<chpt4_det_corr/figs/flashing_right_icca.png, id=893, 193.523pt x 109.208pt>
+File: chpt4_det_corr/figs/flashing_right_icca.png Graphic file (type png)
+
+<use chpt4_det_corr/figs/flashing_right_icca.png> [96 <./chpt4_det_corr/figs/fl
+ashing_cca_corrs.pdf> <./chpt4_det_corr/figs/flashing_icca_corrs.pdf>] [97 <./c
+hpt4_det_corr/figs/flashing_icca_sig.pdf> <./chpt4_det_corr/figs/flashing_icca_
+sig_zoom.pdf> <./chpt4_det_corr/figs/flashing_left_cca.png (PNG copy)> <./chpt4
+_det_corr/figs/flashing_right_cca.png (PNG copy)>]
+<chpt4_det_corr/figs/flashing_v.pdf, id=948, 563.10374pt x 456.70625pt>
+File: chpt4_det_corr/figs/flashing_v.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/flashing_v.pdf> [98 <./chpt4_det_corr/figs/flashing_le
+ft_icca.png (PNG copy)> <./chpt4_det_corr/figs/flashing_right_icca.png (PNG cop
+y)>] <chpt4_det_corr/figs/flashing_lmiss.png, id=953, 240.9pt x 135.50626pt>
+File: chpt4_det_corr/figs/flashing_lmiss.png Graphic file (type png)
+
+<use chpt4_det_corr/figs/flashing_lmiss.png>
+<chpt4_det_corr/figs/flashing_rmiss.png, id=954, 240.9pt x 135.50626pt>
+File: chpt4_det_corr/figs/flashing_rmiss.png Graphic file (type png)
+
+<use chpt4_det_corr/figs/flashing_rmiss.png>
+<chpt4_det_corr/figs/flashing_lmiss_pca.png, id=955, 240.9pt x 135.50626pt>
+File: chpt4_det_corr/figs/flashing_lmiss_pca.png Graphic file (type png)
+
+<use chpt4_det_corr/figs/flashing_lmiss_pca.png>
+<chpt4_det_corr/figs/flashing_rmiss_pca.png, id=956, 240.9pt x 135.50626pt>
+File: chpt4_det_corr/figs/flashing_rmiss_pca.png Graphic file (type png)
+
+<use chpt4_det_corr/figs/flashing_rmiss_pca.png>
+<chpt4_det_corr/figs/flashing_lmiss_cca.png, id=957, 240.9pt x 135.50626pt>
+File: chpt4_det_corr/figs/flashing_lmiss_cca.png Graphic file (type png)
+
+<use chpt4_det_corr/figs/flashing_lmiss_cca.png>
+<chpt4_det_corr/figs/flashing_rmiss_cca.png, id=958, 240.9pt x 135.50626pt>
+File: chpt4_det_corr/figs/flashing_rmiss_cca.png Graphic file (type png)
+
+<use chpt4_det_corr/figs/flashing_rmiss_cca.png> [99 <./chpt4_det_corr/figs/fla
+shing_v.pdf> <./chpt4_det_corr/figs/flashing_lmiss.png (PNG copy)> <./chpt4_det
+_corr/figs/flashing_rmiss.png (PNG copy)>]
+<chpt4_det_corr/figs/flashing_lmiss_icca.png, id=968, 240.9pt x 135.50626pt>
+File: chpt4_det_corr/figs/flashing_lmiss_icca.png Graphic file (type png)
+
+<use chpt4_det_corr/figs/flashing_lmiss_icca.png>
+<chpt4_det_corr/figs/flashing_rmiss_icca.png, id=969, 240.9pt x 135.50626pt>
+File: chpt4_det_corr/figs/flashing_rmiss_icca.png Graphic file (type png)
+
+<use chpt4_det_corr/figs/flashing_rmiss_icca.png>
+<chpt4_det_corr/figs/cca_corrs_miss.pdf, id=970, 556.0775pt x 456.70625pt>
+File: chpt4_det_corr/figs/cca_corrs_miss.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/cca_corrs_miss.pdf>
+<chpt4_det_corr/figs/icca_corrs_miss.pdf, id=971, 556.0775pt x 456.70625pt>
+File: chpt4_det_corr/figs/icca_corrs_miss.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/icca_corrs_miss.pdf>
+<chpt4_det_corr/figs/icca_sigs_miss.pdf, id=972, 562.1pt x 456.70625pt>
+File: chpt4_det_corr/figs/icca_sigs_miss.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/icca_sigs_miss.pdf> [100 <./chpt4_det_corr/figs/flashi
+ng_lmiss_pca.png (PNG copy)> <./chpt4_det_corr/figs/flashing_rmiss_pca.png (PNG
+ copy)>] [101 <./chpt4_det_corr/figs/flashing_lmiss_cca.png (PNG copy)> <./chpt
+4_det_corr/figs/flashing_rmiss_cca.png (PNG copy)> <./chpt4_det_corr/figs/flash
+ing_lmiss_icca.png (PNG copy)> <./chpt4_det_corr/figs/flashing_rmiss_icca.png (
+PNG copy)>] [102 <./chpt4_det_corr/figs/cca_corrs_miss.pdf> <./chpt4_det_corr/f
+igs/icca_corrs_miss.pdf> <./chpt4_det_corr/figs/icca_sigs_miss.pdf>]
+<chpt4_det_corr/figs/av_video.png, id=1021, 250.9375pt x 133.49875pt>
+File: chpt4_det_corr/figs/av_video.png Graphic file (type png)
+
+<use chpt4_det_corr/figs/av_video.png>
+<chpt4_det_corr/figs/av_full_spect.pdf, id=1022, 585.18625pt x 485.815pt>
+File: chpt4_det_corr/figs/av_full_spect.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/av_full_spect.pdf>
+<chpt4_det_corr/figs/av_zoom_spect.pdf, id=1023, 586.19pt x 463.7325pt>
+File: chpt4_det_corr/figs/av_zoom_spect.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/av_zoom_spect.pdf> [103 <./chpt4_det_corr/figs/av_vide
+o.png (PNG copy)> <./chpt4_det_corr/figs/av_full_spect.pdf> <./chpt4_det_corr/f
+igs/av_zoom_spect.pdf>]
+<chpt4_det_corr/figs/av_vsv.pdf, id=1043, 563.10374pt x 485.815pt>
+File: chpt4_det_corr/figs/av_vsv.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/av_vsv.pdf>
+<chpt4_det_corr/figs/av_asv.pdf, id=1044, 563.10374pt x 463.7325pt>
+File: chpt4_det_corr/figs/av_asv.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/av_asv.pdf>
+<chpt4_det_corr/figs/av_vu1.pdf, id=1045, 427.5975pt x 262.9825pt>
+File: chpt4_det_corr/figs/av_vu1.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/av_vu1.pdf>
+<chpt4_det_corr/figs/av_vu2.pdf, id=1046, 427.5975pt x 263.98625pt>
+File: chpt4_det_corr/figs/av_vu2.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/av_vu2.pdf>
+<chpt4_det_corr/figs/av_vu_overlay.png, id=1047, 250.9375pt x 133.49875pt>
+File: chpt4_det_corr/figs/av_vu_overlay.png Graphic file (type png)
+
+<use chpt4_det_corr/figs/av_vu_overlay.png>
+<chpt4_det_corr/figs/av_pca_audio.pdf, id=1048, 537.00626pt x 463.7325pt>
+File: chpt4_det_corr/figs/av_pca_audio.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/av_pca_audio.pdf>
+<chpt4_det_corr/figs/av_pca_zoom_audio.pdf, id=1049, 548.0475pt x 463.7325pt>
+File: chpt4_det_corr/figs/av_pca_zoom_audio.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/av_pca_zoom_audio.pdf>
+<chpt4_det_corr/figs/av_pca_mask_audio.pdf, id=1050, 531.9875pt x 463.7325pt>
+File: chpt4_det_corr/figs/av_pca_mask_audio.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/av_pca_mask_audio.pdf>
+<chpt4_det_corr/figs/av_cca_corrs.pdf, id=1051, 538.01pt x 456.70625pt>
+File: chpt4_det_corr/figs/av_cca_corrs.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/av_cca_corrs.pdf>
+<chpt4_det_corr/figs/av_icca_corrs.pdf, id=1052, 538.01pt x 456.70625pt>
+File: chpt4_det_corr/figs/av_icca_corrs.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/av_icca_corrs.pdf> [104] [105 <./chpt4_det_corr/figs/a
+v_vsv.pdf> <./chpt4_det_corr/figs/av_asv.pdf> <./chpt4_det_corr/figs/av_vu1.pdf
+> <./chpt4_det_corr/figs/av_vu2.pdf> <./chpt4_det_corr/figs/av_vu_overlay.png (
+PNG copy)>] [106 <./chpt4_det_corr/figs/av_pca_audio.pdf> <./chpt4_det_corr/fig
+s/av_pca_zoom_audio.pdf> <./chpt4_det_corr/figs/av_pca_mask_audio.pdf>]
+<chpt4_det_corr/figs/av_icca_sig.pdf, id=1114, 544.0325pt x 456.70625pt>
+File: chpt4_det_corr/figs/av_icca_sig.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/av_icca_sig.pdf>
+<chpt4_det_corr/figs/av_icca_sig_zoom.pdf, id=1115, 544.0325pt x 456.70625pt>
+File: chpt4_det_corr/figs/av_icca_sig_zoom.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/av_icca_sig_zoom.pdf>
+<chpt4_det_corr/figs/av_cca_spect.pdf, id=1116, 585.18625pt x 485.815pt>
+File: chpt4_det_corr/figs/av_cca_spect.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/av_cca_spect.pdf>
+<chpt4_det_corr/figs/av_cca_zoom_spect.pdf, id=1117, 586.19pt x 463.7325pt>
+File: chpt4_det_corr/figs/av_cca_zoom_spect.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/av_cca_zoom_spect.pdf>
+<chpt4_det_corr/figs/av_cca_overlay.png, id=1118, 250.9375pt x 133.49875pt>
+File: chpt4_det_corr/figs/av_cca_overlay.png Graphic file (type png)
+
+<use chpt4_det_corr/figs/av_cca_overlay.png> [107 <./chpt4_det_corr/figs/av_cca
+_corrs.pdf> <./chpt4_det_corr/figs/av_icca_corrs.pdf>]
+<chpt4_det_corr/figs/av_icca_spect.pdf, id=1152, 585.18625pt x 485.815pt>
+File: chpt4_det_corr/figs/av_icca_spect.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/av_icca_spect.pdf>
+<chpt4_det_corr/figs/av_icca_zoom_spect.pdf, id=1153, 586.19pt x 463.7325pt>
+File: chpt4_det_corr/figs/av_icca_zoom_spect.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/av_icca_zoom_spect.pdf>
+<chpt4_det_corr/figs/av_icca_overlay.png, id=1154, 250.9375pt x 133.49875pt>
+File: chpt4_det_corr/figs/av_icca_overlay.png Graphic file (type png)
+
+<use chpt4_det_corr/figs/av_icca_overlay.png> [108 <./chpt4_det_corr/figs/av_ic
+ca_sig.pdf> <./chpt4_det_corr/figs/av_icca_sig_zoom.pdf>] [109 <./chpt4_det_cor
+r/figs/av_cca_spect.pdf> <./chpt4_det_corr/figs/av_cca_zoom_spect.pdf> <./chpt4
+_det_corr/figs/av_cca_overlay.png (PNG copy)>] [110 <./chpt4_det_corr/figs/av_i
+cca_spect.pdf> <./chpt4_det_corr/figs/av_icca_zoom_spect.pdf> <./chpt4_det_corr
+/figs/av_icca_overlay.png (PNG copy)>]
+<chpt4_det_corr/figs/aa1_full_spect.pdf, id=1215, 585.18625pt x 485.815pt>
+File: chpt4_det_corr/figs/aa1_full_spect.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/aa1_full_spect.pdf>
+<chpt4_det_corr/figs/aa1_zoom_spect.pdf, id=1216, 586.19pt x 463.7325pt>
+File: chpt4_det_corr/figs/aa1_zoom_spect.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/aa1_zoom_spect.pdf>
+<chpt4_det_corr/figs/aa2_full_spect.pdf, id=1217, 585.18625pt x 485.815pt>
+File: chpt4_det_corr/figs/aa2_full_spect.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/aa2_full_spect.pdf>
+<chpt4_det_corr/figs/aa2_zoom_spect.pdf, id=1218, 586.19pt x 463.7325pt>
+File: chpt4_det_corr/figs/aa2_zoom_spect.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/aa2_zoom_spect.pdf>
+<chpt4_det_corr/figs/aa_sv1.pdf, id=1219, 563.10374pt x 463.7325pt>
+File: chpt4_det_corr/figs/aa_sv1.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/aa_sv1.pdf>
+<chpt4_det_corr/figs/aa_sv2.pdf, id=1220, 563.10374pt x 463.7325pt>
+File: chpt4_det_corr/figs/aa_sv2.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/aa_sv2.pdf>
+<chpt4_det_corr/figs/aa_pca1.pdf, id=1221, 522.95375pt x 463.7325pt>
+File: chpt4_det_corr/figs/aa_pca1.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/aa_pca1.pdf>
+<chpt4_det_corr/figs/aa_pca1_zoom.pdf, id=1222, 548.0475pt x 463.7325pt>
+File: chpt4_det_corr/figs/aa_pca1_zoom.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/aa_pca1_zoom.pdf>
+<chpt4_det_corr/figs/aa_pca2.pdf, id=1223, 522.95375pt x 463.7325pt>
+File: chpt4_det_corr/figs/aa_pca2.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/aa_pca2.pdf>
+<chpt4_det_corr/figs/aa_pca2_zoom.pdf, id=1224, 548.0475pt x 463.7325pt>
+File: chpt4_det_corr/figs/aa_pca2_zoom.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/aa_pca2_zoom.pdf>
+<chpt4_det_corr/figs/aa_cca_corrs.pdf, id=1225, 545.03625pt x 456.70625pt>
+File: chpt4_det_corr/figs/aa_cca_corrs.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/aa_cca_corrs.pdf>
+<chpt4_det_corr/figs/aa_icca_corrs.pdf, id=1226, 545.03625pt x 456.70625pt>
+File: chpt4_det_corr/figs/aa_icca_corrs.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/aa_icca_corrs.pdf> [111] [112 <./chpt4_det_corr/figs/a
+a1_full_spect.pdf> <./chpt4_det_corr/figs/aa1_zoom_spect.pdf> <./chpt4_det_corr
+/figs/aa2_full_spect.pdf> <./chpt4_det_corr/figs/aa2_zoom_spect.pdf>]
+<chpt4_det_corr/figs/aa_icca_sig.pdf, id=1265, 544.0325pt x 456.70625pt>
+File: chpt4_det_corr/figs/aa_icca_sig.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/aa_icca_sig.pdf>
+<chpt4_det_corr/figs/aa_icca_sig_zoom.pdf, id=1266, 544.0325pt x 456.70625pt>
+File: chpt4_det_corr/figs/aa_icca_sig_zoom.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/aa_icca_sig_zoom.pdf> [113 <./chpt4_det_corr/figs/aa_s
+v1.pdf> <./chpt4_det_corr/figs/aa_sv2.pdf>] [114 <./chpt4_det_corr/figs/aa_pca1
+.pdf> <./chpt4_det_corr/figs/aa_pca1_zoom.pdf> <./chpt4_det_corr/figs/aa_pca2.p
+df> <./chpt4_det_corr/figs/aa_pca2_zoom.pdf>] [115 <./chpt4_det_corr/figs/aa_cc
+a_corrs.pdf> <./chpt4_det_corr/figs/aa_icca_corrs.pdf> <./chpt4_det_corr/figs/a
+a_icca_sig.pdf> <./chpt4_det_corr/figs/aa_icca_sig_zoom.pdf>]
+<chpt4_det_corr/figs/aa1_cca_full_spect.pdf, id=1355, 585.18625pt x 485.815pt>
+File: chpt4_det_corr/figs/aa1_cca_full_spect.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/aa1_cca_full_spect.pdf>
+<chpt4_det_corr/figs/aa1_cca_zoom_spect.pdf, id=1356, 586.19pt x 463.7325pt>
+File: chpt4_det_corr/figs/aa1_cca_zoom_spect.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/aa1_cca_zoom_spect.pdf>
+<chpt4_det_corr/figs/aa2_cca_full_spect.pdf, id=1357, 585.18625pt x 485.815pt>
+File: chpt4_det_corr/figs/aa2_cca_full_spect.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/aa2_cca_full_spect.pdf>
+<chpt4_det_corr/figs/aa2_cca_zoom_spect.pdf, id=1358, 586.19pt x 463.7325pt>
+File: chpt4_det_corr/figs/aa2_cca_zoom_spect.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/aa2_cca_zoom_spect.pdf>
+<chpt4_det_corr/figs/aa1_icca_full_spect.pdf, id=1359, 585.18625pt x 485.815pt>
+File: chpt4_det_corr/figs/aa1_icca_full_spect.pdf Graphic file (type pdf)
+<use chpt4_det_corr/figs/aa1_icca_full_spect.pdf>
+<chpt4_det_corr/figs/aa1_icca_zoom_spect.pdf, id=1360, 586.19pt x 463.7325pt>
+File: chpt4_det_corr/figs/aa1_icca_zoom_spect.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/aa1_icca_zoom_spect.pdf>
+<chpt4_det_corr/figs/aa2_icca_full_spect.pdf, id=1361, 585.18625pt x 485.815pt>
+File: chpt4_det_corr/figs/aa2_icca_full_spect.pdf Graphic file (type pdf)
+<use chpt4_det_corr/figs/aa2_icca_full_spect.pdf>
+<chpt4_det_corr/figs/aa2_icca_zoom_spect.pdf, id=1362, 586.19pt x 463.7325pt>
+File: chpt4_det_corr/figs/aa2_icca_zoom_spect.pdf Graphic file (type pdf)
+
+<use chpt4_det_corr/figs/aa2_icca_zoom_spect.pdf>) [116] [117 <./chpt4_det_corr
+/figs/aa1_cca_full_spect.pdf> <./chpt4_det_corr/figs/aa1_cca_zoom_spect.pdf> <.
+/chpt4_det_corr/figs/aa2_cca_full_spect.pdf> <./chpt4_det_corr/figs/aa2_cca_zoo
+m_spect.pdf>] [118 <./chpt4_det_corr/figs/aa1_icca_full_spect.pdf> <./chpt4_det
+_corr/figs/aa1_icca_zoom_spect.pdf> <./chpt4_det_corr/figs/aa2_icca_full_spect.
+pdf> <./chpt4_det_corr/figs/aa2_icca_zoom_spect.pdf>]
+CHAPTER V.
+(./chpt5_icca_vect/icca_vects.tex [119
+
+] [120] [121] [122] [123] [124] [125]
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 301.
+
+[126] [127] [128]
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 445.
+
+
+Overfull \hbox (7.56915pt too wide) in paragraph at lines 453--453
+[] 
+ []
+
+
+Overfull \hbox (26.43723pt too wide) in paragraph at lines 492--492
+[] [] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 494
+[][]
+ []
+
+[129] [130] [131] [132] [133]
+
+LaTeX Warning: Command \j invalid in math mode on input line 656.
+
+[134] [135] [136]
+<chpt5_icca_vect/figs/icca_vect_n1.pdf, id=1495, 569.12625pt x 463.7325pt>
+File: chpt5_icca_vect/figs/icca_vect_n1.pdf Graphic file (type pdf)
+
+<use chpt5_icca_vect/figs/icca_vect_n1.pdf>
+<chpt5_icca_vect/figs/icca_vect_n2.pdf, id=1496, 569.12625pt x 463.7325pt>
+File: chpt5_icca_vect/figs/icca_vect_n2.pdf Graphic file (type pdf)
+
+<use chpt5_icca_vect/figs/icca_vect_n2.pdf> [137]
+<chpt5_icca_vect/figs/icca_vect_convg_p1.pdf, id=1500, 544.0325pt x 463.7325pt>
+File: chpt5_icca_vect/figs/icca_vect_convg_p1.pdf Graphic file (type pdf)
+<use chpt5_icca_vect/figs/icca_vect_convg_p1.pdf>
+<chpt5_icca_vect/figs/icca_vect_convg_p2.pdf, id=1501, 544.0325pt x 463.7325pt>
+File: chpt5_icca_vect/figs/icca_vect_convg_p2.pdf Graphic file (type pdf)
+<use chpt5_icca_vect/figs/icca_vect_convg_p2.pdf>
+<chpt5_icca_vect/figs/icca_vect_convg_p3.pdf, id=1502, 544.0325pt x 463.7325pt>
+File: chpt5_icca_vect/figs/icca_vect_convg_p3.pdf Graphic file (type pdf)
+<use chpt5_icca_vect/figs/icca_vect_convg_p3.pdf>
+<chpt5_icca_vect/figs/icca_vect_convg_plugin_1.pdf, id=1503, 544.0325pt x 463.7
+325pt>
+File: chpt5_icca_vect/figs/icca_vect_convg_plugin_1.pdf Graphic file (type pdf)
+
+ <use chpt5_icca_vect/figs/icca_vect_convg_plugin_1.pdf>
+<chpt5_icca_vect/figs/icca_vect_convg_plugin_2.pdf, id=1504, 544.0325pt x 463.7
+325pt>
+File: chpt5_icca_vect/figs/icca_vect_convg_plugin_2.pdf Graphic file (type pdf)
+
+ <use chpt5_icca_vect/figs/icca_vect_convg_plugin_2.pdf>
+<chpt5_icca_vect/figs/icca_vect_convg_opt_1.pdf, id=1505, 544.0325pt x 463.7325
+pt>
+File: chpt5_icca_vect/figs/icca_vect_convg_opt_1.pdf Graphic file (type pdf)
+ <use chpt5_icca_vect/figs/icca_vect_convg_opt_1.pdf>
+<chpt5_icca_vect/figs/icca_vect_convg_opt_2.pdf, id=1506, 544.0325pt x 463.7325
+pt>
+File: chpt5_icca_vect/figs/icca_vect_convg_opt_2.pdf Graphic file (type pdf)
+ <use chpt5_icca_vect/figs/icca_vect_convg_opt_2.pdf>
+<chpt5_icca_vect/figs/icca_vect_convg_orth_1.pdf, id=1507, 544.0325pt x 463.732
+5pt>
+File: chpt5_icca_vect/figs/icca_vect_convg_orth_1.pdf Graphic file (type pdf)
+ <use chpt5_icca_vect/figs/icca_vect_convg_orth_1.pdf>
+<chpt5_icca_vect/figs/icca_vect_convg_orth_2.pdf, id=1508, 544.0325pt x 463.732
+5pt>
+File: chpt5_icca_vect/figs/icca_vect_convg_orth_2.pdf Graphic file (type pdf)
+ <use chpt5_icca_vect/figs/icca_vect_convg_orth_2.pdf>
+<chpt5_icca_vect/figs/icca_vect_convg_cca_1.pdf, id=1509, 544.0325pt x 463.7325
+pt>
+File: chpt5_icca_vect/figs/icca_vect_convg_cca_1.pdf Graphic file (type pdf)
+ <use chpt5_icca_vect/figs/icca_vect_convg_cca_1.pdf>
+<chpt5_icca_vect/figs/icca_vect_convg_cca_2.pdf, id=1510, 544.0325pt x 463.7325
+pt>
+File: chpt5_icca_vect/figs/icca_vect_convg_cca_2.pdf Graphic file (type pdf)
+ <use chpt5_icca_vect/figs/icca_vect_convg_cca_2.pdf> [138 <./chpt5_icca_vect/f
+igs/icca_vect_n1.pdf> <./chpt5_icca_vect/figs/icca_vect_n2.pdf>]
+<chpt5_icca_vect/figs/icca_vect_khat1_1.pdf, id=1524, 555.07375pt x 463.7325pt>
+File: chpt5_icca_vect/figs/icca_vect_khat1_1.pdf Graphic file (type pdf)
+<use chpt5_icca_vect/figs/icca_vect_khat1_1.pdf>
+<chpt5_icca_vect/figs/icca_vect_khat1_2.pdf, id=1525, 555.07375pt x 463.7325pt>
+File: chpt5_icca_vect/figs/icca_vect_khat1_2.pdf Graphic file (type pdf)
+<use chpt5_icca_vect/figs/icca_vect_khat1_2.pdf>
+<chpt5_icca_vect/figs/icca_vect_khat1_3.pdf, id=1526, 555.07375pt x 463.7325pt>
+File: chpt5_icca_vect/figs/icca_vect_khat1_3.pdf Graphic file (type pdf)
+<use chpt5_icca_vect/figs/icca_vect_khat1_3.pdf>
+<chpt5_icca_vect/figs/icca_vect_khat2_1.pdf, id=1527, 555.07375pt x 463.7325pt>
+File: chpt5_icca_vect/figs/icca_vect_khat2_1.pdf Graphic file (type pdf)
+<use chpt5_icca_vect/figs/icca_vect_khat2_1.pdf>
+<chpt5_icca_vect/figs/icca_vect_khat2_2.pdf, id=1528, 555.07375pt x 463.7325pt>
+File: chpt5_icca_vect/figs/icca_vect_khat2_2.pdf Graphic file (type pdf)
+<use chpt5_icca_vect/figs/icca_vect_khat2_2.pdf>
+<chpt5_icca_vect/figs/icca_vect_khat2_3.pdf, id=1529, 555.07375pt x 463.7325pt>
+File: chpt5_icca_vect/figs/icca_vect_khat2_3.pdf Graphic file (type pdf)
+<use chpt5_icca_vect/figs/icca_vect_khat2_3.pdf> [139 <./chpt5_icca_vect/figs/i
+cca_vect_convg_p1.pdf> <./chpt5_icca_vect/figs/icca_vect_convg_p2.pdf> <./chpt5
+_icca_vect/figs/icca_vect_convg_p3.pdf>] [140 <./chpt5_icca_vect/figs/icca_vect
+_convg_plugin_1.pdf> <./chpt5_icca_vect/figs/icca_vect_convg_plugin_2.pdf> <./c
+hpt5_icca_vect/figs/icca_vect_convg_opt_1.pdf> <./chpt5_icca_vect/figs/icca_vec
+t_convg_opt_2.pdf>] [141 <./chpt5_icca_vect/figs/icca_vect_convg_orth_1.pdf> <.
+/chpt5_icca_vect/figs/icca_vect_convg_orth_2.pdf> <./chpt5_icca_vect/figs/icca_
+vect_convg_cca_1.pdf> <./chpt5_icca_vect/figs/icca_vect_convg_cca_2.pdf>]
+[142 <./chpt5_icca_vect/figs/icca_vect_khat1_1.pdf> <./chpt5_icca_vect/figs/icc
+a_vect_khat1_2.pdf> <./chpt5_icca_vect/figs/icca_vect_khat1_3.pdf>] [143 <./chp
+t5_icca_vect/figs/icca_vect_khat2_1.pdf> <./chpt5_icca_vect/figs/icca_vect_khat
+2_2.pdf> <./chpt5_icca_vect/figs/icca_vect_khat2_3.pdf>]
+<chpt5_icca_vect/figs/flashing_left_sources.png, id=1633, 193.523pt x 109.208pt
+>
+File: chpt5_icca_vect/figs/flashing_left_sources.png Graphic file (type png)
+ <use chpt5_icca_vect/figs/flashing_left_sources.png>
+<chpt5_icca_vect/figs/flashing_right_sources.png, id=1634, 193.523pt x 109.208p
+t>
+File: chpt5_icca_vect/figs/flashing_right_sources.png Graphic file (type png)
+ <use chpt5_icca_vect/figs/flashing_right_sources.png> [144] [145 <./chpt5_icca
+_vect/figs/flashing_left_sources.png (PNG copy)> <./chpt5_icca_vect/figs/flashi
+ng_right_sources.png (PNG copy)>]
+<chpt5_icca_vect/figs/flashing2_left1_icca.pdf, id=1641, 504.88625pt x 413.545p
+t>
+File: chpt5_icca_vect/figs/flashing2_left1_icca.pdf Graphic file (type pdf)
+ <use chpt5_icca_vect/figs/flashing2_left1_icca.pdf>
+<chpt5_icca_vect/figs/flashing2_left1_orth.pdf, id=1642, 504.88625pt x 413.545p
+t>
+File: chpt5_icca_vect/figs/flashing2_left1_orth.pdf Graphic file (type pdf)
+ <use chpt5_icca_vect/figs/flashing2_left1_orth.pdf>
+<chpt5_icca_vect/figs/flashing2_left1_opt.pdf, id=1643, 504.88625pt x 413.545pt
+>
+File: chpt5_icca_vect/figs/flashing2_left1_opt.pdf Graphic file (type pdf)
+ <use chpt5_icca_vect/figs/flashing2_left1_opt.pdf>
+<chpt5_icca_vect/figs/flashing2_left1_cca.pdf, id=1644, 489.83pt x 413.545pt>
+File: chpt5_icca_vect/figs/flashing2_left1_cca.pdf Graphic file (type pdf)
+
+<use chpt5_icca_vect/figs/flashing2_left1_cca.pdf>
+<chpt5_icca_vect/figs/flashing2_left1_diff_icca.pdf, id=1645, 519.9425pt x 441.
+65pt>
+File: chpt5_icca_vect/figs/flashing2_left1_diff_icca.pdf Graphic file (type pdf
+)
+ <use chpt5_icca_vect/figs/flashing2_left1_diff_icca.pdf>
+<chpt5_icca_vect/figs/flashing2_left1_diff_orth.pdf, id=1646, 519.9425pt x 418.
+56375pt>
+File: chpt5_icca_vect/figs/flashing2_left1_diff_orth.pdf Graphic file (type pdf
+)
+ <use chpt5_icca_vect/figs/flashing2_left1_diff_orth.pdf>
+
+LaTeX Warning: Float too large for page by 26.0742pt on input line 1142.
+
+
+<chpt5_icca_vect/figs/flashing3_left1_icca.pdf, id=1647, 504.88625pt x 412.5412
+4pt>
+File: chpt5_icca_vect/figs/flashing3_left1_icca.pdf Graphic file (type pdf)
+ <use chpt5_icca_vect/figs/flashing3_left1_icca.pdf>
+<chpt5_icca_vect/figs/flashing3_left1_orth.pdf, id=1648, 504.88625pt x 412.5412
+4pt>
+File: chpt5_icca_vect/figs/flashing3_left1_orth.pdf Graphic file (type pdf)
+ <use chpt5_icca_vect/figs/flashing3_left1_orth.pdf>
+<chpt5_icca_vect/figs/flashing3_left1_opt.pdf, id=1649, 504.88625pt x 412.54124
+pt>
+File: chpt5_icca_vect/figs/flashing3_left1_opt.pdf Graphic file (type pdf)
+ <use chpt5_icca_vect/figs/flashing3_left1_opt.pdf>
+<chpt5_icca_vect/figs/flashing3_left1_cca.pdf, id=1650, 489.83pt x 413.545pt>
+File: chpt5_icca_vect/figs/flashing3_left1_cca.pdf Graphic file (type pdf)
+
+<use chpt5_icca_vect/figs/flashing3_left1_cca.pdf>
+<chpt5_icca_vect/figs/flashing3_left1_diff_icca.pdf, id=1651, 519.9425pt x 442.
+65375pt>
+File: chpt5_icca_vect/figs/flashing3_left1_diff_icca.pdf Graphic file (type pdf
+)
+ <use chpt5_icca_vect/figs/flashing3_left1_diff_icca.pdf>
+<chpt5_icca_vect/figs/flashing3_left1_diff_orth.pdf, id=1652, 524.96124pt x 413
+.545pt>
+File: chpt5_icca_vect/figs/flashing3_left1_diff_orth.pdf Graphic file (type pdf
+)
+ <use chpt5_icca_vect/figs/flashing3_left1_diff_orth.pdf>
+
+LaTeX Warning: Float too large for page by 26.06299pt on input line 1179.
+
+
+<chpt5_icca_vect/figs/flashing1_left1_icca.pdf, id=1653, 504.88625pt x 412.5412
+4pt>
+File: chpt5_icca_vect/figs/flashing1_left1_icca.pdf Graphic file (type pdf)
+ <use chpt5_icca_vect/figs/flashing1_left1_icca.pdf>
+<chpt5_icca_vect/figs/flashing1_left1_orth.pdf, id=1654, 504.88625pt x 412.5412
+4pt>
+File: chpt5_icca_vect/figs/flashing1_left1_orth.pdf Graphic file (type pdf)
+ <use chpt5_icca_vect/figs/flashing1_left1_orth.pdf>
+<chpt5_icca_vect/figs/flashing1_left1_opt.pdf, id=1655, 504.88625pt x 412.54124
+pt>
+File: chpt5_icca_vect/figs/flashing1_left1_opt.pdf Graphic file (type pdf)
+ <use chpt5_icca_vect/figs/flashing1_left1_opt.pdf>
+<chpt5_icca_vect/figs/flashing1_left1_cca.pdf, id=1656, 504.88625pt x 412.54124
+pt>
+File: chpt5_icca_vect/figs/flashing1_left1_cca.pdf Graphic file (type pdf)
+ <use chpt5_icca_vect/figs/flashing1_left1_cca.pdf>
+<chpt5_icca_vect/figs/flashing1_left1_diff_icca.pdf, id=1657, 519.9425pt x 441.
+65pt>
+File: chpt5_icca_vect/figs/flashing1_left1_diff_icca.pdf Graphic file (type pdf
+)
+ <use chpt5_icca_vect/figs/flashing1_left1_diff_icca.pdf>
+<chpt5_icca_vect/figs/flashing1_left1_diff_orth.pdf, id=1658, 519.9425pt x 441.
+65pt>
+File: chpt5_icca_vect/figs/flashing1_left1_diff_orth.pdf Graphic file (type pdf
+)
+ <use chpt5_icca_vect/figs/flashing1_left1_diff_orth.pdf>
+
+LaTeX Warning: Float too large for page by 20.38905pt on input line 1216.
+
+
+<chpt5_icca_vect/figs/flashing2_left2_icca.pdf, id=1659, 504.88625pt x 413.545p
+t>
+File: chpt5_icca_vect/figs/flashing2_left2_icca.pdf Graphic file (type pdf)
+ <use chpt5_icca_vect/figs/flashing2_left2_icca.pdf>
+<chpt5_icca_vect/figs/flashing2_left2_orth.pdf, id=1660, 504.88625pt x 413.545p
+t>
+File: chpt5_icca_vect/figs/flashing2_left2_orth.pdf Graphic file (type pdf)
+ <use chpt5_icca_vect/figs/flashing2_left2_orth.pdf>
+<chpt5_icca_vect/figs/flashing2_left2_opt.pdf, id=1661, 504.88625pt x 413.545pt
+>
+File: chpt5_icca_vect/figs/flashing2_left2_opt.pdf Graphic file (type pdf)
+ <use chpt5_icca_vect/figs/flashing2_left2_opt.pdf>
+<chpt5_icca_vect/figs/flashing2_left2_cca.pdf, id=1662, 489.83pt x 413.545pt>
+File: chpt5_icca_vect/figs/flashing2_left2_cca.pdf Graphic file (type pdf)
+
+<use chpt5_icca_vect/figs/flashing2_left2_cca.pdf>
+<chpt5_icca_vect/figs/flashing2_left2_diff_icca.pdf, id=1663, 519.9425pt x 441.
+65pt>
+File: chpt5_icca_vect/figs/flashing2_left2_diff_icca.pdf Graphic file (type pdf
+)
+ <use chpt5_icca_vect/figs/flashing2_left2_diff_icca.pdf>
+<chpt5_icca_vect/figs/flashing2_left2_diff_orth.pdf, id=1664, 519.9425pt x 412.
+54124pt>
+File: chpt5_icca_vect/figs/flashing2_left2_diff_orth.pdf Graphic file (type pdf
+)
+ <use chpt5_icca_vect/figs/flashing2_left2_diff_orth.pdf>
+
+LaTeX Warning: Float too large for page by 26.0742pt on input line 1274.
+
+
+<chpt5_icca_vect/figs/flashing3_left2_icca.pdf, id=1665, 504.88625pt x 413.545p
+t>
+File: chpt5_icca_vect/figs/flashing3_left2_icca.pdf Graphic file (type pdf)
+ <use chpt5_icca_vect/figs/flashing3_left2_icca.pdf>
+<chpt5_icca_vect/figs/flashing3_left2_orth.pdf, id=1666, 504.88625pt x 413.545p
+t>
+File: chpt5_icca_vect/figs/flashing3_left2_orth.pdf Graphic file (type pdf)
+ <use chpt5_icca_vect/figs/flashing3_left2_orth.pdf>
+<chpt5_icca_vect/figs/flashing3_left2_opt.pdf, id=1667, 504.88625pt x 413.545pt
+>
+File: chpt5_icca_vect/figs/flashing3_left2_opt.pdf Graphic file (type pdf)
+ <use chpt5_icca_vect/figs/flashing3_left2_opt.pdf>
+<chpt5_icca_vect/figs/flashing3_left2_cca.pdf, id=1668, 489.83pt x 413.545pt>
+File: chpt5_icca_vect/figs/flashing3_left2_cca.pdf Graphic file (type pdf)
+
+<use chpt5_icca_vect/figs/flashing3_left2_cca.pdf>
+<chpt5_icca_vect/figs/flashing3_left2_diff_icca.pdf, id=1669, 519.9425pt x 441.
+65pt>
+File: chpt5_icca_vect/figs/flashing3_left2_diff_icca.pdf Graphic file (type pdf
+)
+ <use chpt5_icca_vect/figs/flashing3_left2_diff_icca.pdf>
+<chpt5_icca_vect/figs/flashing3_left2_diff_orth.pdf, id=1670, 519.9425pt x 441.
+65pt>
+File: chpt5_icca_vect/figs/flashing3_left2_diff_orth.pdf Graphic file (type pdf
+)
+ <use chpt5_icca_vect/figs/flashing3_left2_diff_orth.pdf>
+
+LaTeX Warning: Float too large for page by 26.0742pt on input line 1311.
+
+
+<chpt5_icca_vect/figs/flashing1_left2_icca.pdf, id=1671, 504.88625pt x 412.5412
+4pt>
+File: chpt5_icca_vect/figs/flashing1_left2_icca.pdf Graphic file (type pdf)
+ <use chpt5_icca_vect/figs/flashing1_left2_icca.pdf>
+<chpt5_icca_vect/figs/flashing1_left2_orth.pdf, id=1672, 504.88625pt x 412.5412
+4pt>
+File: chpt5_icca_vect/figs/flashing1_left2_orth.pdf Graphic file (type pdf)
+ <use chpt5_icca_vect/figs/flashing1_left2_orth.pdf>
+<chpt5_icca_vect/figs/flashing1_left2_opt.pdf, id=1673, 504.88625pt x 412.54124
+pt>
+File: chpt5_icca_vect/figs/flashing1_left2_opt.pdf Graphic file (type pdf)
+ <use chpt5_icca_vect/figs/flashing1_left2_opt.pdf>
+<chpt5_icca_vect/figs/flashing1_left2_cca.pdf, id=1674, 504.88625pt x 412.54124
+pt>
+File: chpt5_icca_vect/figs/flashing1_left2_cca.pdf Graphic file (type pdf)
+ <use chpt5_icca_vect/figs/flashing1_left2_cca.pdf>
+<chpt5_icca_vect/figs/flashing1_left2_diff_icca.pdf, id=1675, 519.9425pt x 441.
+65pt>
+File: chpt5_icca_vect/figs/flashing1_left2_diff_icca.pdf Graphic file (type pdf
+)
+ <use chpt5_icca_vect/figs/flashing1_left2_diff_icca.pdf>
+<chpt5_icca_vect/figs/flashing1_left2_diff_orth.pdf, id=1676, 519.9425pt x 441.
+65pt>
+File: chpt5_icca_vect/figs/flashing1_left2_diff_orth.pdf Graphic file (type pdf
+)
+ <use chpt5_icca_vect/figs/flashing1_left2_diff_orth.pdf>
+
+LaTeX Warning: Float too large for page by 20.38905pt on input line 1348.
+
+[146] [147 <./chpt5_icca_vect/figs/flashing2_left1_icca.pdf> <./chpt5_icca_vect
+/figs/flashing2_left1_orth.pdf> <./chpt5_icca_vect/figs/flashing2_left1_opt.pdf
+> <./chpt5_icca_vect/figs/flashing2_left1_cca.pdf> <./chpt5_icca_vect/figs/flas
+hing2_left1_diff_icca.pdf> <./chpt5_icca_vect/figs/flashing2_left1_diff_orth.pd
+f>] [148 <./chpt5_icca_vect/figs/flashing3_left1_icca.pdf> <./chpt5_icca_vect/f
+igs/flashing3_left1_orth.pdf> <./chpt5_icca_vect/figs/flashing3_left1_opt.pdf> 
+<./chpt5_icca_vect/figs/flashing3_left1_cca.pdf> <./chpt5_icca_vect/figs/flashi
+ng3_left1_diff_icca.pdf> <./chpt5_icca_vect/figs/flashing3_left1_diff_orth.pdf>
+] [149 <./chpt5_icca_vect/figs/flashing1_left1_icca.pdf> <./chpt5_icca_vect/fig
+s/flashing1_left1_orth.pdf> <./chpt5_icca_vect/figs/flashing1_left1_opt.pdf> <.
+/chpt5_icca_vect/figs/flashing1_left1_cca.pdf> <./chpt5_icca_vect/figs/flashing
+1_left1_diff_icca.pdf> <./chpt5_icca_vect/figs/flashing1_left1_diff_orth.pdf>]
+[150 <./chpt5_icca_vect/figs/flashing2_left2_icca.pdf> <./chpt5_icca_vect/figs/
+flashing2_left2_orth.pdf> <./chpt5_icca_vect/figs/flashing2_left2_opt.pdf> <./c
+hpt5_icca_vect/figs/flashing2_left2_cca.pdf> <./chpt5_icca_vect/figs/flashing2_
+left2_diff_icca.pdf> <./chpt5_icca_vect/figs/flashing2_left2_diff_orth.pdf>]
+[151 <./chpt5_icca_vect/figs/flashing3_left2_icca.pdf> <./chpt5_icca_vect/figs/
+flashing3_left2_orth.pdf> <./chpt5_icca_vect/figs/flashing3_left2_opt.pdf> <./c
+hpt5_icca_vect/figs/flashing3_left2_cca.pdf> <./chpt5_icca_vect/figs/flashing3_
+left2_diff_icca.pdf> <./chpt5_icca_vect/figs/flashing3_left2_diff_orth.pdf>]
+[152 <./chpt5_icca_vect/figs/flashing1_left2_icca.pdf> <./chpt5_icca_vect/figs/
+flashing1_left2_orth.pdf> <./chpt5_icca_vect/figs/flashing1_left2_opt.pdf> <./c
+hpt5_icca_vect/figs/flashing1_left2_cca.pdf> <./chpt5_icca_vect/figs/flashing1_
+left2_diff_icca.pdf> <./chpt5_icca_vect/figs/flashing1_left2_diff_orth.pdf>]
+<chpt5_icca_vect/figs/aa1_full_spect.pdf, id=1964, 585.18625pt x 485.815pt>
+File: chpt5_icca_vect/figs/aa1_full_spect.pdf Graphic file (type pdf)
+
+<use chpt5_icca_vect/figs/aa1_full_spect.pdf>
+<chpt5_icca_vect/figs/aa1_zoom_spect.pdf, id=1965, 586.19pt x 463.7325pt>
+File: chpt5_icca_vect/figs/aa1_zoom_spect.pdf Graphic file (type pdf)
+
+<use chpt5_icca_vect/figs/aa1_zoom_spect.pdf>
+<chpt5_icca_vect/figs/aa2_full_spect.pdf, id=1966, 585.18625pt x 485.815pt>
+File: chpt5_icca_vect/figs/aa2_full_spect.pdf Graphic file (type pdf)
+
+<use chpt5_icca_vect/figs/aa2_full_spect.pdf>
+<chpt5_icca_vect/figs/aa2_zoom_spect.pdf, id=1967, 586.19pt x 463.7325pt>
+File: chpt5_icca_vect/figs/aa2_zoom_spect.pdf Graphic file (type pdf)
+
+<use chpt5_icca_vect/figs/aa2_zoom_spect.pdf> [153] [154 <./chpt5_icca_vect/fig
+s/aa1_full_spect.pdf> <./chpt5_icca_vect/figs/aa1_zoom_spect.pdf> <./chpt5_icca
+_vect/figs/aa2_full_spect.pdf> <./chpt5_icca_vect/figs/aa2_zoom_spect.pdf>]
+<chpt5_icca_vect/figs/aa1_1.pdf, id=2006, 531.9875pt x 463.7325pt>
+File: chpt5_icca_vect/figs/aa1_1.pdf Graphic file (type pdf)
+
+<use chpt5_icca_vect/figs/aa1_1.pdf>
+<chpt5_icca_vect/figs/aa1_2.pdf, id=2007, 531.9875pt x 463.7325pt>
+File: chpt5_icca_vect/figs/aa1_2.pdf Graphic file (type pdf)
+
+<use chpt5_icca_vect/figs/aa1_2.pdf>
+<chpt5_icca_vect/figs/aa1_3.pdf, id=2008, 531.9875pt x 463.7325pt>
+File: chpt5_icca_vect/figs/aa1_3.pdf Graphic file (type pdf)
+
+<use chpt5_icca_vect/figs/aa1_3.pdf>
+<chpt5_icca_vect/figs/aa1_3_zoom.pdf, id=2009, 540.0175pt x 463.7325pt>
+File: chpt5_icca_vect/figs/aa1_3_zoom.pdf Graphic file (type pdf)
+
+<use chpt5_icca_vect/figs/aa1_3_zoom.pdf>
+<chpt5_icca_vect/figs/aa2_1.pdf, id=2010, 531.9875pt x 463.7325pt>
+File: chpt5_icca_vect/figs/aa2_1.pdf Graphic file (type pdf)
+
+<use chpt5_icca_vect/figs/aa2_1.pdf>
+<chpt5_icca_vect/figs/aa2_2.pdf, id=2011, 531.9875pt x 463.7325pt>
+File: chpt5_icca_vect/figs/aa2_2.pdf Graphic file (type pdf)
+
+<use chpt5_icca_vect/figs/aa2_2.pdf>
+<chpt5_icca_vect/figs/aa2_3.pdf, id=2012, 531.9875pt x 463.7325pt>
+File: chpt5_icca_vect/figs/aa2_3.pdf Graphic file (type pdf)
+
+<use chpt5_icca_vect/figs/aa2_3.pdf>
+<chpt5_icca_vect/figs/aa2_3_zoom.pdf, id=2013, 540.0175pt x 463.7325pt>
+File: chpt5_icca_vect/figs/aa2_3_zoom.pdf Graphic file (type pdf)
+
+<use chpt5_icca_vect/figs/aa2_3_zoom.pdf> [155] [156 <./chpt5_icca_vect/figs/aa
+1_1.pdf> <./chpt5_icca_vect/figs/aa1_2.pdf> <./chpt5_icca_vect/figs/aa1_3.pdf> 
+<./chpt5_icca_vect/figs/aa1_3_zoom.pdf>] [157 <./chpt5_icca_vect/figs/aa2_1.pdf
+> <./chpt5_icca_vect/figs/aa2_2.pdf> <./chpt5_icca_vect/figs/aa2_3.pdf> <./chpt
+5_icca_vect/figs/aa2_3_zoom.pdf>] [158] [159] [160] [161]) [162]
+CHAPTER VI.
+(./chpt6_xy/xy_proof.tex (./chpt6_xy/intro.tex [163
+
+]
+Overfull \hbox (5.18944pt too wide) in paragraph at lines 41--51
+[]\OT1/cmr/m/n/12 In this chap-ter, we be-gin by ex-plor-ing the per-for-mance 
+of reg-u-lar-ized CCA (RCCA).
+ []
+
+[164] <chpt6_xy/figures/xy_motiv_1.pdf, id=2086, 563.10374pt x 463.7325pt>
+File: chpt6_xy/figures/xy_motiv_1.pdf Graphic file (type pdf)
+
+<use chpt6_xy/figures/xy_motiv_1.pdf>
+<chpt6_xy/figures/xy_motiv_2.pdf, id=2087, 563.10374pt x 463.7325pt>
+File: chpt6_xy/figures/xy_motiv_2.pdf Graphic file (type pdf)
+
+<use chpt6_xy/figures/xy_motiv_2.pdf>
+<chpt6_xy/figures/xy_motiv_3.pdf, id=2088, 563.10374pt x 463.7325pt>
+File: chpt6_xy/figures/xy_motiv_3.pdf Graphic file (type pdf)
+
+<use chpt6_xy/figures/xy_motiv_3.pdf>
+<chpt6_xy/figures/xy_motiv_all.pdf, id=2089, 563.10374pt x 463.7325pt>
+File: chpt6_xy/figures/xy_motiv_all.pdf Graphic file (type pdf)
+
+<use chpt6_xy/figures/xy_motiv_all.pdf>) (./chpt6_xy/prob_state.tex [165 <./chp
+t6_xy/figures/xy_motiv_1.pdf> <./chpt6_xy/figures/xy_motiv_2.pdf> <./chpt6_xy/f
+igures/xy_motiv_3.pdf> <./chpt6_xy/figures/xy_motiv_all.pdf>] [166] [167])
+(./chpt6_xy/main_result.tex [168]
+Overfull \hbox (0.24213pt too wide) detected at line 43
+\OT1/cmr/m/n/12 0 = [] [] [] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 ^^Z[]'[]\OT1
+/cmr/m/n/12 (\OML/cmm/m/it/12 ^^[[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 '[]\OT1/cm
+r/m/n/12 (\OML/cmm/m/it/12 ^^[[]\OT1/cmr/m/n/12 ) [][]
+ []
+
+[169]) (./chpt6_xy/empir_sims.tex [170]
+<chpt6_xy/figures/eta1_auc.pdf, id=2145, 559.08875pt x 463.7325pt>
+File: chpt6_xy/figures/eta1_auc.pdf Graphic file (type pdf)
+
+<use chpt6_xy/figures/eta1_auc.pdf>
+<chpt6_xy/figures/eta2_auc.pdf, id=2146, 559.08875pt x 463.7325pt>
+File: chpt6_xy/figures/eta2_auc.pdf Graphic file (type pdf)
+
+<use chpt6_xy/figures/eta2_auc.pdf>
+<chpt6_xy/figures/eta3_auc.pdf, id=2147, 559.08875pt x 463.7325pt>
+File: chpt6_xy/figures/eta3_auc.pdf Graphic file (type pdf)
+
+<use chpt6_xy/figures/eta3_auc.pdf>
+<chpt6_xy/figures/eta4_auc.pdf, id=2148, 559.08875pt x 463.7325pt>
+File: chpt6_xy/figures/eta4_auc.pdf Graphic file (type pdf)
+
+<use chpt6_xy/figures/eta4_auc.pdf>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[171] <chpt6_xy/figures/sigma_pred.pdf, id=2152, 549.05125pt x 485.815pt>
+File: chpt6_xy/figures/sigma_pred.pdf Graphic file (type pdf)
+
+<use chpt6_xy/figures/sigma_pred.pdf>
+<chpt6_xy/figures/n_theta_large.pdf, id=2153, 537.00626pt x 463.7325pt>
+File: chpt6_xy/figures/n_theta_large.pdf Graphic file (type pdf)
+
+<use chpt6_xy/figures/n_theta_large.pdf>
+<chpt6_xy/figures/n_theta_small.pdf, id=2154, 537.00626pt x 463.7325pt>
+File: chpt6_xy/figures/n_theta_small.pdf Graphic file (type pdf)
+
+<use chpt6_xy/figures/n_theta_small.pdf>
+<chpt6_xy/figures/n_rho.pdf, id=2155, 542.025pt x 463.7325pt>
+File: chpt6_xy/figures/n_rho.pdf Graphic file (type pdf)
+
+<use chpt6_xy/figures/n_rho.pdf>
+<chpt6_xy/figures/rho_theta.pdf, id=2156, 537.00626pt x 463.7325pt>
+File: chpt6_xy/figures/rho_theta.pdf Graphic file (type pdf)
+
+<use chpt6_xy/figures/rho_theta.pdf>
+<chpt6_xy/figures/theta_theta.pdf, id=2157, 532.99126pt x 463.7325pt>
+File: chpt6_xy/figures/theta_theta.pdf Graphic file (type pdf)
+
+<use chpt6_xy/figures/theta_theta.pdf> [172 <./chpt6_xy/figures/eta1_auc.pdf> <
+./chpt6_xy/figures/eta2_auc.pdf> <./chpt6_xy/figures/eta3_auc.pdf> <./chpt6_xy/
+figures/eta4_auc.pdf>]
+<chpt6_xy/figures/rho_10_theta.pdf, id=2209, 579.16376pt x 463.7325pt>
+File: chpt6_xy/figures/rho_10_theta.pdf Graphic file (type pdf)
+
+<use chpt6_xy/figures/rho_10_theta.pdf>
+<chpt6_xy/figures/rho_8_theta.pdf, id=2210, 579.16376pt x 463.7325pt>
+File: chpt6_xy/figures/rho_8_theta.pdf Graphic file (type pdf)
+
+<use chpt6_xy/figures/rho_8_theta.pdf>
+<chpt6_xy/figures/rho_6_theta.pdf, id=2211, 579.16376pt x 463.7325pt>
+File: chpt6_xy/figures/rho_6_theta.pdf Graphic file (type pdf)
+
+<use chpt6_xy/figures/rho_6_theta.pdf>
+<chpt6_xy/figures/rho_4_theta.pdf, id=2212, 579.16376pt x 463.7325pt>
+File: chpt6_xy/figures/rho_4_theta.pdf Graphic file (type pdf)
+
+<use chpt6_xy/figures/rho_4_theta.pdf>
+<chpt6_xy/figures/rho_2_theta.pdf, id=2213, 579.16376pt x 463.7325pt>
+File: chpt6_xy/figures/rho_2_theta.pdf Graphic file (type pdf)
+
+<use chpt6_xy/figures/rho_2_theta.pdf>
+<chpt6_xy/figures/rho_0_theta.pdf, id=2214, 579.16376pt x 463.7325pt>
+File: chpt6_xy/figures/rho_0_theta.pdf Graphic file (type pdf)
+
+<use chpt6_xy/figures/rho_0_theta.pdf> [173 <./chpt6_xy/figures/sigma_pred.pdf>
+] [174 <./chpt6_xy/figures/n_theta_large.pdf> <./chpt6_xy/figures/n_theta_small
+.pdf> <./chpt6_xy/figures/n_rho.pdf> <./chpt6_xy/figures/rho_theta.pdf> <./chpt
+6_xy/figures/theta_theta.pdf>] [175 <./chpt6_xy/figures/rho_10_theta.pdf> <./ch
+pt6_xy/figures/rho_8_theta.pdf> <./chpt6_xy/figures/rho_6_theta.pdf> <./chpt6_x
+y/figures/rho_4_theta.pdf> <./chpt6_xy/figures/rho_2_theta.pdf> <./chpt6_xy/fig
+ures/rho_0_theta.pdf>]
+<chpt6_xy/figures/theta_theta_icca.pdf, id=2360, 549.05125pt x 485.815pt>
+File: chpt6_xy/figures/theta_theta_icca.pdf Graphic file (type pdf)
+
+<use chpt6_xy/figures/theta_theta_icca.pdf>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) (./chpt6_xy/proof.tex [176] [177 <./chpt6_xy/figures/theta_theta_icca.pdf>]
+[178] [179] [180]
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 243.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 243.
+
+
+Overfull \hbox (3.25485pt too wide) in paragraph at lines 243--243
+[] 
+ []
+
+[181] [182] [183] [184]
+Overfull \hbox (8.94788pt too wide) in paragraph at lines 368--371
+[]\OT1/cmr/m/n/12 Let $\OML/cmm/m/it/12 ^^V[]$ \OT1/cmr/m/n/12 be the lim-it-in
+g eigen-value dis-tri-bu-tion of $\OML/cmm/m/it/12 XY[]YX[] [][]$\OT1/cmr/m/n/1
+2 .
+ []
+
+[185])) [186]
+CHAPTER VII.
+(./chpt7_svd_proj/svd_proj.tex [187
+
+] [188]
+<chpt7_svd_proj/figs/motiv_full_1.pdf, id=2412, 561.09625pt x 463.7325pt>
+File: chpt7_svd_proj/figs/motiv_full_1.pdf Graphic file (type pdf)
+
+<use chpt7_svd_proj/figs/motiv_full_1.pdf>
+<chpt7_svd_proj/figs/motiv_orth_1.pdf, id=2413, 563.10374pt x 463.7325pt>
+File: chpt7_svd_proj/figs/motiv_orth_1.pdf Graphic file (type pdf)
+
+<use chpt7_svd_proj/figs/motiv_orth_1.pdf>
+<chpt7_svd_proj/figs/motiv_gauss_1.pdf, id=2414, 554.07pt x 463.7325pt>
+File: chpt7_svd_proj/figs/motiv_gauss_1.pdf Graphic file (type pdf)
+
+<use chpt7_svd_proj/figs/motiv_gauss_1.pdf>
+<chpt7_svd_proj/figs/motiv_full_2.pdf, id=2415, 570.13pt x 463.7325pt>
+File: chpt7_svd_proj/figs/motiv_full_2.pdf Graphic file (type pdf)
+
+<use chpt7_svd_proj/figs/motiv_full_2.pdf>
+<chpt7_svd_proj/figs/motiv_orth_2.pdf, id=2416, 563.10374pt x 463.7325pt>
+File: chpt7_svd_proj/figs/motiv_orth_2.pdf Graphic file (type pdf)
+
+<use chpt7_svd_proj/figs/motiv_orth_2.pdf>
+<chpt7_svd_proj/figs/motiv_gauss_2.pdf, id=2417, 563.10374pt x 463.7325pt>
+File: chpt7_svd_proj/figs/motiv_gauss_2.pdf Graphic file (type pdf)
+
+<use chpt7_svd_proj/figs/motiv_gauss_2.pdf> [189 <./chpt7_svd_proj/figs/motiv_f
+ull_1.pdf> <./chpt7_svd_proj/figs/motiv_orth_1.pdf> <./chpt7_svd_proj/figs/moti
+v_gauss_1.pdf> <./chpt7_svd_proj/figs/motiv_full_2.pdf> <./chpt7_svd_proj/figs/
+motiv_orth_2.pdf> <./chpt7_svd_proj/figs/motiv_gauss_2.pdf>] [190] [191]
+[192] [193] [194] [195] [196] [197] [198] [199]
+<chpt7_svd_proj/figs/gauss_sv_pred.pdf, id=2506, 549.05125pt x 463.7325pt>
+File: chpt7_svd_proj/figs/gauss_sv_pred.pdf Graphic file (type pdf)
+
+<use chpt7_svd_proj/figs/gauss_sv_pred.pdf>
+<chpt7_svd_proj/figs/gauss_sweep.pdf, id=2507, 549.05125pt x 463.7325pt>
+File: chpt7_svd_proj/figs/gauss_sweep.pdf Graphic file (type pdf)
+
+<use chpt7_svd_proj/figs/gauss_sweep.pdf> [200 <./chpt7_svd_proj/figs/gauss_sv_
+pred.pdf> <./chpt7_svd_proj/figs/gauss_sweep.pdf>]
+<chpt7_svd_proj/figs/ks11.pdf, id=2530, 544.0325pt x 463.7325pt>
+File: chpt7_svd_proj/figs/ks11.pdf Graphic file (type pdf)
+
+<use chpt7_svd_proj/figs/ks11.pdf>
+<chpt7_svd_proj/figs/ks21.pdf, id=2531, 544.0325pt x 463.7325pt>
+File: chpt7_svd_proj/figs/ks21.pdf Graphic file (type pdf)
+
+<use chpt7_svd_proj/figs/ks21.pdf>
+<chpt7_svd_proj/figs/maxsv11.pdf, id=2532, 543.02875pt x 463.7325pt>
+File: chpt7_svd_proj/figs/maxsv11.pdf Graphic file (type pdf)
+
+<use chpt7_svd_proj/figs/maxsv11.pdf>
+<chpt7_svd_proj/figs/maxsv21.pdf, id=2533, 536.0025pt x 463.7325pt>
+File: chpt7_svd_proj/figs/maxsv21.pdf Graphic file (type pdf)
+
+<use chpt7_svd_proj/figs/maxsv21.pdf>
+<chpt7_svd_proj/figs/unitary_sv_pred.pdf, id=2534, 549.05125pt x 463.7325pt>
+File: chpt7_svd_proj/figs/unitary_sv_pred.pdf Graphic file (type pdf)
+
+<use chpt7_svd_proj/figs/unitary_sv_pred.pdf>
+<chpt7_svd_proj/figs/fourier_sweep.pdf, id=2535, 549.05125pt x 463.7325pt>
+File: chpt7_svd_proj/figs/fourier_sweep.pdf Graphic file (type pdf)
+
+<use chpt7_svd_proj/figs/fourier_sweep.pdf> [201] [202 <./chpt7_svd_proj/figs/k
+s11.pdf> <./chpt7_svd_proj/figs/ks21.pdf> <./chpt7_svd_proj/figs/maxsv11.pdf> <
+./chpt7_svd_proj/figs/maxsv21.pdf>]
+<chpt7_svd_proj/figs/ks12.pdf, id=2586, 544.0325pt x 463.7325pt>
+File: chpt7_svd_proj/figs/ks12.pdf Graphic file (type pdf)
+
+<use chpt7_svd_proj/figs/ks12.pdf>
+<chpt7_svd_proj/figs/ks22.pdf, id=2587, 544.0325pt x 463.7325pt>
+File: chpt7_svd_proj/figs/ks22.pdf Graphic file (type pdf)
+
+<use chpt7_svd_proj/figs/ks22.pdf>
+<chpt7_svd_proj/figs/maxsv12.pdf, id=2588, 546.04pt x 464.73625pt>
+File: chpt7_svd_proj/figs/maxsv12.pdf Graphic file (type pdf)
+
+<use chpt7_svd_proj/figs/maxsv12.pdf>
+<chpt7_svd_proj/figs/maxsv22.pdf, id=2589, 522.95375pt x 463.7325pt>
+File: chpt7_svd_proj/figs/maxsv22.pdf Graphic file (type pdf)
+
+<use chpt7_svd_proj/figs/maxsv22.pdf> [203 <./chpt7_svd_proj/figs/unitary_sv_pr
+ed.pdf> <./chpt7_svd_proj/figs/fourier_sweep.pdf>] [204 <./chpt7_svd_proj/figs/
+ks12.pdf> <./chpt7_svd_proj/figs/ks22.pdf> <./chpt7_svd_proj/figs/maxsv12.pdf> 
+<./chpt7_svd_proj/figs/maxsv22.pdf>]
+<chpt7_svd_proj/figs/ksdiff1.pdf, id=2658, 560.0925pt x 463.7325pt>
+File: chpt7_svd_proj/figs/ksdiff1.pdf Graphic file (type pdf)
+
+<use chpt7_svd_proj/figs/ksdiff1.pdf>
+<chpt7_svd_proj/figs/ksdiff2.pdf, id=2659, 560.0925pt x 463.7325pt>
+File: chpt7_svd_proj/figs/ksdiff2.pdf Graphic file (type pdf)
+
+<use chpt7_svd_proj/figs/ksdiff2.pdf>) [205] [206 <./chpt7_svd_proj/figs/ksdiff
+1.pdf> <./chpt7_svd_proj/figs/ksdiff2.pdf>]
+CHAPTER VIII.
+(./chpt8_det_reg/det_reg.tex [207
+
+] [208] [209] [210] [211] [212] [213] [214]
+[215]
+Overfull \hbox (5.08058pt too wide) detected at line 381
+[] []
+ []
+
+[216]
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 384.
+
+
+Overfull \hbox (0.89584pt too wide) detected at line 410
+[] []
+ []
+
+[217]
+Overfull \hbox (7.18999pt too wide) detected at line 443
+[] []
+ []
+
+[218] [219] [220]
+<chpt8_det_reg/figures/regr_mse.pdf, id=2735, 570.13pt x 463.7325pt>
+File: chpt8_det_reg/figures/regr_mse.pdf Graphic file (type pdf)
+
+<use chpt8_det_reg/figures/regr_mse.pdf>
+<chpt8_det_reg/figures/regr_mse_zoom.pdf, id=2736, 570.13pt x 463.7325pt>
+File: chpt8_det_reg/figures/regr_mse_zoom.pdf Graphic file (type pdf)
+
+<use chpt8_det_reg/figures/regr_mse_zoom.pdf> [221] [222 <./chpt8_det_reg/figur
+es/regr_mse.pdf> <./chpt8_det_reg/figures/regr_mse_zoom.pdf>] [223]
+Overfull \hbox (1.60709pt too wide) detected at line 700
+\OML/cmm/m/it/12 R[] \OT1/cmr/m/n/12 = [] [] [][] [] [] \OML/cmm/m/it/12 :[] 
+ []
+
+[224] [225] [226] [227] [228] [229] [230] [231]
+<chpt8_det_reg/figures/auc_lrt_high_rho.pdf, id=2784, 559.08875pt x 463.7325pt>
+File: chpt8_det_reg/figures/auc_lrt_high_rho.pdf Graphic file (type pdf)
+<use chpt8_det_reg/figures/auc_lrt_high_rho.pdf>
+<chpt8_det_reg/figures/auc_icca_high_rho.pdf, id=2785, 559.08875pt x 463.7325pt
+>
+File: chpt8_det_reg/figures/auc_icca_high_rho.pdf Graphic file (type pdf)
+ <use chpt8_det_reg/figures/auc_icca_high_rho.pdf>
+<chpt8_det_reg/figures/auc_cca_high_rho.pdf, id=2786, 559.08875pt x 463.7325pt>
+File: chpt8_det_reg/figures/auc_cca_high_rho.pdf Graphic file (type pdf)
+<use chpt8_det_reg/figures/auc_cca_high_rho.pdf>
+Underfull \hbox (badness 10000) in paragraph at lines 1026--1041
+[][] []
+ []
+
+
+<chpt8_det_reg/figures/auc_lrt_low_rho.pdf, id=2787, 559.08875pt x 463.7325pt>
+File: chpt8_det_reg/figures/auc_lrt_low_rho.pdf Graphic file (type pdf)
+
+<use chpt8_det_reg/figures/auc_lrt_low_rho.pdf>
+<chpt8_det_reg/figures/auc_icca_low_rho.pdf, id=2788, 559.08875pt x 463.7325pt>
+File: chpt8_det_reg/figures/auc_icca_low_rho.pdf Graphic file (type pdf)
+<use chpt8_det_reg/figures/auc_icca_low_rho.pdf>
+<chpt8_det_reg/figures/auc_cca_low_rho.pdf, id=2789, 559.08875pt x 463.7325pt>
+File: chpt8_det_reg/figures/auc_cca_low_rho.pdf Graphic file (type pdf)
+
+<use chpt8_det_reg/figures/auc_cca_low_rho.pdf>
+Underfull \hbox (badness 10000) in paragraph at lines 1049--1064
+[][] []
+ []
+
+<chpt8_det_reg/figures/auc_icca_diff.pdf, id=2790, 589.20125pt x 463.7325pt>
+File: chpt8_det_reg/figures/auc_icca_diff.pdf Graphic file (type pdf)
+
+<use chpt8_det_reg/figures/auc_icca_diff.pdf> [232] [233 <./chpt8_det_reg/figur
+es/auc_lrt_high_rho.pdf> <./chpt8_det_reg/figures/auc_icca_high_rho.pdf> <./chp
+t8_det_reg/figures/auc_cca_high_rho.pdf>] [234 <./chpt8_det_reg/figures/auc_lrt
+_low_rho.pdf> <./chpt8_det_reg/figures/auc_icca_low_rho.pdf> <./chpt8_det_reg/f
+igures/auc_cca_low_rho.pdf>]) [235 <./chpt8_det_reg/figures/auc_icca_diff.pdf>]
+CHAPTER IX.
+(./chpt9_ia/image_annot.tex [236
+
+] [237] [238] [239] [240] [241]
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+ [242] [243]
+[244] <chpt9_ia/figures/orig.png, id=2916, 586.8324pt x 442.2924pt>
+File: chpt9_ia/figures/orig.png Graphic file (type png)
+
+<use chpt9_ia/figures/orig.png>
+<chpt9_ia/figures/sift.png, id=2918, 605.6226pt x 452.4102pt>
+File: chpt9_ia/figures/sift.png Graphic file (type png)
+
+<use chpt9_ia/figures/sift.png>
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+ [245 <./chpt9_ia/figures/orig.png> <./chpt9_ia/figures/sift.png>] [246]
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+ [247] [248]
+<chpt9_ia/figures/img_3.jpg, id=2935, 501.875pt x 376.40625pt>
+File: chpt9_ia/figures/img_3.jpg Graphic file (type jpg)
+
+<use chpt9_ia/figures/img_3.jpg>
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 697.
+
+<chpt9_ia/figures/pascal_cca_ex.png, id=2936, 586.8324pt x 442.2924pt>
+File: chpt9_ia/figures/pascal_cca_ex.png Graphic file (type png)
+
+<use chpt9_ia/figures/pascal_cca_ex.png>
+<chpt9_ia/figures/pascal_icca_ex.png, id=2937, 586.8324pt x 442.2924pt>
+File: chpt9_ia/figures/pascal_icca_ex.png Graphic file (type png)
+
+<use chpt9_ia/figures/pascal_icca_ex.png>
+<chpt9_ia/figures/cca_ir.png, id=2938, 622.9674pt x 586.8324pt>
+File: chpt9_ia/figures/cca_ir.png Graphic file (type png)
+
+<use chpt9_ia/figures/cca_ir.png>
+<chpt9_ia/figures/cca_ir_zoom.png, id=2939, 622.9674pt x 586.8324pt>
+File: chpt9_ia/figures/cca_ir_zoom.png Graphic file (type png)
+
+<use chpt9_ia/figures/cca_ir_zoom.png>
+<chpt9_ia/figures/icca_ir.png, id=2940, 622.9674pt x 586.8324pt>
+File: chpt9_ia/figures/icca_ir.png Graphic file (type png)
+
+<use chpt9_ia/figures/icca_ir.png>
+<chpt9_ia/figures/icca_ir_zoom.png, id=2941, 622.9674pt x 586.8324pt>
+File: chpt9_ia/figures/icca_ir_zoom.png Graphic file (type png)
+
+<use chpt9_ia/figures/icca_ir_zoom.png> [249]
+<chpt9_ia/figures/img_27.jpg, id=2945, 361.35pt x 240.6591pt>
+File: chpt9_ia/figures/img_27.jpg Graphic file (type jpg)
+
+<use chpt9_ia/figures/img_27.jpg>
+<chpt9_ia/figures/cca_ia.png, id=2946, 622.9674pt x 586.8324pt>
+File: chpt9_ia/figures/cca_ia.png Graphic file (type png)
+
+<use chpt9_ia/figures/cca_ia.png>
+<chpt9_ia/figures/cca_ia_zoom.png, id=2947, 622.9674pt x 586.8324pt>
+File: chpt9_ia/figures/cca_ia_zoom.png Graphic file (type png)
+
+<use chpt9_ia/figures/cca_ia_zoom.png>
+<chpt9_ia/figures/icca_ia.png, id=2948, 622.9674pt x 586.8324pt>
+File: chpt9_ia/figures/icca_ia.png Graphic file (type png)
+
+<use chpt9_ia/figures/icca_ia.png>
+<chpt9_ia/figures/icca_ia_zoom.png, id=2949, 622.9674pt x 586.8324pt>
+File: chpt9_ia/figures/icca_ia_zoom.png Graphic file (type png)
+
+<use chpt9_ia/figures/icca_ia_zoom.png> [250 <./chpt9_ia/figures/img_3.jpg> <./
+chpt9_ia/figures/pascal_cca_ex.png> <./chpt9_ia/figures/pascal_icca_ex.png>]
+<chpt9_ia/figures/cca_rprec_vw.png, id=2955, 622.9674pt x 586.8324pt>
+File: chpt9_ia/figures/cca_rprec_vw.png Graphic file (type png)
+
+<use chpt9_ia/figures/cca_rprec_vw.png>
+<chpt9_ia/figures/icca_rprec_vw.png, id=2956, 622.9674pt x 586.8324pt>
+File: chpt9_ia/figures/icca_rprec_vw.png Graphic file (type png)
+
+<use chpt9_ia/figures/icca_rprec_vw.png> [251] [252]
+<chpt9_ia/figures/bbc_img.jpg, id=2963, 203.76125pt x 152.57pt>
+File: chpt9_ia/figures/bbc_img.jpg Graphic file (type jpg)
+
+<use chpt9_ia/figures/bbc_img.jpg> [253] [254] [255] [256]) [257] [258 <./chpt9
+_ia/figures/cca_ir.png> <./chpt9_ia/figures/cca_ir_zoom.png> <./chpt9_ia/figure
+s/icca_ir.png> <./chpt9_ia/figures/icca_ir_zoom.png>] [259 <./chpt9_ia/figures/
+img_27.jpg>] [260 <./chpt9_ia/figures/cca_ia.png> <./chpt9_ia/figures/cca_ia_zo
+om.png> <./chpt9_ia/figures/icca_ia.png> <./chpt9_ia/figures/icca_ia_zoom.png>]
+[261 <./chpt9_ia/figures/cca_rprec_vw.png> <./chpt9_ia/figures/icca_rprec_vw.pn
+g> <./chpt9_ia/figures/bbc_img.jpg>]
+CHAPTER X.
+(./chpt10_mcca/mcca.tex [262
+
+] [263] [264] [265]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[266] [267] [268]
+Overfull \hbox (3.18489pt too wide) in paragraph at lines 325--404
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[269]
+Overfull \vbox (17.69717pt too high) has occurred while \output is active []
+
+
+[270] [271]
+Overfull \hbox (0.66022pt too wide) in paragraph at lines 471--475
+\OT1/cmr/m/n/12 than CCA. While any eigen-value not equal to 1 con-veys a cor-r
+e-la-tion be-tween datasets,
+ []
+
+[272] [273] [274] [275] [276] [277] [278]
+<chpt10_mcca/figs/mcca_left_color.png, id=3057, 240.9pt x 135.50626pt>
+File: chpt10_mcca/figs/mcca_left_color.png Graphic file (type png)
+
+<use chpt10_mcca/figs/mcca_left_color.png>
+<chpt10_mcca/figs/mcca_mid_color.png, id=3058, 240.9pt x 135.50626pt>
+File: chpt10_mcca/figs/mcca_mid_color.png Graphic file (type png)
+
+<use chpt10_mcca/figs/mcca_mid_color.png>
+<chpt10_mcca/figs/mcca_right_color.png, id=3059, 240.9pt x 135.50626pt>
+File: chpt10_mcca/figs/mcca_right_color.png Graphic file (type png)
+
+<use chpt10_mcca/figs/mcca_right_color.png>
+<chpt10_mcca/figs/mcca_left_man.png, id=3060, 240.9pt x 135.50626pt>
+File: chpt10_mcca/figs/mcca_left_man.png Graphic file (type png)
+
+<use chpt10_mcca/figs/mcca_left_man.png>
+<chpt10_mcca/figs/mcca_mid_man.png, id=3061, 240.9pt x 135.50626pt>
+File: chpt10_mcca/figs/mcca_mid_man.png Graphic file (type png)
+
+<use chpt10_mcca/figs/mcca_mid_man.png>
+<chpt10_mcca/figs/mcca_right_man.png, id=3062, 240.9pt x 135.50626pt>
+File: chpt10_mcca/figs/mcca_right_man.png Graphic file (type png)
+
+<use chpt10_mcca/figs/mcca_right_man.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[279] [280 <./chpt10_mcca/figs/mcca_left_color.png (PNG copy)> <./chpt10_mcca/f
+igs/mcca_mid_color.png (PNG copy)> <./chpt10_mcca/figs/mcca_right_color.png (PN
+G copy)> <./chpt10_mcca/figs/mcca_left_man.png (PNG copy)> <./chpt10_mcca/figs/
+mcca_mid_man.png (PNG copy)> <./chpt10_mcca/figs/mcca_right_man.png (PNG copy)>
+] <chpt10_mcca/figs/mcca_lsv.pdf, id=3069, 554.07pt x 485.815pt>
+File: chpt10_mcca/figs/mcca_lsv.pdf Graphic file (type pdf)
+
+<use chpt10_mcca/figs/mcca_lsv.pdf>
+<chpt10_mcca/figs/mcca_msv.pdf, id=3070, 554.07pt x 485.815pt>
+File: chpt10_mcca/figs/mcca_msv.pdf Graphic file (type pdf)
+
+<use chpt10_mcca/figs/mcca_msv.pdf>
+<chpt10_mcca/figs/mcca_rsv.pdf, id=3071, 554.07pt x 485.815pt>
+File: chpt10_mcca/figs/mcca_rsv.pdf Graphic file (type pdf)
+
+<use chpt10_mcca/figs/mcca_rsv.pdf>
+<chpt10_mcca/figs/mcca_ul1.pdf, id=3072, 506.89375pt x 285.065pt>
+File: chpt10_mcca/figs/mcca_ul1.pdf Graphic file (type pdf)
+
+<use chpt10_mcca/figs/mcca_ul1.pdf>
+<chpt10_mcca/figs/mcca_ul2.pdf, id=3073, 506.89375pt x 285.065pt>
+File: chpt10_mcca/figs/mcca_ul2.pdf Graphic file (type pdf)
+
+<use chpt10_mcca/figs/mcca_ul2.pdf>
+<chpt10_mcca/figs/mcca_ul3.pdf, id=3074, 492.84125pt x 285.065pt>
+File: chpt10_mcca/figs/mcca_ul3.pdf Graphic file (type pdf)
+
+<use chpt10_mcca/figs/mcca_ul3.pdf>
+<chpt10_mcca/figs/mcca_left_pca.png, id=3075, 240.9pt x 135.50626pt>
+File: chpt10_mcca/figs/mcca_left_pca.png Graphic file (type png)
+
+<use chpt10_mcca/figs/mcca_left_pca.png>
+<chpt10_mcca/figs/mcca_um1.pdf, id=3076, 506.89375pt x 285.065pt>
+File: chpt10_mcca/figs/mcca_um1.pdf Graphic file (type pdf)
+
+<use chpt10_mcca/figs/mcca_um1.pdf>
+<chpt10_mcca/figs/mcca_mid_pca.png, id=3077, 240.9pt x 135.50626pt>
+File: chpt10_mcca/figs/mcca_mid_pca.png Graphic file (type png)
+
+<use chpt10_mcca/figs/mcca_mid_pca.png>
+<chpt10_mcca/figs/mcca_ur1.pdf, id=3078, 506.89375pt x 285.065pt>
+File: chpt10_mcca/figs/mcca_ur1.pdf Graphic file (type pdf)
+
+<use chpt10_mcca/figs/mcca_ur1.pdf>
+<chpt10_mcca/figs/mcca_ur2.pdf, id=3079, 506.89375pt x 289.08pt>
+File: chpt10_mcca/figs/mcca_ur2.pdf Graphic file (type pdf)
+
+<use chpt10_mcca/figs/mcca_ur2.pdf>
+<chpt10_mcca/figs/mcca_ur3.pdf, id=3080, 492.84125pt x 285.065pt>
+File: chpt10_mcca/figs/mcca_ur3.pdf Graphic file (type pdf)
+
+<use chpt10_mcca/figs/mcca_ur3.pdf>
+<chpt10_mcca/figs/mcca_right_pca.png, id=3081, 240.9pt x 135.50626pt>
+File: chpt10_mcca/figs/mcca_right_pca.png Graphic file (type png)
+
+<use chpt10_mcca/figs/mcca_right_pca.png> [281 <./chpt10_mcca/figs/mcca_lsv.pdf
+> <./chpt10_mcca/figs/mcca_msv.pdf> <./chpt10_mcca/figs/mcca_rsv.pdf>] [282 <./
+chpt10_mcca/figs/mcca_ul1.pdf> <./chpt10_mcca/figs/mcca_ul2.pdf> <./chpt10_mcca
+/figs/mcca_ul3.pdf> <./chpt10_mcca/figs/mcca_left_pca.png (PNG copy)> <./chpt10
+_mcca/figs/mcca_um1.pdf> <./chpt10_mcca/figs/mcca_mid_pca.png (PNG copy)>]
+<chpt10_mcca/figs/mcca_cca_corrs.pdf, id=3147, 563.10374pt x 463.7325pt>
+File: chpt10_mcca/figs/mcca_cca_corrs.pdf Graphic file (type pdf)
+
+<use chpt10_mcca/figs/mcca_cca_corrs.pdf>
+<chpt10_mcca/figs/mcca_icca_corrs.pdf, id=3148, 563.10374pt x 463.7325pt>
+File: chpt10_mcca/figs/mcca_icca_corrs.pdf Graphic file (type pdf)
+
+<use chpt10_mcca/figs/mcca_icca_corrs.pdf> [283 <./chpt10_mcca/figs/mcca_ur1.pd
+f> <./chpt10_mcca/figs/mcca_ur2.pdf> <./chpt10_mcca/figs/mcca_ur3.pdf> <./chpt1
+0_mcca/figs/mcca_right_pca.png (PNG copy)>] [284 <./chpt10_mcca/figs/mcca_cca_c
+orrs.pdf> <./chpt10_mcca/figs/mcca_icca_corrs.pdf>]
+<chpt10_mcca/figs/mcca_left_cca.png, id=3198, 240.9pt x 135.50626pt>
+File: chpt10_mcca/figs/mcca_left_cca.png Graphic file (type png)
+
+<use chpt10_mcca/figs/mcca_left_cca.png>
+<chpt10_mcca/figs/mcca_mid_cca.png, id=3199, 240.9pt x 135.50626pt>
+File: chpt10_mcca/figs/mcca_mid_cca.png Graphic file (type png)
+
+<use chpt10_mcca/figs/mcca_mid_cca.png>
+<chpt10_mcca/figs/mcca_right_cca.png, id=3200, 240.9pt x 135.50626pt>
+File: chpt10_mcca/figs/mcca_right_cca.png Graphic file (type png)
+
+<use chpt10_mcca/figs/mcca_right_cca.png>
+<chpt10_mcca/figs/mcca_left_icca.png, id=3201, 240.9pt x 135.50626pt>
+File: chpt10_mcca/figs/mcca_left_icca.png Graphic file (type png)
+
+<use chpt10_mcca/figs/mcca_left_icca.png>
+<chpt10_mcca/figs/mcca_mid_icca.png, id=3202, 240.9pt x 135.50626pt>
+File: chpt10_mcca/figs/mcca_mid_icca.png Graphic file (type png)
+
+<use chpt10_mcca/figs/mcca_mid_icca.png>
+<chpt10_mcca/figs/mcca_right_icca.png, id=3203, 240.9pt x 135.50626pt>
+File: chpt10_mcca/figs/mcca_right_icca.png Graphic file (type png)
+
+<use chpt10_mcca/figs/mcca_right_icca.png>) [285 <./chpt10_mcca/figs/mcca_left_
+cca.png (PNG copy)> <./chpt10_mcca/figs/mcca_mid_cca.png (PNG copy)> <./chpt10_
+mcca/figs/mcca_right_cca.png (PNG copy)> <./chpt10_mcca/figs/mcca_left_icca.png
+ (PNG copy)> <./chpt10_mcca/figs/mcca_mid_icca.png (PNG copy)> <./chpt10_mcca/f
+igs/mcca_right_icca.png (PNG copy)>]
+CHAPTER XI.
+(./future_work.tex [286
+
+]) [287] [288
+
+]
+APPENDIX A.
+(./ieee_msd/appendix.tex [289
+
+] [290]) [291]
+APPENDIX B.
+(./appendix.tex [292
+
+] [293] [294] [295] [296] [297] [298] [299] [300] [301]
+[302] [303] [304] [305] [306] [307] [308] [309]) [310] [311]
+APPENDIX C.
+(./appendixB/cca_acc.tex [312
+
+]
+Overfull \hbox (0.50948pt too wide) in paragraph at lines 52--57
+\OT1/cmr/m/n/12 where $\OML/cmm/m/it/12 W[]$ \OT1/cmr/m/n/12 has in-de-pen-dent
+ columns that are $\OMS/cmsy/m/n/12 N\OT1/cmr/m/n/12 (0\OML/cmm/m/it/12 ; I[]\O
+T1/cmr/m/n/12 )$ and $\OML/cmm/m/it/12 W[]$ \OT1/cmr/m/n/12 has in-de-pen-dent 
+columns
+ []
+
+[313] [314] [315] [316]
+Overfull \hbox (7.77711pt too wide) detected at line 234
+[] []
+ []
+
+[317] [318]
+Overfull \hbox (3.5179pt too wide) detected at line 333
+[] []
+ []
+
+[319] [320]
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 405.
+
+
+Overfull \hbox (4.12643pt too wide) detected at line 414
+[] []
+ []
+
+[321] [322] [323] [324]
+Overfull \hbox (5.10748pt too wide) detected at line 533
+[] []
+ []
+
+[325] [326] [327] [328]
+Overfull \hbox (10.14552pt too wide) in paragraph at lines 708--708
+[] 
+ []
+
+[329]) [330]
+APPENDIX D.
+(./appendixC/icca_sig.tex [331
+
+] [332] [333]
+Overfull \hbox (2.15431pt too wide) in paragraph at lines 145--145
+ []|$\OT1/cmr/m/n/12 2 [] [] []$| 
+ []
+
+
+Overfull \hbox (14.31802pt too wide) in paragraph at lines 164--165
+ []|[]| 
+ []
+
+[334] <appendixC/figs/icca_sig1_real_cdf.pdf, id=3363, 544.0325pt x 485.815pt>
+File: appendixC/figs/icca_sig1_real_cdf.pdf Graphic file (type pdf)
+
+<use appendixC/figs/icca_sig1_real_cdf.pdf>
+<appendixC/figs/icca_sig2_real_cdf.pdf, id=3364, 544.0325pt x 485.815pt>
+File: appendixC/figs/icca_sig2_real_cdf.pdf Graphic file (type pdf)
+
+<use appendixC/figs/icca_sig2_real_cdf.pdf>
+<appendixC/figs/icca_sig3_real_cdf.pdf, id=3365, 544.0325pt x 485.815pt>
+File: appendixC/figs/icca_sig3_real_cdf.pdf Graphic file (type pdf)
+
+<use appendixC/figs/icca_sig3_real_cdf.pdf>
+<appendixC/figs/icca_sig4_real_cdf.pdf, id=3366, 544.0325pt x 485.815pt>
+File: appendixC/figs/icca_sig4_real_cdf.pdf Graphic file (type pdf)
+
+<use appendixC/figs/icca_sig4_real_cdf.pdf>
+<appendixC/figs/icca_sig5_real_cdf.pdf, id=3367, 544.0325pt x 485.815pt>
+File: appendixC/figs/icca_sig5_real_cdf.pdf Graphic file (type pdf)
+
+<use appendixC/figs/icca_sig5_real_cdf.pdf>
+<appendixC/figs/icca_sig6_real_cdf.pdf, id=3368, 544.0325pt x 485.815pt>
+File: appendixC/figs/icca_sig6_real_cdf.pdf Graphic file (type pdf)
+
+<use appendixC/figs/icca_sig6_real_cdf.pdf>
+<appendixC/figs/icca_sig7_real_cdf.pdf, id=3369, 544.0325pt x 485.815pt>
+File: appendixC/figs/icca_sig7_real_cdf.pdf Graphic file (type pdf)
+
+<use appendixC/figs/icca_sig7_real_cdf.pdf>
+<appendixC/figs/icca_sig8_real_cdf.pdf, id=3370, 544.0325pt x 485.815pt>
+File: appendixC/figs/icca_sig8_real_cdf.pdf Graphic file (type pdf)
+
+<use appendixC/figs/icca_sig8_real_cdf.pdf>
+<appendixC/figs/icca_sig9_real_cdf.pdf, id=3371, 544.0325pt x 485.815pt>
+File: appendixC/figs/icca_sig9_real_cdf.pdf Graphic file (type pdf)
+
+<use appendixC/figs/icca_sig9_real_cdf.pdf>
+<appendixC/figs/icca_sig1_real_pdf.pdf, id=3372, 532.99126pt x 485.815pt>
+File: appendixC/figs/icca_sig1_real_pdf.pdf Graphic file (type pdf)
+
+<use appendixC/figs/icca_sig1_real_pdf.pdf>
+<appendixC/figs/icca_sig2_real_pdf.pdf, id=3373, 532.99126pt x 485.815pt>
+File: appendixC/figs/icca_sig2_real_pdf.pdf Graphic file (type pdf)
+
+<use appendixC/figs/icca_sig2_real_pdf.pdf>
+<appendixC/figs/icca_sig3_real_pdf.pdf, id=3374, 532.99126pt x 485.815pt>
+File: appendixC/figs/icca_sig3_real_pdf.pdf Graphic file (type pdf)
+
+<use appendixC/figs/icca_sig3_real_pdf.pdf>
+<appendixC/figs/icca_sig4_real_pdf.pdf, id=3375, 532.99126pt x 485.815pt>
+File: appendixC/figs/icca_sig4_real_pdf.pdf Graphic file (type pdf)
+
+<use appendixC/figs/icca_sig4_real_pdf.pdf>
+<appendixC/figs/icca_sig5_real_pdf.pdf, id=3376, 532.99126pt x 485.815pt>
+File: appendixC/figs/icca_sig5_real_pdf.pdf Graphic file (type pdf)
+
+<use appendixC/figs/icca_sig5_real_pdf.pdf>
+<appendixC/figs/icca_sig6_real_pdf.pdf, id=3377, 532.99126pt x 485.815pt>
+File: appendixC/figs/icca_sig6_real_pdf.pdf Graphic file (type pdf)
+
+<use appendixC/figs/icca_sig6_real_pdf.pdf>
+<appendixC/figs/icca_sig7_real_pdf.pdf, id=3378, 532.99126pt x 485.815pt>
+File: appendixC/figs/icca_sig7_real_pdf.pdf Graphic file (type pdf)
+
+<use appendixC/figs/icca_sig7_real_pdf.pdf>
+<appendixC/figs/icca_sig8_real_pdf.pdf, id=3379, 532.99126pt x 485.815pt>
+File: appendixC/figs/icca_sig8_real_pdf.pdf Graphic file (type pdf)
+
+<use appendixC/figs/icca_sig8_real_pdf.pdf>
+<appendixC/figs/icca_sig9_real_pdf.pdf, id=3380, 532.99126pt x 485.815pt>
+File: appendixC/figs/icca_sig9_real_pdf.pdf Graphic file (type pdf)
+
+<use appendixC/figs/icca_sig9_real_pdf.pdf>
+<appendixC/figs/icca_sig1_imag_cdf.pdf, id=3381, 544.0325pt x 485.815pt>
+File: appendixC/figs/icca_sig1_imag_cdf.pdf Graphic file (type pdf)
+
+<use appendixC/figs/icca_sig1_imag_cdf.pdf>
+<appendixC/figs/icca_sig2_imag_cdf.pdf, id=3382, 544.0325pt x 485.815pt>
+File: appendixC/figs/icca_sig2_imag_cdf.pdf Graphic file (type pdf)
+
+<use appendixC/figs/icca_sig2_imag_cdf.pdf>
+<appendixC/figs/icca_sig3_imag_cdf.pdf, id=3383, 544.0325pt x 485.815pt>
+File: appendixC/figs/icca_sig3_imag_cdf.pdf Graphic file (type pdf)
+
+<use appendixC/figs/icca_sig3_imag_cdf.pdf>
+<appendixC/figs/icca_sig4_imag_cdf.pdf, id=3384, 544.0325pt x 485.815pt>
+File: appendixC/figs/icca_sig4_imag_cdf.pdf Graphic file (type pdf)
+
+<use appendixC/figs/icca_sig4_imag_cdf.pdf>
+<appendixC/figs/icca_sig5_imag_cdf.pdf, id=3385, 544.0325pt x 485.815pt>
+File: appendixC/figs/icca_sig5_imag_cdf.pdf Graphic file (type pdf)
+
+<use appendixC/figs/icca_sig5_imag_cdf.pdf>
+<appendixC/figs/icca_sig6_imag_cdf.pdf, id=3386, 544.0325pt x 485.815pt>
+File: appendixC/figs/icca_sig6_imag_cdf.pdf Graphic file (type pdf)
+
+<use appendixC/figs/icca_sig6_imag_cdf.pdf>
+<appendixC/figs/icca_sig7_imag_cdf.pdf, id=3387, 544.0325pt x 485.815pt>
+File: appendixC/figs/icca_sig7_imag_cdf.pdf Graphic file (type pdf)
+
+<use appendixC/figs/icca_sig7_imag_cdf.pdf>
+<appendixC/figs/icca_sig8_imag_cdf.pdf, id=3388, 544.0325pt x 485.815pt>
+File: appendixC/figs/icca_sig8_imag_cdf.pdf Graphic file (type pdf)
+
+<use appendixC/figs/icca_sig8_imag_cdf.pdf>
+<appendixC/figs/icca_sig9_imag_cdf.pdf, id=3389, 544.0325pt x 485.815pt>
+File: appendixC/figs/icca_sig9_imag_cdf.pdf Graphic file (type pdf)
+
+<use appendixC/figs/icca_sig9_imag_cdf.pdf>
+<appendixC/figs/icca_sig1_imag_pdf.pdf, id=3390, 544.0325pt x 485.815pt>
+File: appendixC/figs/icca_sig1_imag_pdf.pdf Graphic file (type pdf)
+
+<use appendixC/figs/icca_sig1_imag_pdf.pdf>
+<appendixC/figs/icca_sig2_imag_pdf.pdf, id=3391, 544.0325pt x 485.815pt>
+File: appendixC/figs/icca_sig2_imag_pdf.pdf Graphic file (type pdf)
+
+<use appendixC/figs/icca_sig2_imag_pdf.pdf>
+<appendixC/figs/icca_sig3_imag_pdf.pdf, id=3392, 544.0325pt x 485.815pt>
+File: appendixC/figs/icca_sig3_imag_pdf.pdf Graphic file (type pdf)
+
+<use appendixC/figs/icca_sig3_imag_pdf.pdf>
+<appendixC/figs/icca_sig4_imag_pdf.pdf, id=3393, 544.0325pt x 485.815pt>
+File: appendixC/figs/icca_sig4_imag_pdf.pdf Graphic file (type pdf)
+
+<use appendixC/figs/icca_sig4_imag_pdf.pdf>
+<appendixC/figs/icca_sig5_imag_pdf.pdf, id=3394, 544.0325pt x 485.815pt>
+File: appendixC/figs/icca_sig5_imag_pdf.pdf Graphic file (type pdf)
+
+<use appendixC/figs/icca_sig5_imag_pdf.pdf>
+<appendixC/figs/icca_sig6_imag_pdf.pdf, id=3395, 544.0325pt x 485.815pt>
+File: appendixC/figs/icca_sig6_imag_pdf.pdf Graphic file (type pdf)
+
+<use appendixC/figs/icca_sig6_imag_pdf.pdf>
+<appendixC/figs/icca_sig7_imag_pdf.pdf, id=3396, 544.0325pt x 485.815pt>
+File: appendixC/figs/icca_sig7_imag_pdf.pdf Graphic file (type pdf)
+
+<use appendixC/figs/icca_sig7_imag_pdf.pdf>
+<appendixC/figs/icca_sig8_imag_pdf.pdf, id=3397, 544.0325pt x 485.815pt>
+File: appendixC/figs/icca_sig8_imag_pdf.pdf Graphic file (type pdf)
+
+<use appendixC/figs/icca_sig8_imag_pdf.pdf>
+<appendixC/figs/icca_sig9_imag_pdf.pdf, id=3398, 544.0325pt x 485.815pt>
+File: appendixC/figs/icca_sig9_imag_pdf.pdf Graphic file (type pdf)
+
+<use appendixC/figs/icca_sig9_imag_pdf.pdf>
+<appendixC/figs/icca_conv1_real_pf.pdf, id=3399, 563.10374pt x 456.70625pt>
+File: appendixC/figs/icca_conv1_real_pf.pdf Graphic file (type pdf)
+
+<use appendixC/figs/icca_conv1_real_pf.pdf>
+<appendixC/figs/icca_conv1_real_ae.pdf, id=3400, 549.05125pt x 463.7325pt>
+File: appendixC/figs/icca_conv1_real_ae.pdf Graphic file (type pdf)
+
+<use appendixC/figs/icca_conv1_real_ae.pdf>
+<appendixC/figs/icca_conv2_real_pf.pdf, id=3401, 563.10374pt x 456.70625pt>
+File: appendixC/figs/icca_conv2_real_pf.pdf Graphic file (type pdf)
+
+<use appendixC/figs/icca_conv2_real_pf.pdf>
+<appendixC/figs/icca_conv2_real_ae.pdf, id=3402, 525.965pt x 485.815pt>
+File: appendixC/figs/icca_conv2_real_ae.pdf Graphic file (type pdf)
+
+<use appendixC/figs/icca_conv2_real_ae.pdf>
+<appendixC/figs/icca_conv1_imag_pf.pdf, id=3403, 563.10374pt x 463.7325pt>
+File: appendixC/figs/icca_conv1_imag_pf.pdf Graphic file (type pdf)
+
+<use appendixC/figs/icca_conv1_imag_pf.pdf>
+<appendixC/figs/icca_conv1_imag_ae.pdf, id=3404, 549.05125pt x 463.7325pt>
+File: appendixC/figs/icca_conv1_imag_ae.pdf Graphic file (type pdf)
+
+<use appendixC/figs/icca_conv1_imag_ae.pdf>
+<appendixC/figs/icca_conv2_imag_pf.pdf, id=3405, 563.10374pt x 463.7325pt>
+File: appendixC/figs/icca_conv2_imag_pf.pdf Graphic file (type pdf)
+
+<use appendixC/figs/icca_conv2_imag_pf.pdf>
+<appendixC/figs/icca_conv2_imag_ae.pdf, id=3406, 549.05125pt x 463.7325pt>
+File: appendixC/figs/icca_conv2_imag_ae.pdf Graphic file (type pdf)
+
+<use appendixC/figs/icca_conv2_imag_ae.pdf>
+<appendixC/figs/pca_conv1_real_pf.pdf, id=3407, 563.10374pt x 463.7325pt>
+File: appendixC/figs/pca_conv1_real_pf.pdf Graphic file (type pdf)
+
+<use appendixC/figs/pca_conv1_real_pf.pdf>
+<appendixC/figs/pca_conv1_real_ae.pdf, id=3408, 549.05125pt x 463.7325pt>
+File: appendixC/figs/pca_conv1_real_ae.pdf Graphic file (type pdf)
+
+<use appendixC/figs/pca_conv1_real_ae.pdf>
+<appendixC/figs/pca_conv2_real_pf.pdf, id=3409, 563.10374pt x 485.815pt>
+File: appendixC/figs/pca_conv2_real_pf.pdf Graphic file (type pdf)
+
+<use appendixC/figs/pca_conv2_real_pf.pdf>
+<appendixC/figs/pca_conv2_real_ae.pdf, id=3410, 548.0475pt x 485.815pt>
+File: appendixC/figs/pca_conv2_real_ae.pdf Graphic file (type pdf)
+
+<use appendixC/figs/pca_conv2_real_ae.pdf>
+<appendixC/figs/pca_conv1_imag_pf.pdf, id=3411, 563.10374pt x 463.7325pt>
+File: appendixC/figs/pca_conv1_imag_pf.pdf Graphic file (type pdf)
+
+<use appendixC/figs/pca_conv1_imag_pf.pdf>
+<appendixC/figs/pca_conv1_imag_ae.pdf, id=3412, 549.05125pt x 463.7325pt>
+File: appendixC/figs/pca_conv1_imag_ae.pdf Graphic file (type pdf)
+
+<use appendixC/figs/pca_conv1_imag_ae.pdf>
+<appendixC/figs/pca_conv2_imag_pf.pdf, id=3413, 563.10374pt x 456.70625pt>
+File: appendixC/figs/pca_conv2_imag_pf.pdf Graphic file (type pdf)
+
+<use appendixC/figs/pca_conv2_imag_pf.pdf>
+<appendixC/figs/pca_conv2_imag_ae.pdf, id=3414, 525.965pt x 485.815pt>
+File: appendixC/figs/pca_conv2_imag_ae.pdf Graphic file (type pdf)
+
+<use appendixC/figs/pca_conv2_imag_ae.pdf>) (./thesis.bbl [335] [336 <./appendi
+xC/figs/icca_sig1_real_cdf.pdf> <./appendixC/figs/icca_sig2_real_cdf.pdf> <./ap
+pendixC/figs/icca_sig3_real_cdf.pdf> <./appendixC/figs/icca_sig4_real_cdf.pdf> 
+<./appendixC/figs/icca_sig5_real_cdf.pdf> <./appendixC/figs/icca_sig6_real_cdf.
+pdf> <./appendixC/figs/icca_sig7_real_cdf.pdf> <./appendixC/figs/icca_sig8_real
+_cdf.pdf> <./appendixC/figs/icca_sig9_real_cdf.pdf>] [337 <./appendixC/figs/icc
+a_sig1_real_pdf.pdf> <./appendixC/figs/icca_sig2_real_pdf.pdf> <./appendixC/fig
+s/icca_sig3_real_pdf.pdf> <./appendixC/figs/icca_sig4_real_pdf.pdf> <./appendix
+C/figs/icca_sig5_real_pdf.pdf> <./appendixC/figs/icca_sig6_real_pdf.pdf> <./app
+endixC/figs/icca_sig7_real_pdf.pdf> <./appendixC/figs/icca_sig8_real_pdf.pdf> <
+./appendixC/figs/icca_sig9_real_pdf.pdf>] [338 <./appendixC/figs/icca_sig1_imag
+_cdf.pdf> <./appendixC/figs/icca_sig2_imag_cdf.pdf> <./appendixC/figs/icca_sig3
+_imag_cdf.pdf> <./appendixC/figs/icca_sig4_imag_cdf.pdf> <./appendixC/figs/icca
+_sig5_imag_cdf.pdf> <./appendixC/figs/icca_sig6_imag_cdf.pdf> <./appendixC/figs
+/icca_sig7_imag_cdf.pdf> <./appendixC/figs/icca_sig8_imag_cdf.pdf> <./appendixC
+/figs/icca_sig9_imag_cdf.pdf>] [339 <./appendixC/figs/icca_sig1_imag_pdf.pdf> <
+./appendixC/figs/icca_sig2_imag_pdf.pdf> <./appendixC/figs/icca_sig3_imag_pdf.p
+df> <./appendixC/figs/icca_sig4_imag_pdf.pdf> <./appendixC/figs/icca_sig5_imag_
+pdf.pdf> <./appendixC/figs/icca_sig6_imag_pdf.pdf> <./appendixC/figs/icca_sig7_
+imag_pdf.pdf> <./appendixC/figs/icca_sig8_imag_pdf.pdf> <./appendixC/figs/icca_
+sig9_imag_pdf.pdf>] [340 <./appendixC/figs/icca_conv1_real_pf.pdf> <./appendixC
+/figs/icca_conv1_real_ae.pdf> <./appendixC/figs/icca_conv2_real_pf.pdf> <./appe
+ndixC/figs/icca_conv2_real_ae.pdf>] [341 <./appendixC/figs/icca_conv1_imag_pf.p
+df> <./appendixC/figs/icca_conv1_imag_ae.pdf> <./appendixC/figs/icca_conv2_imag
+_pf.pdf> <./appendixC/figs/icca_conv2_imag_ae.pdf>] [342 <./appendixC/figs/pca_
+conv1_real_pf.pdf> <./appendixC/figs/pca_conv1_real_ae.pdf> <./appendixC/figs/p
+ca_conv2_real_pf.pdf> <./appendixC/figs/pca_conv2_real_ae.pdf>] [343 <./appendi
+xC/figs/pca_conv1_imag_pf.pdf> <./appendixC/figs/pca_conv1_imag_ae.pdf> <./appe
+ndixC/figs/pca_conv2_imag_pf.pdf> <./appendixC/figs/pca_conv2_imag_ae.pdf>]
+[344
+
+] [345] [346]
+Missing character: There is no â in font cmti12!
+Missing character: There is no € in font cmti12!
+Missing character: There is no ” in font cmti12!
+ [347] [348] [349] [350] [351] [352] [353]
+Underfull \hbox (badness 2073) in paragraph at lines 654--659
+[]\OT1/cmr/m/n/12 A. Sin-gana-malli, H. Wang, G. Lee, N. Shih, M. Rosen, S. Mas
+-ter,
+ []
+
+[354]
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no ™ in font cmr12!
+ [355] [356] [357]) [358] (./thesis.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 16410 strings out of 495061
+ 326635 string characters out of 1182622
+ 352821 words of memory out of 3000000
+ 18848 multiletter control sequences out of 15000+50000
+ 22466 words of font info for 89 fonts, out of 3000000 for 9000
+ 28 hyphenation exceptions out of 8191
+ 56i,27n,68p,2312b,1016s stack positions out of 5000i,500n,10000p,200000b,50000s
+ </home/asendorf/.texmf-var/fonts/pk/ljfour/public/bbm/bbm12.600pk></usr/shar
+e/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-tex
+live/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-texlive/fonts/
+type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-texlive/fonts/type1/public
+/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/
+cm/cmex10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cmextra/cme
+x7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cmextra/cmex8.pfb>
+</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share
+/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-texl
+ive/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-texlive/fonts/ty
+pe1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-texlive/fonts/type1/public/a
+msfonts/cm/cmmi8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/c
+mr10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></u
+sr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texm
+f-texlive/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-texlive/fon
+ts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-texlive/fonts/type1/publ
+ic/amsfonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/c
+m/cmss12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmss8.pfb
+></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/shar
+e/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-texl
+ive/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-texlive/fonts/ty
+pe1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-texlive/fonts/type1/public/a
+msfonts/cm/cmti10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/
+cmti12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti8.pfb><
+/usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/
+texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf-texli
+ve/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-texlive/fon
+ts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on thesis.pdf (393 pages, 21500948 bytes).
+PDF statistics:
+ 4076 PDF objects out of 4296 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 1643 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -1,0 +1,303 @@
+As we saw in Chapters \ref{sec:cca} and \ref{sec:rcca}, the empirical canonical
+correlations returned by CCA, ICCA, and RCCA are the singular values of an appropriate
+matrix product involving sample covariance matrices. In this chapter we derive
+distributions for the empirical canonical correlations and the distribution of the largest
+canonical correlations under the assumption that the two datasets are uncorrelated. We use
+this to provide significance tests that determine whether an observed canonical
+correlation is statistically different from a correlation generated from two uncorrelated
+datasets.
+
+Letting $y=[\yI^H \yII^H]^H$
+be the joint observation vector results in the sample covariance matrix
+\be
+R = \left[\begin{array}{cc}\RI & \RIII \\ \RIII^H & \RII \end{array}\right].
+\ee
+Throughout this chapter when deriving distributions, we assume a null hypothesis of
+$\RIII=0$ implying that the two datasets are uncorrelated. Without loss of generality, we
+may assume that $\RI = I_{d_1}$ and $\RII = I_{d_2}$ under the null hypothesis. As the
+datasets are only characterized by their means and covariances, under the null hypothesis
+we model them as $\yI\sim\mathcal{N}(0,I_{d_1})$ and $\yII\sim\mathcal{N}(0,I_{d_2})$. We
+will see that it will be easier to work with the eigenvalue version of the CCA, ICCA, and
+RCCA problems. These take the general form
+\be
+C\xIhat = \rho^2\xIhat
+\ee
+where $M$ the appropriate $d_1\times d_1$ matrix formed form the sample covariance
+matrices $\RIhat =\frac{1}{n}Y_1Y_1^H$, $\RIIhat =\frac{1}{n}Y_2Y_2^H$, and $\RIIIhat
+=\frac{1}{n}Y_1Y_2^H$. By deriving the eigenvalue distribution of $M$ under the null
+hypothesis, we will have derived the distribution of the canonical correlations under the
+null hypothesis. By deriving the distribution of the largest eigenvalue of $M$, we will
+have derived the distribution of the largest canonical correlation, which may be used in a
+statistical test to determine whether a canonical correlation does indeed indicate a
+correlation between the datasets. 
+
+Throughout, we will use RMTool \cite{rao2008polynomial} to aid in determining
+the eigenvalue distribution of $M$. RMTool uses the polynomial method and free probability
+theory to determine the eigenvalue distribution of standard operations on random matrices
+with know eigenvalue distribution.
+
+Possible discusison of parameters ($c_1$, $c_2$, $\eta$).
+
+\section{Distribution of CCA Correlations}
+
+Recall from (\ref{eq:cca_eigval_sys}) that the matrix of interest in empirical CCA is
+$C=\RIhat^{-1}\RIIIhat\RIIhat^{-1}\RIIIhat^H$. We use the definitions of the sample
+covariance matrices and simple matrix transformation  $M$.
+\begin{equation*}
+  \ba
+  & C &&= \RIhat^{-1}\RIIIhat\RIIhat^{-1}\RIIIhat^H\\
+  &&&=\left(\frac{1}{n}Y_1Y_1^H\right)^{-1}\frac{1}{n}Y_1Y_2^H
+  \left(\frac{1}{n}Y_2Y_2^H\right)^{-1}\frac{1}{n}Y_2Y_1^H\\
+  \ea
+\end{equation*}
+Define 
+\be
+\widetilde{C}=
+\underbrace{Y_1^H\left(\frac{1}{n}Y_1Y_1^H\right)^{-1}\frac{1}{n}Y_1}_{A} 
+  \underbrace{Y_2^H\left(\frac{1}{n}Y_2Y_2^H\right)^{-1}\frac{1}{n}Y_2}_{B}
+\ee
+such that $\widetilde{C}$ has the same singular values as the eigenvalues of $C$. Next,
+define $\widetilde{A} = Y_1Y_1^H\left(\frac{1}{n}Y_1Y_1^H\right)^{-1}\frac{1}{n}=I_{d_1}$
+and $\widetilde{B} =Y_2Y_2^H\left(\frac{1}{n}Y_2Y_2^H\right)^{-1}\frac{1}{n} =
+I_{d_2}$. $A$ has the same eigenvalues as $\widetilde{A}$ except with an additional
+$n-d_1$ zero eigenvalues. $B$ has the same eigenvalues as $\widetilde{B}$ except with an
+additional $n-d_2$ zero eigenvalues. 
+
+The reason for transforming $M$ to a product of $\widetilde{A}$ and $\widetilde{B}$ is
+that the eigenvalue distributions of these identity matrices are very well known. We may
+now use RMTool to determine the limiting eigenvalue distribution of $M$. We begin with the
+Stieltjes transforms of $\widetilde{A}$ and $\widetilde{B}$. The Stieltjes transform is
+defined as
+\begin{equation}
+  m_X(z) = \int \frac{1}{x-z} dF^X(x),\,\,\,\,\,\,\,z\in\complex^+ \backslash \reals
+\end{equation}
+where $F^X(x)$ is the limiting eigenvalue distribution of a matrix $X$. The Stieltjes
+transforms of $\widetilde{A}$ and $\widetilde{B}$ are
+\begin{equation}
+  m_{\widetilde{A}}(z) = m_{\widetilde{B}}(z) = \int \frac{1}{x-z}\delta(x-1) = \frac{1}{1-z}
+\end{equation}
+In particular, RMTool needs $L_{mz}(m,z)$, the bivariate polynomial such that the
+Stieltjes transform is the solution to $L_{mz}(m,z) =0$. Thus,
+\begin{equation}
+  L_{mz}^{\widetilde{A}}(m,z) = L_{mz}^{\widetilde{B}}(m,z) = m(1-z) -1
+\end{equation}
+
+Now we are ready to use RMTool. Figure \ref{fig:cca_rmtool} provides the {\sc{Matlab}}
+code to determine the eigenvalue distribution of $C$. The distribution is encoded in the
+variables \texttt{coeffs} and \texttt{density}. We note that the function
+\texttt{transposeA} changes the dimension of the matrix, which was a common operation in
+our derivation.
+
+\begin{figure}        
+  \hrulefill\\
+  \texttt{
+    syms m z;\\        
+    atil = m*(1-z)-1;\\
+    btil = m*(1-z)-1;\\
+    a = transposeA(atil,d2/n);\\
+    b = transposeA(btil,d1/n);\\
+    Ctil = AtimesB(a,b);\\
+    C = transposeA(Ctil,n/d1);\\
+    pdfinfo = Lmz2pdf(C, 0:0.001:1);\\
+    coeffs = pdfinfo.range;\\
+    density = pdfinfo.density;\\
+    plot(coeffs,density);\\        
+  }      
+  \caption{RMTool {\sc{Matlab}} code for CCA eigenvalue distribution assuming that
+    $d_2>d_1$}
+  \label{fig:cca_rmtool}
+  \hrulefill \\
+\end{figure}
+
+To recover an exact expression for the density in terms of $d_1$, $d_2$, and $n$, we may
+solve $L_{mz}^C(m,z)$ symbolically in terms of $c_1 = d_1/n$ and $c_2 = d_2/n$. Doing so
+results in 
+\begin{equation}
+  L_{mz}^C(m,z) = (c_1-1) + (c_2-c_1 -z +2c_1z)m + (c_1z^2-c_1z)m^2.
+\end{equation}
+To solve for the Stieltjes transform of $C$ we solve $L_{mz}^C(m,z)=0$. Doing so results
+in
+\begin{equation}\label{eq:cca_st}
+  m_C(z) = \frac{-c_2-c_1-z+2c_1z \pm \sqrt{(c_2-c_1-z+2c_1z)^2-4(c_1-1)(c_1z^2-c_1z)}}{2(c_1z^2-c_1z)}
+\end{equation}
+
+The density of $C$ is then given by
+\begin{equation}
+f_X(x) = \frac{1}{\pi}\Im(m_A(x))
+\end{equation}
+
+The imaginary part of (\ref{eq:cca_st}) occurs for $z$ such that
+\begin{equation}\label{eq:cca_z}
+(c_2-c_1-z+2c_1z)^2-4(c_1-1)(c_1z^2-c_1z) <0.
+\end{equation}
+Solving for $z$ such that (\ref{eq:cca_z}) holds, results in the interval
+\begin{equation}
+z\in \left[ \underbrace{c_1+c_2-2c_1c_2-2\sqrt{c_1c_2(1-c_1(1-c_2))}}_{a},
+  \underbrace{c_1+c_2-2_c1c_2 +2\sqrt{c_1c_2(1-c_1)(1-c_2)}}_{b} \right]
+\end{equation}
+Therefore the density is
+\begin{equation}
+  f(z) = \frac{\sqrt{-(z^2 + 4(c_1c_2-2c_1-2_c2)z +
+      (c_1^2+c_2^2-2c_1c_2))}}{2\pi(c_1z^2-c_1z)}\ones_{\{z\in[a,b]\}} 
+\end{equation}
+where $\ones$ is the indicator function. 
+
+However, recall from Pezeshki's analysis presented in Chapter \ref{sec:cca}, that the
+largest eigenvalue will be deterministically equal to 1 when $n<d_1+d_2$. In fact, as
+Pezeshki shows \cite{pezeshki2004empirical}, when $n<d_1+d_2$ there are $d_1+d_2-n$
+eigenvalues equal to 1. When $n<\max(d_1,d_2)$ all eigenvalues are 1. Therefore, the
+eigenvalue distribution of the matrix $M$ is
+\begin{equation}
+  f(z) = \begin{cases}
+    \frac{\sqrt{-(z^2 + 4(c_1c_2-2c_1-2_c2)z +
+        (c_1^2+c_2^2-2c_1c_2))}}{2\pi(c_1z^2-c_1z)}\ones_{\{z\in[a,b]\}}  + \frac{c_1+c_2-1}{\min(c_1,c_2)}\delta(z-1)\ones_{\{c_1+c_2>1\}}& n > \max(d_1,d_2)\\
+    \delta(z-1) & n < \max(d_1,d_2)\\
+    \end{cases}
+\end{equation}
+
+\subsection{Distribution of Largest CCA Correlation}
+
+The distribution of the largest canonical correlation in CCA was previously derived in
+\cite{johnstone2008multivariate}. We provide a similar derivation using our notation for
+completeness. We then use this to provide a significance test for CCA.
+
+\begin{Th}[Johnstone 2008]
+  Let $A\sim W_p(I,m)$ and $B\sim W_p(I,n)$ where $W_p(\Sigma,n)$ denotes a Wishart
+  distribution matrices formed by the product of $XX^T$ where $X$ is a $p\times n$ matrix
+  with i.i.d. $\mathcal{N}_p(0,\Sigma)$ columns. Assume that $m\geq p$ and that $A$ and
+  $B$ are independent. Denote the largest
+  eigenvalue of $(A+B)^{-1}B$ as $\theta_1(p,m,n)$. Then 
+  \begin{equation}
+    \frac{\log\left(\frac{\theta_1}{1-\theta_1}\right)
+      -\mu_p(p,m,n)}{\sigma_p(p,m,n)}\overset{\mathcal{D}}{\Rightarrow} F_1
+  \end{equation}
+  where $F_1$ is the Tracy-Widom Distribution and
+  \begin{equation}\label{eq:mu_sigma}
+    \ba
+    & \mu_p(p,m,n) = 2\log\tan\left(\frac{\varphi + \gamma}{2}\right)\\
+    & \sigma^3_p(p,m,n) = \frac{16}{(m+n-1)^2\sin^2(\varphi+\gamma)\sin\varphi\sin\gamma}
+    \ea
+  \end{equation}
+  and
+  \begin{equation}
+    \ba
+    & \sin^2\left(\frac{\gamma}{2}\right) = \frac{\min(p,n)-1/2}{m+n-1}\\
+    & \sin^2\left(\frac{\varphi}{2}\right) = \frac{\max(p,n)-1/2}{m+n-1}\\
+    \ea
+  \end{equation}
+\end{Th}
+
+As stated and proved by Johnstone \cite{johnstone2008multivariate}, CCA falls into this
+double Wishart model. We state the result as a theorem.
+
+\begin{Th}
+  Let $Y_1$ be a $d_1\times n$ matrix with $\mathcal{N}(0,1)$ entries and let $Y_2$ be an
+  independent $d_2\times n$ matrix with $\mathcal{N}(0,1)$ entries. Assume that $d_1\leq
+  d_2$ and that $n>d_1+d_2$. Let $\rho_1$ be the largest canonical correlation returned by
+  CCA given $Y_1$ and $Y_2$.  Then
+  \begin{equation}
+    \rho_1^2\sim \theta_1(d_1,n-d_2,d_2).
+  \end{equation}
+\end{Th}
+
+\begin{proof}
+  The matrix of interest in CCA is 
+  \begin{equation*}
+    \ba
+    & C &&= \RIhat^{-1}\RIIIhat\RIIhat^{-1}\RIIIhat^H\\
+    &&&=\left(Y_1Y_1^H\right)^{-1}Y_1Y_2^H\left(Y_2Y_2^H\right)^{-1}Y_2Y_1^H\\
+    \ea
+  \end{equation*}
+  Let $P = Y_2^H\left(Y_2Y_2^H\right)^{-1}Y_2$, which is a $n\times n$ projection matrix
+  of rank $d_2$. Let $P^\perp =I-P$ be the projection matrix onto the orthogonal
+  complement. Define $B=Y_1PY_1^H$ and $A=Y_1P^\perp Y_1^H$. Then $C$ may be written
+  \begin{equation*}
+    C = (A+B)^{-1}B.
+  \end{equation*}
+  Using the definitions of $A$ and $B$, it is clear that $A\sim W_p(I,q)$ and $B\sim
+  W_p(I,n-q)$. Applying Johnstone's Theorem gives the desired result.
+\end{proof}
+
+We now derive a significance test to determine if a canonical correlation reported by CCA
+is statistically different than a canonical correlation in the null model with
+$\RIII=0$. Figure \ref{algo:cca_sig} provides the algorithm. It takes as input the
+canonical correlations as computed by CCA, a significance level $\alpha$ and the system
+dimensions $d_1$, $d_2$ and $n$. Here it is assumed that $d_1< d_2$. The algorithm returns
+the number of canonical correlations that are statistically different from the null model
+that the datasets are uncorrelated. A statistically significant canonical correlation
+indicates that the canonical variates are indeed correlated. 
+
+\begin{figure}
+ \hrulefill \\ 
+ Inputs: Canonical correlations $\rho_1,...,\rho_r$ returned by CCA\\
+ \phantom{Inputs: }Significance level $\alpha\in(0,1)$, $d_1$, $d_2$, $n$\\
+ 1. Initialize $q=0$\\
+ 2. Compute $\mu_p(d_1-q,n-(d_2-q),d_2-q)$ and $\sigma_p(d_1-q,n-(d_2-q),d_2-q)$ from
+ (\ref{eq:mu_sigma}).\\ 
+ 3. Compute $w = \frac{\log\left(\frac{\theta_1}{1-\theta_1}\right)-
+   \mu_p}{\sigma_p}$\\  
+ 4. Compute $\tau_\alpha=F^{-1}(1-\alpha)$\\
+ 5. If $w < \tau_\alpha$, Go to Step 8\\
+ 6. Otherwise, increment $q$\\
+ 7. If $q<r$ Go to Step 2. Otherwise Go to Step8\\
+ 8. Return $q$\\ 
+  \caption{Significance test for CCA}  
+  \label{algo:cca_sig}
+\end{figure}
+
+
+\section{Distribution of ICCA Correlations}
+
+
+\section{Distribution of RCCA Correlations}
+
+We substitute the appropriate definitions for the sample covariance matrices into the (\ref{eq:rcca_eigval}), that the matrix of interest for RCCA.
+\begin{equation*}
+  \ba
+  &C &&= \left(\RIhat+\eta I_{d_1}\right)^{-1}\RIIIhat\left(\RIIhat +\eta
+    I_{d_2}\right)^{-1}\RIIIhat^H. \\
+  &&&= \left(Y_1Y_1^H+\eta I_{d_1}\right)^{-1}Y_1Y_2^H\left(Y_2Y_2^H +\eta
+    I_{d_2}\right)^{-1}Y_2Y_1^H.
+  \ea
+\end{equation*}
+Define
+\begin{equation*}
+  \widetilde{C} = \underbrace{Y_1^H\left(Y_1Y_1^H+\eta I_{d_1}\right)^{-1}Y_1}_{A}
+  \underbrace{Y_2^H\left(Y_2Y_2^H +\eta I_{d_2}\right)^{-1}Y_2}_{B}, 
+\end{equation*}
+which has the same singular values as the eigenvalues of $C$. Next, define $\widetilde{A}
+= Y_1Y_1^H\left(Y_1Y_1^H+\eta I_{d_1}\right)^{-1}$ and $\widetilde{B} =
+Y_2Y_2^H\left(Y_2Y_2^H +\eta I_{d_2}\right)^{-1}$. $A$ has the same eigenvalues as
+$\widetilde{A}$ except with an additional $n-d_1$ zero eigenvalues. Similarly, $B$ has the
+same eigenvalues as $\widetilde{B}$ except with an additional $n-d_2$ zero
+eigenvalues. Both $\widetilde{A}$ and $\widetilde{B}$ are Mobius transforms of a Wishart
+matrix, whose Stieltjes transform is known. Therefore, we are in position to use RMTool to
+determine the eigenvalue distribution of $C$. Figure \ref{fig:rcca_rmtool} show the
+{\sc{Matlab}} code to do so. This assumes that the variables \texttt{d1}, \texttt{d2}, and
+\texttt{eta} are appropriately defined. 
+
+\begin{figure}        
+  \hrulefill\\
+  \texttt{
+    syms m z;    \\
+    y1 = wishartpol(p1/n);   \\
+    atil = mobiusA(y1,1,0,1,eta);\\
+    a = transposeA(atil,p1/n);\\                                
+    y2 = wishartpol(p2/n);\\
+    btil = mobiusA(y2,1,0,1,eta);\\
+    b = transposeA(btil,p2/n);\\
+    ctil = AtimesB(a,b);\\
+    c = transposeA(ctil,n/p1);\\    
+    pdfinfo = Lmz2pdf(c, 0:0.001:1);  \\
+    coeffs = pdfinfo.range;\\
+    density = pdfinfo.density;\\
+  }      
+  \caption{RMTool {\sc{Matlab}} code for RCCA eigenvalue distribution assuming that
+    $d_2>d_1$}
+  \label{fig:rcca_rmtool}
+  \hrulefill \\
+\end{figure}
+
+RMTool will occasionally return multiple possible densities. We wrote a function to piece
+together multiple densities into a correct one. 
+

@@ -1,0 +1,98 @@
+We are given signal-bearing training data $\{y_1,\dots,y_m\}$ where $y_i\in H_1$ for $i=1,\dots,m$ from which we obtain estimates $\widehat{U}$ and $\widehat{\Sigma}$ of the unknown $U$ and $\Sigma$. Consider the $n \times m$ data matrix $Y = \begin{bmatrix} y_1 & \ldots & y_m \end{bmatrix}$. The eigenvalue decomposition of the sample covariance matrix, $S=\frac{1}{m}YY^H$ yields the maximum likelihood estimates of $U$ and $\Sigma$.
+
+
+\subsection{Eigenvector Aspects}
+
+Specifically, assuming $k$ is known, we set $\widehat{U}$ to equal the $n \times k$ matrix whose columns are the $k$ eigenvectors associated with the $k$ largest eigenvalues of $S$. We now quantify the accuracy of the estimated eigenvectors.\\
+
+\begin{prop}\label{th:angles}
+Assume that the columns of the training data matrix $Y$ were generated as described in Section \ref{sec:training_data}. Let $\widehat{u}_{i}$ denote the eigenvector associated with the $i$-th largest eigenvalue of $S$. Then for $i = 1, \ldots, k$ and $n, m \longrightarrow \infty$ with $n/m \to c$, we have that
+\begin{equation}
+|\langle u_i,\widehat{u}_i\rangle|^2 \convas
+\begin{cases}
+\dfrac{\sigma_i^4-c}{\sigma_{i}^4+\sigma_{i}^2c} & \text{ if } \sigma_{i}^2>\sqrt{c}\\
+0 & \textrm{otherwise}\\
+\end{cases}.
+\end{equation}
+\end{prop}
+\begin{proof}
+This result appears in \cite{paul2007asymptotics,benaych2011eigenvalues}.
+\end{proof}
+
+
+The key insight from Proposition \ref{th:angles} is that only the eigenvectors corresponding to the signal eigenvalues lying above the phase transition $\sqrt{c}$ are \textit{informative}. When a signal eigenvalue drops below this critical threshold, the corresponding eigenvector estimate is essentially noise-like  (i.e. $|\langle u_i,\widehat{u}_i\rangle|^2=o_{p}(1)$) and thus \textit{uninformative}.
+
+The term $|\langle u_i,\widehat{u}_i\rangle|^2$ quantifies mismatch between the estimated and underlying eigenvectors and will play an important role in deriving a new detector and in characterizing detector performance; a similar term also comes up in the analysis of the resolving power of arrays due to model mismatch such as in \cite{cox1973resolving}.
+
+
+Following \cite{nadakuditi2008sample}, we define the effective number of identifiable subspace components $k_\text{eff}$ as:
+\begin{equation}\label{eq:keff}
+\boxed{k_\text{eff} = \text{Number of } \sigma_i^2 > \sqrt{c}}.
+\end{equation}
+We can estimate $k_\text{eff}$ using, for example,  `Algorithm 2' of  \cite{nadakuditi2010fundamental}. We now state an additional theorem that will prove useful in our derivations.\\
+
+\begin{Th}\label{th:other angles}
+Assume the same hypothesis as in Proposition \ref{th:angles}. Then for fixed $k$ and  $i,j = 1, \ldots, k $ and $n, m \longrightarrow \infty$ with $n/m \to c$, we have that for $i \neq j$,
+\begin{equation}
+\langle u_j,\widehat{u}_i\rangle \convas 0.
+\end{equation}
+\end{Th}
+\begin{proof}
+In the Appendix we prove the statement for $i, j = 1, \ldots, \keff$. The proof for the setting where $i, j > \keff$ is considerably more involved and we omit it here for space considerations.
+\end{proof}\vskip0.25cm
+
+Matrices of the form $\widehat{U}^HU D U^H\widehat{U}$ will appear throughout our derivations in Sections \ref{sec:msd_stoch}, \ref{sec:msd_determ}, and \ref{sec:roc_theory}. We apply Proposition \ref{th:angles} and Theorem \ref{th:other angles} to state a result that permits approximation, in the large matrix limit, of  $\widehat{U}^HU D U^H\widehat{U}$ by a suitable diagonal matrix.  \\
+%Intuitively, we expect the performance of detectors which utilize subspace components for which $|\langle u_i,\widehat{u}_i\rangle|^2=o_{p}(1)$ to be suboptimal.
+
+\begin{Corr}\label{corr:matrix}
+Suppose $\widehat{k}\leq k$ and let $D$ be a $k \times k$ (non-random) diagonal matrix such that $D=\diag(d_1,\ldots,d_{k})$, independent of $\widehat{U}$. Then as $n,m \longrightarrow \infty$ with $n/m \to c$, we have that
+\begin{equation*}
+\widehat{U}^HU D U^H\widehat{U}\convas \diag(d_1 |\langle u_1,\widehat{u}_1\rangle|^2,\dots, d_{\widehat{k}} |\langle u_{\widehat{k}},\widehat{u}_{\widehat{k}}\rangle|^2)
+\end{equation*}
+where for $i=1,\dots,\widehat{k}$ the quantity $|\langle u_i,\widehat{u}_i\rangle|^2$ is given in Proposition \ref{th:angles}.
+\end{Corr}
+
+\subsection{Eigenvalue Aspects}
+
+Random matrix theory also provides insights about the accuracy of the eigenvalues of $S$, as described next.
+\begin{prop}\label{th:high_eigvals}
+As $n,m \longrightarrow \infty$ with $n/m \to c$, when $\sigma_i^2 > \sqrt{c}$, we have that:
+\begin{equation*}
+\widehat{\sigma}_i^2\convas \sigma_i^2 + c + \frac{c}{\sigma_i^2}.
+\end{equation*}
+\end{prop}
+\begin{proof}
+See Theorem 2 in \cite{paul2007asymptotics} for the real setting when $c<1$ and \cite{benaych2011singular} for the complete result.
+\end{proof}
+This estimate is clearly biased and we now characterize the fluctuations on the signal variance estimate.
+\begin{prop}\label{th:eigenvalues}
+As $n,m \longrightarrow \infty$ with $n/m \to c$, we have that for $i = 1, \ldots, \keff$
+\begin{equation*}
+\sqrt{n}\left(\widehat{\sigma}_i^2-\left(\sigma_i^2+c+\frac{c}{\sigma_i^2}\right)\right)\Rightarrow\mathcal{N}\left(0,\frac{2\left(\sigma_i^2+1\right)^2}{\beta }\left(1-\frac{c}{\sigma_i^4}\right)\right),
+\end{equation*}
+where $\beta = 1$ when the data is real-valued and $\beta = 2$ when the data is complex-valued.
+\end{prop}
+\begin{proof}
+See Theorem 3 in \cite{paul2007asymptotics} for the real setting when $c<1$ and \cite{benaych2011singular} for the complete result.
+\end{proof}
+We form an improved estimate of the unknown signal variance, $\sigma_{i}^{2}$, by employing maximum-likelihood (ML) estimation on the distribution in Proposition \ref{th:eigenvalues}. Specifically, for only the $k_\text{eff}$ signal eigenvalues, we form the estimate:
+\begin{equation}\label{eq:cov}
+\widehat{\sigma}^2_{i_\text{rmt}} = \argmax_{\sigma_i^2} \log\left(f_{\widehat{\sigma}_i^2}(\sigma_i^2)\right)
+\end{equation}
+where
+\begin{equation*}
+f_{\widehat{\sigma}_i^2}(\sigma_i^2):=\mathcal{N}\left(\left(\sigma_i^2+c+\frac{c}{\sigma_i^2}\right),\frac{2\left(\sigma_i^2+1\right)^2}{n\beta }\left(1-\frac{c}{\sigma_i^4}\right)\right).
+\end{equation*}
+We may then estimate $|\langle u_i,\widehat{u}_i\rangle|^2$ by substituting the improved signal variance estimates, $\widehat{\sigma}^2_{i_\text{rmt}}$, for the unknown $\sigma_i^2$ in Proposition \ref{th:angles}. We refer to this estimate as $|\langle u_i,\widehat{u}_i\rangle|^2_{\text{rmt}}$. For the $\max(0,\widehat{k}-k_\text{eff})$ uninformative subspace components, we set $|\langle u_i,\widehat{u}_i\rangle|^2_{\text{rmt}}=0$. We estimate the signal variances under the phase transition by invoking the following result.\\
+
+\begin{prop}\label{th:low_eigvals}
+As $n,m \longrightarrow \infty$ with $n/m \to c$, when $\sigma_i^2 \leq \sqrt{c}$, we have that:
+\begin{equation*}
+\widehat{\sigma}_i^2\convas c + 2\sqrt{c}.
+\end{equation*}
+\end{prop}
+\begin{proof}
+See Theorem 1 in \cite{paul2007asymptotics} for the real setting when $c<1$ and \cite{benaych2011singular} for the complete result.
+\end{proof}
+
+We use (\ref{eq:cov}) and Propositions \ref{th:angles}, \ref{th:high_eigvals}, and \ref{th:low_eigvals} to derive theoretical ROC curves in Section \ref{sec:roc_theory}.

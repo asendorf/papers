@@ -1,0 +1,179 @@
+\contentsline {chapter}{DEDICATION}{ii}
+\contentsline {chapter}{ACKNOWLEDGEMENTS}{iii}
+\contentsline {chapter}{LIST OF FIGURES}{v}
+\contentsline {chapter}{ABSTRACT}{vi}
+\mbox { }\newline \noindent {\bf CHAPTER}\newline 
+\hbox { }
+\hbox { }
+\contentsline {chap}{\numberline {\hbox { }\hfill \bf I.\hspace {5pt}}{\bf Introduction}}{1}
+\hbox { }
+\contentsline {section}{\numberline {1.1}Multi-Modal Data Fusion}{1}
+\contentsline {section}{\numberline {1.2}Canonical Correlation Analysis (CCA)}{2}
+\contentsline {section}{\numberline {1.3}Contributions and Outline}{2}
+\hbox { }
+\contentsline {chap}{\numberline {\hbox { }\hfill \bf II.\hspace {5pt}}{\bf Performance of Matched Subspace Detectors Using Finite Training Data}}{5}
+\hbox { }
+\contentsline {section}{\numberline {2.1}Introduction}{5}
+\contentsline {section}{\numberline {2.2}Data Models and Parameter Estimation}{7}
+\contentsline {subsection}{\numberline {2.2.1}Training Data Model}{7}
+\contentsline {subsection}{\numberline {2.2.2}Parameter Estimation}{8}
+\contentsline {subsection}{\numberline {2.2.3}Testing Data Model}{8}
+\contentsline {section}{\numberline {2.3}Standard Detector Derivations}{9}
+\contentsline {subsection}{\numberline {2.3.1}Stochastic Testing Model}{9}
+\contentsline {subsection}{\numberline {2.3.2}Deterministic Testing Model}{10}
+\contentsline {subsection}{\numberline {2.3.3}Effect of the Number of Training Samples}{11}
+\contentsline {section}{\numberline {2.4}Problem Statements}{13}
+\contentsline {subsection}{\numberline {2.4.1}Problem 1: Derive a New Detector that Exploits Predictions of Subspace Accuracy}{13}
+\contentsline {subsection}{\numberline {2.4.2}Problem 2: Characterize ROC Performance Curves}{14}
+\contentsline {section}{\numberline {2.5}Pertinent Results from Random Matrix Theory}{14}
+\contentsline {subsection}{\numberline {2.5.1}Eigenvector Aspects}{14}
+\contentsline {subsection}{\numberline {2.5.2}Eigenvalue Aspects}{16}
+\contentsline {section}{\numberline {2.6}Derivation of New RMT Matched Subspace Detectors}{17}
+\contentsline {subsection}{\numberline {2.6.1}Stochastic RMT Detector}{17}
+\contentsline {subsection}{\numberline {2.6.2}Deterministic RMT Detector}{19}
+\contentsline {section}{\numberline {2.7}Theoretical ROC Curve Predictions}{20}
+\contentsline {subsection}{\numberline {2.7.1}Stochastic Testing Setting}{21}
+\contentsline {subsection}{\numberline {2.7.2}Deterministic Testing Setting}{21}
+\contentsline {section}{\numberline {2.8}Discussion and Insights}{22}
+\contentsline {subsection}{\numberline {2.8.1}Simulation Protocol}{22}
+\contentsline {subsection}{\numberline {2.8.2}Convergence and Accuracy of ROC Curve Predictions}{23}
+\contentsline {subsection}{\numberline {2.8.3}Effect of the Number of Training Samples}{24}
+\contentsline {subsection}{\numberline {2.8.4}Effect of $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle k$}\mathaccent "0362{k}$}{25}
+\contentsline {section}{\numberline {2.9}Conclusion}{25}
+\hbox { }
+\contentsline {chap}{\numberline {\hbox { }\hfill \bf III.\hspace {5pt}}{\bf Useful Subspace Components in Deterministic Matched Subspace Detectors}}{34}
+\hbox { }
+\contentsline {section}{\numberline {3.1}Introduction}{34}
+\contentsline {section}{\numberline {3.2}Problem Formulation}{35}
+\contentsline {subsection}{\numberline {3.2.1}ROC Curve Analysis}{36}
+\contentsline {subsection}{\numberline {3.2.2}Problem Statement}{37}
+\contentsline {section}{\numberline {3.3}Useful Components In Energy Detectors}{37}
+\contentsline {subsection}{\numberline {3.3.1}Definition and Computation of $k_{\text {useful}}$}{38}
+\contentsline {subsection}{\numberline {3.3.2}Discussion of Test Statistic Distributions}{38}
+\contentsline {section}{\numberline {3.4}Application to Deterministic Matched Subspace Detectors}{40}
+\contentsline {subsection}{\numberline {3.4.1}Training Data Model}{41}
+\contentsline {subsection}{\numberline {3.4.2}Testing Data Model}{42}
+\contentsline {subsection}{\numberline {3.4.3}Subspace Estimation and Accuracy}{42}
+\contentsline {subsection}{\numberline {3.4.4}Plug-in and RMT Detectors}{43}
+\contentsline {subsection}{\numberline {3.4.5}Relationship between $k_{\text {useful}}$ and $k_\text {eff}$}{44}
+\contentsline {subsection}{\numberline {3.4.6}Numerical Example}{45}
+\contentsline {section}{\numberline {3.5}Extension - Weighted Energy Detector}{45}
+\contentsline {section}{\numberline {3.6}Conclusion}{47}
+\hbox { }
+\contentsline {chap}{\numberline {\hbox { }\hfill \bf IV.\hspace {5pt}}{\bf Background: Canonical Correlation Analysis (CCA)}}{50}
+\hbox { }
+\contentsline {section}{\numberline {4.1}Mathematical Formulation of CCA}{50}
+\contentsline {section}{\numberline {4.2}Empirical CCA}{52}
+\contentsline {section}{\numberline {4.3}Performance of Empirical CCA}{52}
+\contentsline {subsection}{\numberline {4.3.1}Performance Breakdown When $n<d_1+d_2$}{52}
+\contentsline {subsection}{\numberline {4.3.2}Simulation Results}{53}
+\contentsline {section}{\numberline {4.4}Informative CCA (ICCA)}{57}
+\contentsline {subsection}{\numberline {4.4.1}Simulation results}{58}
+\hbox { }
+\contentsline {chap}{\numberline {\hbox { }\hfill \bf V.\hspace {5pt}}{\bf Low-Rank Gauss-Gauss Detection with Two Datasets}}{61}
+\hbox { }
+\contentsline {section}{\numberline {5.1}Data Model}{62}
+\contentsline {section}{\numberline {5.2}LRT Detector Derivation}{62}
+\contentsline {section}{\numberline {5.3}CCA Detector Equivalency}{63}
+\contentsline {subsection}{\numberline {5.3.1}CCA Detector for Data Model (5.1\hbox {})}{65}
+\contentsline {section}{\numberline {5.4}Empirical Detectors}{66}
+\contentsline {subsection}{\numberline {5.4.1}Parameter Estimation}{66}
+\contentsline {subsection}{\numberline {5.4.2}Rank-1 Detectors}{67}
+\contentsline {subsection}{\numberline {5.4.3}Rank 1 Proof that $\Lambda _{\text {icca}}(\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle w$}\mathaccent "0365{w}_{r^*}) \equiv \Lambda _{\text {plug-in}}(y)$}{68}
+\contentsline {subsection}{\numberline {5.4.4}Rank 1 Numerical Simulations}{69}
+\hbox { }
+\contentsline {chap}{\numberline {\hbox { }\hfill \bf VI.\hspace {5pt}}{\bf Regularized CCA (RCCA)}}{74}
+\hbox { }
+\contentsline {section}{\numberline {6.1}Mathematical Formulation of RCCA}{74}
+\contentsline {section}{\numberline {6.2}Empirical RCCA}{76}
+\contentsline {section}{\numberline {6.3}Performance of Empirical RCCA}{77}
+\contentsline {subsection}{\numberline {6.3.1}Simulation Setup}{77}
+\contentsline {subsection}{\numberline {6.3.2}Distribution of $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle \rho $}\mathaccent "0362{\rho }$}{78}
+\contentsline {subsection}{\numberline {6.3.3}Detection Based on $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle \rho $}\mathaccent "0362{\rho }$}{78}
+\contentsline {section}{\numberline {6.4}Informative RCCA (IRCCA)}{82}
+\contentsline {subsection}{\numberline {6.4.1}IRCCA Derivation}{82}
+\contentsline {subsection}{\numberline {6.4.2}Numerical Simulations}{83}
+\contentsline {section}{\numberline {6.5}Limiting as $\eta \to \infty $}{87}
+\contentsline {section}{\numberline {6.6}Conclusion}{88}
+\hbox { }
+\contentsline {chap}{\numberline {\hbox { }\hfill \bf VII.\hspace {5pt}}{\bf Significance Tests}}{90}
+\hbox { }
+\contentsline {section}{\numberline {7.1}Distribution of CCA Correlations}{91}
+\contentsline {subsection}{\numberline {7.1.1}Distribution of Largest CCA Correlation}{93}
+\contentsline {section}{\numberline {7.2}Distribution of ICCA Correlations}{94}
+\contentsline {section}{\numberline {7.3}Distribution of RCCA Correlations}{94}
+\hbox { }
+\contentsline {chap}{\numberline {\hbox { }\hfill \bf VIII.\hspace {5pt}}{\bf Kernel CCA (KCCA)}}{96}
+\hbox { }
+\contentsline {section}{\numberline {8.1}KCCA Derivation}{96}
+\contentsline {section}{\numberline {8.2}Informative KCCA (IKCCA)}{99}
+\hbox { }
+\contentsline {chap}{\numberline {\hbox { }\hfill \bf IX.\hspace {5pt}}{\bf Multiset CCA (MCCA)}}{100}
+\hbox { }
+\contentsline {section}{\numberline {9.1}Mathematical Formulation of MCCA}{101}
+\contentsline {subsection}{\numberline {9.1.1}Constraint Functions, $h(x,R)$}{101}
+\contentsline {subsection}{\numberline {9.1.2}Objective Functions, $J(\Phi (x))$}{102}
+\contentsline {section}{\numberline {9.2}Theoretical and Empirical MCCA Derivations}{103}
+\contentsline {subsection}{\numberline {9.2.1}Manopt Software for Optimization on Manifolds}{105}
+\contentsline {subsection}{\numberline {9.2.2}Successive Canonical Vectors}{105}
+\contentsline {subsection}{\numberline {9.2.3}MCCA Summary}{106}
+\hbox { }
+\contentsline {chap}{\numberline {\hbox { }\hfill \bf X.\hspace {5pt}}{\bf Future Work}}{108}
+\hbox { }
+\contentsline {section}{\numberline {10.1}Real World Datasets}{108}
+\contentsline {section}{\numberline {10.2}Future Work in CCA and ICCA}{109}
+\contentsline {section}{\numberline {10.3}Future Work in RCCA and IRCCA}{109}
+\contentsline {section}{\numberline {10.4}Future Work in KCCA and ICCA}{109}
+\contentsline {section}{\numberline {10.5}Future Work in MCCA}{110}
+\contentsline {section}{\numberline {10.6}Timeline}{110}
+\contentsline {chapter}{APPENDICES}{112}
+\contentsline {section}{\numberline {A.1}Problem 1a}{113}
+\contentsline {subsection}{\numberline {A.1.1}Theory}{113}
+\contentsline {subsection}{\numberline {A.1.2}Empirical}{114}
+\contentsline {section}{\numberline {A.2}Problem 1b}{114}
+\contentsline {subsection}{\numberline {A.2.1}Theory}{114}
+\contentsline {subsection}{\numberline {A.2.2}Empirical}{115}
+\contentsline {section}{\numberline {A.3}Problem 1c}{115}
+\contentsline {subsection}{\numberline {A.3.1}Theory}{115}
+\contentsline {subsection}{\numberline {A.3.2}Empirical}{115}
+\contentsline {section}{\numberline {A.4}Problem 1d}{116}
+\contentsline {subsection}{\numberline {A.4.1}Theory}{116}
+\contentsline {subsection}{\numberline {A.4.2}Empirical}{117}
+\contentsline {section}{\numberline {A.5}Problem 2a}{117}
+\contentsline {subsection}{\numberline {A.5.1}Theory}{117}
+\contentsline {subsection}{\numberline {A.5.2}Empirical}{118}
+\contentsline {section}{\numberline {A.6}Problem 2b}{118}
+\contentsline {subsection}{\numberline {A.6.1}Theory}{118}
+\contentsline {subsection}{\numberline {A.6.2}Empirical}{118}
+\contentsline {section}{\numberline {A.7}Problem 2c}{119}
+\contentsline {subsection}{\numberline {A.7.1}Theory}{119}
+\contentsline {subsection}{\numberline {A.7.2}Empirical}{119}
+\contentsline {section}{\numberline {A.8}Problem 2d}{120}
+\contentsline {subsection}{\numberline {A.8.1}Theory}{120}
+\contentsline {subsection}{\numberline {A.8.2}Empirical}{120}
+\contentsline {section}{\numberline {A.9}Problem 3a}{121}
+\contentsline {subsection}{\numberline {A.9.1}Theory}{121}
+\contentsline {subsection}{\numberline {A.9.2}Empirical}{121}
+\contentsline {section}{\numberline {A.10}Problem 3b}{122}
+\contentsline {subsection}{\numberline {A.10.1}Theory}{122}
+\contentsline {subsection}{\numberline {A.10.2}Empirical}{122}
+\contentsline {section}{\numberline {A.11}Problem 3c}{123}
+\contentsline {subsection}{\numberline {A.11.1}Theory}{123}
+\contentsline {subsection}{\numberline {A.11.2}Empirical}{124}
+\contentsline {section}{\numberline {A.12}Problem 3d}{124}
+\contentsline {subsection}{\numberline {A.12.1}Theory}{124}
+\contentsline {subsection}{\numberline {A.12.2}Empirical}{125}
+\contentsline {section}{\numberline {A.13}Problem 4a}{125}
+\contentsline {section}{\numberline {A.14}Problem 4b}{125}
+\contentsline {subsection}{\numberline {A.14.1}Theory}{125}
+\contentsline {subsection}{\numberline {A.14.2}Empirical}{125}
+\contentsline {section}{\numberline {A.15}Problem 4c}{126}
+\contentsline {section}{\numberline {A.16}Problem 4d}{126}
+\contentsline {subsection}{\numberline {A.16.1}Theory}{126}
+\contentsline {subsection}{\numberline {A.16.2}Empirical}{126}
+\contentsline {section}{\numberline {A.17}Problems 5a-d Theory}{126}
+\contentsline {section}{\numberline {A.18}Problem 5a Empirical}{127}
+\contentsline {section}{\numberline {A.19}Problem 5b Empirical}{127}
+\contentsline {section}{\numberline {A.20}Problem 5c Empirical}{127}
+\contentsline {section}{\numberline {A.21}Problem 5d Empirical}{127}
+\contentsline {chapter}{BIBLIOGRAPHY}{128}

@@ -1,0 +1,350 @@
+\documentclass[english]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{amstext}
+\usepackage{babel,color}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\geometry{letterpaper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\parskip = 0.1in
+
+\newtheorem{theorem}{Theorem}
+
+\input my_header.tex
+
+\title{Random Matrix Theory Improvements on the Matched Subspace Classifier}
+\author{Nicholas Asendorf}
+
+\begin{document}
+\maketitle
+
+\section{Problem Statement}
+
+We consider the classification problem where our observed data, $y$, may be one of two classes. We may either observe signal in the presence of noise, or simply noise itself. Our setup is as follows:
+
+\begin{equation}\label{eq:prob state}
+y=\left\{
+\begin{aligned}
+&z
+&& y\in H_0\\
+&U_1x+z
+&& y\in H_1\\
+\end{aligned}\right.
+\end{equation}
+
+where $z\sim\mathcal{N}(0,I)$, $U_1\in\mathbb{C}^{n\times k}$ is unknown with orthonormal columns, $x\sim\mathcal{N}(0,\Sigma_1)$ with $\Sigma_1=\diag(\sigma_1^2,\dots,\sigma_k^2)$ with $\sigma_i^2$ unknown. We also assume that $x$ and $z$ are independent.
+
+We are given labeled training data $y_1,\dots,y_m$, with $m\geq n$ and $y_i\in H_1 \text{ for } i=1,\dots,m$. We will use this training data to form estimates $\hat{U}_1$, $\hat{\Sigma}_1$ of our unknown parameters $U_1$, $\Sigma_1$. 
+
+We consider the processed data $w=\hat{U}_1^Hy\in\mathbb{C}^n$. We are also given unlabeled testing data $y_1,\dots,y_r$. Our goal is to determine a classifier, $g(w)\to\{0,1\}$ which solves the following problem for our testing data:
+
+\begin{equation}
+\begin{aligned}
+&\text{maximize}
+&& P_D=P\left(g(w)=1 | y\in H_1\right)\\
+&\text{subject to}
+&& P_F=P\left(g(w)=1 | y\in H_0\right)\\
+\end{aligned}
+\end{equation}
+
+\section{Parameter Estimation}
+
+We have two unknown parameters, $U_1$, $\Sigma_1$. Using our training data, $\left\{y_1,\dots,y_m\right\}$, we make estimate of these parameters. To do so, we form the matrix $Y=[y_1,\dots,y_m]$ by stacking the training data as columns in a matrix. Define $S_1=\frac{1}{m}YY^H$ as the sample covariance of our training data. By properties of Gaussian random variables, under $H_1$, $y_i\sim\mathcal{N}(0,U_1\Sigma_1U_1^H+I)$. Taking $U_2=U_1^{\perp}$ to be the orthogonal complement of $U_1 $ we may write this covariance as
+
+\begin{equation}
+\begin{aligned}
+&U_1\Sigma U_1^H+I
+&&=\left[\begin{array}{lr} U_1 & U_2\end{array}\right]\left[\begin{array}{lr}\Sigma_1 & 0\\ 0 & 0\end{array}\right]\left[\begin{array}{lr}U_1^H \\ U_2^H\end{array}\right] + \left[\begin{array}{lr}U_1 & U_2\end{array}\right]\left[\begin{array}{lr}U_1^H \\ U_2^H\end{array}\right]\\
+&&&=\left[\begin{array}{lr} U_1 & U_2\end{array}\right]\left(\left[\begin{array}{lr}\Sigma_1 & 0\\ 0 & 0\end{array}\right]+\left[\begin{array}{lr}I_k & 0\\ 0 & I_{n-k}\end{array}\right]\right)\left[\begin{array}{lr}U_1^H \\ U_2^H\end{array}\right]\\
+&&&=\left[\begin{array}{lr} U_1 & U_2\end{array}\right]\left[\begin{array}{lr}\Sigma_1+I_k & 0\\ 0 & I_{n-k}\end{array}\right]\left[\begin{array}{lr}U_1^H \\ U_2^H\end{array}\right]\\
+\end{aligned}
+\end{equation}
+
+Clearly this is the in the form of an eigenvalue decomposition of our covariance matrix. Therefore if we take the eigenvalue decomposition of the sample covariance matrix, $S$, we can form an estimate of our subspace $U_1$ and our covariances $\sigma_i^2$. Defining the eigenvalue decomposition $S_1=V\Lambda V^H$ where $\Lambda = \diag(\lambda_1,\dots,\lambda_n)$ and $V=[v_1,\dots, v_n]$ such that $\lambda_1>\lambda_2>\dots>\lambda_n$ we have
+
+\begin{equation}\label{eq:param estims}
+\begin{aligned}
+&\hat{U}_1=[v_1 \dots v_k]\\
+&\hat{\sigma}_i^2 = \lambda_i -1 \text{ for } i=1,\dots,k\\
+\end{aligned}
+\end{equation}
+
+We also define $\hat{\Sigma}_1=\diag(\hat{\sigma}_1^2,\dots,\hat{\sigma}_k^2)$. 
+
+\section{Random Matrix Theory Estimates}\label{sec:rmt}
+
+If we are given a sample covariance matrix, $S=\frac{1}{m}YY^H$, where the columns of $Y$ are drawn from $y\sim\mathcal{N}(0,\Sigma)$ where $\Sigma=\diag(\lambda_1,\dots,\lambda_k,1,\dots,1)\in\reals^n$, Paul's paper tells us that
+
+\begin{equation}
+\hat{\lambda}_i \to
+\begin{cases}
+\left(1+\sqrt{c}\right)^2 & \text{ if } \lambda_i\leq 1+\sqrt{c}\\
+\lambda_i\left(1+\frac{c}{\lambda-1}\right) & \text{ if } \lambda_i>1+\sqrt{c}
+\end{cases}
+\end{equation}
+
+where $c=\frac{n}{m}$ and $\hat{\lambda}_i$ are the eigenvalues of $S$.
+
+Because our sample covariance matrix $S_1$ takes this form, we may apply this theorem to our problem at hand:
+
+\begin{equation}
+\begin{aligned}
+&\hat{\sigma}^2_i+1
+&&\to\begin{cases}
+\left(1+\sqrt{c}\right)^2 & \text{ if } \sigma_i^2+1\leq 1+\sqrt{c}\\
+(\sigma^2_i+1)\left(1+\frac{c}{\sigma_i^2+1-1}\right) & \text{ if } \sigma_i^2+1>1+\sqrt{c}
+\end{cases}\\
+&&&\to\begin{cases}
+\left(1+\sqrt{c}\right)^2 & \text{ if } \sigma_i^2\leq \sqrt{c}\\
+\sigma_i^2+1+c+\frac{c}{\sigma_i^2} & \text{ if } \sigma_i^2>\sqrt{c}
+\end{cases}\\
+&\hat{\sigma}^2_i
+&&\to\begin{cases}
+2\sqrt{c}+c & \text{ if } \sigma_i^2\leq \sqrt{c}\\
+\sigma_i^2+c+\frac{c}{\sigma_i^2} & \text{ if } \sigma_i^2>\sqrt{c}
+\end{cases}\\
+\end{aligned}
+\end{equation}
+
+Solving for $\sigma_i^2$ we have obtain our random matrix theory estimate of $\sigma_i^2$
+
+\begin{equation}\label{eq:cov}
+\boxed{\tilde{\sigma}_{i_\text{rmt}}^2 =
+\begin{cases}
+\sqrt{c} & \text{ if } \hat{\sigma}_i^2 \leq c + 2\sqrt{c}\\
+\frac{\hat{\sigma}_i^2-c+\sqrt{\left(\hat{\sigma}_i^2-c\right)^2-4c}}{2} & \text{ if } \hat{\sigma}_i^2 > c + 2\sqrt{c}
+\end{cases}}
+\end{equation}
+
+From Paul's paper, we also have that
+
+\begin{equation}
+|<v_i,\hat{v}_i>|^2 \to
+\begin{cases}
+0 & \text{ if } \lambda_i\leq 1+\sqrt{c}\\
+\frac{1-\frac{c}{(\lambda-1)^2}}{1+\frac{c}{\lambda-1}} & \text{ if } \lambda_i>1+\sqrt{c}
+\end{cases}
+\end{equation}
+
+where $\hat{v}_i$ is the eigenvector of the sample covariance matrix corresponding to the eigenvalue $\lambda_i$ and $v_i$ is the true underlying eigenvalue. Applying this theorem to our problem, we have
+
+\begin{equation}
+\begin{aligned}
+&|<u_i,\hat{u}_i>|^2
+&& \to \begin{cases}
+0 & \text{ if } \sigma_i^2+1\leq 1+\sqrt{c}\\
+\frac{1-\frac{c}{(\sigma_i^2+1-1)^2}}{1+\frac{c}{\sigma_i^2+1-1}} & \text{ if } \sigma_i^2+1>1+\sqrt{c}
+\end{cases}\\
+&&&\to\begin{cases}
+0 & \text{ if } \sigma_i^2\leq\sqrt{c}\\
+\frac{\frac{\sigma_i^4-c}{\sigma_i^4}}{\frac{\sigma_i^2+c}{\sigma_i^2}} & \text{ if } \sigma_i^2>\sqrt{c}
+\end{cases}\\
+&&&\to\begin{cases}
+0 & \text{ if } \sigma_i^2\leq\sqrt{c}\\
+\frac{\sigma_i^4-c}{\sigma_i^4+\sigma_i^2c} & \text{ if } \sigma_i^2>\sqrt{c}
+\end{cases}\\
+\end{aligned}
+\end{equation}
+
+We then substitute our expression for $\sigma_i^2$ derived in (\ref{eq:cov})
+
+\begin{equation}\label{eq:angles}
+\boxed{|<u_i,\hat{u}_i>|^2_{\text{rmt}}
+\to\begin{cases}
+0 & \text{ if } \tilde{\sigma}_{i_\text{rmt}}^2\leq2\sqrt{c}+c\\
+\frac{\tilde{\sigma}_{i_\text{rmt}}^4-c}{\tilde{\sigma}_{i_\text{rmt}}^4+\tilde{\sigma}_{i_\text{rmt}}^2c} & \text{ if } \tilde{\sigma}_{i_\text{rmt}}^2>2\sqrt{c}+c
+\end{cases}}
+\end{equation}
+
+\section{Processed Matched Subspace Classifier}\label{sec:classifiers}
+
+By properties of Gaussian random variables, under $H_0$, $y\sim\mathcal{N}(0,I)$ and under $H_1$, $y\sim\mathcal{N}(0,U_1\Sigma_1U_1^H+I)$. For our processed data, $w=\hat{U}^H_1$, using properties of Gaussian random variables, under $H_0$, $w\sim\mathcal{N}(0,I_k)$ and under $H_1$, $w\sim\mathcal{N}(0, \hat{U}_1^HU_1\Sigma_1U_1^H\hat{U}_1 +I)$.
+
+We will consider 3 different classifiers by examining the likelihood ratio test (LRT) for our data $w$. The first is an oracle classifier, which will assume that $U_1$ and $\Sigma_1$ are known. The purpose of this is to give an upper bound on a classifier's performance. The second classifier is a plug-in classifier which will approximate the oracle classifier by simply plugging in our estimates $\hat{U}_1$, $\hat{\Sigma}_1$ for our unknown $U_1$ and $\Sigma_1$. The third classifier uses the results of random matrix theory to form an approximation to the oracle classifier.
+
+\subsection{Oracle Classifier}
+
+Our (LRT) for our processed data $w$, is
+
+\begin{equation}
+\begin{aligned}
+&\Lambda(w)
+&&=\frac{(2\pi)^{-k/2}|\hat{U}_1^HU_1\Sigma_1U_1^H\hat{U}_1+I|^{-1/2}\exp\{-\frac{1}{2}w^H\left[\hat{U}_1^HU_1\Sigma_1U_1^H\hat{U}_1+I\right]^{-1}w\}}{(2\pi)^{-k/2}\exp\{-\frac{1}{2}w^Hw\}}\\
+&&&=|\hat{U}_1^HU_1\Sigma_1U_1^H\hat{U}_1+I|^{-1/2}\exp\{-\frac{1}{2}w^H\left[\left(\hat{U}_1^HU_1\Sigma_1U_1^H\hat{U}_1+I\right)^{-1} - I\right]w\}
+\end{aligned}
+\end{equation}
+
+where, defining $\eta=\frac{P(y\in H_0)}{P(y\in H_1)}$ our classifier is
+
+\begin{equation}
+g_{\text{oracle}}(w)=
+\begin{cases}
+0 & \text{ if } \Lambda(w) < \eta\\
+1 & \text{ if } \Lambda(w) > \eta\\
+\end{cases}
+\end{equation}
+
+We may apply the natural logarithm operator to both sides as it is a monotonic operation. Our statistic becomes
+
+\begin{equation}\label{eq:oracle stat}
+\boxed{\Lambda_{\text{oracle}}(w) = w^H\left[I-\left(\hat{U}_1^HU_1\Sigma_1U_1^H\hat{U}_1+I\right)^{-1}\right]w}
+\end{equation}
+
+and defining a threshold $\gamma=2\ln\left(\eta|\hat{U}_1^HU_1\Sigma_1U_1^H\hat{U}_1+I|^{1/2}\right)$ we have the classifier
+
+\begin{equation}\label{eq:oracle classifier}
+\boxed{g_{\text{oracle}}(w)=
+\begin{cases}
+0 & \text{ if } \Lambda_{\text{oracle}}(w) < \gamma\\
+1 & \text{ if } \Lambda_{\text{oracle}}(w) > \gamma\\
+\end{cases}}
+\end{equation}
+
+\subsection{Plug-in Classifier}
+
+As is the case, $U_1$ and $\Sigma_1$ are not known, and we cannot compute (\ref{eq:oracle stat}) directly. One solution to this problem is to plug in our estimates $\hat{U}_1$ and $\hat{\Sigma}_1$ wherever $U_1$ and $\Sigma_1$ appear respectively. Using our estimates in (\ref{eq:param estims}) have the following plug-in classifier statistic:
+
+\begin{equation}
+\begin{aligned}
+&\Lambda_{\text{plugin}}(w)
+&& = w^H\left(I-\left[\hat{U}_1^H\hat{U}_1\hat{\Sigma}_1\hat{U}_1^H\hat{U}_1 + I\right]^{-1}\right)w\\
+&&& = w^H\left(I-\left(\hat{\Sigma}_1+I\right)^{-1}\right)w\\
+&&& = w^H\left(I-\diag\left(\hat{\sigma}_i^2+1\right)^{-1}\right)w\\
+\end{aligned}
+\end{equation}
+
+This simplifies to
+
+\begin{equation}\label{eq:plugin stat}
+\boxed{\Lambda_{\text{plugin}}(w) = w^H\diag\left(\frac{\hat{\sigma}^2_i}{1+\hat{\sigma}^2_i}\right)w=\sum_{i=1}^k\frac{w_i^2\hat{\sigma}_i^2}{\hat{\sigma}_i^2+1}}
+\end{equation}
+
+and our classifier becomes
+
+\begin{equation}\label{eq:plugin classifier}
+\boxed{g_{\text{plugin}}(w)=
+\begin{cases}
+0 & \text{ if } \Lambda_{\text{plugin}}(w) < \gamma\\
+1 & \text{ if } \Lambda_{\text{plugin}}(w) > \gamma\\
+\end{cases}}
+\end{equation}
+
+\subsection{Random Matrix Theory Classifier}
+
+To utilize our random matrix theory expressions derived in Section \ref{sec:rmt}, we first make a diagonal approximation of (\ref{eq:oracle stat})
+
+\begin{equation}
+\begin{aligned}
+&\tilde{\Lambda}(w)
+&&= w^H\left[I-\left(\hat{U}_1^HU_1\Sigma_1U_1^H\hat{U}_1+I\right)^{-1}\right]w\\
+&&&\approx w^H\left(I-\left[\diag\left(|<u_i,\hat{u}_i>|^2\sigma_i^2\right)+I\right]^{-1}\right)w\\
+&&&=w^H\left(\diag\left(\frac{|<u_i,\hat{u}_i>|^2\sigma_i^2}{|<u_i,\hat{u}_i>|^2\sigma_i^2 + 1}\right)\right)w
+\end{aligned}
+\end{equation}
+
+However, $\sigma_i^2$ and $|<u_i,\hat{u}_i>|^2$ are unknown and we must use an estimate for them. However, instead of using $\hat{\sigma}_i^2$ and estimating $|<u_i,\hat{u}_i>|^2=1$ as the plug-in classifier does, we use expressions derived in Section \ref{sec:rmt} which considers the error in estimating the eigenvalues and eigenvectors of our sample covariance matrix.
+
+Using (\ref{eq:cov}) and (\ref{eq:angles}) our random matrix theory statistic becomes
+
+\begin{equation}\label{eq:rmt stat}
+\boxed{\Lambda_{\text{rmt}}(w) = w^H\diag\left(\frac{|<u_i,\hat{u}_i>|^2_{\text{rmt}}\tilde{\sigma}_{i_\text{rmt}}^2}{|<u_i,\hat{u}_i>|^2_{\text{rmt}}\tilde{\sigma}_{i_\text{rmt}}^2 + 1}\right)w = \sum_{i=1}^k\frac{w_i^2|<u_i,\hat{u}_i>|^2_{\text{rmt}}\tilde{\sigma}_{i_\text{rmt}}^2}{|<u_i,\hat{u}_i>|^2_{\text{rmt}}\tilde{\sigma}_{i_\text{rmt}}^2 + 1}}
+\end{equation}
+
+and our classifier beocmes
+
+\begin{equation}\label{eq:rmt classifier}
+\boxed{g_{\text{rmt}}(w)=
+\begin{cases}
+0 & \text{ if } \Lambda_{\text{rmt}}(w) < \gamma\\
+1 & \text{ if } \Lambda_{\text{rmt}}(w) > \gamma\\
+\end{cases}}
+\end{equation}
+
+\section{Theoretical ROC for (\ref{eq:plugin stat})}
+
+Under $H_0$ we have that $w\sim\mathcal{N}(0,I)$ so $w_i\sim\mathcal{N}(0,1)$ are i.i.d for $i=1,\dots,k$. So $w_i^2\sim\chi_1^2$ are i.i.d for $i=1,\dots,k$. So under $H_0$,
+
+\begin{equation}
+\Lambda_{\text{plugin}}(w)=\sum_{i=1}^k\left(\frac{\sigma_i^2}{1+\sigma_i^2}\right)\chi^2_{1i}
+\end{equation}
+
+That is, a weighted sum of independent chi-square random variables with 1 degree of freedom.
+
+Now, under $H_1$, we have that $w\sim\mathcal{N}(0,\hat{U}^H_1U_1\Sigma_1U_1^H\hat{U}_1+I)$ so $w_i\approx\mathcal{N}(0,\sigma^2_i|<u_i,\hat{u}_i>|^2+1)$ are i.i.d.  Therefore,
+
+\begin{equation}
+\frac{w_i^2}{\sigma^2_i|<u_i,\hat{u}_i>|^2+1}\sim\chi_1^2
+\end{equation}
+
+Therefore, under $H_1$,
+
+\begin{equation}
+\Lambda_{\text{plugin}}(w)=\sum_{i=1}^k\left(\frac{\sigma_i^2\left(\sigma^2_i|<u_i,\hat{u}_i>|^2+1\right)}{1+\sigma_i^2}\right)\chi^2_{1i}
+\end{equation}
+
+which is also a weighted sum of independent chi-square random variables with 1 degree of freedom.
+
+\section{Theoretical ROC for (\ref{eq:rmt stat})}
+
+Under $H_0$ we have again that $w\sim\mathcal{N}(0,I)$ so $w_i\sim\mathcal{N}(0,1)$ are i.i.d for $i=1,\dots,k$. So $w_i^2\sim\chi_1^2$ are i.i.d for $i=1,\dots,k$. So under $H_0$,
+
+\begin{equation}
+\Lambda-{\text{rmt}}(w)=\sum_{i=1}^k\left(\frac{\sigma_i^2|<u_i,\hat{u}_i>|^2_{\text{rmt}}}{1+\sigma_i^2|<u_i,\hat{u}_i>|^2_{\text{rmt}}}\right)\chi^2_{1i}
+\end{equation}
+
+That is, a weighted sum of independent chi-square random variables with 1 degree of freedom.
+
+Now, under $H_1$, we again have that $w\sim\mathcal{N}(0,\hat{U}^H_1U_1\Sigma_1U_1^H\hat{U}_1+I)$ so $w_i\approx\mathcal{N}(0,\sigma^2_i|<u_i,\hat{u}_i>|^2+1)$ are i.i.d.  Therefore,
+
+\begin{equation}
+\frac{w_i^2}{\sigma^2_i|<u_i,\hat{u}_i>|^2+1}\sim\chi_1^2
+\end{equation}
+
+Therefore, under $H_1$,
+
+\begin{equation}
+\Lambda-{\text{rmt}}(w)=\sum_{i=1}^k\left(\sigma^2_i|<u_i,\hat{u}_i>|^2_{\text{rmt}}\right)\chi^2_{1i}
+\end{equation}
+
+which is also a weighted sum of independent chi-square random variables with 1 degree of freedom.
+
+\section{Simulation Results}
+
+We now demonstrate the performance of the three classifiers derived in Section \ref{sec:classifiers} through numerical simulations. To compare classifiers across all thresholds, $\gamma$, we generate a Receiver Operating Characteristic (ROC) curve for each classifier. ROC curves plot $P_D$ vs. $P_F$ for a classifier. Curves lying in the northwest regime are the best as they operate with a high probability of detection and a low probability of false-alarm.
+
+To test our classifiers first generate a random $U_1$ by taking the first $k$ left singular vectors of a random $n\times n$ matrix. Using the desired $\Sigma_1$ we generate $m$ training points via (\ref{eq:prob state}). We then form our parameter estimates (\ref{eq:param estims}) and random matrix theory values (\ref{eq:cov}) and (\ref{eq:angles}) to be used in our classifier.
+
+We then generate $r$ testing points of each class via (\ref{eq:prob state}) and process them via $w=\hat{U}_1^Hy$. We calculate our statistic for each testing point for each classifier via (\ref{eq:oracle stat}), (\ref{eq:plugin stat}) and (\ref{eq:rmt stat}). 
+
+Using algorithm 1 of Fawcett 2005 we calculate the ROC curve of each classifier by sweeping $\gamma$ used in (\ref{eq:oracle classifier}), (\ref{eq:plugin classifier}) and (\ref{eq:rmt classifier})
+
+We then repeat this process multiple times with a different random $U_1$ to generate multiple ROC curves. Using algorithm 4 of Fawcett 2005 we average the ROC curves of each trial to produce a one final ROC curve for each of the three classifiers.
+
+\begin{center}
+\begin{tabular}{c|c|c|c|c|c|c|c|}
+Figure & $n$ & $m$ & $c=n/m$ & $k$ & $r$ & trials & $\Sigma_1$ \\ \hline
+1 & 100 & 100 & 1 & 1 & 5000 & 10 & $\diag(10,1)$ \\ \hline
+2 & 100 & 100 & 1 & 1 & 5000 & 10 & $\diag(10,1)$ \\ \hline
+3 & 100 & 100 & 1 & 1 & 5000 & 10 & $\diag(10,1)$ \\ \hline
+4 & 100 & 100 & 1 & 1 & 5000 & 10 & $\diag(10,1)$ \\ \hline
+5 & 100 & 100 & 1 & 1 & 5000 & 10 & $\diag(10,1)$ \\ \hline
+\end{tabular}
+\end{center}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=5in]{rank_1}
+\caption{Rank 1}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=5in]{rank_2}
+\caption{Rank 2}
+\end{figure}
+
+\end{document} 

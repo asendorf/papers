@@ -1,0 +1,115 @@
+In this section we provide the data model that we will use throughout the paper. This
+model emulates the linear signal-plus-noise model used in many applications. We then
+provide the optimization problems and solutions to canonical correlation analysis (CCA),
+regularized CCA (RCCA), informative CCA (ICCA), and limit RCCA (LRCCA). 
+
+\subsection{Data Model}
+
+Let $\widetilde{X}_n=\left[\widetilde{x}_1,\dots,\widetilde{x}_n\right]$ and
+$\widetilde{Y}_n=\left[\widetilde{y}_1,\dots,\widetilde{y}_n\right]$ be two datasets with
+observations $\widetilde{x}_i\in\reals^{p}$ and
+$\widetilde{y}_i\in\reals^{q}$. Throughout, we model the datasets as
+\beq\label{eq:model}\ba
+&\widetilde{X}_n = U_x\Theta_xV_x^T + X_n,\\
+&\widetilde{Y}_n = U_y\Theta_yV_y^T + Y_n\\
+\ea\eeq where $U_x\in\reals^{p\times r}$, $U_y\in\reals^{q\times r}$ are independent
+orthonormal matrices, $V_x\in\reals^{n\times r}$ and $V_y\in\reals^{n\times r}$ are
+orthogonal matrices such that $\E{V_x^TV_y}=P=\diag\left(\rho_1,\dots,\rho_r\right)$ with
+$0\leq\rho_i\leq1$, and $\Theta_x=\diag(\theta_{x1},\dots,\theta_{xr})$ and
+$\Theta_y=\diag(\theta_{y1},\dots,\theta_{yr})$. We denote $p$ as the dimension of the
+first dataset, $q$ as the dimension of the second dataset, $n$ as the number of training
+samples, and $r$ as the maximum number of signals in either
+dataset. $X_n\in\reals^{p\times n}$ and $Y_n\in\reals^{p\times n}$ model the system noise
+and are assumed to be independent. In this regard, our model accounts for different
+dimensional signal subspaces in $\widetilde{X}$ and $\widetilde{Y}$ by setting the
+appropriate $\theta$ and $\rho$ to zero. Finally, define
+$\Rxxhat=\frac{1}{n}\widetilde{X}_n\widetilde{X}_n^T$,
+$\Ryyhat=\frac{1}{n}\widetilde{Y}_n\widetilde{Y}_n^T$, and
+$\Rxyhat=\frac{1}{n}\widetilde{X}_n\widetilde{Y}_n^T$ as the sample covariance matrices.
+
+\subsection{CCA}
+
+The goal of CCA is to find a linear transformation for each dataset that maximizes the
+correlation between the datasets in the projected spaces. We represent the linear
+transformations with the canonical vectors $w_x\in\reals^{p}$ and
+$w_y\in\reals^{q}$ and the projection with the canonical variates $z_x=w_x^Hx$ and
+$z_y=w_y^Hy$. The objective is to find the canonical vectors $w_x$ and $w_y$ that
+maximize the correlation between the canonical variates $z_x$ and $z_y$. Formally, the
+optimization problem is
+\begin{equation}\label{eq:cca_opt}
+  \begin{aligned}
+    &\argmax_{w_x,w_y}&&\rho = \E{z_xz_y}\\
+    & \text{subject to}&&\E{z_x^2}=1, \E{z_y^2}=1.
+  \end{aligned}
+\end{equation}
+We may obtain a closed form solution for (\ref{eq:cca_opt}) through the SVD of
+\be
+\Cccahat=\Rxxhat^{-1/2}\Rxyhat\Ryyhat^{-H/2}.
+\ee
+Let $FKG^H$ be the SVD of $\Cccahat$ where
+$F=[f_1,\dots,f_{p}]$, $K=\diag(k_1,\dots,k_{\min\left(p,q\right)})$, and
+$G=[g_1,\dots,g_{q}]$. Then the solution for the canonical vector pair corresponding to
+the largest canonical correlation is
+\beq\label{eq:cca_svd_sol}\ba 
+&\rho = k_1\\ 
+&w_x = \Rxxhat^{-1/2}f_1\\ 
+&w_y = \Ryyhat^{-1/2}g_1.\\ 
+\ea\eeq
+To find higher order canonical vector and correlation pairs we take successive singular
+vector and value pairs of $\Cccahat$.
+
+\subsection{RCCA}
+
+When $n<p+q$, CCA reports a perfect correlation of $\rho=1$ regardless of the true
+correlation \cite{pezeshki2004empirical}. To overcome this performance loss, RCCA
+introduces a regularization parameter, $\eta$, that adds an identity to the sample
+covariance matrix of each dataset. Formally, the RCCA optimization problem is
+\begin{equation}\label{eq:rcca_opt}
+  \begin{aligned}
+    &\argmax_{w_x,w_y}&&\rho = E[z_xz_y]\\
+    & \text{subject to}&& E[z_x^2] + \eta w_x^Hw_x\leq 1\\
+    &&& E[z_y^2] + \eta w_y^Hw_y\leq 1.\\
+  \end{aligned}
+\end{equation}
+We solve (\ref{eq:rcca_opt}) by taking the SVD of $\Creg = \left(\Rxxhat+\eta
+  I_{p}\right)^{-1/2}\Rxyhat\left(\Ryyhat +\eta I_{q}\right)^{-1/2}$. Let
+  $FKG^H$ be the SVD of $\Creg$ where $F=[f_1,\dots,f_{p}]$,
+  $K=\diag(k_1,\dots,k_{\min\left(p,q\right)})$, and $G=[g_1,\dots,g_{q}]$. The
+  solution to RCCA is
+\beq\label{eq:rcca_sol}\ba
+    & \rho =k_1 \\
+    & w_x=(\Rxxhat+\eta I_{p})^{-1/2}f_1 \\
+    & w_y = (\Ryyhat+\eta I_{q})^{-1/2}g_1.\\
+\ea\eeq
+Higher order canonical vector and correlation pairs are again computed using successive singular
+value and vector pairs of $\Creg$.
+
+\subsection{ICCA}
+
+We repeat the informative CCA (ICCA) algorithm presented in Chapter
+\ref{sec:chpt_cca_det}, first proposed by Nadakuditi
+\cite{nadakuditi2011fundamental}. ICCA can avoids the performance loss in the sample
+deficient regime by first trimming the individual data matrices to only include
+informative subspace components. Let $\widetilde{X}=F_xK_xG_x^T$ and
+$\widetilde{Y}=F_yK_yG_y^T$ be the data SVDs for our data matrices. Define the trimmed data
+matrices
+\be\ba
+& \widetilde{F}_x = F_x(:,1:r_x) && \widetilde{G}_x = G_x(:,1:r_x)\\
+& \widetilde{F}_y = F_y(:,1:r_y) && \widetilde{G}_y = G_y(:,1:r_y)\\
+\ea\ee 
+where $r_x$ and $r_y$ are the number of informative components in the first
+and second datasets, respectively. To determine the number of informative components one
+may employ techniques in \cite{asendorf2013performance, nadakuditi2008sample}. Using these trimmed data matrices, we form the matrix
+used for ICCA,
+\beq\label{eq:icca_chat}
+  \widetilde{C} = \widetilde{F}_x\widetilde{G}_x^T\widetilde{G}_y\widetilde{F}_y^T,
+\eeq
+with SVD $\widetilde{C} = \widetilde{F}\widetilde{K}\widetilde{G}^H$, where $\widetilde{F}=[\widetilde{f}_1,\dots,\widetilde{f}_{r_x}]$, $\widetilde{K}=\diag(\widetilde{k}_1,\dots,\widetilde{k}_{\min\left(r_x,r_y\right)})$, and $\widetilde{G}=[\widetilde{g}_1,\dots,\widetilde{g}_{r_y}]$. ICCA returns the following informative correlation estimate and canonical vectors
+\beq\label{eq:icca_rho}
+\ba
+&\rho = \widetilde{k}_1\\
+&w_x = \Rxxhat^{-1/2}\widetilde{f}_1\\
+&w_y= \Ryyhat^{-1/2}\widetilde{g}_1\\
+\ea\eeq
+Higher order canonical vector and correlation pairs are computed using successive singular
+value and vector pairs of $\widetilde{C}$.

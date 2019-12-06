@@ -1,0 +1,90 @@
+This section derives an oracle, plug-in, and optimal detector for the deterministic setting of our subspace detection problem. For this setting, the conditional distributions of the test vector under each hypothesis are simply
+\begin{equation*}
+\begin{aligned}
+&w|H_0\sim\mathcal{N}(0,I_{k})\\
+&w|H_1\sim\mathcal{N}(\widehat{U}^HU\Sigma x, I_{k}).\\
+\end{aligned}
+\end{equation*}
+However, as $x$ is unknown, we employ the generalized likelihood ratio test (GLRT) where $\Lambda(w) = \frac{\max_x f(w|H_1)}{f(w|H_0)}$. The GLRT statistic for our processed data $w$ is
+\begin{equation*}
+\Lambda(w)=\frac{\max_x\mathcal{N}(\widehat{U}^HU\Sigma x,I_{k})}{\mathcal{N}(0,I_{k})}.
+\end{equation*}
+
+\subsection{Oracle Detector}\label{sec:oracle_determ}
+The oracle detector assumes that $k$, $U$, and $\Sigma$ are all known. Given an dimension estimate $\widehat{k}$, our modified GLRT statistic is
+\begin{equation*}
+\Lambda(w) = \frac{\max_{U,\Sigma,x}\mathcal{N}(\widehat{U}^HU\Sigma x, I_{\widehat{k}})}{\mathcal{N}(0,I_{\widehat{k}})}
+\end{equation*}
+Employing maximum likelihood estimation on $x$ in the GLRT yields the estimate $\widehat{x}=\left(\Sigma U^H\widehat{U}\widehat{U}^HU\Sigma\right)^{-1}\Sigma U^H\widehat{U}w$. After simplifying the GLRT statistic using $\widehat{x}$ and using the natural logarithm operator as a monotonic operation, the oracle statistic becomes
+\begin{equation}\label{eq:oracle_stat_determ}
+\boxed{\Lambda_\text{oracle}(w) = w^H\left(\widehat{U}^HU\Sigma\left(\Sigma U^H\widehat{U}\widehat{U}^HU\Sigma\right)^{-1}\Sigma U^H\widehat{U}\right)w}
+\end{equation}
+and the oracle detector is
+\begin{equation*}
+\boxed{\Lambda_\text{oracle}(w) \detgtrless 2\ln(\eta_\text{oracle})}
+\end{equation*}
+where $\eta_\text{oracle}$ satisfies $P(\Lambda(w)\leq2\ln\left(\eta_\text{oracle}\right)|H_0)=\alpha$.
+
+\subsection{Plug-in Detector}\label{sec:plugin_determ}
+In our problem statement however, $k$, $U$, and $\Sigma$ are unknown and therefore (\ref{eq:oracle_stat_determ}) cannot be computed directly. One may then substitute a ML estimate for $U$ in (\ref{eq:oracle stat}) as in \cite{jin2005cfar} and \cite{mcwhorter2003matched}. The ML estimate (in the large-sample, small matrix setting) for $U$ is the top $k$ left singular vectors $\widehat{U}=[\widehat{u}_1 \dots \widehat{u}_{k}]$ of the training data matrix, $\widetilde{Y}$.
+
+By replacing the $U$ with the estimate $\widehat{U}$ we obtain the plug-in detector which employs the test statistic:
+\begin{equation*}
+\Lambda_{\text{plugin}}(w)= w^H\left(\widehat{U}^H\widehat{U}\Sigma\left(\Sigma\widehat{U}^H\widehat{U}\widehat{U}^H\widehat{U}\Sigma\right)^{-1}\Sigma\widehat{U}^H\widehat{U}\right)w.\\
+\end{equation*}
+This simplifies to
+\begin{equation}\label{eq:plugin_stat_determ}
+\boxed{\Lambda_{\text{plugin}}(w) = w^Hw=\sum_{i=1}^kw_i^2}
+\end{equation}
+and our detector becomes
+\begin{equation}\label{eq:plugin_class_determ}
+\boxed{\Lambda_{\text{plugin}}(w) \detgtrless 2\ln(\eta_{\text{plugin}})}
+\end{equation}
+where $\eta_{\text{plugin}}$ satisfies $P(\Lambda_{\text{plugin}}(w)\leq2\ln\left(\eta_{\text{plugin}}\right)|H_0)=\alpha$.
+
+The plug-in detector assumes that the estimated signal subspace $\widehat{U}$ is equal to the true signal subspace $U$. However, as shown in Section \ref{sec:rmt}, using uninformative components of $w$ is not well motivated.
+
+\subsection{Optimal Detector}\label{sec:optimal_determ}
+Consider the term $\widehat{U}^HU$. By Theorem \ref{th:angles} and by noting that the singular vectors are unique up to a phase, we have that in the large matrix limit $\widehat{U}^HU \approx SA$ where $S=\diag(s_1,\dots,s_{k})$ with $s_i=\exp(j \psi_i)$ where for some $\psi_{i}$, $s_i$ denotes the random phase ambiguity in the computation of the SVD and $A=\diag(a_1,\dots,a_k)$ with $a_i=|\langle u_i,\widehat{u}_i\rangle|$.
+
+The plug-in detector assumes that $A=S=I_k$, that is $s_i=1$ and $|\langle u_i,\widehat{u}_i\rangle|=1$ . However, as seen in Section \ref{sec:rmt}, this assumption is invalid. Let us now re-derive the GLRT using Theorem \ref{th:angles}. Our conditional distributions are
+\begin{equation*}
+\begin{aligned}
+&w|H_0\sim\mathcal{N}(0,I_{k})\\
+&w|H_1\sim\mathcal{N}(SA\Sigma x, I_{k})\\
+\end{aligned}
+\end{equation*}
+and the GLRT is
+\begin{equation*}
+\Lambda(w)=\frac{\max_x\mathcal{N}(SA\Sigma x,I_{k})}{\mathcal{N}(0,I_{k})}.
+\end{equation*}
+Since the covariance matrices are diagonal and $S$, $A$, and $\Sigma$ are diagonal, we have that
+\begin{equation*}
+\max_x\mathcal{N}(SA\Sigma x,I_{k})=\prod_{i=1}^k\max_{x_i}\mathcal{N}(\sigma_is_ia_ix_i,1).
+\end{equation*}
+We use Theorem \ref{th:angles} to estimate $a_i=\sqrt{|\langle u_i,\widehat{u}_i\rangle|^2_{\text{rmt}}}$. Now, $a_i=0$ when $\sigma_i\leq \frac{c^{1/4}}{\sqrt{p}}$. We define $k_\text{eff}$ as the number of signal singular values above the phase transition $\frac{c^{1/4}}{\sqrt{p}}$. Our GLRT becomes
+\begin{equation*}
+\Lambda(w)=\frac{\mathcal{N}(0,1)^{k-k_\text{keff}}\prod_{i=1}^{k_\text{eff}}\max_{x_i}\mathcal{N}(\sigma_is_ia_ix_i,1)}{\mathcal{N}(0,I_{k})}.
+\end{equation*}
+Employing maximum likelihood estimation on the remaining $x_i$ yields the estimates $\widehat{x}_i=\frac{w_i}{s_ia_i}$. Notice that for these values of $x_i$, dividing by $a_i$ is justified as the corresponding signal singular value is above the phase transition and so $a_i>0$. After simplification of the GLRT using this $\widehat{x}_i$ and the natural logarithm operator, the statistic becomes
+\begin{equation}\label{eq:optimal_stat_determ}
+\boxed{\Lambda_{\text{optimal}}(w) = \sum_{i=1}^{k_\text{eff}}w_i^2}
+\end{equation}
+and our detector becomes
+\begin{equation}\label{eq:optimal_class_determ}
+\boxed{\Lambda_{\text{optimal}}(w) \detgtrless 2\ln(\eta_{\text{optimal}})}
+\end{equation}
+where $\eta_{\text{optimal}}$ satisfies $P(\Lambda_{\text{optimal}}(w)\leq2\ln\left(\eta_{\text{optimal}}\right)|H_0)=\alpha$.
+\begin{table*}[!ht]
+\centering
+\begin{tabular}{clll}\toprule
+ Detector & Detector Statistic $\Lambda(w)$  & Null Hypothesis Distribution $\Lambda|H_0$ & Simple Hypothesis Distribution $\Lambda|H_1$\\
+\midrule
+Oracle & $ w^H\left(\widehat{U}^HU\Sigma\left(\Sigma U^H\widehat{U}\widehat{U}^HU\Sigma\right)^{-1}\Sigma U^H\widehat{U}\right)w$ &  & \\
+Plug-in & $\sum_{i=1}^{\widehat{k}}w_i^2$ & $\chi^2_{\widehat{k}}$ & $\chi^2_{\text{nc}}(\widehat{k},\sum_{i=1}^{\min(\widehat{k},k_\text{eff})}\sigma_i^2|\langle u_i,\widehat{u}_i\rangle|^2x_i^2)$\\
+ Optimal& $\sum_{i=1}^{\min(k_\text{eff},\widehat{k})}w_i^2$ & $\chi^2_{\min(\widehat{k},k_\text{eff})}$ & $\chi^2_{\text{nc}}(\min(\widehat{k},k_\text{eff}),\sum_{i=1}^{\min(\widehat{k},k_\text{eff})}\sigma_i^2|\langle u_i,\widehat{u}_i\rangle|^2x_i^2)$\\
+\bottomrule
+\end{tabular}
+\caption{Given an observation vector $y$ from the deterministic setting, we form the vector $w=\widehat{U}^Hy$ where $\widehat{U}$ is an estimate of the signal subspace. The table summarizes the test statistic associated with each detector for the deterministic setting. The associated distribution of each test statistic under $H_0$ and $H_1$ is provided in the last two columns. The notation $\chi^2_{\text{nc}}(k,\delta)$ is a non-central chi-square random variable with $k$ degrees of freedom and non-centrality parameter $\delta$. In the CFAR setting, the threshold is  set to obtain the desired false alarm probability. Note the appearance of $k_\text{eff}$ in the optimal detector.}\vskip-0.2cm
+\label{table:summary_determ}
+\end{table*} 

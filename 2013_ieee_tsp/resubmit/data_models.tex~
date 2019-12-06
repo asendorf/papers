@@ -1,0 +1,45 @@
+\textcolor{blue}{Given an observation, we wish to discriminate between the $H_0$ hypothesis that the observation is purely noise and the $H_1$ hypothesis that the observation contains a target signal. We assume that the signal of interest lies in a low dimensional subspace as in \cite{besson2006cfar,bandiera2007glrt,bandiera2007adaptive,maris2003resampling,soong1995principal,besson2005matched,thai2002invariant, healey1999models,kwon2006kernel}. However, this low-rank subspace and the SNR governing the subspace components are unknown. To design a detector to distinguish between the $H_0$ and $H_1$ hypotheses, we have access to a training dataset, recorded under similar noisy conditions, whose observations are known to contain the signal of interest (see, for example, \cite{healey1999models,kwon2006kernel}). We use this training data to form estimates of the unknown low-rank subspace and each component's SNR. This section will mathematically describe the training data models, how we estimate any unknown parameters, and a stochastic and deterministic model for the testing data. Both testing models share the same training data model.}
+
+\subsection{Training Data Model}\label{sec:training_data}
+
+\textcolor{blue}{We model our unknown subspace with the complex matrix $U=[u_1,\dots,u_k]$ such that $\dim u_i = n$ and $\langle u_i, u_j\rangle = u_i^Hu_j=\delta_{ij}$ for $i,j=1,\dots,k$. Here $\delta_{ij}$ is the delta function such that $\delta_{ij} = 0$ for $i\neq j$ and $\delta_{ij}=1$ for $i=j$.} We are given $m$ signal-bearing training vectors $y_i\in \complex^{n\times 1}$, $i=1,\dots,m$, modeled\footnote{For expositional simplicity, we have assumed that all our matrices and vectors are complex-valued; our results also hold for real-valued matrices and vectors.} as $y_i=Ux_i+z_i$ where $z_i\overset{\text{i.i.d.}}{\sim}\mathcal{CN}(0,I_n)$ and $x_i\overset{\text{i.i.d.}}{\sim}\mathcal{CN}(0,\Sigma)$ where $\Sigma=\diag(\sigma_1^2,\dots,\sigma_k^2)$ with $\sigma_1>\sigma_2>\dots>\sigma_k>0$ unknown. \textcolor{blue}{Similar gaussian priors appear in \cite{bandiera2007glrt, bandiera2007adaptive,thai2002invariant, healey1999models}}. $\Sigma$ models the SNR of each subspace component and $z_i$ models the additive noise. For each observation, $x_i$ and $z_i$ are independent. The dimension, $k$, of our subspace is unknown and we assume throughout that $k\ll n$ so that we have a low-rank signal embedded in a high-dimensional observation vector.
+
+\subsection{Parameter Estimation}\label{sec:param_estim}
+
+\textcolor{blue}{The parameters $k$, $U$, and $\Sigma$ are all unknown in our training model. For the rest of the paper, we assume that we are given a dimension estimate, $\widehat{k}$; this may have been estimated from the training data or provided by a domain expert. Typically, $\widehat{k}$ is an overestimation of a dimension estimate provided by percent variance, scree plots \cite{zhu2006automatic}, or robust techniques \cite{nadakuditi2010fundamental,johnstone2001distribution,el2007tracy}. This overestimation, or ``play-it-safe'' strategy, strives to include all signal subspace components at the expense of possibly including non-signal subspace compoents.}
+
+\textcolor{blue}{Given $\widehat{k}$ and the signal bearing training data $Y = \begin{bmatrix} y_1 & \dots & y_m \end{bmatrix}$, we form the sample covariance matrix $S=\frac{1}{m}YY^{H}$. The covariance matrix of $y_i$ is $U\Sigma U^H +I_n$ and it follows that the (classical) ML estimates (in the many-sample, small matrix setting) for $U$ and $\Sigma$ are given by \cite{muirhead1982aspects}
+\begin{equation}\label{eq:param_estims_stoch}
+\begin{aligned}
+&\widehat{U}=[\widehat{u}_1 \dots \widehat{u}_{\widehat{k}}]\\
+&\textcolor{blue}{\widehat{\sigma}_i^2 = \max(0,\widehat{\lambda}_i -1)} \text{ for } i=1,\dots,\widehat{k}\\
+\end{aligned}
+\end{equation}
+where $\widehat{\lambda}_1,\dots,\widehat{\lambda}_{\widehat{k}}$ are the $\widehat{k}$  largest eigenvalues of the sample covariance matrix, $S$, and $\widehat{u}_1,\dots,\widehat{u}_{\widehat{k}}$ are the corresponding eigenvectors. Define the signal covariance matrix estimate as $\widehat{\Sigma}=\diag(\widehat{\sigma}_1^2,\dots,\widehat{\sigma}_{\widehat{k}}^2)$. We are now able to use the parameter estimates $\widehat{U}$ and $\widehat{\Sigma}$ in detectors where necessary.}
+
+\subsection{Testing Data Model}
+\textcolor{blue}{We will consider both a stochastic and deterministc model for a test vector. In both settings, parameter estimates are formed as described in (\ref{eq:param_estims_stoch}) from training data modeled in Section \ref{sec:training_data}.}
+
+In the stochastic setting, the test vector $y\in\complex^{n\times 1}$ is modeled as
+\begin{equation}\label{eq:stoch_setup}
+\text{Stochastic Model: }y=\left\{
+\begin{aligned}
+&z
+&& y\in H_0:\text{ Noise only}\\
+&Ux+z
+&& y\in H_1:\text{ Signal-plus noise}\\
+\end{aligned}\right. ,
+\end{equation}
+where $U$, $z$, and $x$ are modeled as described in Section \ref{sec:training_data}. This assumes that the signal, $Ux$, may lie anywhere in the subspace and whose position in the subspace is governed by the signal covariance matrix $\Sigma$.
+
+In the deterministic setting, the test vector $y\in\complex^{n\times 1}$ is modeled as
+\begin{equation}\label{eq:determ_setup}
+\text{Deterministic Model: }y=\left\{
+\begin{aligned}
+&z
+&& y\in H_0:\text{ Noise only}\\
+&U\Sigma^{1/2} x+z
+&& y\in H_1:\text{ Signal-plus noise}\\
+\end{aligned}\right. ,
+\end{equation}
+where $U$, $\Sigma$, and $z$ are modeled as described in Section \ref{sec:training_data}. Here, in contrast to the stochastic setting, $x$ is a non-random deterministic vector. Thus the signal, $U\Sigma^{1/2}x$, lies at a fixed point in the unknown subspace. \textcolor{blue}{Note that $\Sigma$ still controls the SNR of each subspace component} and that placing a mean zero, identity covariance Gaussian prior on $x$ in (\ref{eq:determ_setup}) yields the stochastic model described in (\ref{eq:stoch_setup}).

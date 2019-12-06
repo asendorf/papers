@@ -1,0 +1,301 @@
+% The packages used here are just a sample. You may need others, and may not need some of these. It doesn't hurt to leave them in, unless they start to conflict with other packages you've added. Chapter 2 has example code for equations, figures, tables, citations, abbreviations, etc. If there are sections labeled 'optional' that you don't want, just comment them out. -jg
+
+\documentclass[reqno,12pt,oneside]{report} % right-side equation numbering, 12 point font, print one-sided 
+%\documentclass[reqno,12pt,twoside,openright]{report} % right-side equation numbering, 12 point font, print two-sided, Chapters start on odd pages. Rackham only accepts one-sided, so this is for personal printings.
+
+\usepackage{rac}         % Use Rackham thesis style file
+\usepackage{setspace}    % Allows you to specify the line spacing
+\onehalfspacing %or \doublespaceing
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+
+\usepackage[font=small,labelfont=bf]{caption}
+
+\include{thesis_header}
+
+\usepackage{accents,array}
+
+% CCA things
+\newcommand{\xI}{x_1}
+\newcommand{\xII}{x_2}
+\newcommand{\xIhat}{\widehat{x}_1}
+\newcommand{\xIIhat}{\widehat{x}_2}
+\newcommand{\yI}{y_1}
+\newcommand{\yII}{y_2}
+\newcommand{\RI}{R_{11}}
+\newcommand{\RII}{R_{22}}
+\newcommand{\RIII}{R_{12}}
+\newcommand{\RIhat}{\widehat{R}_{11}}
+\newcommand{\RIIhat}{\widehat{R}_{22}}
+\newcommand{\RIIIhat}{\widehat{R}_{12}}
+\newcommand{\wI}{w_1}
+\newcommand{\wII}{w_2}
+\newcommand{\Creg}{C_{\text{reg}}}
+\newcommand{\Creghat}{\widehat{C}_{\text{reg}}}
+\newcommand{\Cregtil}{\widetilde{C}_{\text{reg}}}
+\newcommand{\Ckcca}{C_{\text{kcca}}}
+\newcommand{\Ckccatil}{\widetilde{C}_{\text{kcca}}}
+
+\newcommand{\twr}{{\sf TW}_\reals}
+\newcommand{\twc}{{\sf TW}_\complex}
+\newcommand{\sx}{s_{x,i}}
+\newcommand{\sy}{s_{y,i}}
+\newcommand{\zx}{z_{x,i}}
+\newcommand{\zy}{z_{y,i}}
+\newcommand{\Zx}{Z_x}
+\newcommand{\Zy}{Z_y}
+\newcommand{\Ux}{U_x}
+\newcommand{\Uy}{U_y}
+\newcommand{\Vx}{V_x}
+\newcommand{\Vy}{V_y}
+\newcommand{\Pxy}{P_{xy}}
+\newcommand{\kx}{k_x}
+\newcommand{\ky}{k_y}
+\newcommand{\kxhat}{\widehat{k}_x}
+\newcommand{\kyhat}{\widehat{k}_y}
+\newcommand{\khatcca}{\widehat{k}_{\text{cca}}}
+\newcommand{\khaticca}{\widehat{k}_{\text{icca}}}
+\newcommand{\Uxhat}{\widehat{U}_x}
+\newcommand{\Uyhat}{\widehat{U}_y}
+\newcommand{\Sigxhat}{\widehat{\Sigma}_x}
+\newcommand{\Sigyhat}{\widehat{\Sigma}_y}
+\newcommand{\Sigxtil}{\widetilde{\Sigma}_x}
+\newcommand{\Sigytil}{\widetilde{\Sigma}_y}
+\newcommand{\Vxhat}{\widehat{V}_x}
+\newcommand{\Vyhat}{\widehat{V}_y}
+\newcommand{\Uxtil}{\widetilde{U}_x}
+\newcommand{\Uytil}{\widetilde{U}_y}
+\newcommand{\Vxtil}{\widetilde{V}_x}
+\newcommand{\Vytil}{\widetilde{V}_y}
+\newcommand{\Uxcir}{\accentset{\circ}{U}_x}
+\newcommand{\Uycir}{\accentset{\circ}{U}_y}
+\newcommand{\Vxcir}{\accentset{\circ}{V}_x}
+\newcommand{\Vycir}{\accentset{\circ}{V}_y}
+\newcommand{\Sigxcir}{\accentset{\circ}{\Sigma}_x}
+\newcommand{\Sigycir}{\accentset{\circ}{\Sigma}_y}
+\newcommand{\kapcir}{\accentset{\circ}{\kappa}}
+\newcommand{\xii}{x_i}
+\newcommand{\yii}{y_i}
+\newcommand{\Tx}{\Theta_x}
+\newcommand{\Ty}{\Theta_y}
+\newcommand{\Txhat}{\widehat{\Theta}_x}
+\newcommand{\Tyhat}{\widehat{\Theta}_y}
+\newcommand{\tx}{\theta^{(x)}}
+\newcommand{\ty}{\theta^{(y)}}
+\newcommand{\Kxy}{K_{xy}}
+\newcommand{\Kxytil}{\widetilde{K}_{xy}}
+\newcommand{\Uktil}{U_{\widetilde{K}}}
+\newcommand{\Vktil}{V_{\widetilde{K}}}
+\newcommand{\Uktilhat}{\widehat{U}_{\widetilde{K}}}
+\newcommand{\Vktilhat}{\widehat{V}_{\widetilde{K}}}
+\newcommand{\kxy}{k^{xy}}
+\newcommand{\defeq}{=:}
+\newcommand{\Rxx}{R_{xx}}
+\newcommand{\Ryy}{R_{yy}}
+\newcommand{\Rxy}{R_{xy}}
+\newcommand{\Rxxhat}{\widehat{R}_{xx}}
+\newcommand{\Ryyhat}{\widehat{R}_{yy}}
+\newcommand{\Rxyhat}{\widehat{R}_{xy}}
+\newcommand{\wx}{w_x}
+\newcommand{\wy}{w_y}
+\newcommand{\wxt}{\widetilde{w}_x}
+\newcommand{\wyt}{\widetilde{w}_y}
+\newcommand{\wxicca}{\widehat{w}_x^{\text{icca}}}
+\newcommand{\wyicca}{\widehat{w}_y^{\text{icca}}}
+\newcommand{\wxticca}{\widetilde{w}_x^{\text{icca}}}
+\newcommand{\wyticca}{\widetilde{w}_y^{\text{icca}}}
+\newcommand{\wxhaticca}{\widehat{w}_x}
+\newcommand{\wyhaticca}{\widehat{w}_y}
+\newcommand{\Ccca}{C_{\text{cca}}}
+\newcommand{\Cccahat}{\widehat{C}_{\text{cca}}}
+\newcommand{\Ciccahat}{\widehat{C}_{\text{icca}}}
+\newcommand{\rank}{\text{rank}}
+\newcommand{\taucca}{\tau_{\text{cca}}^\alpha}
+\newcommand{\tauicca}{\tau_{\text{icca}}^\alpha}
+\newcommand{\simiid}{\overset{\text{i.i.d.}}{\sim}}
+\newcommand{\rhocca}{\rho_\text{cca}}
+\newcommand{\rhohatcca}{\widehat{\rho}_\text{cca}}
+\newcommand{\rhohaticca}{\widehat{\rho}_\text{icca}}
+\newcommand{\rhoeff}{k_{\text{eff}}^{xy}}
+
+\newcommand{\Clrcca}{C_{\text{lrcca}}}
+
+\newcommand{\Rmcca}{C_{\text{mcca}}}
+\newcommand{\Rmccahat}{\widehat{R}_{\text{mcca}}}
+\newcommand{\Rmccatil}{\widehat{R}_{\text{imcca}}}
+\newcommand{\Ucir}{\accentset{\circ}{U}}
+\newcommand{\Vcir}{\accentset{\circ}{V}}
+
+\newcommand{\Sww}{S_{ww}}
+\newcommand{\Swy}{S_{wy}}
+\newcommand{\Syw}{S_{yw}}
+\newcommand{\Sxx}{S_{xx}}
+\newcommand{\Syy}{S_{yy}}
+\newcommand{\Sxy}{S_{xy}}
+\newcommand{\Syx}{S_{yx}}
+\newcommand{\wxhat}{\widehat{w}_x}
+\newcommand{\wyhat}{\widehat{w}_y}
+\newcommand{\ttu}{\widetilde{\widetilde{u}}}
+
+\newcommand{\iccap}{ICCA\texttt{+} }
+\newcommand{\iccaps}{ICCA\texttt{+}}
+
+
+\newcolumntype{C}{ >{\centering\arraybackslash} m{0.7in} }
+\newcolumntype{D}{ >{\centering\arraybackslash} m{1in} }
+\newcolumntype{E}{>{\centering\arraybackslash} m{2in}}
+\newcolumntype{F}{>{\centering\arraybackslash} m{3in}}
+
+
+\newcommand{\figwidth}{2.9in}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% If printing two-sided, this makes sure that any blank page at the 
+% end of a chapter will not have a page number. 
+\makeatletter
+\def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
+\hbox{}
+\thispagestyle{empty}
+\newpage
+\if@twocolumn\hbox{}\newpage\fi\fi\fi}
+\makeatother 
+
+\begin{document}
+
+% Title page as required by Rackham dissertation guidelines
+\titlepage{Informative Data Fusion:\\ Beyond Canonical Correlation Analysis}{Nicholas A. Asendorf}{Doctor of Philosophy}
+{Electrical Engineering and Computer Science}{2015}
+{Assistant Professor Raj Rao Nadakuditi, Chair\\
+ Assistant Professor Laura Balzano\\
+ Professor Alfred O. Hero III\\
+ Associate Professor Rada Mihalcea}
+
+
+% Begin the front matter as required by Rackham dissertation guidelines
+\initializefrontsections
+
+% Optional Frontispiece % TODO
+\frontispiece{\includegraphics[width=5in]{figures/secret_truth.jpg}}
+
+% Optional, but recommended, Copyright page
+\copyrightpage{Nicholas A. Asendorf}
+
+% Page numbering. If you don't include a frontispiece or copyright page, you'll need to change this for two-sided printing.
+\makeatletter
+\if@twoside \setcounter{page}{4} \else \setcounter{page}{1} \fi
+\makeatother
+ 
+% Optional Dedication page
+\dedicationpage{For my grandmothers Josephine Asendorf and Doris Evashko, in memoriam.}
+
+% Optional Acknowledgements page
+\startacknowledgementspage
+\input{acknowledgements}
+\label{Acknowledgements}
+
+% Table of contents, list of figures, etc.
+\tableofcontents     % Required
+\listoffigures       % Required if there is more than one figure
+\listoftables        % Required if there is more than one table
+%\listofmaps          % Required if there is more than one map
+\listofappendices    % Required if there is more than one appendix
+%\listofabbreviations % Optional. Abbreviations should be stored in a file named abbr.tex
+
+% Optional in-dissertation Abstract Page
+\startabstractpage
+{Informative Data Fusion:\\ Beyond Canonical Correlation Analysis}{Nicholas
+  A. Asendorf}{Chair: Raj Rao Nadakuditi}
+%\abstract{\input{abstract.tex}}
+\input{abstract.tex}
+\label{Abstract}
+
+\startthechapters 
+% The individual files for each of the chapters are put here.
+% Save each chapter of your thesis to a seperate tex file
+% and then use the \input command to include this file in your
+% thesis.  For instance you can save a file to "intro.tex" and 
+% then type \input{intro}. 
+
+
+\chapter{Introduction}\label{sec:intro}
+\input{intro.tex}
+
+
+\chapter{Performance of Matched Subspace Detectors Using Finite Training Data}\label{sec:chpt_msd}
+\input{ieee_msd/IEEE_RMT_MSD.tex}
+
+\chapter{Extensions of Deterministic Matched Subspace Detectors: Missing Data and Useful
+  Subspace Components}\label{sec:chpt_msd_exten}
+%\chapter{Useful Subspace Components in Deterministic Matched Subspace
+%  Detectors}\label{sec:taes_useful}
+\input{taes_msd/taes_useful.tex}
+
+%\chapter{The performance of deterministic matched subspace detectors when using subspaces estimated from noisy, missing data}\label{sec:ms_missing}
+%\input{msd_missing/ssp_input5.tex}
+
+
+\chapter{Using CCA and ICCA to Detect Correlations in Low-Rank Signal-Plus-Noise Datasets}\label{sec:chpt_cca_det}
+%\input{cca.tex}
+\input{chpt4_det_corr/cca_detect.tex}
+
+\chapter{On Estimating Population Canonical Vectors}\label{sec:chpt_cca_vects}
+\input{chpt5_icca_vect/icca_vects.tex}
+
+\chapter{The Top Singular Values of $XY^H$}\label{sec:chpt_rcca}
+\input{chpt6_xy/xy_proof.tex}
+
+\chapter{The Largest Singular Values of a Random Projection of a Low-Rank Perturbation of
+  a Random Matrix}\label{sec:chpt_svd_proj}
+\input{chpt7_svd_proj/svd_proj.tex}
+
+\chapter{CCA and ICCA for Regression and Detection}\label{sec:chpt_det_reg}
+%\input{detection.tex}
+\input{chpt8_det_reg/det_reg.tex}
+
+%\chapter{Regularized CCA (RCCA)}\label{sec:rcca}
+%\input{rcca.tex}
+
+%\chapter{Significance Tests}\label{sec:sig_tests}
+%\input{sig_tests.tex}
+
+
+%\chapter{Kernel CCA (KCCA)}\label{sec:kcca}
+%\input{kcca.tex}
+
+\chapter{Content Based Image Retrieval and Automatic Image Annotation Using Correlation Methods}\label{sec:chpt_ia}
+\input{chpt9_ia/image_annot.tex}
+
+\chapter{Multiset CCA (MCCA)}\label{sec:chpt_mcca}
+\input{chpt10_mcca/mcca.tex}
+
+\chapter{Afterword}\label{sec:fw}
+\input{future_work.tex}
+
+\startappendices
+\appendix{Proof of Theorem \ref{th:other angles}}
+\label{sec:ieee_msd_appen}
+\input{ieee_msd/appendix.tex}
+ \appendix{Theoretical and Empirical MCCA Derivations}
+\label{sec:mcca_derivs}
+ \input{appendix.tex}
+\appendix{Derivations of Empirical CCA Canonical Correlations and Accuracy of Canonical Vectors}
+\input{appendixB/cca_acc.tex}
+\appendix{Significance Test for Canonical Correlations}
+\input{appendixC/icca_sig.tex}
+
+\bibliographystyle{IEEEtran}
+%\startbibliography
+ \begin{singlespace} % Bibliography must be single spaced
+\bibliography{IEEEabrv,thesis_bib,taes_msd/taes_useful,ieee_msd/IEEE_RMT_MSD_bib}
+ \end{singlespace}
+
+
+% An external Abstract that can be printed at the end of the document, 
+% for separate submission to Rackham. Comment it out when not needed. - jg
+%\startextabstractpage
+%{The Title of Your Dissertation}{Your Name}{Chair: Albert Einstein}
+%\input{Abstract/Abstract}
+%\label{ExtAbstract}
+
+\end{document}

@@ -1,0 +1,85 @@
+A ubiquitous problem in signal and array processing is designing multi-dimensional
+signal-plus-noise versus noise detectors. In such applications, an observation
+$w$ may belong to either the noise only hypothesis ($H_0$) or the signal-plus-noise hypothesis
+($H_1$), via the model
+\beq\label{eq:general_setup} 
+w = \begin{cases}
+  z & w\in H_0\\
+  \delta + z & w\in H_1,\\
+\end{cases}
+\eeq
+where $\delta$ is the unknown signal vector and $z$ is additive noise. When modeling
+$\delta$ as a fixed deterministic vector and $z$ as Gaussian noise, the standard detector
+statistic is $\|w\|^2$, the squared norm (magnitude) of the observed vector $w$. This
+detector is commonly referred to as an energy detector because the squared norm measures
+the amount of energy contained in the observation. Energy detectors arise in applications such
+as incoherent radar detection \cite{cui2013performance}, Global Navigation Satellite
+Systems (GNSS) \cite{arribas2013antenna}, and MIMO radar
+\cite{gorji2013widely,zhou2013space}.
+
+In this chapter, we analyze the performance of the energy detector, starting from first
+principles. Using a receiver operating characteristic (ROC) performance analysis, we
+investigate the conditional distributions of the energy detector's test statistic and
+showcase how these distributions shift depending on the number of signal components that
+the energy detector uses. We saw in the previous chapter that including more than the
+$\keff$ number of subspace components degrades detector performance. In this chapter we
+show that, surprisingly, even if a signal component is one of the $\keff$ informative
+components, if its signal strength is too small,
+including it in an energy detector actually degrades detector performance. Using this
+observation, we define the number of signal components that maximize detector performance
+as $\kuse$, which is dependent on the desired false alarm rate of the energy detector. Our
+goal is to bring this phenomenon into focus so that effort can be spent on designing
+better real world detectors.
+
+We are motivated by the more specific problem of deterministic matched subspace
+detection. A matched subspace detector (MSD) is commonly used to detect a signal buried in
+high dimensional noise under the assumption that the signal lies in a low-rank signal
+subspace. Many applications in signal and array processing use such low-rank
+signal-plus-noise models, including incoherent radar detectors \cite{cui2013performance},
+direction detection \cite{santiago2013noise,hu2013doa,liao2013direction}, GNSS
+\cite{arribas2013antenna}, MIMO radar
+\cite{chen2013adaptive,gorji2013widely,zhou2013space} and target detection
+\cite{kwon2013multi}. A deterministic signal model, which assumes that the target signal
+lies at an unknown but fixed point in the signal subspace, occurs in array processing
+\cite{besson2005matched,bandiera2007glrt,bandiera2007adaptive}, MIMO radar
+\cite{sirianunpiboon2013multiple}, and cognitive radio \cite{vazquez2011spatial}.
+When the signal subspace is known \textit{a priori}, the performance of such deterministic
+MSDs has been extensively studied (see, for example,
+\cite{scharf1994matched,vincent2008matched,besson2006cfar}). In a recent paper
+\cite{asendorf2013performance}, we considered the performance of a MSD in the alternative
+setting where the signal subspace is unknown and estimated from finite, noisy,
+signal-bearing training data.
+
+Under a deterministic signal model and appropriate noise assumptions, a MSD is an energy
+detector that projects a observation onto this estimated signal subspace and uses the
+squared norm of the projection as the detector's statistic. In
+\cite{asendorf2013performance}, we used random matrix theory (RMT) to showcase that using
+more than the $\keff$ \textit{informative} subspace components decreases detector
+performance. In this chapter, we show that even though a subspace component may be informative (as
+defined by $\keff$), including it in a detector may degrade performance. Using exactly the
+$\kuse$ subspace components results in the best detector performance. However, as $\kuse$
+is computed assuming knowledge of the unknown deterministic vector, $\keff$ provides a
+realizable upper bound for $\kuse$.
+
+Finally, we consider the deterministic MSD setting where the training data
+is noisy \textit{and} has missing entries. The missing entry context is motivated in
+\cite{balzano2010high} by distributed detection scenarios where it might be prohibitive to
+collect and transmit only a (randomly chosen) fraction $p$ of the training data
+entries. Alternately one might think of $1-p \in (0,1)$ as a compression factor as in
+compressed sensing. We precisely quantify the performance of the MSD with missing data. We
+uncover a phase transition phenomenon by showing that there is 
+a critical fraction, $p_\text{crit}$, which is a simple function of the eigen-SNR, the
+number of training samples, and the number of sensors, below which detection performance
+deteriorates to random guessing. Compressing the training dataset below this critical
+fraction is undesirable.
+
+The chapter is organized as follows. In Section \ref{sec:energy_detector}, we formulate
+the standard signal versus noise detection problem and derive the standard energy
+detector. We discuss the energy detector's conditional distributions, define $\kuse$, and
+discuss its properties in Section \ref{sec:useful}. In Section \ref{sec:msd}, we apply
+these insights to deterministic MSDs and highlight the relationship between $\keff$ and
+$\kuse$ through numerical simulations. In Section \ref{sec:ext}, we discuss the weighted
+energy detector as a natural extension to this work.  We extend the results to the setting
+where our original data matrix may have missing data in Section
+\ref{sec:chpt3:missing}. Finally, we provide concluding remarks in Section
+\ref{sec:conclusion}.

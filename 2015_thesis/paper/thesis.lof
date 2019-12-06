@@ -1,0 +1,427 @@
+\noindent \relax $\@@underline {\hbox {\bf Figure}}\mathsurround \z@ $\relax \hfill \rm \newline 
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Illustration of multi-modal data fusion\relax }}{2}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Empirical ROC curves for the plug-in and oracle detectors. Empirical ROC curves were simulated with $n=200$, $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle k$}\mathaccent "0362{k}=k=2$, and $\Sigma =\mathop {\bf diag}\left (10,0.1\right )$. The empirical ROC curves were computed using $10000$ test samples and averaged over 100 trials using algorithms 2 and 4 of \cite {fawcett2006introduction}. (a) Shows results for the stochastic MSD. (b) Shows results for the deterministic MSD when $x=[0.75,0.75]^T$. For both settings, as $m$ decreases, the performance of the plug-in detector degrades.\relax }}{16}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Stochastic Setting}}}{16}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Deterministic Setting}}}{16}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Empirically determined number of training samples, $m$, needed for the stochastic plug-in detector to achieve a desired performance loss, $\epsilon $, as defined in (2.13\hbox {}). The required false alarm rate is $P_F=0.1$. Empirical ROC curves were generated for $n=200$, $\Sigma =\mathop {\bf diag}(10,0.1)$, $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle k$}\mathaccent "0362{k}=k=2$ using 10000 testing samples and averaged over 100 trials using algorithms 2 and 4 of \cite {fawcett2006introduction}.\relax }}{18}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Empirical and theoretical ROC curves for the stochastic plug-in detector. Empirical ROC curves were simulated using $10000$ test samples and averaged over 50 trials using algorithms 2 and 4 of \cite {fawcett2006introduction}. (a) $\Sigma =\mathop {\bf diag}(10,2)$, $c=1$, $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle k$}\mathaccent "0362{k}=k=2$ so that $k_\text {eff}=2$. (b) $\Sigma =\mathop {\bf diag}(10,2,0.5,0.1)$, $c=10$, $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle k$}\mathaccent "0362{k}=k=4$ so that $k_\text {eff}=1$. Each figure plots empirical ROC curves for $n=50,200,1000$. Theoretical ROC curves were computed as described in Section 2.7\hbox {}. As $n$ increases, the empirical ROC curves approach the theoretically predicted one. However, this convergence is slower for larger $k$ and $c$.\relax }}{35}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$k=2$, $c=1$}}}{35}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$k=4$, $c=10$}}}{35}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Empirical and theoretical ROC curves for the plug-in and RMT detectors. Empirical ROC curves were simulated using $10000$ test vectors and averaged over 100 trials with $n=1000$, $m=500$, and $\Sigma =\alpha \mathop {\bf diag}\left (10,5\right )$. The theoretical ROC curves were computed as described in Section 2.7\hbox {}. (a) Stochastic testing setting. Results are plotted for $\alpha =1,0.5,0.25$. For $\alpha =1$ and $\alpha =0.5$, $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle k$}\mathaccent "0362{k}=k=k_\text {eff}=2$ by (2.16\hbox {}). For $\alpha =0.25$, $k_\text {eff}=1$.Since $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle k$}\mathaccent "0362{k} > k_{\text {eff}}$ when $\alpha =0.25$, we observe a performance gain when using the RMT detector. (b) Deterministic testing setting. Results are plotted for $\alpha =1$ so that $k_\text {eff}=2$. Three values of the deterministic signal vector were used: $x=[1,1]^T$, $x=[0.5,0.5]^T$, and $x=[0.25,0.25]^T$. The resulting ROC curves depend on the choice of $x$, however, since $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle k$}\mathaccent "0362{k} = k_{\text {eff}}$, the plug-in and RMT detector achieve the same performance for all $x$. For both the stochastic and deterministic detectors, the theoretically predicted ROC curves match the empirical ROC curves, reflecting the accuracy of Corollary 2.5.1\hbox {} and the Lugannani-Rice formula.\relax }}{36}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Stochastic}}}{36}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Deterministic}}}{36}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Empirical and theoretical ROC curves for the plug-in and RMT stochastic detectors. Empirical ROC curves were computed with 10000 test samples and averaged over 100 trials. Here, $n=5000$, $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle k$}\mathaccent "0362{k}=k=4$ and $\Sigma = \mathop {\bf diag}({\bf {10,3,2.5,2}})$. The empirical oracle ROC curve is provided for relative comparison purposes. (a) $m=5000$ so that $c=1$ and $k_\text {eff}=\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle k$}\mathaccent "0362{k}=4$. The plug-in and RMT detectors achieve relatively the same performance. (b) $m=250$ so that $c=20$ and $k_\text {eff}=1<\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle k$}\mathaccent "0362{k}=4$. The RMT detector avoids some of the performance loss realized by the plug-in detector. As seen in Section 2.3\hbox {}, limited training samples degrades detector performance. However, the new RMT detector does not suffer as badly as the plug-in detector because it accounts for subspace estimation errors due to finite training data. The disagreement between the theoretical and empirical ROC curves is attributed to finite dimensionality.\relax }}{37}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$m=5000$}}}{37}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$m=250$}}}{37}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Theoretically determined number of training samples, $m$, needed to achieve a desired performance loss, $\epsilon $, as defined in (2.13\hbox {}). The required false alarm rate is $P_F=0.1$ with $n=200$, $\Sigma = \mathop {\bf diag}(10,0.1)$, and $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle k$}\mathaccent "0362{k}=k=2$. (a) Results for the stochastic detectors. We see that for a given $\epsilon $, the new RMT detector requires less training samples. (b) Results for the deterministic detectors when $x=[0.75,0.75]^T$. Again, for a given $\epsilon $, the new RMT detector requires less training samples. In the deterministic setting, the limiting performance loss is different (and non-zero) for the plug-in and RMT detectors. This arises in estimation errors of $x$ in the GLRT.\relax }}{38}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Stochastic}}}{38}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Deterministic}}}{38}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Empirical exploration of the achieved probability of detection, $P_D$, for a fixed probability of false alarm, $P_F=0.01$, for various $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle k$}\mathaccent "0362{k}$. Empirical ROC curves were computed using 10000 test samples and averaged over 100 trials with $n=1000$, $m=500$, and $\Sigma = \mathop {\bf diag}({\bf {10,5,4}},0.75,0.5,0.25)$ so that $k_{\text {eff}}=3$. Results for the stochastic detectors. The optimal $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle k$}\mathaccent "0362{k}$ resulting in the largest $P_D$ is not the true $k$, but rather $k_\text {eff}$.\relax }}{39}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Algorithm to determine $k_{\text {useful}}$. This is computable in an oracle setting where $\delta $ is known.\relax }}{46}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Probability density function (p.d.f.) of $\Lambda (w)\tmspace +\thinmuskip {.1667em}|\tmspace +\thinmuskip {.1667em}H_0$ and $\Lambda (w)\tmspace +\thinmuskip {.1667em}|\tmspace +\thinmuskip {.1667em}H_1$ for three combinations of the number of components $d$ and non-centrality parameter $\lambda _d$. (a) Baseline: $d=1$, $\lambda _d=2$ (b) Increases $d$ but keeps $\lambda _d$ fixed. The distributions are less separable. (c) Increases both $d$ and $\lambda _d$. The distributions are more separable.\relax }}{47}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$d=1$, $\lambda _d=2$}}}{47}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$d=2$, $\lambda _d=2$}}}{47}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$d=2$, $\lambda _d=3$}}}{47}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces The corresponding ROC curves to the three choices of $d$ and $\lambda _d$ in Figure 3.2\hbox {}. ROC curves were generated from (3.4\hbox {}). When adding an additional subspace component, the non-centrality parameter must increase sufficiently in order to achieve improved detection. \relax }}{48}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Minimum increase in non-centrality parameter necessary for increased detector performance. Results are shown for multiple choices of $P_F$. $\lambda _1$ indicates the non-centrality parameter when $d=1$ and $\Delta \lambda $ indicates the increase in non-centrality parameter when increasing the number of components to $d=2$.\relax }}{49}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Deterministic energy detector performance as a function of the number of training samples. In this experiment $n=200$, $\Sigma =\mathop {\bf diag}(5,2,0.5)$, $x=[1.5,1.5,1.5]^T$, and the required false alarm rate is $P_F=0.1$. (a) The theoretical probability of detection achieved by the plug-in, RMT, and useful detectors. $P_D(P_F)$ is calculated in (3.4\hbox {}). The plug-in detector sets $d=k$, the RMT detector sets $k=k_\text {eff}$ as defined in (3.16\hbox {}), and the useful detector sets $d=k_{\text {useful}}$ as calculated in Figure 3.1\hbox {} using the non-centrality parameter defined in (3.19\hbox {}). The useful detector achieves the optimal performance. (b) The number of subspace components used by the plug-in, RMT, and useful detectors. Whenever $k_\text {eff}\not =k_{\text {useful}}$, the RMT detector realizes a suboptimal detector performance. Even though these subspace components are \textit {informative}, there is not enough training data to make them \textit {useful} in detection.\relax }}{54}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Detector Performance}}}{54}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Number of Subspace Components}}}{54}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Empirically achieved probability of detection ($P_D$) as a function of the weighting coefficient $a$ for a fixed false alarm rate of $P_F=0.1$. (a) Two detectors, one using the deterministic vector $\delta =[1,1]^T$ and the second using $\delta =[1,0]^T$. The first detector achieves its maximum performance around $a=0.5$ indicating that both components are equally informative. The second detector achieves its maximum performance at $a=1$ indicating the second subspace component is not useful in detection. (b) Two detectors, one using $\delta =[1, 0.75]^T$ and the other using $\delta =[1, 0.5]^T$. The maximum performance of each detector is no longer achieved at $a=0.5$ or $a=1$ as the entries of $\delta $ are non-zero and are not equal. The maximum performance is indicated by a black circle.\relax }}{56}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Easy Optimal Weights}}}{56}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Difficult Optimal Weights}}}{56}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Empirical and theoretical ROC curves for the plug-in and RMT matched subspace detectors. Empirical ROC curves were simulated with $n=500$, $m=500$, $k=2$, $\Sigma =\mathop {\bf diag}(3,0.1)$, and $p=0.8$. However, as $\sigma _2$ is below the critical threshold, $k_{\text {eff}} = 1$. The empirical ROC curves were computed using $5000$ test samples and averaged over 25 trials. $x$ was generated randomly for training samples but fixed for test samples. The theoretical ROC curves were obtained using (3.4\hbox {}). Note the excellent agreement and the performance gain realized by the RMT detector.\relax }}{60}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Empirically computed probability of detection, $P_D$, for a fixed probability of false alarm, $P_F=0.1$, for various $p$. Here, $n=1000$, $m=1000$, $k=2$, $\Sigma =\mathop {\bf diag}(3,0.1)$. $P_D$ was computed using (3.4\hbox {}) and $x$ was generated as described in Figure 3.7\hbox {}. For values of $p \leq 1/9$, $k_\text {eff}=0$ and performance degrades to $P_D = P_F +o(1)$ for both detectors. As $p$ increases, $k_\text {eff}=1$ allowing the detectors to achieve better than random guessing performance. When $k_\text {eff}>0$ the plug-in detector is sub-optimal for all values of $p$.\relax }}{61}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces We generate data from (4.1\hbox {}) for $p=q=150$, $k_x=k_y=1$, $k=1$, and various $\rho =P_{xy}$ and sweep over $\theta = \theta ^{(x)}_1=\theta ^{(y)}_1$ and $n$. We compute $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle k$}\mathaccent "0362{k}_x$ and $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle k$}\mathaccent "0362{k}_y$ as outlined in Appendix D for a significance value of $\alpha =0.01$. Using these estimates, we compute $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle \rho $}\mathaccent "0362{\rho }_\text {cca}^{(1)}$ as the largest singular value of $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle C$}\mathaccent "0362{C}_{\text {cca}}$ as in (4.8\hbox {}) and $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle \rho $}\mathaccent "0362{\rho }_\text {icca}^{(1)}$ as the largest singular value of $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle C$}\mathaccent "0362{C}_{\text {icca}}$ as in (4.12\hbox {}). We then estimate the number of correlated signals $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle k$}\mathaccent "0362{k}_{\text {cca}}$ and $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle k$}\mathaccent "0362{k}_{\text {icca}}$ via (4.14\hbox {}) for a significance level of $\alpha =0.01$. We repeat this for 10000 trials and compute the percentage of trials where $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle k$}\mathaccent "0362{k}_{\text {cca}}=1$ and $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle k$}\mathaccent "0362{k}_{\text {icca}}=1$. We plot $\qopname \relax o{log}_{10}$ of these percentages for multiples values of $\theta $ and $n$. We plot the theoretical consistency boundary of CCA (given in Theorem 4.6.2\hbox {} that relies on \cite {bao2014canonical}) in a solid white line and the theoretical consistency boundary of ICCA (given in Theorem 4.6.2\hbox {}) in a dashed white line.\relax }}{87}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Empirical CCA $\rho =0.7$}}}{87}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Empirical CCA $\rho =0.9$}}}{87}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {ICCA $\rho =0.7$}}}{87}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {ICCA $\rho =0.9$}}}{87}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Contour lines for minimum $1/c$ necessary for reliable detection of $k=1$ correlated component. The quantity $1/c = n/p$ is equivalent to the number of samples per dimension of data. Figure 4.2(a)\hbox {} plots the contours for empirical CCA and Figure 4.2(b)\hbox {} plots the ICCA contours using the limits give in Theorem 4.6.2\hbox {} for $c=c_x=c_y$. We plot the contours for $1/c=10$ to $1/c=3$. These plots clearly demonstrate the ICCA limits are independent of $\rho =P_{xy}$ while CCA is highly dependent on $\rho =P_{xy}$. For a fixed number of samples (fixed $c$), ICCA is reliably detect the presence of a correlated signal at lower SNR values than empirical CCA.\relax }}{88}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Empirical CCA}}}{88}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {ICCA}}}{88}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Theoretical detection regions for ICCA for a rank-1 setting where $c_x=c_y=1$. In this setting, $\theta >1$ implies that the corresponding subspace is informative. Therefore, in light of Theorem 4.6.2\hbox {}, we see that when both $\theta _x<1$ and $\theta _y<1$, neither subspace component is informative and we cannot detect the presence of a correlated signal. This corresponds to the blue region. When only one of $\theta _x$ or $\theta _y$ is above the phase transition (green region), we still cannot detect the presence of a correlated signal even though we have one informative signal. However, when both $\theta _x$ and $\theta _y$ are above the phase transition (yellow region), we can detect the presence of a correlated signal between the datasets. This detection ability is independent of the value of correlation between the datasets. \relax }}{88}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces We generate data from (4.1\hbox {}) for $p=q=150$, $k_x=k_y=1$, $k=1$, $\theta ^{(x)}_1=\theta ^{(y)}_1=2$, $P_{xy}=1$, and $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle k$}\mathaccent "0362{k}_x=\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle k$}\mathaccent "0362{k}_y=1$. We compute $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle \rho $}\mathaccent "0362{\rho }_\text {cca}^{(1)}$ as the largest singular value of $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle C$}\mathaccent "0362{C}_{\text {cca}}$ as in (4.8\hbox {}) and $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle \rho $}\mathaccent "0362{\rho }_\text {icca}^{(1)}$ as the largest singular value of $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle C$}\mathaccent "0362{C}_{\text {icca}}$ as in (4.12\hbox {}). We then estimate the number of correlated signals $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle k$}\mathaccent "0362{k}_{\text {cca}}$ and $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle k$}\mathaccent "0362{k}_{\text {icca}}$ using the Wilks test in (4.10\hbox {}) and our new test in (4.14\hbox {}) for a significance level of $\alpha =0.01$. We repeat this for 250 trials and compute the percentage of trials where $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle k$}\mathaccent "0362{k}_{\text {cca}}=1$ and $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle k$}\mathaccent "0362{k}_{\text {icca}}=1$ for each significance test. We repeat this for multiple values of $n$ and plot the results. We observe that the classical Wilk's Lambda test is suboptimal and results in a large number of false alarms.\relax }}{89}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces We generate data from (4.22\hbox {}) for $p=q=150$, $k_x=k_y=1$, $k=1$, $n=1200$, and various $\rho =P_{xy}$ and sweep over $\theta = \theta ^{(x)}_1=\theta ^{(y)}_1$ and $\gamma =\gamma _x=\gamma _y$. We compute $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle k$}\mathaccent "0362{k}_x$ and $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle k$}\mathaccent "0362{k}_y$ as outline in Appendix D for a significance value of $\alpha =0.01$. Using these estimates, we compute $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle \rho $}\mathaccent "0362{\rho }_\text {cca}^{(1)}$ as the largest singular value of $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle C$}\mathaccent "0362{C}_{\text {cca}}$ as in (4.8\hbox {}) and $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle \rho $}\mathaccent "0362{\rho }_\text {icca}^{(1)}$ as the largest singular value of $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle C$}\mathaccent "0362{C}_{\text {icca}}$ as in (4.12\hbox {}). We then estimate the number of correlated signals $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle k$}\mathaccent "0362{k}_{\text {cca}}$ and $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle k$}\mathaccent "0362{k}_{\text {icca}}$ via (4.14\hbox {}) for a significance level of $\alpha =0.01$. We repeat this for 10000 trials and compute the percentage of trials where $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle k$}\mathaccent "0362{k}_{\text {cca}}=1$ and $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle k$}\mathaccent "0362{k}_{\text {icca}}=1$. We plot $\qopname \relax o{log}_{10}$ of these percentages for multiples values of $\theta $ and $n$. We plot the theoretical consistency boundary of empirical CCA (given in Theorem 4.7.1\hbox {}) in a solid white line and the theoretical consistency boundary of ICCA (given in Theorem 4.7.1\hbox {}) in a dashed white line.\relax }}{92}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Empirical CCA $\rho =0.7$}}}{92}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Empirical $\rho =0.9$}}}{92}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {ICCA $\rho =0.7$}}}{92}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {ICCA $\rho =0.9$}}}{92}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Left and right camera views of our experiment with boxes manually identifying each source. Both cameras share a common flashing phone, outlined in a red rectangle. Each camera has two independent sources besides the shared flashing phone.\relax }}{93}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Left Camera}}}{93}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Right Camera}}}{93}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Singular value spectra of $X_{\text {left}}$ and $Y_{\text {right}}$ for the flashing light experiment.\relax }}{93}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Left camera}}}{93}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Right camera}}}{93}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces (a)-(c) Left singular vectors of $X_{\text {left}}$ corresponding to the top 3 singular values in Figure 4.7(a)\hbox {}. (d) Thresholded singular vectors from (a)-(c) overlayed onto original scene. We use a threshold of $\qopname \relax o{log}(p)/\sqrt {p}$ where $p=32400$ pixels. These correspond to the 3 light sources visible in the left camera.The green pixels identify BPL; the magenta pixels identify PH1; the red pixels identify PH2.\relax }}{94}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$u_1$}}}{94}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$u_2$}}}{94}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$u_3$}}}{94}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Overlay}}}{94}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces (a)-(c) Left singular vectors of $Y_{\text {right}}$ corresponding to the top 3 singular values in Figure 4.7(b)\hbox {}. (d) Thresholded singular vectors from (a)-(c) overlayed onto original scene. We use a threshold of $\qopname \relax o{log}(p)/\sqrt {p}$ where $p=32400$ pixels. These correspond to the 3 light sources visible in the right camera. The dark blue pixels identify PH2; the cyan pixels identify T1; the white pixels identify RPL.\relax }}{95}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$u_1$}}}{95}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$u_2$}}}{95}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$u_3$}}}{95}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Overlay}}}{95}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces (a) Top three singular values returned by empirical CCA as defined in (4.8\hbox {}). As we are in the sample deficient regime, these singular values are deterministically 1. (b) Top three singular values returned by ICCA as defined in (4.12\hbox {}). ICCA correctly identifies two sources of correlation.\relax }}{96}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {CCA}}}{96}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {ICCA}}}{96}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Significance of the top singular value returned by ICCA in Figure 4.10(b)\hbox {} using (4.14\hbox {}) with $\alpha =0.01$. A value of zero represents that the singular value is not significant. A value of one represents that the singular value is significant. (a) Significance over all 800 frame. (b) Zoomed in to the first 50 frames in (a).\relax }}{97}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {ICCA}}}{97}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {ICCA - first 50 frames}}}{97}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Top 3 threholded empirical CCA canonical vectors overlayed on the original scene after 800 frames as computed in (4.9\hbox {}). The red pixels correspond to the vector with the highest correlation, the green pixels correspond to the vector with the second highest correlation, and the blue pixels correspond to the vector with the third highest correlation. We use a threshold of $\qopname \relax o{log}(p)/\sqrt {p}$ where $p=32400$ pixels.\relax }}{97}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Left Camera}}}{97}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Right Camera}}}{97}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Top 2 threholded ICCA canonical vectors overlayed on video after 800 frames as computed in (4.13\hbox {}). The red pixels correspond to the vector with the highest correlation and the green pixels correspond to the vector with the second highest correlation. We use a threshold of $\qopname \relax o{log}(p)/\sqrt {p}$ where $p=32400$ pixels.\relax }}{98}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Left Camera}}}{98}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Right Camera}}}{98}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces A portion of the right singular vectors of $X_{\text {left}}$ (blue) and $Y_{\text {right}}$ (red) corresponding the flashing police lights in each camera view. Both sources have very similar periods and are approximately in antiphase and therefore are correlated. \relax }}{99}
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Left and right camera views of our five sources in the presence of missing data.\relax }}{99}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Left Camera}}}{99}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Right Camera}}}{99}
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Top 3 threholded PCA vectors overlayed on each video after 800 frames. This is analogous to Figures 4.8\hbox {} and 4.9\hbox {} but with missing data. Again we use the threshold $\qopname \relax o{log}(p)/\sqrt {p}$ for $p=32400$. A different color is used for the every vector. We note that the middle source of the left camera violates the low-coherence assumption in Assumption 4.7.1\hbox {} and so PCA does not detect it.\relax }}{100}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Left Camera}}}{100}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Right Camera}}}{100}
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Top 2 threholded empirical CCA canonical vectors overlayed on missing data video as computed in (4.9\hbox {}). Again we use the threshold $\qopname \relax o{log}(p)/\sqrt {p}$ for $p=32400$. The red pixels correspond to the vector with the highest correlation and the green pixels correspond to the vector with the second highest correlation in Figure 4.19(a)\hbox {}.\relax }}{101}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Left Camera}}}{101}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Right Camera}}}{101}
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Top 2 threholded ICCA canonical vectors overlayed on missing data video as computed in (4.13\hbox {}). Again we use the threshold $\qopname \relax o{log}(p)/\sqrt {p}$ for $p=32400$. The red pixels correspond to the vector with the highest correlation and the green pixels correspond to the vector with the second highest correlation in Figure 4.19(a)\hbox {}.\relax }}{101}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Left Camera}}}{101}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Right Camera}}}{101}
+\contentsline {figure}{\numberline {4.19}{\ignorespaces (a) Top three singular values returned by empirical CCA as defined in (4.8\hbox {}). As we are in the sample deficient regime, these singular values are deterministically 1. (b) Top three singular values returned by ICCA as defined in (4.12\hbox {}). ICCA correctly identifies two sources of correlation. As our data matrices now have missing data, it takes more frames for ICCA to identify the two sources of correlations.\relax }}{102}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {CCA}}}{102}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {ICCA}}}{102}
+\contentsline {figure}{\numberline {4.20}{\ignorespaces Significance of the top singular value returned by ICCA in Figure 4.19(b)\hbox {} using (4.14\hbox {}) with $\alpha =0.01$. A value of zero represents that the singular value is not significant. A value of one represents that the singular value is significant.\relax }}{102}
+\contentsline {figure}{\numberline {4.21}{\ignorespaces Still shot of the video. The block M on the left is amplitude modulated at 1 Hz, the same rate as $s_1(t)$ in (4.27\hbox {}), while the block M on the right is amplitude modulate at 2.15 Hz, which is different than all other audio and visual sources.\relax }}{103}
+\contentsline {figure}{\numberline {4.22}{\ignorespaces (a) Full spectrogram of the audio signal in (4.26\hbox {}). (b) Zoomed in spectrogram of (a) to see the 3 audio sources at 250 Hz, 400 Hz, and 550 Hz. Each sources is also amplitude modulated at a different frequency as described in (4.27\hbox {}).\relax }}{103}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Full Spectrogram}}}{103}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Zoomed Spectrogram}}}{103}
+\contentsline {figure}{\numberline {4.23}{\ignorespaces Singular value spectra of $X_{\text {video}}$ and $Y_{\text {audio}}$.\relax }}{105}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Video}}}{105}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Audio}}}{105}
+\contentsline {figure}{\numberline {4.24}{\ignorespaces (a)-(b)) Left singular vectors of $X_{\text {video}}$ corresponding to the top 2 singular values. (c) Thresholded singular vectors from (a)-(b) overlayed onto original scene with pixels from (a) in red and pixels from (b) in green. We use the threshold $\qopname \relax o{log}(p)/\sqrt {p}$ for $p=33250$. These vectors correspond to the 2 block M's.\relax }}{105}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$u_1$}}}{105}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$u_2$}}}{105}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$u_3$}}}{105}
+\contentsline {figure}{\numberline {4.25}{\ignorespaces (a) Left singular vectors of $Y_{\text {audio}}$ corresponding to the top 3 singular values. (b) Zoomed in version of (a) to see the three audio sources. (c) Masked principle component formed by thresholding the singular vectors with $\sqrt {\qopname \relax o{log}(q)/q}$ for $q=1025$.\relax }}{106}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Audio principle components}}}{106}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Zoomed-in of (a)}}}{106}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Example Filter}}}{106}
+\contentsline {figure}{\numberline {4.26}{\ignorespaces (a) Top two singular values returned by empirical CCA as defined in (4.8\hbox {}). As we are in the sample deficient regime, these singular values are deterministically 1. (b) Top two singular values returned by ICCA as defined in (4.12\hbox {}). ICCA correctly identifies the one source of correlation present in the audio-video dataset.\relax }}{107}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Empirical CCA}}}{107}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {ICCA}}}{107}
+\contentsline {figure}{\numberline {4.27}{\ignorespaces Significance of the top singular value returned by ICCA in Figure 4.26\hbox {} using (4.14\hbox {}) with $\alpha =0.01$. A value of zero represents that the singular value is not significant. A value of one represents that the singular value is significant. (a) Significance for all 540 frames. (b) Zoomed in of (a) to examine the first 75 frames.\relax }}{108}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {ICCA}}}{108}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {ICCA - first 75 frames}}}{108}
+\contentsline {figure}{\numberline {4.28}{\ignorespaces Thresholded canonical vectors (as computed in (4.9\hbox {})) corresponding to the top singular value returned by empirical CCA in Figure 4.26(a)\hbox {}. We use a threshold of $\qopname \relax o{log}(p)/\sqrt {p}$ for $p=33250$ and $p=1025$ for video and audio vectors, respectively. (a) Spectrogram of the original audio stream filtered using the thresholded empirical CCA top canonical vector and the overlap-save filter method. (b) Zoomed in spectrogram of (a). (c) Red colored pixels represent the pixels that empirical CCA marks as correlated to the audio stream in (a).\relax }}{109}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Audio}}}{109}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Audio - zoomed}}}{109}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Video}}}{109}
+\contentsline {figure}{\numberline {4.29}{\ignorespaces Thresholded canonical vectors (as computed in (4.13\hbox {})) corresponding to the top singular value returned by ICCA in Figure 4.26(b)\hbox {}. We use a threshold of $\qopname \relax o{log}(p)/\sqrt {p}$ for $p=33250$ and $p=1025$ for video and audio vectors, respectively. (a) Spectrogram of the original audio stream filtered using the thresholded ICCA top canonical vector and the overlap-save filter method. (b) Zoomed in spectrogram of (a). (c) Red colored pixels represent the pixels that ICCA marks as correlated to the audio stream in (a).\relax }}{110}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Audio}}}{110}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Audio - zoomed}}}{110}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Video}}}{110}
+\contentsline {figure}{\numberline {4.30}{\ignorespaces (a) Full spectrogram of $a_1(t)$ defined in (4.28\hbox {}). (b) Zoomed in spectrogram of $a_1(t)$ to see the 2 sources at 250 Hz and 400 Hz. (c) Full spectrogram of $a_2(t)$ defined in (4.28\hbox {}) (d) Zoomed in spectrogram of $a_2(t)$ to see the 2 sources at 300 Hz and 550 Hz. The 250 Hz signal in $a_1(t)$ is amplitude modulated at the same frequency as the 300 Hz signal in $a_2(t)$.\relax }}{112}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Full Spectrogram of $a_1(t)$}}}{112}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Zoomed Spectrogram of $a_1(t)$}}}{112}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Full Spectrogram of $a_2(t)$}}}{112}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Zoomed Spectrogram of $a_2(t)$}}}{112}
+\contentsline {figure}{\numberline {4.31}{\ignorespaces Singular value spectra of $X_{a_1}$ and $Y_{a_2}$.\relax }}{113}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Video}}}{113}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Audio}}}{113}
+\contentsline {figure}{\numberline {4.32}{\ignorespaces (a) Left singular vectors of $X_{a_1}$ corresponding to the top 2 singular values in Figure 4.31(a)\hbox {}. (b) Zoomed in version of (a). (c) Left singular vectors of $Y_{a_2}$ corresponding to the top 2 singular values in Figure 4.31(b)\hbox {}. (d) Zoomed in version of (c).\relax }}{114}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$X_{a_1}$ principle components}}}{114}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$X_{a_1}$ zoomed-in principle components}}}{114}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$Y_{a_2}$ principle components}}}{114}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {$Y_{a_2}$ zoomed-in principle components}}}{114}
+\contentsline {figure}{\numberline {4.33}{\ignorespaces (a) Top two singular values returned by empirical CCA as defined in (4.8\hbox {}) for the audio-audio experiment. As we are in the sample deficient regime, these singular values are deterministically 1. (b) Top two singular values returned by ICCA as defined in (4.12\hbox {}). ICCA correctly identifies the one source of correlation present in the audio-audio dataset.\relax }}{115}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Empirical CCA}}}{115}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {ICCA}}}{115}
+\contentsline {figure}{\numberline {4.34}{\ignorespaces Significance of the top singular value returned by ICCA in Figure 4.33\hbox {} using (4.14\hbox {}) with $\alpha =0.01$. A value of zero represents that the singular value is not significant. A value of one represents that the singular value is significant. (a) Significance for all 450 frames. (b) Zoomed in of (a) to examine the first 75 frames.\relax }}{115}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {ICCA}}}{115}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {ICCA - first 75 frames}}}{115}
+\contentsline {figure}{\numberline {4.35}{\ignorespaces (a) Full spectrogram of $a_1(t)$ (as defined in (4.28\hbox {})) filtered using the thresholded top canonical vector of empirical CCA computed via (4.9\hbox {}). We use a threshold of $\qopname \relax o{log}(p)/\sqrt {p}$ for $p=2049$ and use the overlap-save filter method. (b) Zoomed in spectrogram of (a). (c) Full spectrogram of $a_2(t)$ (as defined in (4.28\hbox {})) filtered using the thresholded top canonical vector of empirical CCA computed using (4.9\hbox {}). We use a threshold of $\qopname \relax o{log}(p)/\sqrt {p}$ for $p=2049$ and use the overlap-save filter method. (d) Zoomed in spectrogram of (c). Empirical CCA fails to detect the correlated 250 Hz signal in $a_1(t)$ and the 300 Hz signal in $a_2(t)$. Instead, empirical CCA has random bandpass filters across the spectrum.\relax }}{117}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$a_1(t)$ filtered with empirical CCA}}}{117}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Zoomed in of (a)}}}{117}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$a_2(t)$ filtered with empirical CCA}}}{117}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Zoomed in of (c)}}}{117}
+\contentsline {figure}{\numberline {4.36}{\ignorespaces (a) Full spectrogram of $a_1(t)$ (as defined in (4.28\hbox {})) filtered using the thresholded top canonical vector of ICCA computed using (4.13\hbox {}). We use a threshold of $\qopname \relax o{log}(p)/\sqrt {p}$ for $p=2049$ and use the overlap-save filter method. (b) Zoomed in spectrogram of (a). (c) Full spectrogram of $a_2(t)$ (as defined in (4.28\hbox {})) filtered using the thresholded top canonical vector of ICCA computed using (4.13\hbox {}). We use a threshold of $\qopname \relax o{log}(p)/\sqrt {p}$ for $p=2049$ and use the overlap-save filter method. (d) Zoomed in spectrogram of (c). ICCA correctly detects the correlated 250 Hz signal in $a_1(t)$ and the 300 Hz signal in $a_2(t)$ without including any spurious frequencies.\relax }}{118}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$a_1(t)$ filtered with ICCA}}}{118}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Zoomed in of (a)}}}{118}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$a_2(t)$ filtered with ICCA}}}{118}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Zoomed in of (c)}}}{118}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Algorithm to compute the ICCA\texttt {+} canonical vectors.\relax }}{130}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Accuracy plots as a function of $n$ for a rank-2 setting where $k_x=k_y=2$, $p=200$, $q=250$, $\Theta _x=\Theta _y=\mathop {\bf diag}(16,1)$, $P_{xy}=\mathop {\bf diag}(0.9,0.9)$, $V_K=I_2$, and non-identity $U_K$. Accuracy is defined in (5.16\hbox {}). The left figure plots the accuracy of the first canonical vector and the right figure plots the accuracy of the second canonical vector.\relax }}{138}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$w_x^{(1)}$}}}{138}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$w_x^{(2)}$}}}{138}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Convergence plots of the first canonical vector of each estimate for three values of $p$. Results are plotted for three fixed values of $c_x=0.5,1,2$. The simulation setting is the same as Figure 5.2\hbox {} for a rank-2 setting where $k_x=k_y=2$, $p=200$, $q=250$, $\Theta _x=\Theta _y=\mathop {\bf diag}(16,1)$, $P_{xy}=\mathop {\bf diag}(0.9,0.9)$, $V_K=I_2$, and non-identity $U_K$. Errorbars are 1 standard deviation.\relax }}{139}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$p=100$}}}{139}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$p=500$}}}{139}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$p=1000$}}}{139}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Accuracy convergence plots for the top two canonical vectors of the ICCA and ICCA\texttt {+} estimates. Results are plotted for three fixed values of $c_x=0.5,1,2$ for three different values of $p$. The simulation setting is the same as Figure 5.3\hbox {} for a rank-2 setting where $k_x=k_y=2$, $p=200$, $q=250$, $\Theta _x=\Theta _y=\mathop {\bf diag}(16,1)$, $P_{xy}=\mathop {\bf diag}(0.9,0.9)$, $V_K=I_2$, and non-identity $U_K$. Errorbars are 1 standard deviation.\relax }}{140}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {ICCA $w_x^{(1)}$}}}{140}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {ICCA $w_x^{(2)}$}}}{140}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {ICCA\texttt {+} $w_x^{(1)}$}}}{140}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {ICCA\texttt {+} $w_x^{(2)}$}}}{140}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Accuracy convergence plots for the top two canonical vectors of the orthogonal and empirical CCA estimates. Results are plotted for three fixed values of $c_x=0.5,1,2$ for three different values of $p$. The simulation setting is the same as Figure 5.3\hbox {} for a rank-2 setting where $k_x=k_y=2$, $p=200$, $q=250$, $\Theta _x=\Theta _y=\mathop {\bf diag}(16,1)$, $P_{xy}=\mathop {\bf diag}(0.9,0.9)$, $V_K=I_2$, and non-identity $U_K$. Errorbars are 1 standard deviation.\relax }}{141}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Orthogonal $w_x^{(1)}$}}}{141}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Orthogonal $w_x^{(2)}$}}}{141}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Empirical CCA $w_x^{(1)}$}}}{141}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Empirical CCA $w_x^{(2)}$}}}{141}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Accuracy plots of the first two canonical vector estimates a function of $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle k$}\mathaccent "0362{k}_x$ for $c=0.2$. The simulation setting is the same as Figure 5.3\hbox {} for a rank-2 setting where $k_x=k_y=2$, $p=200$, $q=250$, $\Theta _x=\Theta _y=\mathop {\bf diag}(16,1)$, $P_{xy}=\mathop {\bf diag}(0.9,0.9)$, $V_K=I_2$, and non-identity $U_K$. Errorbars are 1 standard deviation.\relax }}{142}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$w_x^{(1)}$}}}{142}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$w_x^{(2)}$}}}{142}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$w_x^{(3)}$}}}{142}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Accuracy plots of the first two canonical vector estimates a function of $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle k$}\mathaccent "0362{k}_x$ for $c=1$. The simulation setting is the same as Figure 5.3\hbox {} for a rank-2 setting where $k_x=k_y=2$, $p=200$, $q=250$, $\Theta _x=\Theta _y=\mathop {\bf diag}(16,1)$, $P_{xy}=\mathop {\bf diag}(0.9,0.9)$, $V_K=I_2$, and non-identity $U_K$. Errorbars are 1 standard deviation.\relax }}{143}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$w_x^{(1)}$}}}{143}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$w_x^{(2)}$}}}{143}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$w_x^{(3)}$}}}{143}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Manual source identification of each camera. Both cameras share a common flashing phone, outlined in a red rectangle. Each camera has two independent sources besides the shared flashing phone.\relax }}{145}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Left Camera}}}{145}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Right Camera}}}{145}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces First canonical vector estimates for the left camera at frame 5. This corresponds to a total capture time of 1/6 of a second. (a)-(d) show the absolute value of the vectors displayed in an image so that large values indicate correlated pixels. (e)-(f) plot the difference between the ICCA estimate and the ICCA\texttt {+} estimate and the orthogonal estimate and the ICCA\texttt {+} estimate. Positive values indicate pixels that the ICCA\texttt {+} estimate thinks are less correlated while negative values indicate pixels that the ICCA\texttt {+} estimate thinks are more correlated. \relax }}{147}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {ICCA}}}{147}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Orthogonal}}}{147}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {ICCA\texttt {+} }}}{147}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {CCA}}}{147}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {ICCA minus ICCA\texttt {+} }}}{147}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {Orthogonal minus ICCA\texttt {+} }}}{147}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces First canonical vector estimates for the left camera at frame 30. This corresponds to a total capture time of 1 second. (a)-(d) show the absolute value of the vectors displayed in an image so that large values indicate correlated pixels. (e)-(f) plot the difference between the ICCA estimate and the ICCA\texttt {+} estimate and the orthogonal estimate and the ICCA\texttt {+} estimate. Positive values indicate pixels that the ICCA\texttt {+} estimate thinks are less correlated while negative values indicate pixels that the ICCA\texttt {+} estimate thinks are more correlated. \relax }}{148}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {ICCA}}}{148}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Orthogonal}}}{148}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {ICCA\texttt {+} }}}{148}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {CCA}}}{148}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {ICCA minus ICCA\texttt {+} }}}{148}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {Orthogonal minus ICCA\texttt {+} }}}{148}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces First canonical vector estimates for the left camera at frame 600. This corresponds to a total capture time of 20 seconds. (a)-(d) show the absolute value of the vectors displayed in an image so that large values indicate correlated pixels. (e)-(f) plot the difference between the ICCA estimate and the ICCA\texttt {+} estimate and the orthogonal estimate and the ICCA\texttt {+} estimate. Positive values indicate pixels that the ICCA\texttt {+} estimate thinks are less correlated while negative values indicate pixels that the ICCA\texttt {+} estimate thinks are more correlated. \relax }}{149}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {ICCA}}}{149}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Orthogonal}}}{149}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {ICCA\texttt {+} }}}{149}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {CCA}}}{149}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {ICCA minus ICCA\texttt {+} }}}{149}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {Orthogonal minus ICCA\texttt {+} }}}{149}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Second canonical vector estimates for the left camera at frame 5. This corresponds to a total capture time of 1/6 of a second. (a)-(d) show the absolute value of the vectors displayed in an image so that large values indicate correlated pixels. (e)-(f) plot the difference between the ICCA estimate and the ICCA\texttt {+} estimate and the orthogonal estimate and the ICCA\texttt {+} estimate. Positive values indicate pixels that the ICCA\texttt {+} estimate thinks are less correlated while negative values indicate pixels that the ICCA\texttt {+} estimate thinks are more correlated. \relax }}{150}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {ICCA}}}{150}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Orthogonal}}}{150}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {ICCA\texttt {+} }}}{150}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {CCA}}}{150}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {ICCA minus ICCA\texttt {+} }}}{150}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {Orthogonal minus ICCA\texttt {+} }}}{150}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Second canonical vector estimates for the left camera at frame 30. This corresponds to a total capture time of 1 second. (a)-(d) show the absolute value of the vectors displayed in an image so that large values indicate correlated pixels. (e)-(f) plot the difference between the ICCA estimate and the ICCA\texttt {+} estimate and the orthogonal estimate and the ICCA\texttt {+} estimate. Positive values indicate pixels that the ICCA\texttt {+} estimate thinks are less correlated while negative values indicate pixels that the ICCA\texttt {+} estimate thinks are more correlated. \relax }}{151}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {ICCA}}}{151}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Orthogonal}}}{151}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {ICCA\texttt {+} }}}{151}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {CCA}}}{151}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {ICCA minus ICCA\texttt {+} }}}{151}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {Orthogonal minus ICCA\texttt {+} }}}{151}
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Second canonical vector estimates for the left camera at frame 600. This corresponds to a total capture time of 20 seconds. (a)-(d) show the absolute value of the vectors displayed in an image so that large values indicate correlated pixels. (e)-(f) plot the difference between the ICCA estimate and the ICCA\texttt {+} estimate and the orthogonal estimate and the ICCA\texttt {+} estimate. Positive values indicate pixels that the ICCA\texttt {+} estimate thinks are less correlated while negative values indicate pixels that the ICCA\texttt {+} estimate thinks are more correlated. \relax }}{152}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {ICCA}}}{152}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Orthogonal}}}{152}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {ICCA\texttt {+} }}}{152}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {CCA}}}{152}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {ICCA minus ICCA\texttt {+} }}}{152}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {Orthogonal minus ICCA\texttt {+} }}}{152}
+\contentsline {figure}{\numberline {5.15}{\ignorespaces (a) Full spectrogram of $a_1(t)$. (b) Zoomed in spectrogram of $a_1(t)$ to see the 2 sources at 250 Hz and 400 Hz. (c) Full spectrogram of $a_2(t)$ (d) Zoomed in spectrogram of $a_2(t)$ to see the 2 sources at 300 Hz and 550 Hz. The 250 Hz signal in $a_1(t)$ is amplitude modulated at the same frequency as the 300 Hz signal in $a_2(t)$.\relax }}{154}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Full Spectrogram of $a_1(t)$}}}{154}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Zoomed Spectrogram of $a_1(t)$}}}{154}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Full Spectrogram of $a_2(t)$}}}{154}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Zoomed Spectrogram of $a_2(t)$}}}{154}
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Canonical vectors estimates for the first audio stream at 3 different frames. One frame corresponds to 1/15 seconds. Frequencies with large weights are those that the algorithms mark as correlated with frequencies with large weights in Figure 5.17\hbox {}.\relax }}{156}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Frame 5}}}{156}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Frame 15}}}{156}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Frame 300}}}{156}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Frame 300 - Zoomed}}}{156}
+\contentsline {figure}{\numberline {5.17}{\ignorespaces Canonical vectors estimates for the second audio stream at 3 different frames. One frame corresponds to 1/15 seconds. Frequencies with large weights are those that the algorithms mark as correlated with frequencies with large weights in Figure 5.16\hbox {}.\relax }}{157}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Frame 5}}}{157}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Frame 15}}}{157}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Frame 300}}}{157}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Frame 300 - Zoomed}}}{157}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Motivational example of the singular value spectra of $\frac {1}{n}XY^H$ for three different sets of parameters. In all figures $p=q=200$, $n=500$, and $\theta =\theta _x=\theta _y$. In the settings in (a) and (b), the singular value spectra are very similar, with one singular value separating from the bulk of the singular values. In the setting in (c) where there is no correlation between the datasets, two singular values separate from the bulk of the singular values.\relax }}{165}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$\rho =0.9$, $\theta =3$}}}{165}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$\rho =0.5$, $\theta =4$}}}{165}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$\rho =0$, $\theta =10$}}}{165}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Combined}}}{165}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces AUC performance of RCCA for various regularization parameters. For all figures, $p=100$, $q=150$, $r=1$, and $\rho _1=0.9$. Each figure plots an AUC heatmap while sweeping over $\theta =\theta _{x1}=\theta _{y1}$ and $n$. AUC points are generated from an ROC formed from 500 points of each distribution. Increasing the regularization parameter increases the performance of CCA. This gives rise to LRCCA, which sets $\eta \to \infty $.\relax }}{172}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$\eta =0.0001$}}}{172}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$\eta =0.1$}}}{172}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$\eta =10$}}}{172}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {$\eta =1000$}}}{172}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Top singular value prediction for the rank-1 case for $p=200$, $q=400$, $n=400$, and $\rho =1$.\relax }}{173}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Top singular value of LRCCA plotted for pairs of parameter sweeps. In all plots, $p=200$ and $q=400$. The theoretical boundary where the top singular value is indistinguishable from a noise only setting is plotted for each. Below this line, the top singular value is asymptotically identical to the noise only setting. Above this line, the top singular value is asymptotically different from that of the noise only setting.\relax }}{174}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$\rho =1$, $\theta =\theta _{x1}=\theta _{y1}$}}}{174}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$\rho =0.1$, $\theta =\theta _{x1}=\theta _{y1}$}}}{174}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$\theta _{x1}=\theta _{y1}=1$}}}{174}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {$n=400$}}}{174}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {$\rho =0.5$, $n=400$}}}{174}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces KS statistic between the top singular value of LRCCA in signal bearing and noise only settings. In all plots, $p=200$, $q=400$, and $n=400$. The theoretical boundary where the top singular value is indistinguishable from a noise only setting is plotted for each.\relax }}{175}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$\rho =1$}}}{175}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$\rho =0.8$}}}{175}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$\rho =0.6$}}}{175}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {$\rho =0.4$}}}{175}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {$\rho =0.2$}}}{175}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {$\rho =0$}}}{175}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Phase transition for LRCCA (dahsed lines) for various $\rho $ and ICCA. The performance of ICCA is independent of $\rho $. The setting shown in for $c_x=0.5$ and $c_y=1$. \relax }}{177}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Singular value spectra for the full matrix (a), orthogonal projection matrix (b), and Gaussian projection matrix (c). This example uses a rank-1 setting where $n=1000$, $m=100$, $N=1000$, $\theta =\theta _x=\theta _y=4$.\relax }}{189}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle X$}\mathaccent "0365{X}$}}}{189}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$Q^H\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle X$}\mathaccent "0365{X}$}}}{189}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$G^H\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle X$}\mathaccent "0365{X}$}}}{189}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Singular value spectra for the full matrix (a), orthogonal projection matrix (b), and Gaussian projection matrix (c). This example uses a rank-1 setting where $n=1000$, $m=100$, $N=1000$, $\theta =\theta _x=\theta _y=2.2$.\relax }}{189}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle X$}\mathaccent "0365{X}$}}}{189}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$Q^H\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle X$}\mathaccent "0365{X}$}}}{189}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$G^H\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle X$}\mathaccent "0365{X}$}}}{189}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces {\sc {matlab}} code to compute $\varphi _F$ and $\varphi _H$ for a Gaussian projection matrix and Gaussian noise matrix. This relies on function provided in RMTool \cite {rao2008polynomial}.\relax }}{199}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces (a) Singular value prediction for Gaussian $G$ and $X$ for a rank-1 setting with fixed $n=1000$, $N=1220$ and $m=100$. The theoretical prediction uses (7.3\hbox {}) with approximations from Figure 7.3\hbox {}. Empirical results are averaged over 500 trials. (b) Singular value prediction for Gaussian-like $G$ and Gaussian $X$ for a rank-1 setting with fixed $n=1000$, $N=1220$ and $m=100$. Here, the entries of $G$ are either $\pm 1$ with equal probability. The theoretical prediction is the same for (a). Empirical results are again averaged over 500 trials.\relax }}{200}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Gaussian $G$}}}{200}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Gaussian-like $G$}}}{200}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Performance of theoretical phase transition prediction for Gaussian $G$ and $X$ for a rank-1 setting with fixed $n=1000$. The theoretical prediction uses (7.3\hbox {}) with approximations from Figure 7.3\hbox {}. The first row plots the KS statistic between singular values generated from 500 signal bearing and 500 noise only matrices. The bottom row plots the average empirical singular value averaged over 500 trials. The left column sweeps over both $\theta $ and $N$ for a fixed $m=100$ while the right column sweeps over $\theta $ and $m$ for a fixed $N=1000$.\relax }}{202}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {KS Statistic - $N$,$\theta $ sweep}}}{202}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {KS Statistic - $m$,$\theta $ sweep}}}{202}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Maximum singular value - $N$,$\theta $ sweep}}}{202}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Maximum singular value - $m$, $\theta $ sweep}}}{202}
+\contentsline {figure}{\numberline {7.6}{\ignorespaces (a) Singular value prediction for unitary projection matrix $Q$ and Gaussian noise matrix $X$ for a rank-1 setting with fixed $n=1000$, $N=1220$ and $m=100$. The theoretical prediction uses Corollary 7.2.1\hbox {}. Empirical results are averaged over 500 trials. (b) Singular value prediction for unitary-like matrix $Q$ and Gaussian noise matrix $X$ for a rank-1 setting with fixed $n=1000$, $N=1220$ and $m=100$. Here, the columns of $Q$ are sampled from the $n\times n$ discrete Fourier matrix defined in (7.14\hbox {}). The theoretical prediction is the same as (a) and uses Corollary 7.2.1\hbox {}. Empirical results are averaged over 500 trials.\relax }}{203}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Unitary $Q$}}}{203}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Fourier $Q$}}}{203}
+\contentsline {figure}{\numberline {7.7}{\ignorespaces Performance of theoretical phase transition prediction for unitary projection matrix $Q$ and Gaussian noise matrix $X$ for a rank-1 setting with fixed $n=1000$. The theoretical prediction uses Corollary 7.2.1\hbox {}. The first row plots the KS statistic between singular values generated from 500 signal bearing and 500 noise only matrices. The bottom row plots the average empirical singular value averaged over 500 trials. The left column sweeps over both $\theta $ and $N$ for a fixed $m=100$ while the right column sweeps over $\theta $ and $m$ for a fixed $N=1000$.\relax }}{204}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {KS Statistic - $N$,$\theta $ sweep}}}{204}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {KS Statistic - $m$,$\theta $ sweep}}}{204}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Maximum singular value - $N$,$\theta $ sweep}}}{204}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Maximum singular value - $m$, $\theta $ sweep}}}{204}
+\contentsline {figure}{\numberline {7.8}{\ignorespaces Performance difference between using a Gaussian projection matrix, $G$, and a unitary projection matrix, $Q$, for a rank-1 setting with fixed $n=1000$ and Gaussian noise matrix $X$. Positive values indicate that the Gaussian projection can more reliably detect the signal while negative values indicate that the unitary projection can more reliably detect the signal. We observe that the unitary projection outperforms the Gaussian projection.\relax }}{206}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {KS Statistic difference - $N$,$\theta $ sweep}}}{206}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {KS Statistic difference - $m$,$\theta $ sweep}}}{206}
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Empirical and theoretically predicted MSE for the plug-in, CCA, and ICCA estimators. We use a rank-1 setting where $k_x=k_y=1$, $\theta ^{(x)}_1=3$, $\theta ^{(y)}_1=4$, $p=100$, $q=200$ and $\rho =0.9$. In the rank-1 setting, $U_{\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle K$}\mathaccent "0365{K}}=V_{\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle K$}\mathaccent "0365{K}}=1$. The plot on the right is a zoomed in version of the plot on the left. The ICCA and plug-in curves lie on top of each other, as we showed that the two are equivalent.\relax }}{222}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Empirical and Theoretical MSE}}}{222}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Zoomed-in}}}{222}
+\contentsline {figure}{\numberline {8.2}{\ignorespaces AUC results for the plug-in LRT, empirical CCA, and ICCA detectors in (8.21\hbox {}), (8.23\hbox {}), and (8.24\hbox {}), respectively. Empirical ROC curves were simulated using $2000$ test samples for each hypothesis and averaged over $50$ trials using algorithms 2 and 4 of \cite {fawcett2006introduction}. Simulations parameters were $p=200$, $q=150$, and $\rho =0.8$. Each figure plots the AUC for the average ROC curve at a different values of SNR, $\theta =\theta ^{(x)}_1=\theta ^{(y)}_1$, and training samples, $n$.\relax }}{233}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Plug-in LRT}}}{233}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {ICCA}}}{233}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Empirical CCA}}}{233}
+\contentsline {figure}{\numberline {8.3}{\ignorespaces AUC results for the plug-in LRT, empirical CCA, and ICCA detectors in (8.21\hbox {}), (8.23\hbox {}), and (8.24\hbox {}), respectively. Empirical ROC curves were simulated using $2000$ test samples for each hypothesis and averaged over $50$ trials using algorithms 2 and 4 of \cite {fawcett2006introduction}. Simulations parameters were $p=200$, $q=150$, and $\rho =0.2$. Each figure plots the AUC for the average ROC curve at a different value of SNR, $\theta =\theta ^{(x)}_1=\theta ^{(y)}_1$, and training samples, $n$.\relax }}{234}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Plug-in LRT}}}{234}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {ICCA}}}{234}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {CCA}}}{234}
+\contentsline {figure}{\numberline {8.4}{\ignorespaces Difference between ICCA AUC heatmaps in Figures 8.3(c)\hbox {} and 8.2(c)\hbox {}. Positive values indicate when the setting of $\rho =0.8$ achieves a higher AUC. Negative values indicate when the setting of $\rho =0.2$ achieves a higher AUC.\relax }}{235}
+\contentsline {figure}{\numberline {9.1}{\ignorespaces Shared training pipeline for image retrieval and annotation when using raw images as the second dataset. The system takes training images and captions as inputs and returns the canonical bases $W_x$ and $W_y$ and the correlation coefficients $P$.\relax }}{243}
+\contentsline {figure}{\numberline {9.2}{\ignorespaces Shared training pipeline for image retrieval and annotation when the second dataset is associated text documents. The system takes an training captions and associated documents as inputs and returns the canonical bases $W_x$ and $W_y$ and the correlation coefficients $P$.\relax }}{244}
+\contentsline {figure}{\numberline {9.3}{\ignorespaces (a) Original image. (b) Original image with SIFT keypoint identification.\relax }}{245}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Original Image}}}{245}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {SIFT Keypoints}}}{245}
+\contentsline {figure}{\numberline {9.4}{\ignorespaces Image retrieval pipeline. This system takes a text query as input and the correlation model from the training pipeline and will return relevant images.\relax }}{246}
+\contentsline {figure}{\numberline {9.5}{\ignorespaces Image annotation pipeline when using the raw image as input. This system takes an image and correlation model from the training system as inputs and will return a list of words that are most relevant for the image.\relax }}{247}
+\contentsline {figure}{\numberline {9.6}{\ignorespaces Image annotation pipeline when using associated text documents. This system takes a text document and correlation model from the training system as inputs and will return a list of words that are most relevant for the associated image.\relax }}{248}
+\contentsline {figure}{\numberline {9.7}{\ignorespaces Example of an image and its captions in the Pascal dataset\relax }}{250}
+\contentsline {figure}{\numberline {9.8}{\ignorespaces (a) CCA results for query "airplane". (b) ICCA results for query "airplane".\relax }}{250}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {CCA Results}}}{250}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {ICCA Results}}}{250}
+\contentsline {figure}{\numberline {9.9}{\ignorespaces (a) Scores for all 1000 Pascal images for the query ``airplane'' for CCA. (b) Zoomed in version of (a) to highlight the top scores returned in Figure 9.8(a)\hbox {}. (c) Scores for all 1000 Pascal images for the query ``airplane'' for ICCA. (d) Zoomed in version of (c) to highlight the top scores which are returned in Figure 9.8(b)\hbox {}. All scores are the norm in (9.13\hbox {}).\relax }}{258}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {CCA Results}}}{258}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {CCA Results Zoomed}}}{258}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {ICCA Results}}}{258}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {ICCA Results Zoomed}}}{258}
+\contentsline {figure}{\numberline {9.10}{\ignorespaces CCA vs ICCA annotation results for the image query shown in 9.10(a)\hbox {}.\relax }}{259}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Image Query}}}{259}
+\contentsline {figure}{\numberline {9.11}{\ignorespaces (a) CCA scores for all words in the Pascal database for the image query in Figure 9.10(a)\hbox {}. (b) Zoomed in version of (a) to highlight the top scores returned in Figure 9.10\hbox {}. (c) ICCA scores for all words in the Pascal database for the image query in Figure 9.10(a)\hbox {}. (d) Zoomed in version of (c) to highlight the top scores which are returned in Figure 9.10\hbox {}. All scores are the norm in (9.14\hbox {}).\relax }}{260}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {CCA Results}}}{260}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {CCA Results Zoomed}}}{260}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {ICCA Results}}}{260}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {ICCA Results Zoomed}}}{260}
+\contentsline {figure}{\numberline {9.12}{\ignorespaces Empirical probability density functions of R-precision of image annotation of the University of Washington Ground Truth Dataset.\relax }}{261}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {CCA}}}{261}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {ICCA}}}{261}
+\contentsline {figure}{\numberline {9.13}{\ignorespaces Example of an image, its caption, and title in the BBC News dataset\relax }}{261}
+\contentsline {figure}{\numberline {10.1}{\ignorespaces Left, middle, and right camera views of our four sources for the controlled MCCA flashing light experiment.\relax }}{280}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Left Camera}}}{280}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Middle Camera}}}{280}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Right Camera}}}{280}
+\contentsline {figure}{\numberline {10.2}{\ignorespaces Manual identification of each source in each camera. All three sources share a common flashing tablet, outlined in red. The left and right camera views share a common flashing laptop screen, outlined in green. The left camera has an independent flashing phone light, outlined in dark blue. The right camera has an independent flashing police light, outlined in cyan.\relax }}{280}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Left Camera}}}{280}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Middle Camera}}}{280}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Right Camera}}}{280}
+\contentsline {figure}{\numberline {10.3}{\ignorespaces Singular value spectra of $Y_{\text {left}}$, $Y_{\text {middle}}$, and $Y_{\text {right}}$\relax }}{281}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Left Camera}}}{281}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Middle Camera}}}{281}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Right Camera}}}{281}
+\contentsline {figure}{\numberline {10.4}{\ignorespaces (a)-(c) Left singular vectors of $Y_{\text {left}}$ corresponding to the top 3 singular values. (d) Thresholded singular vectors from (a)-(c) overlayed onto the original scene. These pixels correspond to the flashing light sources visible in the left camera.\relax }}{282}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$u_1$}}}{282}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$u_2$}}}{282}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$u_3$}}}{282}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Overlay}}}{282}
+\contentsline {figure}{\numberline {10.5}{\ignorespaces (a) Left singular vector of $Y_{\text {middle}}$ corresponding to the top singular value. (b) Thresholded singular vector from (a) overlayed onto the original scene. These pixels correspond to the flashing light source visible in the middle camera.\relax }}{282}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$u_1$}}}{282}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Overlay}}}{282}
+\contentsline {figure}{\numberline {10.6}{\ignorespaces (a)-(c) Left singular vectors of $Y_{\text {right}}$ corresponding to the top 3 singular values. (d) Thresholded singular vectors from (a)-(c) overlayed onto the original scene. These pixels correspond to the flashing light sources visible in the right camera.\relax }}{283}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$u_1$}}}{283}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$u_2$}}}{283}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$u_3$}}}{283}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Overlay}}}{283}
+\contentsline {figure}{\numberline {10.7}{\ignorespaces Top 3 correlations returned by MCCA and IMCCA.\relax }}{284}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {MCCA}}}{284}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {IMCCA}}}{284}
+\contentsline {figure}{\numberline {10.8}{\ignorespaces Top 2 thresholded MCCA canonical vectors overlayed onto the original scene. The red pixels are the pixels corresponding to the largest correlation and the green pixels correspond to the pixels with the second largest correlation. Since we are in the sample deficient regime, MCCA returns random pixels as the canonical vectors are random.\relax }}{285}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Left Camera}}}{285}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Middle Camera}}}{285}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Right Camera}}}{285}
+\contentsline {figure}{\numberline {10.9}{\ignorespaces Top 2 thresholded IMCCA canonical vectors overlayed onto the original scene. The red pixels correspond to the largest correlation and the green pixels correspond to the second largest correlation. Clearly, the red pixels identify the shared flashing tablet light in all 3 views and the green pixels identify the shared flashing laptop in the left and right views.\relax }}{285}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Left Camera}}}{285}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Middle Camera}}}{285}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Right Camera}}}{285}
+\contentsline {figure}{\numberline {{\rm D}.1}{\ignorespaces Empirical and theoretically predicted cumulative distribution functions (cdf) for ICCA under various parameters $k_x$, $k_y$ and $n$ for real valued $X$ and $Y$.\relax }}{336}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{336}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{336}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{336}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{336}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {}}}{336}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {}}}{336}
+\contentsline {subfigure}{\numberline {(g)}{\ignorespaces {}}}{336}
+\contentsline {subfigure}{\numberline {(h)}{\ignorespaces {}}}{336}
+\contentsline {subfigure}{\numberline {(i)}{\ignorespaces {}}}{336}
+\contentsline {figure}{\numberline {{\rm D}.2}{\ignorespaces Empirical and theoretically predicted probability density functions (pdf) for ICCA under various parameters $k_x$, $k_y$ and $n$ for real valued $X$ and $Y$.\relax }}{337}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{337}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{337}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{337}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{337}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {}}}{337}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {}}}{337}
+\contentsline {subfigure}{\numberline {(g)}{\ignorespaces {}}}{337}
+\contentsline {subfigure}{\numberline {(h)}{\ignorespaces {}}}{337}
+\contentsline {subfigure}{\numberline {(i)}{\ignorespaces {}}}{337}
+\contentsline {figure}{\numberline {{\rm D}.3}{\ignorespaces Empirical and theoretically predicted cumulative distribution functions (cdf) for ICCA under various parameters $k_x$, $k_y$ and $n$ for complex valued $X$ and $Y$.\relax }}{338}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{338}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{338}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{338}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{338}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {}}}{338}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {}}}{338}
+\contentsline {subfigure}{\numberline {(g)}{\ignorespaces {}}}{338}
+\contentsline {subfigure}{\numberline {(h)}{\ignorespaces {}}}{338}
+\contentsline {subfigure}{\numberline {(i)}{\ignorespaces {}}}{338}
+\contentsline {figure}{\numberline {{\rm D}.4}{\ignorespaces Empirical and theoretically predicted probability density functions (pdf) for ICCA under various parameters $k_x$, $k_y$ and $n$ for complex valued $X$ and $Y$.\relax }}{339}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{339}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{339}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{339}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{339}
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {}}}{339}
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {}}}{339}
+\contentsline {subfigure}{\numberline {(g)}{\ignorespaces {}}}{339}
+\contentsline {subfigure}{\numberline {(h)}{\ignorespaces {}}}{339}
+\contentsline {subfigure}{\numberline {(i)}{\ignorespaces {}}}{339}
+\contentsline {figure}{\numberline {{\rm D}.5}{\ignorespaces Convergence plots for the false alarm rate of the proposed ICCA test statistic for real data. The false alarm rate is plotted as a function of $n$ for fixed $k_x/n$, $k_y/n$. The black line shows the desired false alarm rate. The absolute error is also plotted. We show plots for $\alpha =0.05$ and $\alpha =0.01$. We show convergence plots when using the test statistic with and without the correction term.\relax }}{340}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{340}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{340}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{340}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{340}
+\contentsline {figure}{\numberline {{\rm D}.6}{\ignorespaces Convergence plots for the false alarm rate of the proposed ICCA test statistic for complex data. The false alarm rate is plotted as a function of $n$ for fixed $k_x/n$, $k_y/n$. The black line shows the desired false alarm rate. The absolute error is also plotted. We show plots for $\alpha =0.05$ and $\alpha =0.01$. We show convergence plots when using the test statistic with and without the correction term.\relax }}{341}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{341}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{341}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{341}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{341}
+\contentsline {figure}{\numberline {{\rm D}.7}{\ignorespaces Convergence plots for the false alarm rate of the PCA test statistic for real data. The false alarm rate is plotted as a function of $n$ for fixed $p/n$. The black line shows the desired false alarm rate. The absolute error is also plotted. We show plots for $\alpha =0.05$ and $\alpha =0.01$. We show convergence plots when using the test statistic with and without the correction term.\relax }}{342}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{342}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{342}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{342}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{342}
+\contentsline {figure}{\numberline {{\rm D}.8}{\ignorespaces Convergence plots for the false alarm rate of the PCA test statistic for complex data. The false alarm rate is plotted as a function of $n$ for fixed $p/n$. The black line shows the desired false alarm rate. The absolute error is also plotted. We show plots for $\alpha =0.05$ and $\alpha =0.01$. We show convergence plots when using the test statistic with and without the correction term.\relax }}{343}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{343}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{343}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{343}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{343}

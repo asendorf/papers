@@ -1,0 +1,164 @@
+CCA is a linear algorithm, relying on the assumption that features of each dataset are
+linearly correlated. However, if there are nonlinear correlations present between the
+datasets, CCA may not discover such correlations. Motivated by kernel versions of
+algorithms such as principal component analysis (PCA) and support vector machines (SVM), a
+kernel version of CCA (KCCA) was developed separately in
+\cite{akaho2006kernel,melzer2001kernel}. 
+
+Similar to other kernel algorithms, KCCA first uses a nonlinear mapping to implicitly
+transform observations to a higher dimensional space. Linear CCA is then performed in this
+higher dimensional space. Thankfully, the kernel-trick is used to reduce the computational
+burden so that computational times depends only on the size of the training set and not
+on the dimensions of the kernel space. This allows us to work with feature spaces of
+arbitrarily high or infinite dimension. 
+
+KCCA has been used in applications such as image pose estimation \cite{melzer2001kernel},
+handwritten digit recognition \cite{yu2007learning}. KCCA has also been applied to
+independent component analysis (ICA) \cite{fyfe2000ica} and extended to a weighted version used
+for multiple datasets \cite{yu2007learning}. In this section, we provide a derivation of
+KCCA and give a closed form solution to find the canonical vectors and correlation
+coefficients. We then apply the idea of using informative data components in data fusion
+used in ICCA and IRCCA to derive an informative version of KCCA (IKCCA).
+
+\section{Derivation of KCCA}
+
+We provided a derivation of KCCA for completeness, following \cite{welling2005kcca}, which
+provides an excellent first principles discussion of KCCA. KCCA is inherently empirical,
+it relies on training data. We proceed using the previous assumption that we are presented
+with $n$ observations of each dataset that we stack into data matrices $Y_1$ and $Y_2$. We
+represent the nonlinear data mappings with the functions $\Phi$ and $\Psi$ and use these
+to map our training data to the kernel space via,
+\begin{equation*}
+  \yI^{(i)}\to\Phi(\yI^{(i)}),\,\,\,\,\,\yII^{(i)}\to\Psi(\yII^{(i)}).
+\end{equation*}
+We then perform empirical CCA using the kernel data matrices,
+$\Phi(Y_1)=\left[\Phi(\yI^{(1)}),\dots,\Phi(\yI^{(n)})\right]$ and
+$\Psi(Y_2)=\left[\Psi(\yI^{(1)}),\dots,\Psi(\yI^{(n)})\right]$ to form the sample
+covariance matrices. Substituting these expressions into (\ref{eq:cca_lagr}), the
+Lagrangian used in CCA, we arrive at
+\beq{\label{eq:kcca_lagr}}\ba
+& L(x_1,x_2,\lambda_1,\lambda_2) &&= &&&\xI^H\RIIIhat\xII - \lambda_1\left(\xI^H\RIhat\xI -
+  1\right) -\lambda_2\left(\xIIhat^H\RII\xII - 1\right)\\
+&&& = &&&\xI^H\Phi(Y_1)\Psi(Y_2)^H\xII - \lambda_1\left(\xI^H\Phi(Y_1)\Phi(Y_1)^H\xI -
+  1\right) \\
+&&&&&&-\lambda_2\left(\xII^H\Psi(Y_2)\Psi(Y_2)^H\xII - 1\right).\\
+\ea\eeq
+Typically, $\Phi$ and $\Psi$ map their respective vectors to a very high dimensional
+(possibly infinite) space in the hopes that data dependencies become linear in the kernel
+space. If the dimensionality of the feature space is larger than the number of
+observations, the canonical coefficient vectors must lie in the span of the mapped
+observations:
+\begin{equation*}
+  \xI = \Phi(Y_1)\alpha,\,\,\,\,\,\xII=\Psi(Y_2)\beta
+\end{equation*}
+where $\alpha=\left[\alpha_1,\dots,\alpha_n\right]^H$ and
+$\beta=\left[\beta_1,\dots,\beta_n\right]^H$ are weight vectors. Using this fact, the
+Lagrangian in (\ref{eq:kcca_lagr}) becomes
+\beq\label{eq:kcca_lagr2}\ba
+&L(\alpha,\beta,\lambda_1,\lambda_2) = &&\alpha^H\Phi(Y_1)^H\Phi(Y_1)\Psi(Y_2)^H\Psi(Y_2)\beta -
+\lambda_1\left(\alpha^H\Phi(Y_1)^H\Phi(Y_1)\Phi(Y_1)^H\Phi(Y_1)\alpha - 
+  1\right) \\
+&&&-\lambda_2\left(\beta^H\Psi(Y_2)^H\Psi(Y_2)\Psi(Y_2)^H\Psi(Y_2)\beta - 1\right).\\
+\ea\eeq
+Defining $K_1=\Phi(Y_1)^H\Phi(Y_1)$ and $K_2 = \Psi(Y_2)^H\Psi(Y_2)$   as the kernel
+matrices. The entries of $K_1$ are $\Phi(\yI^{(i)H}\Phi(\yI^{(j)}))$ and the entries of
+$K_2$ are $\Psi(\yII^{(i)H}\Psi(\yII^{(j)}))$. We introduce the kernel trick by letting
+$k_1(\yI^{(i)},\yI^{(j)}) = \Phi(\yI^{(i)H}\Phi(\yI^{(j)}))$ and
+$k_2(\yII^{(i)},\yII^{(j)}) = \Psi(\yII^{(i)H}\Psi(\yII^{(j)}))$. Therefore, the kernel
+matrices, $K_1$ and $K_2$ can be computed without mapping the observations into the kernel
+spaces. 
+
+Using this notation, (\ref{eq:kcca_lagr2}) simplifies to 
+\beq
+L(\alpha,\beta,\lambda_1,\lambda_2) = \alpha^HK_1K_2\beta -
+\lambda_1\left(\alpha^HK_1K_1\alpha -
+  1\right) -\lambda_2\left(\beta^HK_2K_2\beta - 1\right).\\
+  \eeq
+After taking partial derivatives with respect to $\alpha$ and $\beta$, we achieve
+  the following system
+\begin{equation*}
+  \begin{aligned}
+    &K_1K_2\beta = 2\lambda_1 K_1^2\alpha\\
+    &K_2K_1\alpha = 2\lambda_2 K_2^2\beta.\\
+  \end{aligned}
+\end{equation*}
+It is easily shown that $\rho=2\lambda_1=2\lambda_2$ as in CCA by multiplying the first
+equation by $\alpha^H$ and the second by $\beta^H$. Assuming that $K_1$ is invertible,
+this system yields the solution $\alpha =\lambda^{-1}K_1^{-1}K_2\beta$ implying that
+$K_2^2\beta=\rho^2K_2^2\beta$ which always has a solution for $\lambda=\rho=1$. However,
+this implies that the solution represents maximal correlation between the two datasets in
+the feature spaces, which is not necessarily true. To overcome this over-fitting, it is
+common to use a regularization parameter $\eta$ that penalizes large solutions. The
+regularized Lagrangian is
+\begin{equation*}
+  L(\alpha,\beta,\lambda_1,\lambda_2) = \alpha^H K_1K_2\beta - \frac{rho}{2}(\alpha^HK_1^2\alpha+\eta\|\alpha\|^2 -1) - \frac{rho}{2}(\beta^HK_2^2\beta+\eta\|\beta\|^2-1).
+\end{equation*}
+After taking partial derivatives, we achieve the following system
+\begin{equation*}
+  \begin{aligned}
+    &K_1K_2\beta = \rho (K_1^2+\eta I_n)\alpha\\
+    &K_2K_1\alpha = \rho(K_2^2+\eta I_n)\beta.\\
+  \end{aligned}
+\end{equation*}
+Solving this system yields the following eigenvalue problem
+\begin{equation}\label{eq:kcca_eig}
+  (K_1^2+\eta I_n)^{-1}K_1K_2(K_2^2+\eta I_n)^{-1}K_2K_1\alpha =\rho^2\alpha.
+\end{equation}
+Using a similarity transform as in CCA and RCCA, we let $f=(K_1^2+\eta I_n)^{1/2}\alpha$
+and $g=(K_2^2+\eta I_n)^{1/2}\beta$ and define
+\beq\label{eq:ckcca}
+\Ckcca = (K_1^2+\eta I_n)^{-1/2}K_1K_2(K_2^2+\eta I_n)^{-1/2}.
+\eeq
+Let $FKG^H$ be the SVD of $\Ckcca$ where $F=\left[f_1,\dots, f_n\right]$,
+  $K=\diag(k_1,\dots,k_n)$, $G=\left[g_1,\dots,g_n\right]$ so that the solution of KCCA is
+\be\ba
+& \rho = k_1\\
+& \alpha = (K_1^2+\eta I_n)^{-1/2} f\\
+& \beta  = (K_2^2+\eta I_n)^{-1/2}g\\
+\ea\ee
+
+We may simplifying this solution using the SVDs of the kernel matrices. Let $K_1=U_1\Sigma_1U_1^H$ and $K_2=U_2\Sigma_2U_2^H$ be the SVDs of our kernel matrices. Because kernel matrices are always symmetric and positive semi-definite, the SVD is the same as the eigenvalue decomposition. Using this decomposition, we can rewrite
+\beq\label{eq:ckcca_svd}\ba
+    &\Ckcca &&= (U_1\Sigma_1U_1^HU_1\Sigma_1U_1^H+\eta
+    I_n)^{-1/2}U_1\Sigma_1U_1^HU_2\Sigma_2U_2^H(U_2\Sigma_2U_2^HU_2\Sigma_2U_2^H+\eta
+    I_n)^{-1/2}\\    
+    &&& = U_1(\Sigma_1^2+\eta I_n)^{-1/2}\Sigma_1U_1^HU_2\Sigma_2(\Sigma_2^2+\eta
+    I_n)^{-1/2}U_2^H\\    
+\ea\eeq
+Notice that $(\Sigma_1^2+\eta I_n)^{-1/2}$ and $(\Sigma_2^2+\eta I_n)^{-1/2}$ are easily
+computable as they are diagonal matrices. The KCCA correlation coefficient is computed by
+\begin{equation*}
+  \rho= \sigma_1\left(\left(\Sigma_1^2+\eta
+      I_n\right)^{-1/2}\Sigma_1U_1^HU_2\Sigma_2\left(\Sigma_2^2+\eta
+      I_n\right)^{-1/2}\right).
+\end{equation*}
+
+\section{Informative KCCA (IKCCA)}
+
+Motivated by informative versions of CCA and RCCA derived herein, we now derive an
+informative version of KCCA (IKCCA). Proposition \ref{prop:raj} demonstrated that the
+effective rank of $Y_1$ and $Y_2$ was much less than the inherent dimension of the feature
+vectors. Similarly, when examining $\Ckcca$ in (\ref{eq:ckcca_svd}) we see that it uses
+the full rank SVD of the kernel matrices $K_1$ and $K_2$. However, the effective
+(informative) rank of these matrices is most certainly much less than the number of
+samples $n$. In this spirit, we define the trimmed kernel data matrices as
+\begin{equation*}
+  \begin{aligned}
+    &\widetilde{\Sigma}_1=\Sigma_x(1:r_1,1:r_1)\\
+    &\widetilde{\Sigma}_2=\Sigma_y(1:r_2,1:r_2)\\
+    &\widetilde{U}_x=U_1(:,1:r_1)\\
+    &\widetilde{U}_y=U_2(:,1:r_2)\\
+  \end{aligned}
+\end{equation*}
+where $r_1$ and $r_2$ are the number of informative components each dataset. We construct
+\be
+    \Ckccatil= \widetilde{U}_1(\widetilde{\Sigma}_1^2+\eta I_n)^{-1/2}\widetilde{\Sigma}_1\widetilde{U}_1^H\widetilde{U}_2\widetilde{\Sigma}_2(\widetilde{\Sigma}_2^2+\eta
+    I_n)^{-1/2}\widetilde{U}_2^H
+\ee
+and then take the SVD $\Ckccatil = \widetilde{F}\widetilde{K}\widetilde{G}^H$. The IKCCA
+canonical vectors and correlation coefficient estimates are
+\be\ba
+& \widetilde{\rho} = \widetilde{k}_1\\
+& \widetilde{\alpha} = (K_1^2+\eta I_n)^{-1/2} \widetilde{f}\\
+& \widetilde{\beta}  = (K_2^2+\eta I_n)^{-1/2}\widetilde{g}\\
+\ea\ee

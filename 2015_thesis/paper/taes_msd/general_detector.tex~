@@ -1,0 +1,241 @@
+We consider the standard detection problem where we wish to design a detector that
+discriminates between the $H_0$ hypothesis that an observation is purely noise and the $H_1$
+hypothesis that the observation contains an unknown signal.  We model the observation
+$w\in\reals^{k\times 1}$ as
+\beq\label{eq:general_setup}
+w = \begin{cases}
+z & w\in H_0\\
+\delta + z & w\in H_1\\
+\end{cases}
+\eeq
+where $\delta=[\delta_1,\dots,\delta_k]^T\in\reals^{k\times 1}$ is an unknown deterministic vector,
+$z\sim\mathcal{N}\left(0,I_k\right)$ is additive white Gaussian noise (AWGN), and $k$ is
+known.See
+\cite{cui2013performance,santiago2013noise,arribas2013antenna,chen2013adaptive,gorji2013widely,zhou2013space,kwon2013multi,hu2013doa,liao2013direction}
+for similar signal-plus-noise models in signal and array processing.
+We consider the
+Neyman-Pearson detection setting (see \cite{van1968detection}), where a detector used to decide $H_0$ or $H_1$  is a likelihood ratio test (LRT) that has the form
+\beq\label{eq:lrt_form}
+\Lambda(w) = \frac{f\left(w\,|\, H_1\right)}{f\left(w\,|\, H_0\right)} \detgtrless \eta.
+\eeq
+Here $f\left(\cdot\right)$ is the appropriate conditional probability density function
+(p.d.f.) of the observation and $\eta$ is a scalar threshold set so that $\Prob{\Lambda(w)
+  > \eta\,|\, w\in H_0} = \alpha$ where $\alpha\in[0,1]$ is a desired false alarm rate.
+
+The conditional distributions of $w$ modeled in (\ref{eq:general_setup}) are
+$w|H_0\sim\mathcal{N}\left(0,I_k\right)$ and
+$w|H_1\sim\mathcal{N}\left(\delta,I_k\right)$. However, as $\delta$ is unknown, we cannot
+substitute the p.d.f. of $w|H_1$ into (\ref{eq:lrt_form}). Instead, we use the generalized
+LRT (GLRT), which maximizes $f(w|H_1)$ with respect to any unknown parameters. The GLRT
+for our problem is 
+\be \Lambda(w) = \frac{\max_{\delta}f\left(w\,|\,
+    H_1\right)}{f\left(w\,|\, H_0\right)} \detgtrless \eta.  
+\ee
+The conditional p.d.f. of $w$ under the $H_1$ hypothesis is
+\be
+f\left(w\,|\,H_1\right) = \left(2\pi\right)^{-k/2}\exp\left\{ -\frac{1}{2}\left(w-\delta\right)^T\left(w-\delta\right)\right\}.
+\ee
+This p.d.f. is maximized when $\delta=w$ and obtains the maximum value of
+$(2\pi)^{-k/2}$. Substituting this into the GLRT yields
+\be
+\Lambda(w) = \frac{(2\pi)^{-k/2}}{\left(2\pi\right)^{-k/2}\exp\left\{ -\frac{1}{2}w^Tw\right\}}.
+\ee
+Simplifying this expression using the natural logarithm as a monotonic operation yields
+the test statistic
+\beq\label{eq:energy_detector}
+\Lambda_{\text{energy}}(w) = w^Tw = \sum_{i=1}^k w_i^2
+\eeq
+where $w=[w_1,\dots,w_k]^T$. The detector for the observation model in
+(\ref{eq:general_setup}) is an energy detector as its test statistic sums the energy
+residing in each component (or dimension) of the given observation.
+
+\subsection{Weighted Energy Detector}
+
+The energy detector in (\ref{eq:energy_detector}) may be generalized by adding a
+non-negative weight, $a_i\geq 0$ to each component in the sum. The statistic for the
+weighted energy detector is 
+\beq\label{eq:weighted_detector}
+\Lambda_{\text{weighted}}(w) = w^TAw = \sum_{i=1}^k a_iw_i^2.
+\eeq
+where $A=\diag(a_1,\dots,a_k)\in\reals^{k\times k}$. We constrain $\sum_{i=1}^k a_i = 1$ so that the weights
+reside on the $(k-1)$-simplex. This reduces the set of possible weights by eliminating
+the sets of weights that are multiples of each other, resulting in equivalent detectors. 
+
+The weighted energy detector gives us, as practitioners, additional freedom when designing
+a detector; we may not wish to weight each component equally as the standard energy
+detector does. Instead, we may wish to give larger weights to components with larger $\delta_i$
+and smaller weights to components with $\delta_i\approx 0$. We can easily recover the
+standard energy detector by letting $A=I_k$.
+
+\subsection{ROC Curve Analysis}
+
+To compare the performance of multiple detectors, we will compare their receiver operating
+characteristic (ROC) curves. A ROC curve is a collection of points ($P_F,P_D$) where for
+$-\infty<\eta<\infty$,
+\beq\label{eq:roc}\ba
+&P_F=\Prob{\Lambda(w) > \eta \,|\, w\in H_0}\\
+&P_D=\Prob{\Lambda(w) > \eta \,|\, w\in H_1}.\\
+\ea\eeq
+For $0\leq P_F\leq 1$ we can alternatively define the ROC curve as a function $P_D(P_F)$ by
+solving for $\eta$. This function measures the achieved probability of detection, $P_D$,
+as a function of the probability of false alarm, $P_F$. This paper is an oracle study of the
+performance of energy detectors and so we assume that the deterministic vector $\delta$ is
+known for purposes of computing a theoretical ROC curve.
+
+To derive the ROC curve for the energy detector we must compute the conditional
+distributions of the statistic in (\ref{eq:energy_detector}). The conditional
+distributions of the components in $w$ are simply
+$w_i|H_0\overset{\text{i.i.d.}}{\sim}\mathcal{N}\left(0,1\right)$ and
+$w_i|H_1\overset{\text{i.i.d.}}{\sim}\mathcal{N}\left(\delta_i,1\right)$. Therefore,
+$w_i^2|H_0\overset{\text{i.i.d.}}{\sim}\chi^2_1$ and
+$w_i^2|H_1\overset{\text{i.i.d.}}{\sim}\chi^2_1\left(\delta_i^2\right)$ where $\chi^2_1$
+is a chi-square random variable with one degree of freedom and $\chi^2_1(\delta_i^2)$ is a
+non-central chi-square random variable with one degree of freedom and non-centrality
+parameter $\delta_i^2$. As each component $w_i$ is independent,
+\beq\label{eq:distr_energy} \ba
+&\Lambda(w)|H_0\sim\chi^2_k\\
+&\Lambda(w)|H_1\sim\chi^2_k\left(\delta^T\delta\right) \ea \eeq where $\chi^2_k$ is a
+chi-square random variable with $k$ degrees of freedom and $\chi^2_k(\delta^T\delta)$ is a
+non-central chi-square random variable with $k$ degrees of freedom and non-centrality
+parameter $\delta^T\delta = \sum_{i=1}^k\delta_i^2$. By using these distributions in
+(\ref{eq:distr_energy}) and solving for $\eta$ in (\ref{eq:roc}), we achieve the ROC curve
+\begin{equation}\label{eq:roc_energy}
+\begin{aligned}
+&P_{D_\text{energy}}(P_F,k)=1-Q_{\chi_{k}^2(\lambda_k)}\left(Q^{-1}_{\chi^2_{k}}\left(1-P_F\right)\right)\\
+\end{aligned}
+\end{equation}
+where $Q_{\chi_{k}^2}(\lambda_k)$ is the cumulative distribution function (c.d.f.) of a
+non-central chi-square random variable with $k$ degrees of freedom and non-centrality
+parameter $\lambda_k=\sum_{i=1}^k\delta_i^2$ and $Q_{\chi_{k}^2}$ is the c.d.f. of a chi-square random
+variable with $k$ degrees of freedom. See \cite{cui2013performance,arribas2013antenna,zhou2013space} for similar ROC
+performance curve derivations.
+
+Using a similar analysis, the conditional distributions of the weighted energy detector's
+statistic in (\ref{eq:weighted_detector}) are
+\beq\label{eq:roc_weighted}
+\ba
+&\Lambda(w)|H_0\sim\sum_{i=1}^k a_i\chi_{1i}^2\\
+&\Lambda(w)|H_1\sim\sum_{i=1}^k a_i \chi_{1i}^2\left(\delta_i^2\right)
+\ea
+\eeq
+where $\chi_{1i}^2$ are independent chi-square random variables with one degree of freedom
+and $\chi_{1i}^2\left(\delta_i^2\right)$ are independent non-central chi-square random variable
+with one degree of freedom and non-centrality parameter $\delta_i^2$. However, we cannot
+write the ROC curve of the weighted energy detector as an explicit function
+$P_{D_{\text{weighted}}}\left(P_F\right)$. While the c.d.f. of chi-square and non-central
+chi-square random variables are known in closed form, the c.d.f. of a sum of chi-square
+random variables is not known in closed form.
+
+\subsection{Problem Statement}\label{sec:prob_state}
+
+The definition of $\Lambda_{\text{weighted}}(w)$ in (\ref{eq:weighted_detector}) raises
+the natural question
+\begin{quote}
+  Given $\delta$ and a desired $P_F$, what is the optimal choice of weighting matrix, $A$,
+  that maximizes $P_{D_{\text{weighted}}}(P_F)$ for a weighted energy detector with the
+  form of (\ref{eq:weighted_detector}) using observations generated from
+  (\ref{eq:general_setup})?
+\end{quote}
+As noted above, we cannot derive a closed form expression for
+$P_{D_{\text{weighted}}}(P_F)$ because the conditional c.d.f. of the test statistic are
+weighted sums of chi-square random variables. To compute the value of the c.d.f. of such
+sums in (\ref{eq:roc_weighted}) at a threshold $\eta$, it is common to use saddlepoint
+approximation techniques \cite{wood1993saddlepoint}. However, this would have to be
+repeated for $0\leq\eta<\infty$ to produce a ROC curve for one particular choice of
+weighting matrix. One would then repeat this process, optimizing over the choice of
+weighting matrix. The difficulty of this problem also increases with increased dimension
+$k$. Similar generalized frameworks such as \cite{lee2013generalized}, which allows for
+optimal weights for guidance laws, typically must make strict assumptions about any
+optimal weights. We leave developing an algorithm to efficiently optimize over the
+weighting matrix, $A$, to future work.
+
+In this paper, we instead focus on an easier problem that constrains all of the weights to
+be either 0 or 1. The problem then becomes deciding which components of $w$ to include in
+an energy detector. To illustrate how this problem is related to problem of solving for
+the optimal weighting matrix and  why this problem is easier, we consider a rank-2 setting
+where the desired false alarm rate is $P_F=0.1$. Optimizing $A=\diag(a_1,a_2)$ on the
+simplex $a_1+a_2=1$ results in one degree of freedom and results in the detector
+\be
+\Lambda(w)_{\text{weighted}} = aw_1^2 + (1-a)w_2^2  
+\ee
+where $a\in[0,1]$. 
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\figwidth]{figures/weights_easy.pdf}
+\caption{Empirically achieved probability of detection ($P_D$) as a function of the
+  weighting coefficient $a$ for a fixed false alarm rate of $P_F=0.1$. Results are shown
+  for two detectors. The first detector uses the deterministic vector $\delta=[1,1]^T$
+  and the second detector uses $\delta=[1,0]^T$.  The first detector achieves its
+  maximum performance around $a=0.5$ indicating that both components are equally
+  informative. The second detector achieves its maximum performance at $a=1$ indicating
+  the second subspace component is not useful in detection.}
+\label{fig:weights_easy}
+\end{figure}
+
+Figure \ref{fig:weights_easy} plots the empirically achieved probability of detection as a
+function of the weighting parameter $a$. Results are shown for two choices of the
+deterministic signal vector, $\delta$. The detector with $\delta=[1, 1]^T$ achieves
+maximum performance when $a=0.5$. This choice of weighting parameter weights both
+components equally and makes sense because in this setup the components of the
+deterministic vector are equal, $\delta_1=\delta_2=1$. Thus, both components $w_1$ and
+$w_2$ have the same conditional distributions and it is intuitive that we should weight
+both components equally. However, the second detector sets $\delta=[1, 0]^T$ and achieves
+maximum performance when $a=1$ indicating that the second component is not useful in
+detection. As $\delta_2=0$, $w_2$ has the same distribution under both the $H_1$ and $H_0$
+hypotheses, giving it no discriminatory power.
+
+These two detectors represent the extreme cases that we may encounter. In the first,
+$\delta_1/\delta_2=1$ and so each component is equally informative. In the second
+$\delta_1/\delta_2 = \infty$ and so the first component is much more useful than the
+second. In these extreme settings, the choice of $a$ is obvious and we would not need a
+sophisticated algorithm for optimizing $A$. However, in the moderate regime of
+$\delta_1/\delta_2$, the optimal weighting matrix is no longer immediately obvious and we
+would have to use an optimization algorithm.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\figwidth]{figures/weights_hard.pdf}
+\caption{Empirically achieved probability of detection ($P_D$) as a function of the
+  weighting coefficient $a$ for a fixed false alarm rate of $P_F=0.1$. Results are shown
+  for a detector using $\delta=[1, 0.75]^T$ and a detector using $\delta=[1, 0.5]^T$. The
+  maximum performance of each detector is indicated by a black circle.}
+\label{fig:weights_hard}
+\end{figure}
+
+Figure \ref{fig:weights_hard} illustrates this detection setting, where the optimal
+weights are not simply 0 or 1. The figure plots the empirically achieved probability of
+detection as a function of the weighting parameter $a$ for a fixed $P_F=0.1$. We consider
+two choices of the deterministic signal vector, $\delta$. Both choices place
+$\delta_1>\delta_2$ so we only consider the regime $a\in[0.5, 1]$, which weights the first
+component stronger than the second. The maximum performance of each detector is indicated
+by a black circle. Unlike the detectors in Figure \ref{fig:weights_easy}, the maximum
+$P_D$ is not achieved at $a=0.5$ or $a=1$. For each detector, both components are needed to
+achieve optimal performance.  For the first detector, $\delta_1/\delta_2=4/3$ and for the
+second detector $\delta_1/\delta_2=2$. The weight that maximizes $P_D$ for the detector
+using $\delta=[1, 0.75]^T$ is closer to $0.5$ as $\delta_1/\delta_2$ is closer to 1. In
+the other detector, the second component is weaker and it is intuitive that the optimal
+$a$ for this detector weights the first component stronger.
+
+Instead of finding the optimal weighting matrix, this paper focuses on selecting which
+components (or dimensions) to use in an energy detector. If we make the assumption that
+the entries of $\delta$ are ordered (i.e. $|\delta_1| \geq |\delta_2|
+\geq\dots|\delta_k|$), then the problem is equivalent to choosing the number of
+components, $d$, to use in the energy detector
+\beq\label{eq:the_detector}
+\Lambda_d(w) = \sum_{i=1}^d w_i^2.
+\eeq
+This problem becomes tractable because the ROC curve of the detector in
+(\ref{eq:the_detector}) is easily computable in (\ref{eq:roc_energy}). Specifically, we
+wish to answer the following question:
+\begin{quote}
+  Given $\delta$ and a desired $P_F$, what is the optimal number of components, $d$, to
+  use to maximize $P_{D_{\text{energy}}}(P_F,d)$ for an energy detector with the form of
+  (\ref{eq:the_detector}) derived from observations modeled by (\ref{eq:general_setup})?
+\end{quote}
+ Answering this
+question will provide some surprising results.  Even in the setting of Figure
+\ref{fig:weights_hard} where $k=2$, for the detector using $\delta=[1,0.5]^T$, it is better to
+use only the first component ($a=1$) than both components ($a=0.5$). From this simple
+example, we see that for energy detectors, not all components may be useful in detection.
+

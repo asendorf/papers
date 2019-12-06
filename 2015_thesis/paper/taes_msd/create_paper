@@ -1,0 +1,6 @@
+#!/bin/sh
+pdflatex taes_useful.tex
+bibtex taes_useful
+bibtex taes_useful
+pdflatex taes_useful.tex
+evince taes_useful.pdf

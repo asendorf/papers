@@ -1,0 +1,176 @@
+\documentclass[11pt,draftcls,onecolumn]{IEEEtran}
+%\documentclass[10pt,twocolumn,twoside]{IEEEtran}
+
+\usepackage{amstext}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage[tight]{subfigure}
+\usepackage{comment, color}
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+\include{my_header}
+
+\usepackage{epstopdf}
+\usepackage{epsfig}
+
+
+% Figure size
+\newcommand{\figwidth}{2.5in}
+
+% CCA things
+\newcommand{\yI}{\widetilde{x}}
+\newcommand{\yII}{\widetilde{y}}
+\newcommand{\xI}{w_x}
+\newcommand{\xII}{w_y}
+\newcommand{\wI}{z_x}
+\newcommand{\wII}{z_y}
+\newcommand{\RI}{R_{xx}}
+\newcommand{\RII}{R_{yy}}
+\newcommand{\RIII}{R_{xy}}
+
+
+\newcommand{\xIhat}{\widehat{x}_1}
+\newcommand{\xIIhat}{\widehat{x}_2}
+\newcommand{\RIhat}{\widehat{R}_{11}}
+\newcommand{\RIIhat}{\widehat{R}_{22}}
+\newcommand{\RIIIhat}{\widehat{R}_{12}}
+
+\newcommand{\Creg}{C_{\text{reg}}}
+\newcommand{\Creghat}{\widehat{C}_{\text{reg}}}
+\newcommand{\Cregtil}{\widetilde{C}_{\text{reg}}}
+\newcommand{\Ckcca}{C_{\text{kcca}}}
+\newcommand{\Ckccatil}{\widetilde{C}_{\text{kcca}}}
+\newcommand{\Clrcca}{C_{\text{lrcca}}}
+
+
+\begin{document}
+%
+% paper title
+% can use linebreaks \\ within to get better formatting as desired
+\title{The Top Singular Values of the Product of Low Rank Perturbations of Large Random Matrices}
+
+
+\author{Nicholas~Asendorf
+        and~Raj~Rao~Nadakuditi\\
+%EDICS: SSP-DETC, SSP-PERF% <-this % stops a space
+
+\thanks{Copyright (c) 2012 IEEE. Personal use of this material is permitted. However, permission to use this material for any other purposes must be obtained from the IEEE by sending a request to pubs-permissions@ieee.org.}
+
+\thanks{N. Asendorf is with the Department
+of Electrical Engineering and Computer Science, 1301 Beal Avenue, Room 4313, University of Michigan, Ann Arbor,
+MI, 48109 USA (e-mail: asendorf@umich.edu).}% <-this % stops a space
+\thanks{R.R. Nadakuditi is with the Department
+of Electrical Engineering and Computer Science, 1301 Beal Avenue, Room 4118, University of Michigan, Ann Arbor,
+MI, 48109 USA (e-mail: rajnrao@umich.edu).}% <-this % stops a space
+\thanks{Manuscript received ??}}
+
+
+% The paper headers
+%\markboth{IEEE Journal,~Vol.~?, No.~?, ?~?}%
+%{Asendorf and Nadakuditi: The Performance of a Matched Subspace Detector that Uses Subspaces Estimated from Finite, Noisy, Training Data}
+% The only time the second header will appear is for the odd numbered pages
+% after the title page when using the twoside option.
+%
+% *** Note that you probably will NOT want to include the author's ***
+% *** name in the headers of peer review papers.                   ***
+% You can use \ifCLASSOPTIONpeerreview for conditional compilation here if
+% you desire.
+
+% make the title area
+\maketitle
+
+
+\begin{abstract}
+  \input{abstract.tex}
+\end{abstract}
+
+% Note that keywords are not normally used for peerreview papers.
+\begin{IEEEkeywords}
+ random matrices, correlation analysis, signal detection
+\end{IEEEkeywords}
+
+\IEEEpeerreviewmaketitle
+
+\section{Introduction}\label{sec:intro}
+\input{intro.tex}
+
+\section{Data Model and Background}\label{sec:back}
+\input{prob_state.tex}
+
+\section{Main Results}\label{sec:results}
+\input{main_result.tex}
+
+\section{Empirical Simulations}\label{sec:sims}
+\input{empir_sims.tex}
+
+\section{Proofs of Theorems \ref{thm:lrcca} and \ref{thm:xy_sv}}\label{sec:proof}
+\input{proof.tex}
+
+\section{Conclusion}\label{sec:con}
+\input{conclusion.tex}
+
+%\section*{Appendix}
+% Some append
+
+% use section* for acknowledgement
+%\section*{Acknowledgment}
+
+% Acknowledges
+
+
+% Can use something like this to put references on a page
+% by themselves when using endfloat and the captionsoff option.
+\ifCLASSOPTIONcaptionsoff
+  \newpage
+\fi
+
+\bibliographystyle{IEEEtran}
+\bibliography{IEEEabrv,xy_proof_bib}
+
+% biography section
+%
+% If you have an EPS/PDF photo (graphicx package needed) extra braces are
+% needed around the contents of the optional argument to biography to prevent
+% the LaTeX parser from getting confused when it sees the complicated
+% \includegraphics command within an optional argument. (You could create
+% your own custom macro containing the \includegraphics command to make things
+% simpler here.)
+%\begin{biography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{figures/asend.png}}]{Nicholas
+%  Asendorf}
+%received the B.S. degree in computer engineering from the University of Maryland, College Park, MD, in 2010 and the M.S. degree in electrical engineering:systems from the University of Michigan in 2012.
+
+%He is a graduate student in the Department of Electrical Engineering and Computer Science at the University of Michigan, Ann Arbor. His research interests include the need for data driven algorithms in statistical signal processing and machine learning particularly in low SNR and sample starved settings.
+
+%\end{biography}
+
+%\begin{biography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{figures/nadak.jpg}}]{Raj Rao Nadakuditi}
+%is an Assistant Professor in the Department of Electrical Engineering and Computer Science at the University of Michigan. He received his PhD in 2007 from the Massachusetts Institute of Technology and the Woods Hole Oceanographic Institution. He was awarded an Office of Naval Research Young Investigator Award in 2011, an Air Force Office of Scientific Research Young Investigator Award in 2012 and the Signal Processing Society Best Young Author Paper Award in 2012. His research focuses on developing theory for random matrices for applications such in signal processing, machine learning, queuing theory and scattering theory. 
+%\end{biography}
+
+
+% if you will not have a photo at all:
+%\begin{IEEEbiographynophoto}{John Doe}
+%Biography text here.
+%\end{IEEEbiographynophoto}
+
+
+% You can push biographies down or up by placing
+% a \vfill before or after them. The appropriate
+% use of \vfill depends on what kind of text is
+% on the last page and whether or not the columns
+% are being equalized.
+
+%\vfill
+
+% Can be used to pull up biographies so that the bottom of the last one
+% is flush with the other column.
+%\enlargethispage{-5in}
+
+
+
+
+\end{document} 

@@ -1,0 +1,224 @@
+\contentsline {chapter}{DEDICATION}{ii}
+\contentsline {chapter}{ACKNOWLEDGEMENTS}{iii}
+\contentsline {chapter}{LIST OF FIGURES}{xii}
+\contentsline {chapter}{LIST OF TABLES}{xxix}
+\contentsline {chapter}{LIST OF APPENDICES}{xxxi}
+\contentsline {chapter}{ABSTRACT}{xxxii}
+\mbox { }\newline \noindent {\bf CHAPTER}\newline 
+\hbox { }
+\hbox { }
+\contentsline {chap}{\numberline {\hbox { }\hfill \bf I.\hspace {5pt}}{\bf Introduction}}{1}
+\hbox { }
+\contentsline {section}{\numberline {1.1}Canonical Correlation Analysis (CCA)}{1}
+\contentsline {subsection}{\numberline {1.1.1}What is it? What is it not?}{1}
+\contentsline {subsection}{\numberline {1.1.2}Variations on CCA}{3}
+\contentsline {subsection}{\numberline {1.1.3}Applications}{4}
+\contentsline {section}{\numberline {1.2}Contributions of this thesis}{5}
+\hbox { }
+\contentsline {chap}{\numberline {\hbox { }\hfill \bf II.\hspace {5pt}}{\bf Performance of Matched Subspace Detectors Using Finite Training Data}}{8}
+\hbox { }
+\contentsline {section}{\numberline {2.1}Introduction}{8}
+\contentsline {section}{\numberline {2.2}Data Models and Parameter Estimation}{11}
+\contentsline {subsection}{\numberline {2.2.1}Training Data Model}{11}
+\contentsline {subsection}{\numberline {2.2.2}Parameter Estimation}{11}
+\contentsline {subsection}{\numberline {2.2.3}Testing Data Model}{12}
+\contentsline {section}{\numberline {2.3}Standard Detector Derivations}{13}
+\contentsline {subsection}{\numberline {2.3.1}Stochastic Testing Model}{13}
+\contentsline {subsection}{\numberline {2.3.2}Deterministic Testing Model}{14}
+\contentsline {subsection}{\numberline {2.3.3}Effect of the Number of Training Samples}{15}
+\contentsline {section}{\numberline {2.4}Problem Statements}{17}
+\contentsline {subsection}{\numberline {2.4.1}Problem 1: Derive a New Detector that Exploits Predictions of Subspace Accuracy}{17}
+\contentsline {subsection}{\numberline {2.4.2}Problem 2: Characterize ROC Performance Curves}{18}
+\contentsline {section}{\numberline {2.5}Pertinent Results from Random Matrix Theory}{19}
+\contentsline {subsection}{\numberline {2.5.1}Eigenvector Aspects}{19}
+\contentsline {subsection}{\numberline {2.5.2}Eigenvalue Aspects}{21}
+\contentsline {section}{\numberline {2.6}Derivation of New RMT Matched Subspace Detectors}{22}
+\contentsline {subsection}{\numberline {2.6.1}Stochastic RMT Detector}{23}
+\contentsline {subsection}{\numberline {2.6.2}Deterministic RMT Detector}{24}
+\contentsline {section}{\numberline {2.7}Theoretical ROC Curve Predictions}{26}
+\contentsline {subsection}{\numberline {2.7.1}Stochastic Testing Setting}{27}
+\contentsline {subsection}{\numberline {2.7.2}Deterministic Testing Setting}{28}
+\contentsline {section}{\numberline {2.8}Discussion and Insights}{29}
+\contentsline {subsection}{\numberline {2.8.1}Simulation Protocol}{29}
+\contentsline {subsection}{\numberline {2.8.2}Convergence and Accuracy of ROC Curve Predictions}{30}
+\contentsline {subsection}{\numberline {2.8.3}Effect of the Number of Training Samples}{31}
+\contentsline {subsection}{\numberline {2.8.4}Effect of $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle k$}\mathaccent "0362{k}$}{32}
+\contentsline {section}{\numberline {2.9}Conclusion}{33}
+\hbox { }
+\contentsline {chap}{\numberline {\hbox { }\hfill \bf III.\hspace {5pt}}{\bf Extensions of Deterministic Matched Subspace Detectors: Missing Data and Useful Subspace Components}}{40}
+\hbox { }
+\contentsline {section}{\numberline {3.1}Introduction}{40}
+\contentsline {section}{\numberline {3.2}Problem Formulation}{42}
+\contentsline {subsection}{\numberline {3.2.1}ROC Curve Analysis}{43}
+\contentsline {subsection}{\numberline {3.2.2}Problem Statement}{44}
+\contentsline {section}{\numberline {3.3}Useful Components In Energy Detectors}{44}
+\contentsline {subsection}{\numberline {3.3.1}Definition and Computation of $k_{\text {useful}}$}{45}
+\contentsline {subsection}{\numberline {3.3.2}Discussion of Test Statistic Distributions}{45}
+\contentsline {section}{\numberline {3.4}Useful Components in Deterministic Matched Subspace Detectors}{48}
+\contentsline {subsection}{\numberline {3.4.1}Training Data Model}{49}
+\contentsline {subsection}{\numberline {3.4.2}Testing Data Model}{50}
+\contentsline {subsection}{\numberline {3.4.3}Subspace Estimation and Accuracy}{50}
+\contentsline {subsection}{\numberline {3.4.4}Plug-in and RMT Detectors}{51}
+\contentsline {subsection}{\numberline {3.4.5}Relationship between $k_{\text {useful}}$ and $k_\text {eff}$}{52}
+\contentsline {subsection}{\numberline {3.4.6}Numerical Example}{53}
+\contentsline {section}{\numberline {3.5}Extension - Weighted Energy Detector}{54}
+\contentsline {section}{\numberline {3.6}Deterministic Matched Subspace Detectors with Missing Data}{57}
+\contentsline {subsection}{\numberline {3.6.1}Pertinent Results from RMT}{57}
+\contentsline {subsection}{\numberline {3.6.2}Plug-in and RMT Detectors}{58}
+\contentsline {subsection}{\numberline {3.6.3}Theoretical ROC Curve Derivation}{59}
+\contentsline {section}{\numberline {3.7}Simulation Results and Discussion}{59}
+\contentsline {subsection}{\numberline {3.7.1}ROC Curves}{59}
+\contentsline {subsection}{\numberline {3.7.2}Effect of Missing Data}{60}
+\contentsline {section}{\numberline {3.8}Conclusion}{60}
+\hbox { }
+\contentsline {chap}{\numberline {\hbox { }\hfill \bf IV.\hspace {5pt}}{\bf Using CCA and ICCA to Detect Correlations in Low-Rank Signal-Plus-Noise Datasets}}{63}
+\hbox { }
+\contentsline {section}{\numberline {4.1}Introduction}{63}
+\contentsline {section}{\numberline {4.2}Data Model}{65}
+\contentsline {section}{\numberline {4.3}Canonical Correlation Analysis}{66}
+\contentsline {section}{\numberline {4.4}Empirical CCA for Correlation Detection}{67}
+\contentsline {subsection}{\numberline {4.4.1}Classical Wilks Lambda Correlation Test}{69}
+\contentsline {subsection}{\numberline {4.4.2}Informative CCA (ICCA)}{70}
+\contentsline {subsection}{\numberline {4.4.3}New Statistical Tests for Correlation Detection}{71}
+\contentsline {section}{\numberline {4.5}Empirical CCA Theory}{72}
+\contentsline {section}{\numberline {4.6}New Results for CCA and ICCA Consistency}{74}
+\contentsline {section}{\numberline {4.7}Extension to Missing Data}{81}
+\contentsline {section}{\numberline {4.8}Empirical Results}{85}
+\contentsline {subsection}{\numberline {4.8.1}Simulated Data}{85}
+\contentsline {subsection}{\numberline {4.8.2}Comparison to Wilks Lambda Test}{89}
+\contentsline {subsection}{\numberline {4.8.3}Simulated Missing Data}{90}
+\contentsline {subsection}{\numberline {4.8.4}Controlled Flashing Lights Experiment}{91}
+\contentsline {subsection}{\numberline {4.8.5}Controlled Flashing Lights with Missing Data}{98}
+\contentsline {subsection}{\numberline {4.8.6}Controlled Audio Visual Experiment}{100}
+\contentsline {subsection}{\numberline {4.8.7}Controlled Audio Audio Experiment}{108}
+\hbox { }
+\contentsline {chap}{\numberline {\hbox { }\hfill \bf V.\hspace {5pt}}{\bf On Estimating Population Canonical Vectors}}{119}
+\hbox { }
+\contentsline {section}{\numberline {5.1}Introduction}{119}
+\contentsline {subsection}{\numberline {5.1.1}Data Model}{120}
+\contentsline {section}{\numberline {5.2}Canonical Correlation Analysis}{121}
+\contentsline {section}{\numberline {5.3}Empirical CCA}{122}
+\contentsline {section}{\numberline {5.4}Estimating Population Canonical Vectors}{124}
+\contentsline {subsection}{\numberline {5.4.1}Population canonical vectors}{125}
+\contentsline {subsection}{\numberline {5.4.2}Empirical CCA canonical vector estimates}{125}
+\contentsline {subsection}{\numberline {5.4.3}ICCA canonical vectors}{126}
+\contentsline {subsection}{\numberline {5.4.4}ICCA\texttt {+} }{126}
+\contentsline {section}{\numberline {5.5}Main Results}{127}
+\contentsline {subsection}{\numberline {5.5.1}Extension to missing data}{134}
+\contentsline {section}{\numberline {5.6}Orthogonal Canonical Vector Estimates}{135}
+\contentsline {section}{\numberline {5.7}Empirical Results - Synthetic Data}{136}
+\contentsline {subsection}{\numberline {5.7.1}Performance on non identity $U_{\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle K$}\mathaccent "0365{K}}$}{137}
+\contentsline {subsection}{\numberline {5.7.2}Convergence}{137}
+\contentsline {subsection}{\numberline {5.7.3}Robustness to $\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle k$}\mathaccent "0362{k}_x$}{138}
+\contentsline {section}{\numberline {5.8}Empirical Results - Real-World Data}{144}
+\contentsline {subsection}{\numberline {5.8.1}Video-Video Experiment}{144}
+\contentsline {subsection}{\numberline {5.8.2}Audio-Audio Experiment}{153}
+\contentsline {section}{\numberline {5.9}Proof of Theorem 5.5.1\hbox {}, Theorem 5.5.2\hbox {}, Corollary 5.5.1\hbox {}, and Theorem 5.5.4\hbox {}}{155}
+\contentsline {section}{\numberline {5.10}Proof of Theorem 5.5.3\hbox {}, Corollary 5.5.2\hbox {}, and Theorem 5.6.1\hbox {}}{160}
+\hbox { }
+\contentsline {chap}{\numberline {\hbox { }\hfill \bf VI.\hspace {5pt}}{\bf The Top Singular Values of $XY^H$}}{163}
+\hbox { }
+\contentsline {section}{\numberline {6.1}Introduction}{163}
+\contentsline {section}{\numberline {6.2}Data Model and Background}{166}
+\contentsline {subsection}{\numberline {6.2.1}Data Model}{166}
+\contentsline {subsection}{\numberline {6.2.2}Empirical CCA}{166}
+\contentsline {subsection}{\numberline {6.2.3}RCCA}{167}
+\contentsline {subsection}{\numberline {6.2.4}ICCA}{168}
+\contentsline {section}{\numberline {6.3}Main Results}{168}
+\contentsline {section}{\numberline {6.4}Empirical Simulations}{170}
+\contentsline {subsection}{\numberline {6.4.1}Performance of RCCA}{171}
+\contentsline {subsection}{\numberline {6.4.2}Numerical Accuracy of Theorem 6.3.2\hbox {}}{171}
+\contentsline {subsection}{\numberline {6.4.3}Comparison to ICCA}{173}
+\contentsline {section}{\numberline {6.5}Proofs of Theorems 6.3.1\hbox {} and 6.3.2\hbox {}}{176}
+\contentsline {subsection}{\numberline {6.5.1}Proof of Theorem 6.3.1\hbox {}}{176}
+\contentsline {subsection}{\numberline {6.5.2}Proof of Theorem 6.3.2\hbox {}}{178}
+\contentsline {subsubsection}{\numberline {6.5.2.1}Expression for $\varphi _F$}{183}
+\contentsline {subsubsection}{\numberline {6.5.2.2}Expression for $\varphi _J$}{185}
+\contentsline {subsubsection}{\numberline {6.5.2.3}Expression for $\varphi _G$}{185}
+\contentsline {subsubsection}{\numberline {6.5.2.4}Expression for $\varphi _H$}{185}
+\contentsline {subsubsection}{\numberline {6.5.2.5}Expression for $\varphi _K$}{186}
+\hbox { }
+\contentsline {chap}{\numberline {\hbox { }\hfill \bf VII.\hspace {5pt}}{\bf The Largest Singular Values of a Random Projection of a Low-Rank Perturbation of a Random Matrix}}{187}
+\hbox { }
+\contentsline {section}{\numberline {7.1}Introduction}{187}
+\contentsline {section}{\numberline {7.2}Main Results}{190}
+\contentsline {section}{\numberline {7.3}Proof of Theorem 7.2.1\hbox {}}{192}
+\contentsline {subsection}{\numberline {7.3.1}Expression for $\varphi _F$}{195}
+\contentsline {subsection}{\numberline {7.3.2}Expression for $\varphi _H$}{195}
+\contentsline {subsection}{\numberline {7.3.3}Proof of Corollary 7.2.2\hbox {}}{196}
+\contentsline {section}{\numberline {7.4}Proof of Corollary 7.2.1\hbox {}}{196}
+\contentsline {section}{\numberline {7.5}Empirical Results}{198}
+\contentsline {subsection}{\numberline {7.5.1}Gaussian Projection, $G$}{199}
+\contentsline {subsection}{\numberline {7.5.2}Unitary Projection, $Q$}{201}
+\contentsline {subsection}{\numberline {7.5.3}Comparison}{203}
+\hbox { }
+\contentsline {chap}{\numberline {\hbox { }\hfill \bf VIII.\hspace {5pt}}{\bf CCA and ICCA for Regression and Detection}}{207}
+\hbox { }
+\contentsline {section}{\numberline {8.1}Introduction}{207}
+\contentsline {section}{\numberline {8.2}Data Model and Parameter Estimation}{208}
+\contentsline {subsection}{\numberline {8.2.1}Training Data}{208}
+\contentsline {subsection}{\numberline {8.2.2}Parameter Estimation}{209}
+\contentsline {subsection}{\numberline {8.2.3}Testing Data}{210}
+\contentsline {section}{\numberline {8.3}Standard Regression Techniques}{210}
+\contentsline {subsection}{\numberline {8.3.1}Plug-in Predictor}{211}
+\contentsline {subsection}{\numberline {8.3.2}Prediction using CCA, empirical CCA, and ICCA}{211}
+\contentsline {section}{\numberline {8.4}Random Matrix Theory Preliminaries}{212}
+\contentsline {section}{\numberline {8.5}Theoretical MSE Derivations}{215}
+\contentsline {subsection}{\numberline {8.5.1}ICCA}{216}
+\contentsline {subsection}{\numberline {8.5.2}CCA}{218}
+\contentsline {subsection}{\numberline {8.5.3}Plug-in}{220}
+\contentsline {section}{\numberline {8.6}Rank-1 Empirical Results}{220}
+\contentsline {section}{\numberline {8.7}LRT Detector Derivation}{221}
+\contentsline {section}{\numberline {8.8}CCA Detector Equivalency}{224}
+\contentsline {subsection}{\numberline {8.8.1}CCA Detector for Data Model (8.4\hbox {})}{226}
+\contentsline {section}{\numberline {8.9}Empirical Detectors}{227}
+\contentsline {subsection}{\numberline {8.9.1}Plug-in Detector}{227}
+\contentsline {subsection}{\numberline {8.9.2}Empirical CCA Detector}{227}
+\contentsline {subsection}{\numberline {8.9.3} ICCA Detector}{228}
+\contentsline {subsection}{\numberline {8.9.4}Proof that $\Lambda _{\text {icca}}(\setbox \z@ \hbox {\frozen@everymath \@emptytoks \mathsurround \z@ $\textstyle \xi $}\mathaccent "0365{\xi }) \equiv \Lambda _{\text {plug-in}}(w)$}{228}
+\contentsline {subsection}{\numberline {8.9.5}Rank 1 Numerical Simulations}{231}
+\hbox { }
+\contentsline {chap}{\numberline {\hbox { }\hfill \bf IX.\hspace {5pt}}{\bf Content Based Image Retrieval and Automatic Image Annotation Using Correlation Methods}}{236}
+\hbox { }
+\contentsline {section}{\numberline {9.1}Introduction}{236}
+\contentsline {section}{\numberline {9.2}Correlation Methods}{238}
+\contentsline {subsection}{\numberline {9.2.1}Mathematical Formulation of CCA}{238}
+\contentsline {subsection}{\numberline {9.2.2}Empirical CCA}{240}
+\contentsline {subsection}{\numberline {9.2.3}Informative CCA}{241}
+\contentsline {section}{\numberline {9.3}System Implementation}{241}
+\contentsline {subsection}{\numberline {9.3.1}Text Processing}{242}
+\contentsline {subsection}{\numberline {9.3.2}Image Processing}{242}
+\contentsline {subsection}{\numberline {9.3.3}Correlation Algorithm}{246}
+\contentsline {subsection}{\numberline {9.3.4}Image Retrieval}{247}
+\contentsline {subsection}{\numberline {9.3.5}Image Annotation}{248}
+\contentsline {section}{\numberline {9.4}Experiments}{249}
+\contentsline {subsection}{\numberline {9.4.1}Pascal Image Dataset}{249}
+\contentsline {subsection}{\numberline {9.4.2}Ground Truth Image Dataset}{251}
+\contentsline {subsection}{\numberline {9.4.3}Gold Standard Web Dataset}{251}
+\contentsline {subsection}{\numberline {9.4.4}BBC News Dataset}{252}
+\contentsline {section}{\numberline {9.5}Discussion}{253}
+\contentsline {subsection}{\numberline {9.5.1}Pascal Results}{253}
+\contentsline {subsection}{\numberline {9.5.2}Image Annotation of Ground Truth Dataset}{254}
+\contentsline {subsection}{\numberline {9.5.3}Annotation of Gold Standard Web Dataset}{255}
+\contentsline {subsection}{\numberline {9.5.4}Annotation of BBC News Dataset}{255}
+\contentsline {section}{\numberline {9.6}Conclusion}{256}
+\hbox { }
+\contentsline {chap}{\numberline {\hbox { }\hfill \bf X.\hspace {5pt}}{\bf Multiset CCA (MCCA)}}{262}
+\hbox { }
+\contentsline {section}{\numberline {10.1}Introduction}{262}
+\contentsline {section}{\numberline {10.2}Mathematical Formulation of MCCA}{263}
+\contentsline {subsection}{\numberline {10.2.1}Constraint Functions, $h(x,R)$}{264}
+\contentsline {subsection}{\numberline {10.2.2}Objective Functions, $J(\Phi (x))$}{265}
+\contentsline {section}{\numberline {10.3}Theoretical and Empirical MCCA Derivations}{266}
+\contentsline {subsection}{\numberline {10.3.1}Manopt Software for Optimization on Manifolds}{268}
+\contentsline {subsection}{\numberline {10.3.2}Successive Canonical Vectors}{268}
+\contentsline {subsection}{\numberline {10.3.3}MCCA Summary}{269}
+\contentsline {section}{\numberline {10.4}Proposed Informative MCCA Algorithm}{270}
+\contentsline {subsection}{\numberline {10.4.1}Low-Rank Multi-dataset Model}{275}
+\contentsline {subsection}{\numberline {10.4.2}Informative MCCA}{277}
+\contentsline {section}{\numberline {10.5}Controlled Video-Video-Video Experiment}{279}
+\hbox { }
+\contentsline {chap}{\numberline {\hbox { }\hfill \bf XI.\hspace {5pt}}{\bf Afterword}}{286}
+\hbox { }
+\contentsline {chapter}{APPENDICES}{288}
+\contentsline {chapter}{BIBLIOGRAPHY}{344}

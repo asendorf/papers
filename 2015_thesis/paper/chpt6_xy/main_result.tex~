@@ -1,0 +1,64 @@
+Figure \ref{fig:chpt6:rcca} shows the empirical performance of RCCA for various
+regularization parameters. Evident in this figure, we observe that increasing the
+regularization parameter increases the performance of RCCA. The following theorem gives
+the solution of RCCA when taking $\eta\to\infty$. 
+
+\begin{Th}\label{thm:lrcca}
+Let $\widetilde{X}_n$ and $\widetilde{Y}_n$ be modeled as in (\ref{eq:model}). Let
+$\Clrcca=\frac{1}{n}\widetilde{X}_n\widetilde{Y}_n^T$ have svd $FKG^T$ where $F=[f_1,\dots,f_{p}]$,
+  $K=\diag(k_1,\dots,k_{\min\left(p,q\right)})$, and $G=[g_1,\dots,g_{q}]$. When $\eta\to\infty$, the solution to
+the RCCA optimization problem in (\ref{eq:rcca_opt}) is 
+\beq\label{eq:lrcca}\ba
+&\rho \propto k_1\\
+&\xI \propto f_1\\
+&\xII \propto g_1.\\
+\ea\eeq
+\end{Th}
+\begin{proof}
+See Section \ref{sec:lrcca_proof}.
+\end{proof}
+
+We call the above algorithm limit RCCA (LRCCA), which is preferred over RCCA as it both
+offers better performance and has no tuning parameter. Next we characterize the asymptotic
+limit of the top singular values of $\Clrcca$. 
+
+\begin{Th}\label{thm:xy_sv}
+Let $\widetilde{X}_n$ and $\widetilde{Y}_n$ be modeled as in (\ref{eq:model}) and define
+$C_n=\frac{1}{n}\widetilde{X}_n\widetilde{Y}_n^T$. Let $p\to\infty$, $q\to\infty$, and $n\to\infty$
+such that $\frac{p}{n}\to c_x$ and $\frac{q}{n}\to c_y$. Given the noise matrices $X_n$
+and $Y_n$, define $R_n=\frac{1}{n}X_n^TX_n$ and $S_n=\frac{1}{n}Y_n^TY_n$. Let $\mu_{R_n}$
+and $\mu_{S_n}$ be the respective empirical eigenvalue distributions and assume that each
+converges almost surely weakly, 
+as $n,p,q\to\infty$ as above, to the non-random compactly supported probability measures
+$\mu_R$ and $\mu_S$, respectively. Similarly, let $M_1=\frac{1}{n^2}X_nY_n^TY_nX_n^T$,
+$M_2=\frac{1}{n^2}Y_nX_n^TX_nY_n^T$, and $M_3 = M_1\left(\sigma_i^2-M_1\right)^{-1}$ have
+limiting eigenvalue distributions $\mu_{M_1}$, $\mu_{M_2}$, and $\mu_{M_3}$
+respectively. Define  For $i=1,\dots,r$, let $\sigma_i$ be the larest singular values of $C_n$.
+Then, almost surely, $\sigma_i$ are the solutions to the following equation
+\beq\label{eq:thm}
+ 0=\prod_{i=1}^r\left(\varphi_H(\sigma_i)\varphi_F(\sigma_i) -
+\frac{1}{\theta_{yi}^2}\right)\left(\varphi_J(\sigma_i)\varphi_G(\sigma_i) -
+\frac{1}{\theta_{xi}^2}\right) -
+\rho_i^2\varphi_H(\sigma_i)\varphi_G(\sigma_i)\left(1+\varphi_K(\sigma_i)\right)^2
+\eeq
+where 
+\be\ba
+& \varphi_F(\sigma_i) = -\sigma_i\E{xm_{\mu_{RS|R}}\left(\sigma_i^2,x\right)}_{\mu_R}\\
+& \varphi_J(\sigma_i) = -\sigma_i\E{xm_{\mu_{RS|S}}\left(\sigma_i^2,x\right)}_{\mu_S}\\
+& \varphi_G(\sigma_i) = -\sigma_im_{\mu_{M_1}}(\sigma_i^2) \\
+& \varphi_H(\sigma_i) = -\sigma_im_{\mu_{M_2}}(\sigma_i^2) \\
+& \varphi_K(\sigma_i) = c_x\E{x}_{\mu_{M_3}}\\
+\ea\ee
+and
+\be
+m_{\mu_M}(z) = \int \frac{1}{t-z}d\mu_M(t)
+\ee
+is the Stieltjes transform of $\mu_M$ and
+\be
+m_{\mu_{XY|X}}(x,y) = \int \frac{1}{y-z}k_{XY|X}(x,z)dz
+\ee
+where $k_{XY|X}$ is the Markov transition kernel density function. 
+\end{Th}
+\begin{proof}
+See Section \ref{sec:xy_sv_proof}.
+\end{proof}

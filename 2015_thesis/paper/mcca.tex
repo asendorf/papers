@@ -1,0 +1,395 @@
+The algorithms considered in Chapters \ref{sec:cca}, \ref{sec:rcca}, and \ref{sec:kcca}
+are useful only when there are exactly two datasets that we would like to fuse. However,
+in many applications, we may have access to multiple datasets of high dimensional features
+that we believe contain a correlated target signal. Access to more than two datasets
+arises in applications such as handwritten digit classification \cite{yu2007learning},
+multi-temporal hyperspectral imaging \cite{nielsen2002multiset}, and medical imaging
+\cite{correa2010canonical, deleus2011functional}.
+
+The theory of multiset canonical correlation analysis (MCCA) has evolved over the past
+decades. The earliest work on extending CCA to three datasets was conducted by Vinograde
+\cite{vinograde1950canonical}. This work found the canonical form of the three dataset
+correlation matrix but made no attempts at finding the canonical vectors. In
+\cite{steel1951minimum}, Steel considers the particular objective function of minimizing
+the generalized variance between the canonical variates of an arbitrary number of
+datasets. In 1961, Horst first considered the practical problem of fusing features from
+multiple datasets \cite{horst1961relations,horst1961generalized}. He provides a solution
+for two particular objective functions originally called the ``maximum correlation
+method'', which is now called the sum of correlations method, and the ``rank one
+approximation method'', which is now called maximum variance method. A decade later,
+Kettenring \cite{kettenring1971canonical} considered a more general extension of
+Hotellings's \cite{hotelling1936relations} original CCA work. He considers five objective
+functions of that extend CCA to the multiple datasets. Each objective function represents
+some notion of multiset correlation. All five formulations of multiset CCA return canonical
+vectors for each dataset and a correlation coefficient and each reduce to CCA when only
+two datasets are present. Two decades later, Nielsen \cite{nielsen1994analysis} extended
+Kettenring's analysis by also considering four constraint functions placed on the
+canonical vectors in the optimization problem.
+
+The five objective functions posed by Kettenring and four constraint functions posed by
+Nielsen give rise to twenty different optimization problems and thus twenty different
+formulations of MCCA. In this section, we consider all twenty such optimization
+problems. We begin by deriving the theoretical solution to each of these, unifying the
+works above and completing any formulations previously unsolved. As the performance of
+empirical MCCA has not previously been studied, we also derive empirical
+versions of each MCCA formulation using training data SVDs of each dataset. We leave the
+performance analysis of these empirical MCCA formulations to the thesis.
+
+\section{Mathematical Formulation of MCCA}
+
+Let $y_1,y_2,\dots,y_m$ be observations drawn from $m$ distributions $y_i\sim
+\mathcal{Y}_i$ with $y_i\in\complex^{d_i}$. Assume, without loss of generality, that $y_i$
+is zero mean. Define the covariance between distributions as $E[y_iy_j^T]=R_{ij}$ for
+$i,j=1,\dots,m$. Define the joint observation vector $y$ and its covariance $R=\E{yy^H}$ as
+\be
+y = \left[\begin{array}{c}y_1\\ \vdots \\ y_m\end{array}\right] \in\complex^{d\times 1},\,\,\,\,R
+= \left[\begin{array}{ccc}R_{11}&\dots&R_{1m}\\ \vdots&\ddots&\vdots\\ 
+    R_{m1}&\dots&R_{mm}\end{array}\right]\in\complex^{d\times d}
+\ee
+where $d=\sum_{i=1}^md_i$.
+
+The goal of MCCA is to find canonical coefficient vectors, $x_i\in\complex^{d_i\times 1}$
+for $i=1,\dots,m$, such that the canonical variates, $w_i=x_i^Hy_i$, are optimal with
+respect to an objective function $J(\cdot)$ and constraint function $h(\cdot)$. We
+consider five objective functions \cite{kettenring1971canonical} in Section
+\ref{sec:obj_func} and four constraints functions \cite{nielsen1994analysis} in Section
+\ref{sec:constraints}. Define the vector of canonical vectors a
+$x=\left[x_1^H,\dots,x_m^H\right]^H\in\complex^{d\times 1}$ and the vector of canonical
+variates as $w=[w_1,\dots,w_m]^H\in\complex^{m\times 1}$. The covariance matrix of $w$ is
+\begin{equation*}
+\Phi(x)=E[ww^H]=\left[\begin{array}{ccc} x_1^HR_{11}x_1 & \dots & x_1^HR_{1m}x_m \\ \vdots
+    & \ddots & \vdots \\ x_m^HR_{m1}x_1 & \dots & x_m^HR_{mm}x_m\\ \end{array}\right].
+\end{equation*}
+Using this notation, the MCCA optimization problem is
+\begin{equation}\label{eq:opt_prob}
+\begin{aligned}
+&\underset{x}{\mathop{\rm optimize}} && J(\Phi(x))\\
+&\mathop{\rm subject to} && h(x,R).\\
+\end{aligned}
+\end{equation}
+
+\subsection{Constraint Functions, $h(x,R)$}\label{sec:constraints}
+In \cite{nielsen2002multiset,nielsen1994analysis}, Nielsen describes four constraints
+placed on the canonical vectors that are natural to use in MCCA. Using our notation and
+new naming scheme, these constraint functions are:
+
+\begin{description}
+\item[a)] \textbf{NORM} - The canonical coefficient vectors each have unit norm.
+  \begin{equation*}
+    h(x,R) = x_i^Hx_i=1,\, 1\leq i\leq m
+  \end{equation*}
+  This objective function has the same flavor as other machine learning algorithms such as
+  PCA.
+
+\item[b)] \textbf{AVGNORM} - The vctor of canonical vectors, $x$, has unit norm.
+  \begin{equation*}
+    h(x,R) = x^Hx=\sum_{i=1}^mx_i^Hx_i = 1
+  \end{equation*}
+
+\item[c)] \textbf{VAR} - The canonical variates each have unit variance.
+  \begin{equation*}
+    x_i^HR_{ii}x_i = 1,\, 1\leq i\leq m.
+  \end{equation*}
+  This is the natural extension of the CCA constraint functions. 
+
+\item[d)] \textbf{AVGVAR} - The canonical variates have average variance of $1/m$. 
+  \begin{equation*}
+    \sum_{i=1}^mx_i^HR_{ii}x_i =1.
+  \end{equation*}
+  This may be written $\Tr(X^H RX ) = 1$, where $X = blkdiag(x_1,\dots,x_m)$. 
+\end{description}
+
+In Appendix \ref{sec:mcca_derivs}, we derive a solution to each of the twenty optimization
+problems formed by choosing one objective function and one constraint function. We then
+consider empirical version of each MCCA formulation. In such a setting, we are given $n$
+samples (observations) from each data distribution. Using these $n$ samples, we form $m$
+ training data matrices by stacking the observations as columns in a
+matrix. We denote these training data matrices $Y_1=\left[y_1^{(1)},\dots
+  y_1^{(n)}\right]\in\complex^{d_1\times n},\dots, Y_m=\left[y_m^{(1)},\dots,
+  y_m^{(n)}\right]\in\complex^{d_m\times n}$. 
+
+\subsection{Objective Functions, $J(\Phi(x))$}\label{sec:obj_func}
+
+In \cite{kettenring1971canonical}, Kettenring describes five objective functions, each
+used to detect a different form of linear relationship among the datasets. Under the VAR
+and AVGVAR constraints above, each of the objective functions reduces to the standard CCA
+formulation and thus the standard CCA solution. Using our notation, these objective
+functions are:
+
+\begin{enumerate}
+\item \textbf{SUMCORR} - Maximize the sum of the correlations between each of the canonical variates.
+  \begin{equation*}
+    J(\Phi(x)) = \max_{x_1,\dots,x_m} \sum_{i=1}^m\sum_{i=1}^m x_i^HR_{ij}x_j=\max_{x_1,\dots,x_m}\ones^H\Phi(x) \ones 
+  \end{equation*}
+  This is the natural extension of the CCA objective function. It  was first proposed by
+  Horst in \cite{horst1961relations}. 
+
+\item \textbf{SSQCORR} - Maximize the sum of the squares of the correlations between
+  each of the canonical variates.
+  \begin{equation*}
+    J(\Phi(x)) = \max_{x_1,\dots,x_m}\sum_{i=1}^m\sum_{j=1}^m(x_i^HR_{ij}x_j)^2=
+    \max_{x_1,\dots,x_m}\|\Phi(x)\|_F^2 =
+    \max_{x_1,\dots,x_m}\sum_{i=1}^m\lambda_i^2(\Phi(x)). 
+  \end{equation*}
+
+  where $\lambda_i$ are the eigenvalues of $\phi(x)$. This is very similar to SUMCORR
+  except that it penalizes small pairwise correlations more than SUMCORR does. Under the
+  VAR constraint, the $m\times m$ identity matrix is the least informative $\Phi(x)$ as
+  this denotes no correlation between any of the canonical variates. Therefore, we want
+  $\Phi(x)$ to be as different as possible from the identity matrix. Under the VAR
+  constraint, this is what the SSQCORR objective function accomplishes. It was first
+  proposed in 1971 by Kettenring \cite{kettenring1971canonical}.
+
+\item \textbf{MAXVAR} - Maximize the largest eigenvalue of $\Phi$, $\lambda_1(\Phi(x))$.
+  \begin{equation*}
+    J(\Phi(x)) = \max_{x_1,\dots,x_m}\lambda_1(\Phi(x))
+  \end{equation*}
+  MAXVAR was created by Horst in \cite{horst1961relations} to find the canonical vectors
+  that give $\Phi(x)$ the best approximation (in the Frobeneus norm) to a rank-1
+  matrix. Horst's original name for this method was the ``rank one approximation
+  method''. The corresponding largest eigenvalue, $\lambda_1(\Phi(x))$ is a notion of
+  variance and thus the new name.
+
+\item \textbf{MINVAR} - Minimize the smallest eigenvalue of $\Phi$, $\lambda_m(\Phi(x))$.
+  \begin{equation*}
+    J(\Phi(x)) = \min_{x_1,\dots,x_m}\lambda_m(\Phi(x))
+  \end{equation*}
+  This is, more or less, the opposite of MAXVAR. Instead of maximizing the energy in the
+  top eigenvalue, we wish to minimize the energy in the last eigenvalue. In
+  \cite{bach2003kernel}, MINVAR is shown to have the desired property that the minimal
+  eigenvalue has a fixed range in $[0,1]$ whereas the maximal eigenvalue found by MAXVAR
+  has a range dependent on the dimensions of the variables. It was first proposed in 1971
+  by Kettenring \cite{kettenring1971canonical}.
+
+\item \textbf{GENVAR} - Minimize the generalized variance of $w$, which is equivalent to
+  minimizing the determinant of the correlation matrix of $w$.
+  \begin{equation*}
+    J(\Phi(x)) = \min_{x_1,\dots,x_m}\left|\Phi(x)\right| = \min_{x_1,\dots,x_m}\prod_{i=1}^m\lambda_i(\Phi(x))
+  \end{equation*}
+\end{enumerate}
+This is the oldest of the five criterion and was proposed by Steel in 1951
+\cite{steel1951minimum}. This seems to involve a tradeoff between choosing $x$ to have
+large leading eigenvalues and small tail eigenvalues.
+
+\begin{table*}[h!]
+  \centering
+  \begin{tabular}{ll}
+    \midrule
+    $y_i$ & Observation from dataset $i$ \\
+    $y$ &  $[y_1^H,\dots,y_m^H]^H$\\ 
+    $d_i$ & $\text{Dimension of } y_i$ \\
+    $d=\sum_{i=1}^md_i$& $\text{Dimension of } y$\\ 
+    $m$ & $\text{Number of datasets}$ \\
+    $n$ & $\text{Number of observations}$\\ 
+    $x_i\in\complex^{d_i}$ & $\text{Canonical coefficient vector}$ \\
+    $x\in\complex^d$ & $[x_1^H,\dots,x_m^H]^H$\\ 
+    $w_i\in\complex$ & $\text{Canonical variate}$\\
+    $w\in\complex^m$ & $[w_1,\dots,w_m]^H$\\ 
+    $X\in\complex^{d\times m}$ & $\blkdiag(x_1,\dots,x_m)$ \\
+    $\Phi(x)$ &  $\text{Correlation matrix of }w$\\ 
+    $R_D\in\complex^{d\times d}$ & $\blkdiag(R_{11},\dots,R_{mm})$\\
+    $R\in\complex^{d\times d}$ & $\text{Matrix of } [R_{ij}]_{ij}$\\ 
+    $\widetilde{R}(x)\in\complex^{d\times d}$ & $\text{Matrix of}
+    [(x_i^HR_{ij}x_j)R_{ij}]_{ij}$ \\
+    $Y_i\in\complex^{d_i\times n}$ & Training data matrix\\
+    $U_i\in\complex^{d_i\times d_i}$ & $\text{Left singular vectors of } Y_i$\\
+    $U\in\complex^{d\times m}$ & $\blkdiag(U_1,\dots,U_m)$\\ 
+    $\Sigma_i\in\complex^{d_i\times n}$ & $\text{Singular values matrix of }$ $Y_i$\\
+    $\Sigma\in\complex^{d\times nm}$ & $\blkdiag(\Sigma_1,\dots,\Sigma_m)$\\ 
+    $V_i\in\complex^{n\times n}$ & $\text{Right singular vectors of } Y_i$\\
+    $V\in\complex^{n\times nm}$ & $[V_1,\dots,V_m]$\\ 
+    $\Lambda\in\complex^{m\times m}$ & Diag matrix of Lagrange multipliers\\
+    $\Lambda_D\in\complex^{d\times d}$ & $\blkdiag\left(\lambda_1 I_{d_1},\dots,\lambda_m
+      I_{d_m}\right)$\\  
+    $\widetilde{\Sigma}\in\complex^{d\times d}$ & $\blkdiag(\Sigma_1(:,1:d_1),\dots
+    \Sigma_m(:,1:d_m))$\\ 
+    $\widetilde{V}\in\complex^{n\times  d}$&$[V_1(:,1:d_1),\dots,V_m(:,1:d_m)]$ \\
+    $\ones$ & $\left[1,\dots,1\right]$\\
+    \midrule
+  \end{tabular}
+  \caption{Notation used in MCCA}
+  \label{tab:mcca_notation}
+\end{table*}
+
+\section{Theoretical and Empirical MCCA Derivations}
+
+In this section, we provide a solution for each of the twenty MCCA formulations based on
+the five objection functions described in Section \ref{sec:obj_func} and four constraint
+functions described in Section \ref{sec:constraints}. Some of these solutions have been
+previously reported in \cite{kettenring1971canonical, nielsen1994analysis}. We complete
+the analysis and unify the results. We provide the empirical solution for each algorithm
+provided training data matrices $Y_1,\dots, Y_m$.
+
+For all empirical derivations, we assume that we are given $n$ samples in each training
+dataset. We denote the SVD of each training dataset as $Y_i=U_i\Sigma_iV_i^H$ and form the
+matrices $U\in\complex^{d\times d}=\blkdiag(U_1,\dots,U_m)$, $\Sigma\in\complex^{d\times
+  nm}=\blkdiag(\Sigma_1,\dots,\Sigma_m)$, and $V\in\complex^{n\times nm}=[V_1,\dots,V_m]$.
+Using these data SVDs, we form sample correlation matrices,
+$\widehat{R}_{ij}=\frac{1}{n}Y_iY_j^H = \frac{1}{n}U_i\Sigma_iV_i^HV_j\Sigma_j^HU_j^H$
+with which we form $\widehat{R}=U\Sigma V^HV\Sigma^HU^H$ and
+$\widehat{R}_D=U\Sigma\Sigma^HU^H$. Please refer to Table \ref{tab:mcca_notation} for a
+summary of the notation used throughout the MCCA derivations.
+
+The derivations are provided in Appendix \ref{sec:mcca_derivs}. Table
+\ref{tab:main_results} in the following section summarizes the solution to each
+problem. It assigns a number-letter pair to each MCCA optimization problem (1-5 for the
+objective function, a-d for the constraint function). This label can be used to look up
+the appropriate derivation in Appendix \ref{sec:mcca_derivs}. The table provides the
+appropriate eigen-system used to solve the problem if all the covariance matrices are
+known. The table also provides the appropriate eigen-system used to solve the problem in
+the empirical setting where we are given training datasets to estimate unknown covariance
+matrices. The last column in the table provides references that use, discuss, or derive
+the MCCA formulation.
+
+\subsection{Manopt Software for Optimization on Manifolds}
+
+Many of the problems discussed in Appendix \ref{sec:mcca_derivs} do not yield closed form
+solutions because either the cost function is unwieldy or because the constraint functions
+complicate the derivations. For these problems we use the Manopt software provided at
+\textit{www.manopt.org}. The Manopt software specializes in solving constrained optimization
+problems when the constraints are manifolds. This software package is able to solve
+nonlinear optimization problems. For reference, see \cite{boumal2013manopt}. To use the
+solvers, we must provide a cost function and its associated gradient.
+
+All of our constraints will be of the form $\|x\|=1$ where $x\in\reals^{p}$. The
+associated manifold that we use for this constraint is the sphere manifold called via
+\texttt{spherefactory(p,1)}. If we have multiple of such constraints, than we use the
+\texttt{productmanifold} to ensure all constraints are satisfied. See the Manopt
+documentation and provided code for an example. 
+
+After selecting the appropriate manifold and providing the cost and gradient functions, we
+use the \texttt{trustregions} solver to find a solution for our problems. This returns the
+minimized cost and the point that achieved the minimum cost. If our objective
+function has a cost function that seeks a maximum, the provided is the negative of the
+true cost function and the gradient is computed from this negative cost. 
+
+\subsection{Successive Canonical Vectors}
+
+The derivations in Appendix \ref{sec:mcca_derivs} show how to compute the first stage
+canonical vectors and canonical correlation. We may compute $r=\min(d_1,\dots,d_m,n)$
+canonical vector and correlation pairs. We use the standard constraint on successive
+canonical variates
+\be
+\E{w_i^{(k)}w_i^{(k-j)}} = 0,\,\, \text{ for } j=1,\dots,k-1,\,\,\,\forall i.
+\ee
+Here, the subscript $i$ indexes the canonical variates and the superscript $(k)$ indexes
+the stage of the canonical vector and correlation pair. This requires the next stage
+canonical variates to be uncorrelated to all previous canonical variates for a given
+dataset. Using the definition for canonical variates, this constraint becomes
+\be
+\E{x_i^{(k)H}y_iy_i^Hx_i^{(k-j)}} = x_i^{(k)H}R_{ii}x_i^{(k-j)} = 0,\,\, \text{ for }
+j=1,\dots,k-1,\,\,\,\forall i. 
+\ee
+To enforce this constraint, we run the following algorithm
+\begin{enumerate}
+\item Form $X\in\complex^{d\times mk}=blkdiag(X_1,\dots,X_m)$ where $X_i = [x_i^{(1)},dots,x_i^{(k)}]$.
+\item Project the canonical vectors onto $R_D$ via $B = R_DX \in\complex^{d\times mk}$
+\item Compute a basis for the span of $B$ via the rank-$k$ SVD, $B=U_B\Sigma_B V_B^H$
+\item Form the projection matrix onto the orthogonal completment of this basis $P = I -
+  U_BU_B^H$
+\item Project the training data onto $P$ via $\widetilde{Y} = PY$.
+\item Recompute covariance matrices used in optimization using $\widetilde{Y}$
+\end{enumerate}
+
+\subsection{MCCA Summary}\label{sec:summary}
+
+As evidenced by Table \ref{tab:main_results}, we still must tackle the GENVAR problem in the
+thesis. We have completely solved both the theoretical and empirical MAXVAR and MINVAR
+problems. The eigen-systems used to solve these problems closely resemble those used to
+solve CCA and RCCA. All of the empirical eigenvalue systems rely on the matrix product
+$V^HV$. Intuition suggest that this will lead to a performance loss and that using only
+the informative components of $V$ will lead to improved performance. We leave the
+derivation of such informative MCCA algorithms to the thesis. 
+
+Many of the SUMCORR and SSQCORR theoretical eigen-systems are non-normal, using multiple
+Lagrange multipliers. It is unclear if these Lagrange multipliers are indeed equal as they
+were in the CCA, RCCA, and KCCA derivations. Solving these problems using training data
+SVDs is left to the thesis. In the thesis, we will also explore the empirical performance
+of the MCCA algorithms and any informative versions we derive. 
+
+\begin{table*}[!h]
+  \centering
+  \begin{tabular}{lllllll}\toprule
+    \# & $J(x)$ & $h(x,R)$  & Eigenvalue Prob & Empirical Prob & Ref\\
+    \midrule
+    1a & SUMCORR & NORM & $R \widetilde{x} = \Lambda_D\widetilde{x}$ & Manopt &
+    \cite{nielsen2002multiset,nielsen1994analysis}\\ 
+    &&&$x = \Lambda_{\widetilde{x}}\widetilde{x}$ &&\\
+    1b & SUMCORR & AVGNORM & $R x = \rho x$ &
+    $\widehat{R}\widehat{x} = \widehat{\rho}\widehat{x}$&
+    \cite{nielsen1994analysis}\\ 
+    1c & SUMCORR & VAR & $R\widetilde{x}=\Lambda_DR_D\widetilde{x}$  & Manopt&
+    \cite{nielsen2002multiset,kettenring1971canonical,nielsen1994analysis}\\
+    &&&$x = R_D^{-1/2}\Lambda_{\widetilde{x}}\widetilde{x}$&&\\
+    1d & SUMCORR & AVGVAR &  $R_D^{-1/2}RR_D^{-1/2}\widetilde{x}=\rho\widetilde{x}$&
+    $\widetilde{V}^T\widetilde{V}\widehat{f}=\widehat{\rho}\widehat{f}$ &
+    \cite{deleus2011functional,nielsen2002multiset,via2005canonical}\\ 
+    &&&$x=R_D^{-1/2}\widetilde{x}$&$\widehat{x}=U\widetilde{\Sigma}^{-1}\widehat{f}$&
+    \cite{nielsen1994analysis,yu2007learning}\\  
+    \midrule
+    2a & SSQCORR & NORM & $\widetilde{R}(x)x = \Lambda_Dx$ & Manopt &
+    \cite{nielsen1994analysis}\\  
+    2b & SSQCORR & AVGNORM & $\widetilde{R}(x)x = \lambda x$ & Manopt &
+    \cite{nielsen1994analysis}\\ 
+    2c & SSQCORR & VAR & $\widetilde{R}(x)x= \Lambda_DR_Dx$ & Manopt &
+    \cite{correa2010canonical,kettenring1971canonical,nielsen1994analysis}\\ 
+    2d & SSQCORR & AVGVAR & $\widetilde{R}(x)x=\lambda R_Dx$ & Manopt&
+    \cite{nielsen1994analysis}\\ 
+    \midrule
+    3a & MAXVAR & NORM & $R\tilde{a} = \rho\tilde{a}$ &
+    $\widehat{R} \widehat{f}=\widehat{\rho} \widehat{f}$&
+    \cite{nielsen1994analysis}\\ 
+    &&&$x=\Lambda_{\tilde{a}}^{-1}\tilde{a}$&
+    $\widehat{x}=\Lambda_{\widehat{f}}^{-1}\widehat{f}$ &\\ 
+    3b & MAXVAR & AVGNORM & $x_i=u_{1i}$ &
+    $\widehat{x}_i = u_{1i}$ &
+    \cite{nielsen1994analysis}\\ 
+    3c & MAXVAR & VAR &
+    $R_D^{-1/2}RR_D^{-1/2}\tilde{a}=\rho\tilde{a}$&
+    $\tilde{V}^H\tilde{V}\widehat{f}=\widehat{\rho}\widehat{f}$&
+    \cite{kettenring1971canonical,nielsen1994analysis}\\ 
+    &&&$x=R_D^{-1/2}\Lambda_{\widetilde{a}}^{-1}\widetilde{a}$&
+    $\widehat{x}=U\widetilde{\Sigma}^{-1}\Lambda_{\widehat{f}}^{-1}\widehat{f}$&\\ 
+    3d & MAXVAR & AVGVAR &
+    Non-unique &
+    Non-unique &
+    \cite{deleus2011functional,via2005canonical,nielsen1994analysis}\\ 
+    &&& $x=u_i/\sigma_i$ & $\widehat{x} = u_i/\sigma_i$&\\  
+    \midrule
+    4a & MINVAR & NORM & $R\tilde{a} = \rho_{\text{min}}\tilde{a}$ &
+    $\widehat{R}\widehat{a}=\widehat{\rho}_{\text{min}}\widehat{a}$&  
+    \cite{nielsen1994analysis}\\ 
+    &&&$x=\Lambda_{\widetilde{a}}^{-1}\widetilde{a}$&
+    $\widehat{x}=\Lambda_{\widehat{a}}^{-1}\widehat{a}$ &\\  
+    4b & MINVAR & AVGNORM & Non-unique & Non-unique & 
+    \cite{nielsen1994analysis}\\ 
+    &&& $x_i = u_{1i}$ & $\widehat{x}_i = u_{1i}$&\\
+    4c & MINVAR & VAR &
+    $R_D^{-1/2}RR_D^{-1/2}\widetilde{a}=\rho_{\text{min}}\widetilde{a}$&
+    $\widetilde{V}^H\widetilde{V}\widehat{f}=\widehat{\rho}_{\text{min}} \widehat{f}$&
+    \cite{kettenring1971canonical,nielsen1994analysis}\\ 
+    &&&$x=R_D^{-1/2}\Lambda_{\widetilde{a}}^{-1}\widetilde{a}$&
+    $\widehat{f}=U\widetilde{\Sigma}^{-1}\Lambda_{\widehat{f}}\widehat{f}$& \\
+    4d & MINVAR & AVGVAR & Non-unique & Non-unique&
+    \cite{nielsen1994analysis,bach2003kernel}\\ 
+    &&& $x=u_{i}/\sigma_i$ & $\widehat{x} = u_i/\sigma_i $&\\  
+    \midrule
+    5a & GENVAR & NORM & Non-eigen prob & Manopt&  \cite{nielsen1994analysis}\\
+    5b & GENVAR & AVGNORM & Non-eigen prob & Manopt&  \cite{nielsen1994analysis}\\
+    5c & GENVAR & VAR &Non-eigen prob & Manopt&
+    \cite{kettenring1971canonical,nielsen1994analysis}\\  
+    5d & GENVAR & AVGVAR & Non-eigen prob & Manopt &  \cite{nielsen1994analysis}\\
+    \bottomrule
+  \end{tabular}
+  \caption{Summary of MCCA optimization problems. The objective functions are described in
+    Section \ref{sec:obj_func}. The constraints are described in section
+    \ref{sec:constraints}. The eigenvalue problem column is the theoretical solution while
+    the Empirical problem column describes how to solve the problem given empirical
+    data. All eigenvalue problems solve the for the maximum eigenvalue-eigenvector pair
+    except for the MINVAR problems, which solve for the minimum eigenvalue-eigenvector
+    pair. The final column lists references which describe the MCCA optimization
+    problem. }\vskip-0.2cm 
+  \label{tab:main_results}
+\end{table*}
+
+

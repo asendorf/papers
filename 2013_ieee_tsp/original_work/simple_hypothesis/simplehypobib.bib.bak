@@ -1,0 +1,29 @@
+@article{paul2007asymptotics,
+  title={{Asymptotics of sample eigenstructure for a large dimensional spiked covariance model}},
+  author={Paul, D.},
+  journal={Statistica Sinica},
+  volume={17},
+  number={4},
+  pages={1617},
+  issn={1017-0405},
+  year={2007}
+}
+@article{fawcett2006introduction,
+  title={An introduction to ROC analysis},
+  author={Fawcett, T.},
+  journal={Pattern recognition letters},
+  volume={27},
+  number={8},
+  pages={861--874},
+  year={2006},
+  publisher={Elsevier}
+}
+
+@article{wood1993saddlepoint,
+  title={Saddlepoint approximations to the CDF of some statistics with nonnormal limit distributions},
+  author={Wood, A.T.A. and Booth, J.G. and Butler, R.W.},
+  journal={Journal of the American Statistical Association},
+  pages={680--686},
+  year={1993},
+  publisher={JSTOR}
+}

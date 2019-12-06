@@ -1,0 +1,2649 @@
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.8.7)  6 JAN 2015 19:30
+entering extended mode
+ %&-line parsing enabled.
+**rac_thesis.tex
+(./rac_thesis.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, loaded.
+(/usr/share/texmf-texlive/tex/latex/base/report.cls
+Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texmf-texlive/tex/latex/base/size12.clo
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (./rac.sty
+ 
+Substyle `rac' for Rackham dissertation.
+ 
+\c@map=\count88
+) (/usr/share/texmf-texlive/tex/latex/setspace/setspace.sty
+Package: setspace 2000/12/01 6.7 Contributed and Supported LaTeX2e package
+
+Package: `setspace' 6.7 <2000/12/01>
+) (/usr/share/texmf/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texmf/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/share/texmf/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks14
+)
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box26
+
+(/usr/share/texmf-texlive/tex/latex/ms/everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfrcs.code.tex
+Package: pgfrcs 2010/10/25 v2.10 (rcs-revision 1.24)
+))
+Package: pgf 2008/01/15 v2.10 (rcs-revision 1.12)
+
+(/usr/share/texmf/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/share/texmf-texlive/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+(/usr/share/texmf-texlive/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/etc/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/share/texmf-texlive/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2010/03/12 v0.04p Graphics/color for pdfTeX
+\Gread@gobject=\count89
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/share/texmf/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2010/06/30 v2.10 (rcs-revision 1.37)
+
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks16
+\pgfkeys@temptoks=\toks17
+
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
+\pgfkeys@tmptoks=\toks18
+))
+\pgf@x=\dimen105
+\pgf@y=\dimen106
+\pgf@xa=\dimen107
+\pgf@ya=\dimen108
+\pgf@xb=\dimen109
+\pgf@yb=\dimen110
+\pgf@xc=\dimen111
+\pgf@yc=\dimen112
+\w@pgf@writea=\write3
+\r@pgf@reada=\read1
+\c@pgf@counta=\count90
+\c@pgf@countb=\count91
+\c@pgf@countc=\count92
+\c@pgf@countd=\count93
+
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
+)
+Package pgfsys Info: Driver file for pgf: pgfsys-pdftex.def on input line 900.
+
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2009/05/22  (rcs-revision 1.26)
+
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2008/05/19  (rcs-revision 1.10)
+)))
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2008/07/18  (rcs-revision 1.7)
+\pgfsyssoftpath@smallbuffer@items=\count94
+\pgfsyssoftpath@bigbuffer@items=\count95
+)
+(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+))
+(/usr/share/texmf/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/etc/texmf/tex/latex/config/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2010/04/11 v2.10 (rcs-revision 1.7)
+
+(/usr/share/texmf/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathcalc.code.tex
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen113
+\pgfmath@count=\count96
+\pgfmath@box=\box27
+\pgfmath@toks=\toks19
+\pgfmath@stack@operand=\toks20
+\pgfmath@stack@operation=\toks21
+)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.code.tex
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.random.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.base.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.round.code.tex)
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex)))
+(/usr/share/texmf/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count97
+))
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2010/04/09  (rcs-revision 1.20)
+\pgf@picminx=\dimen114
+\pgf@picmaxx=\dimen115
+\pgf@picminy=\dimen116
+\pgf@picmaxy=\dimen117
+\pgf@pathminx=\dimen118
+\pgf@pathmaxx=\dimen119
+\pgf@pathminy=\dimen120
+\pgf@pathmaxy=\dimen121
+\pgf@xx=\dimen122
+\pgf@xy=\dimen123
+\pgf@yx=\dimen124
+\pgf@yy=\dimen125
+\pgf@zx=\dimen126
+\pgf@zy=\dimen127
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2010/08/03  (rcs-revision 1.24)
+\pgf@path@lastx=\dimen128
+\pgf@path@lasty=\dimen129
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2008/04/22  (rcs-revision 1.12)
+\pgf@shorten@end@additional=\dimen130
+\pgf@shorten@start@additional=\dimen131
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2010/09/08  (rcs-revision 1.34)
+\pgfpic=\box28
+\pgf@hbox=\box29
+\pgf@layerbox@main=\box30
+\pgf@picture@serial@count=\count98
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2008/04/22  (rcs-revision 1.9)
+\pgflinewidth=\dimen132
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2009/06/10  (rcs-revision 1.11)
+\pgf@pt@x=\dimen133
+\pgf@pt@y=\dimen134
+\pgf@pt@temp=\dimen135
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2008/10/09  (rcs-revision 1.8)
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2008/04/23  (rcs-revision 1.11)
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2008/11/23  (rcs-revision 1.13)
+\pgf@max=\dimen136
+\pgf@sys@shading@range@num=\count99
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2010/03/25  (rcs-revision 1.16)
+
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2010/09/01  (rcs-revision 1.17)
+\pgfexternal@startupbox=\box31
+))
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2010/08/27  (rcs-revision 1.2)
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2008/01/17  (rcs-revision 1.2)
+)
+(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2009/07/02  (rcs-revision 1.3)
+)))
+(/usr/share/texmf/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2010/09/09  (rcs-revision 1.13)
+\pgfnodeparttextbox=\box32
+)
+(/usr/share/texmf/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2010/10/22  (rcs-revision 1.8)
+)
+(/usr/share/texmf/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2007/07/03 v2.10 (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen137
+\pgf@nodesepend=\dimen138
+)
+(/usr/share/texmf/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2007/07/23 v2.10 (rcs-revision 1.1)
+))
+(/usr/share/texmf/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texmf/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/share/texmf/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/usr/share/texmf/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2010/03/23 v2.10 (rcs-revision 1.18)
+\pgffor@iter=\dimen139
+\pgffor@skip=\dimen140
+\pgffor@stack=\toks22
+\pgffor@toks=\toks23
+))
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2010/10/13 v2.10 (rcs-revision 1.76)
+
+(/usr/share/texmf/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2010/05/31 v2.10 (rcs-revision 1.15)
+\pgf@plot@mark@count=\count100
+\pgfplotmarksize=\dimen141
+)
+\tikz@lastx=\dimen142
+\tikz@lasty=\dimen143
+\tikz@lastxsaved=\dimen144
+\tikz@lastysaved=\dimen145
+\tikzleveldistance=\dimen146
+\tikzsiblingdistance=\dimen147
+\tikz@figbox=\box33
+\tikz@tempbox=\box34
+\tikztreelevel=\count101
+\tikznumberofchildren=\count102
+\tikznumberofcurrentchild=\count103
+\tikz@fig@count=\count104
+
+(/usr/share/texmf/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2010/08/24  (rcs-revision 1.4)
+\pgfmatrixcurrentrow=\count105
+\pgfmatrixcurrentcolumn=\count106
+\pgf@matrix@numberofcolumns=\count107
+)
+\tikz@expandcount=\count108
+
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopat
+hs.code.tex
+File: tikzlibrarytopaths.code.tex 2008/06/17 v2.10 (rcs-revision 1.2)
+)))
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryarrow
+s.code.tex
+File: tikzlibraryarrows.code.tex 2008/01/09 v2.10 (rcs-revision 1.1)
+
+(/usr/share/texmf/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
+File: pgflibraryarrows.code.tex 2008/10/27 v2.10 (rcs-revision 1.9)
+\arrowsize=\dimen148
+))
+(/usr/share/texmf-texlive/tex/latex/caption/caption.sty
+Package: caption 2009/10/09 v3.1k Customizing captions (AR)
+
+(/usr/share/texmf-texlive/tex/latex/caption/caption3.sty
+Package: caption3 2009/10/09 v3.1k caption3 kernel (AR)
+\captionmargin=\dimen149
+\captionmargin@=\dimen150
+\captionwidth=\dimen151
+\caption@indent=\dimen152
+\caption@parindent=\dimen153
+\caption@hangindent=\dimen154
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used on input line 1068.
+)
+
+Package caption Warning: Unsupported document class (or package) detected,
+(caption)                usage of the caption package is not recommended.
+See the caption package documentation for explanation.
+
+Package caption Info: \@makecaption = \long macro:#1#2-> \vskip 10pt \setbox \@
+tempboxa \hbox {#1: #2} \ifdim \wd \@tempboxa >\hsize \setbox \@tempboxa \hbox 
+{#1: } \def \@tempdimj {\hsize } \advance \@tempdimj -\wd \@tempboxa \hbox to\h
+size {#1: \parbox [t]{\@tempdimj }{#2}} \else \hbox to\hsize {\hfill \box \@tem
+pboxa \hfill } \fi .
+\c@ContinuedFloat=\count109
+)
+\@input{my_header.aux}
+\openout2 = `my_header.aux'.
+
+(/home/asendorf/texmf/tex/latex/my_header.tex
+(/usr/share/texmf-texlive/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks24
+\ex@=\dimen155
+))
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen156
+)
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count110
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count111
+\leftroot@=\count112
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count113
+\DOTSCASE@=\count114
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box35
+\strutbox@=\box36
+\big@size=\dimen157
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count115
+\c@MaxMatrixCols=\count116
+\dotsspace@=\muskip10
+\c@parentequation=\count117
+\dspbrk@lvl=\count118
+\tag@help=\toks25
+\row@=\count119
+\column@=\count120
+\maxfields@=\count121
+\andhelp@=\toks26
+\eqnshift@=\dimen158
+\alignsep@=\dimen159
+\tagshift@=\dimen160
+\tagwidth@=\dimen161
+\totwidth@=\dimen162
+\lineht@=\dimen163
+\@envbody=\toks27
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks28
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+(/usr/share/texmf-texlive/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2009/06/22 v3.00
+
+(/usr/share/texmf-texlive/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+))
+(/usr/share/texmf-texlive/tex/latex/amscls/amsthm.sty
+Package: amsthm 2004/08/06 v2.20
+\thm@style=\toks29
+\thm@bodyfont=\toks30
+\thm@headfont=\toks31
+\thm@notefont=\toks32
+\thm@headpunct=\toks33
+\thm@preskip=\skip46
+\thm@postskip=\skip47
+\thm@headsep=\skip48
+\dth@everypar=\toks34
+)
+(/usr/share/texmf-texlive/tex/latex/algorithmicx/algpseudocode.sty
+Package: algpseudocode 
+
+(/usr/share/texmf-texlive/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texmf-texlive/tex/latex/algorithmicx/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count122
+\c@ALG@rem=\count123
+\c@ALG@nested=\count124
+\ALG@tlm=\skip49
+\ALG@thistlm=\skip50
+\c@ALG@Lnr=\count125
+\c@ALG@blocknr=\count126
+\c@ALG@storecount=\count127
+\c@ALG@tmpcounter=\count128
+\ALG@tmplength=\skip51
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (/usr/share/texmf-texlive/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2005/04/14 v1.61803 publication quality tables
+\heavyrulewidth=\dimen164
+\lightrulewidth=\dimen165
+\cmidrulewidth=\dimen166
+\belowrulesep=\dimen167
+\belowbottomsep=\dimen168
+\aboverulesep=\dimen169
+\abovetopsep=\dimen170
+\cmidrulesep=\dimen171
+\cmidrulekern=\dimen172
+\defaultaddspace=\dimen173
+\@cmidla=\count129
+\@cmidlb=\count130
+\@aboverulesep=\dimen174
+\@belowrulesep=\dimen175
+\@thisruleclass=\count131
+\@lastruleclass=\count132
+\@thisrulewidth=\dimen176
+)
+(/usr/share/texmf-texlive/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip52
+\subfigcapskip=\skip53
+\subfigcaptopadj=\dimen177
+\subfigbottomskip=\skip54
+\subfigcapmargin=\dimen178
+\subfiglabelskip=\skip55
+\c@subfigure=\count133
+\c@lofdepth=\count134
+\c@subtable=\count135
+\c@lotdepth=\count136
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/share/texmf-texlive/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip56
+\subfig@bottom=\skip57
+)
+(/usr/share/texmf-texlive/tex/latex/comment/comment.sty
+\CommentStream=\write4
+
+Excluding comment 'comment')
+(/usr/share/texmf-texlive/tex/latex/psnfss/helvet.sty
+Package: helvet 2005/04/12 PSNFSS-v9.2a (WaS) 
+)
+(/home/asendorf/texmf/tex/latex/UMcolors.sty)
+\mytemplen=\skip58
+\mytempbox=\box37
+\c@prop=\count137
+\c@conj=\count138
+\c@Th=\count139
+\c@Corr=\count140
+\c@Conj=\count141
+\c@Remark=\count142
+) (./rac_thesis.aux
+
+LaTeX Warning: Label `sec:intro' multiply defined.
+
+
+LaTeX Warning: Label `eq:roc' multiply defined.
+
+
+LaTeX Warning: Label `sec:training_data' multiply defined.
+
+
+LaTeX Warning: Label `eq:determ_setup' multiply defined.
+
+
+LaTeX Warning: Label `sec:param_estim' multiply defined.
+
+
+LaTeX Warning: Label `eq:param_estims_stoch' multiply defined.
+
+
+LaTeX Warning: Label `eq:angles' multiply defined.
+
+
+LaTeX Warning: Label `eq:keff' multiply defined.
+
+
+LaTeX Warning: Label `eq:cca_svd_sol' multiply defined.
+
+
+LaTeX Warning: Label `eq:lrt' multiply defined.
+
+
+LaTeX Warning: Label `fig:rcca_errorbars_low_snr' multiply defined.
+
+
+LaTeX Warning: Label `fig:rcca_errorbars_high_snr' multiply defined.
+
+
+LaTeX Warning: Label `eq:opt_prob' multiply defined.
+
+)
+\openout1 = `rac_thesis.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+ ABD: EveryShipout initializing macros
+(/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count143
+\scratchdimen=\dimen179
+\scratchbox=\box38
+\nofMPsegments=\count144
+\nofMParguments=\count145
+\everyMPshowfont=\toks35
+\MPscratchCnt=\count146
+\MPscratchDim=\dimen180
+\MPnumerator=\count147
+\everyMPtoPDFconversion=\toks36
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfigure package is loaded.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Try loading font information for U+msa on input line 57.
+ (/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 57.
+
+(/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+) [1
+
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+<figures/secret_truth.jpg, id=10, 722.7pt x 417.56pt>
+File: figures/secret_truth.jpg Graphic file (type jpg)
+
+<use figures/secret_truth.jpg>
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 64--65
+[][] 
+ []
+
+[0 <./figures/secret_truth.jpg>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 67.
+
+(/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 67.
+ [1] [2]
+(./acknowledgements.tex) [3] (./rac_thesis.toc)
+\tf@toc=\write5
+\openout5 = `rac_thesis.toc'.
+
+ [4] (./rac_thesis.lof)
+\tf@lof=\write6
+\openout6 = `rac_thesis.lof'.
+
+ [5]
+(./abstract.tex [6]) [7]
+CHAPTER I.
+(./intro.tex
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 23.
+ (/usr/share/texmf-texlive/tex/latex/psnfss/ot1phv.fd
+File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
+)
+
+LaTeX Warning: Citation `melzer2001nonlinear' on page 1 undefined on input line
+ 40.
+
+
+LaTeX Warning: Citation `todros2012measure' on page 1 undefined on input line 4
+0.
+
+
+LaTeX Warning: Citation `correa2010canonical' on page 1 undefined on input line
+ 41.
+
+
+LaTeX Warning: Citation `deleus2011functional' on page 1 undefined on input lin
+e 41.
+
+
+LaTeX Warning: Citation `hardoon2004canonical' on page 1 undefined on input lin
+e 42.
+
+
+LaTeX Warning: Citation `ge2009does' on page 1 undefined on input line 42.
+
+
+LaTeX Warning: Citation `nielsen2002multiset' on page 1 undefined on input line
+ 43.
+
+
+LaTeX Warning: Citation `torres2007finding' on page 1 undefined on input line 4
+3.
+
+
+LaTeX Warning: Citation `chaudhuri2009multi' on page 1 undefined on input line 
+44.
+
+
+LaTeX Warning: Citation `hotelling1936relations' on page 1 undefined on input l
+ine 55.
+
+[1
+
+
+
+]
+
+LaTeX Warning: Citation `hardoon2004canonical' on page 2 undefined on input lin
+e 63.
+
+
+LaTeX Warning: Citation `via2005canonical' on page 2 undefined on input line 66
+.
+
+
+LaTeX Warning: Citation `deleus2011functional' on page 2 undefined on input lin
+e 68.
+
+
+LaTeX Warning: Citation `correa2010canonical' on page 2 undefined on input line
+ 69.
+
+
+LaTeX Warning: Citation `chaudhuri2009multi' on page 2 undefined on input line 
+70.
+
+
+LaTeX Warning: Citation `pezeshki2006canonical' on page 2 undefined on input li
+ne 71.
+
+
+LaTeX Warning: Citation `gunderson1997estimating' on page 2 undefined on input 
+line 77.
+
+
+LaTeX Warning: Citation `pezeshki2004empirical' on page 2 undefined on input li
+ne 79.
+
+
+LaTeX Warning: Citation `nadakuditi2011fundamental' on page 2 undefined on inpu
+t line 82.
+
+
+LaTeX Warning: Citation `nadakuditi2011fundamental' on page 2 undefined on inpu
+t line 102.
+
+[2]
+
+LaTeX Warning: Citation `nadakuditi2011fundamental' on page 3 undefined on inpu
+t line 111.
+
+
+LaTeX Warning: Citation `welling2005kcca' on page 3 undefined on input line 117
+.
+
+
+LaTeX Warning: Citation `yu2007learning' on page 3 undefined on input line 117.
+
+
+
+LaTeX Warning: Citation `melzer2001nonlinear' on page 3 undefined on input line
+ 123.
+
+
+LaTeX Warning: Citation `kettenring1971canonical' on page 3 undefined on input 
+line 130.
+
+
+LaTeX Warning: Citation `nielsen1994analysis' on page 3 undefined on input line
+ 133.
+
+
+LaTeX Warning: Citation `pezeshki2004empirical' on page 3 undefined on input li
+ne 142.
+
+
+LaTeX Warning: Citation `nadakuditi2011fundamental' on page 3 undefined on inpu
+t line 142.
+
+
+LaTeX Warning: Citation `nadakuditi2011fundamental' on page 3 undefined on inpu
+t line 143.
+
+
+LaTeX Warning: Reference `sec:mcca_derivs' on page 3 undefined on input line 15
+1.
+
+
+LaTeX Warning: Reference `sec:fw' on page 3 undefined on input line 152.
+
+) [3] [4]
+CHAPTER II.
+(./ieee_msd/IEEE_RMT_MSD.tex (./ieee_msd/introduction.tex
+
+LaTeX Warning: Citation `scharf1991statistical' on page 5 undefined on input li
+ne 4.
+
+
+LaTeX Warning: Citation `friedman2001elements' on page 5 undefined on input lin
+e 4.
+
+
+LaTeX Warning: Citation `besson2005matched' on page 5 undefined on input line 4
+.
+
+
+LaTeX Warning: Citation `besson2006cfar' on page 5 undefined on input line 4.
+
+
+LaTeX Warning: Citation `bandiera2007adaptive' on page 5 undefined on input lin
+e 4.
+
+
+LaTeX Warning: Citation `bandiera2007glrt' on page 5 undefined on input line 4.
+
+
+
+LaTeX Warning: Citation `maris2003resampling' on page 5 undefined on input line
+ 4.
+
+
+LaTeX Warning: Citation `soong1995principal' on page 5 undefined on input line 
+4.
+
+
+LaTeX Warning: Citation `besson2005matched' on page 5 undefined on input line 4
+.
+
+
+LaTeX Warning: Citation `besson2006cfar' on page 5 undefined on input line 4.
+
+
+LaTeX Warning: Citation `bandiera2007adaptive' on page 5 undefined on input lin
+e 4.
+
+
+LaTeX Warning: Citation `bandiera2007glrt' on page 5 undefined on input line 4.
+
+
+
+LaTeX Warning: Citation `scharf1994matched' on page 5 undefined on input line 4
+.
+
+
+LaTeX Warning: Citation `vincent2008matched' on page 5 undefined on input line 
+4.
+
+
+LaTeX Warning: Citation `mcwhorter2003matched' on page 5 undefined on input lin
+e 4.
+
+
+LaTeX Warning: Citation `jin2005cfar' on page 5 undefined on input line 4.
+
+
+LaTeX Warning: Citation `scharf1994matched' on page 5 undefined on input line 6
+.
+
+
+LaTeX Warning: Citation `elden2007matrix' on page 5 undefined on input line 8.
+
+
+LaTeX Warning: Citation `hwritingurl' on page 5 undefined on input line 8.
+
+
+LaTeX Warning: Citation `elden2007matrix' on page 5 undefined on input line 8.
+
+
+LaTeX Warning: Citation `thai2002invariant' on page 5 undefined on input line 8
+.
+
+
+LaTeX Warning: Citation `healey1999models' on page 5 undefined on input line 8.
+
+
+
+LaTeX Warning: Citation `kwon2006kernel' on page 5 undefined on input line 8.
+
+[5
+
+]
+
+LaTeX Warning: Citation `nadakuditi2008sample' on page 6 undefined on input lin
+e 10.
+
+
+LaTeX Warning: Citation `paul2007asymptotics' on page 6 undefined on input line
+ 14.
+
+
+LaTeX Warning: Citation `benaych2011eigenvalues' on page 6 undefined on input l
+ine 14.
+
+
+LaTeX Warning: Citation `benaych2011singular' on page 6 undefined on input line
+ 14.
+
+
+LaTeX Warning: Citation `asendorf2011msd' on page 6 undefined on input line 14.
+
+
+[6]
+
+LaTeX Warning: Reference `sec:data_models' on page 7 undefined on input line 16
+.
+
+
+LaTeX Warning: Reference `sec:std_detecs' on page 7 undefined on input line 16.
+
+
+
+LaTeX Warning: Reference `sec:rmt' on page 7 undefined on input line 16.
+
+
+LaTeX Warning: Reference `sec:rmt_detecs' on page 7 undefined on input line 16.
+
+
+
+LaTeX Warning: Reference `sec:roc_theory' on page 7 undefined on input line 16.
+
+
+
+LaTeX Warning: Reference `sec:results' on page 7 undefined on input line 16.
+
+) (./ieee_msd/data_models.tex
+
+LaTeX Warning: Citation `besson2005matched' on page 7 undefined on input line 1
+.
+
+
+LaTeX Warning: Citation `besson2006cfar' on page 7 undefined on input line 1.
+
+
+LaTeX Warning: Citation `bandiera2007adaptive' on page 7 undefined on input lin
+e 1.
+
+
+LaTeX Warning: Citation `bandiera2007glrt' on page 7 undefined on input line 1.
+
+
+
+LaTeX Warning: Citation `maris2003resampling' on page 7 undefined on input line
+ 1.
+
+
+LaTeX Warning: Citation `soong1995principal' on page 7 undefined on input line 
+1.
+
+
+LaTeX Warning: Citation `thai2002invariant' on page 7 undefined on input line 1
+.
+
+
+LaTeX Warning: Citation `healey1999models' on page 7 undefined on input line 1.
+
+
+
+LaTeX Warning: Citation `kwon2006kernel' on page 7 undefined on input line 1.
+
+
+LaTeX Warning: Citation `healey1999models' on page 7 undefined on input line 1.
+
+
+
+LaTeX Warning: Citation `kwon2006kernel' on page 7 undefined on input line 1.
+
+
+LaTeX Warning: Citation `bandiera2007adaptive' on page 7 undefined on input lin
+e 5.
+
+
+LaTeX Warning: Citation `bandiera2007glrt' on page 7 undefined on input line 5.
+
+
+
+LaTeX Warning: Citation `thai2002invariant' on page 7 undefined on input line 5
+.
+
+
+LaTeX Warning: Citation `healey1999models' on page 7 undefined on input line 5.
+
+
+[7]
+
+LaTeX Warning: Citation `zhu2006automatic' on page 8 undefined on input line 9.
+
+
+
+LaTeX Warning: Citation `nadakuditi2010fundamental' on page 8 undefined on inpu
+t line 9.
+
+
+LaTeX Warning: Citation `johnstone2001distribution' on page 8 undefined on inpu
+t line 9.
+
+
+LaTeX Warning: Citation `el2007tracy' on page 8 undefined on input line 9.
+
+
+LaTeX Warning: Citation `muirhead1982aspects' on page 8 undefined on input line
+ 11.
+
+[8]) (./ieee_msd/std_detec.tex
+
+LaTeX Warning: Citation `van1968detection' on page 9 undefined on input line 1.
+
+
+
+LaTeX Warning: Citation `scharf1991statistical' on page 9 undefined on input li
+ne 12.
+
+[9]
+
+LaTeX Warning: Citation `mcwhorter2003matched' on page 10 undefined on input li
+ne 27.
+
+
+LaTeX Warning: Citation `jin2005cfar' on page 10 undefined on input line 27.
+
+
+LaTeX Warning: Reference `sec:rmt' on page 10 undefined on input line 38.
+
+[10]
+
+LaTeX Warning: Citation `scharf1991statistical' on page 11 undefined on input l
+ine 54.
+
+
+LaTeX Warning: Reference `sec:rmt' on page 11 undefined on input line 65.
+
+<ieee_msd/figures/asend1a.pdf, id=85, 463.7325pt x 377.41pt>
+File: ieee_msd/figures/asend1a.pdf Graphic file (type pdf)
+
+<use ieee_msd/figures/asend1a.pdf>
+<ieee_msd/figures/asend1b.pdf, id=86, 466.74374pt x 378.41376pt>
+File: ieee_msd/figures/asend1b.pdf Graphic file (type pdf)
+
+<use ieee_msd/figures/asend1b.pdf>
+
+LaTeX Warning: Citation `fawcett2006introduction' on page 11 undefined on input
+ line 78.
+
+
+LaTeX Warning: Citation `fawcett2006introduction' on page 11 undefined on input
+ line 78.
+
+[11] [12 <./ieee_msd/figures/asend1a.pdf> <./ieee_msd/figures/asend1b.pdf>]
+<ieee_msd/figures/asend2.pdf, id=105, 472.76625pt x 378.41376pt>
+File: ieee_msd/figures/asend2.pdf Graphic file (type pdf)
+
+<use ieee_msd/figures/asend2.pdf>
+
+LaTeX Warning: Citation `fawcett2006introduction' on page 13 undefined on input
+ line 97.
+
+
+LaTeX Warning: Citation `fawcett2006introduction' on page 13 undefined on input
+ line 97.
+
+) (./ieee_msd/prob_state.tex
+
+LaTeX Warning: Reference `sec:std_detecs' on page 13 undefined on input line 1.
+
+
+
+LaTeX Warning: Reference `sec:rmt_detecs' on page 13 undefined on input line 9.
+
+
+[13 <./ieee_msd/figures/asend2.pdf>]
+
+LaTeX Warning: Reference `sec:std_detecs' on page 14 undefined on input line 13
+.
+
+
+LaTeX Warning: Reference `sec:rmt_detecs' on page 14 undefined on input line 17
+.
+
+
+LaTeX Warning: Reference `sec:roc_theory' on page 14 undefined on input line 22
+.
+
+
+LaTeX Warning: Reference `sec:rmt' on page 14 undefined on input line 22.
+
+) (./ieee_msd/rmt.tex
+
+LaTeX Warning: Reference `sec:rmt_detecs' on page 14 undefined on input line 5.
+
+
+
+LaTeX Warning: Reference `sec:roc_theory' on page 14 undefined on input line 5.
+
+
+[14]
+
+LaTeX Warning: Citation `paul2007asymptotics' on page 15 undefined on input lin
+e 18.
+
+
+LaTeX Warning: Citation `benaych2011eigenvalues' on page 15 undefined on input 
+line 18.
+
+
+LaTeX Warning: Citation `cox1973resolving' on page 15 undefined on input line 2
+3.
+
+
+LaTeX Warning: Citation `nadakuditi2008sample' on page 15 undefined on input li
+ne 26.
+
+
+LaTeX Warning: Citation `nadakuditi2010fundamental' on page 15 undefined on inp
+ut line 30.
+
+
+LaTeX Warning: Citation `nadakuditi2010fundamental' on page 15 undefined on inp
+ut line 30.
+
+
+LaTeX Warning: Citation `nadakuditi2010fundamental' on page 15 undefined on inp
+ut line 30.
+
+
+LaTeX Warning: Citation `johnstone2001distribution' on page 15 undefined on inp
+ut line 30.
+
+
+LaTeX Warning: Citation `el2007tracy' on page 15 undefined on input line 30.
+
+[15]
+
+LaTeX Warning: Reference `sec:rmt_detecs' on page 16 undefined on input line 61
+.
+
+
+LaTeX Warning: Reference `sec:roc_theory' on page 16 undefined on input line 61
+.
+
+
+LaTeX Warning: Citation `paul2007asymptotics' on page 16 undefined on input lin
+e 77.
+
+
+LaTeX Warning: Citation `benaych2011singular' on page 16 undefined on input lin
+e 77.
+
+
+LaTeX Warning: Reference `sec:roc_theory' on page 16 undefined on input line 79
+.
+
+[16]
+
+LaTeX Warning: Citation `paul2007asymptotics' on page 17 undefined on input lin
+e 90.
+
+
+LaTeX Warning: Citation `paul2007asymptotics' on page 17 undefined on input lin
+e 90.
+
+
+LaTeX Warning: Citation `benaych2011singular' on page 17 undefined on input lin
+e 90.
+
+) (./ieee_msd/rmt_detecs.tex
+
+LaTeX Warning: Reference `sec:std_detecs' on page 17 undefined on input line 1.
+
+
+[17]
+
+LaTeX Warning: Citation `nadakuditi2010fundamental' on page 18 undefined on inp
+ut line 16.
+
+
+Overfull \hbox (66.94475pt too wide) in paragraph at lines 36--44
+ [][] 
+ []
+
+[18]
+
+LaTeX Warning: Reference `sec:rmt' on page 19 undefined on input line 62.
+
+
+Overfull \hbox (20.20949pt too wide) in paragraph at lines 74--81
+ [][] 
+ []
+
+) [19] (./ieee_msd/roc_theory.tex
+
+LaTeX Warning: Reference `sec:std_detecs' on page 20 undefined on input line 1.
+
+
+
+LaTeX Warning: Reference `sec:rmt_detecs' on page 20 undefined on input line 1.
+
+
+
+LaTeX Warning: Citation `fawcett2006introduction' on page 20 undefined on input
+ line 5.
+
+
+LaTeX Warning: Reference `sec:rmt' on page 20 undefined on input line 12.
+
+[20]
+
+LaTeX Warning: Citation `wood1993saddlepoint' on page 21 undefined on input lin
+e 27.
+
+[21]) (./ieee_msd/results.tex
+
+LaTeX Warning: Reference `sec:roc_theory' on page 22 undefined on input line 1.
+
+
+
+LaTeX Warning: Reference `sec:rmt' on page 22 undefined on input line 1.
+
+
+LaTeX Warning: Reference `sec:rmt_detecs' on page 22 undefined on input line 1.
+
+
+
+LaTeX Warning: Citation `fawcett2006introduction' on page 22 undefined on input
+ line 8.
+
+
+LaTeX Warning: Citation `fawcett2006introduction' on page 22 undefined on input
+ line 8.
+
+[22] <ieee_msd/figures/asend3a.pdf, id=149, 463.7325pt x 381.425pt>
+File: ieee_msd/figures/asend3a.pdf Graphic file (type pdf)
+
+<use ieee_msd/figures/asend3a.pdf>
+<ieee_msd/figures/asend3b.pdf, id=150, 463.7325pt x 378.41376pt>
+File: ieee_msd/figures/asend3b.pdf Graphic file (type pdf)
+
+<use ieee_msd/figures/asend3b.pdf>
+
+LaTeX Warning: Citation `fawcett2006introduction' on page 23 undefined on input
+ line 23.
+
+
+LaTeX Warning: Reference `sec:roc_theory' on page 23 undefined on input line 23
+.
+
+
+LaTeX Warning: Citation `fawcett2006introduction' on page 23 undefined on input
+ line 23.
+
+
+LaTeX Warning: Reference `sec:roc_theory' on page 23 undefined on input line 23
+.
+
+<ieee_msd/figures/asend4a.pdf, id=151, 465.74pt x 396.48125pt>
+File: ieee_msd/figures/asend4a.pdf Graphic file (type pdf)
+
+<use ieee_msd/figures/asend4a.pdf>
+<ieee_msd/figures/asend4b.pdf, id=152, 484.81125pt x 396.48125pt>
+File: ieee_msd/figures/asend4b.pdf Graphic file (type pdf)
+
+<use ieee_msd/figures/asend4b.pdf>
+
+LaTeX Warning: Reference `sec:roc_theory' on page 23 undefined on input line 42
+.
+
+
+LaTeX Warning: Reference `sec:roc_theory' on page 23 undefined on input line 42
+.
+
+
+LaTeX Warning: Reference `sec:roc_theory' on page 23 undefined on input line 46
+.
+
+
+LaTeX Warning: Reference `sec:rmt' on page 23 undefined on input line 46.
+
+[23] <ieee_msd/figures/asend5a.pdf, id=156, 461.725pt x 378.41376pt>
+File: ieee_msd/figures/asend5a.pdf Graphic file (type pdf)
+
+<use ieee_msd/figures/asend5a.pdf>
+<ieee_msd/figures/asend5b.pdf, id=157, 463.7325pt x 376.40625pt>
+File: ieee_msd/figures/asend5b.pdf Graphic file (type pdf)
+
+<use ieee_msd/figures/asend5b.pdf>
+
+LaTeX Warning: Reference `sec:std_detecs' on page 24 undefined on input line 63
+.
+
+
+LaTeX Warning: Reference `sec:std_detecs' on page 24 undefined on input line 63
+.
+
+
+LaTeX Warning: Reference `sec:rmt' on page 24 undefined on input line 68.
+
+
+LaTeX Warning: Reference `sec:std_detecs' on page 24 undefined on input line 81
+.
+
+
+LaTeX Warning: Reference `sec:std_detecs' on page 24 undefined on input line 83
+.
+
+[24] <ieee_msd/figures/asend6a.pdf, id=161, 471.7625pt x 378.41376pt>
+File: ieee_msd/figures/asend6a.pdf Graphic file (type pdf)
+
+<use ieee_msd/figures/asend6a.pdf>
+<ieee_msd/figures/asend6b.pdf, id=162, 471.7625pt x 378.41376pt>
+File: ieee_msd/figures/asend6b.pdf Graphic file (type pdf)
+
+<use ieee_msd/figures/asend6b.pdf>
+<ieee_msd/figures/asend7.pdf, id=163, 468.75125pt x 389.455pt>
+File: ieee_msd/figures/asend7.pdf Graphic file (type pdf)
+
+<use ieee_msd/figures/asend7.pdf>) (./ieee_msd/conclusion.tex [25]
+
+LaTeX Warning: Citation `nadakuditi2010fundamental' on page 26 undefined on inp
+ut line 3.
+
+
+LaTeX Warning: Citation `johnstone2001distribution' on page 26 undefined on inp
+ut line 3.
+
+
+LaTeX Warning: Citation `el2007tracy' on page 26 undefined on input line 3.
+
+
+LaTeX Warning: Citation `benaych2011singular' on page 26 undefined on input lin
+e 5.
+
+) (./ieee_msd/appendix.tex
+Overfull \hbox (70.87715pt too wide) in paragraph at lines 11--13
+\OT1/cmr/m/n/12 Let $\OML/cmm/m/it/12 X[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 V[
+]\OT1/cmr/m/n/12 ^^C[]\OML/cmm/m/it/12 V[]$ \OT1/cmr/m/n/12 be the eigen-value 
+de-com-po-si-tion of $\OML/cmm/m/it/12 X[]$ \OT1/cmr/m/n/12 such that $^^C[] = 
+[](\OML/cmm/m/it/12 ^^U[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X[]\OT1/cmr/m/n/12 )
+\OML/cmm/m/it/12 ; [] ; ^^U[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X[]\OT1/cmr/m/n/
+12 ))$
+ []
+
+[26]
+
+LaTeX Warning: Citation `benaych2011eigenvalues' on page 27 undefined on input 
+line 27.
+
+
+LaTeX Warning: Citation `benaych2011eigenvalues' on page 27 undefined on input 
+line 35.
+
+[27]
+
+LaTeX Warning: Citation `silverstein1985smallest' on page 28 undefined on input
+ line 77.
+
+
+LaTeX Warning: Citation `barvinok2005measure' on page 28 undefined on input lin
+e 79.
+
+)) [28] [29 <./ieee_msd/figures/asend3a.pdf> <./ieee_msd/figures/asend3b.pdf>]
+[30 <./ieee_msd/figures/asend4a.pdf> <./ieee_msd/figures/asend4b.pdf>] [31 <./i
+eee_msd/figures/asend5a.pdf> <./ieee_msd/figures/asend5b.pdf>] [32 <./ieee_msd/
+figures/asend6a.pdf> <./ieee_msd/figures/asend6b.pdf>] [33 <./ieee_msd/figures/
+asend7.pdf>]
+CHAPTER III.
+(./taes_msd/taes_useful.tex (./taes_msd/intro.tex
+
+LaTeX Warning: Citation `cui2013performance' on page 34 undefined on input line
+ 16.
+
+
+LaTeX Warning: Citation `arribas2013antenna' on page 34 undefined on input line
+ 17.
+
+
+LaTeX Warning: Citation `gorji2013widely' on page 34 undefined on input line 18
+.
+
+
+LaTeX Warning: Citation `zhou2013space' on page 34 undefined on input line 18.
+
+
+LaTeX Warning: Citation `cui2013performance' on page 34 undefined on input line
+ 35.
+
+
+LaTeX Warning: Citation `santiago2013noise' on page 34 undefined on input line 
+36.
+
+
+LaTeX Warning: Citation `hu2013doa' on page 34 undefined on input line 36.
+
+
+LaTeX Warning: Citation `liao2013direction' on page 34 undefined on input line 
+36.
+
+
+LaTeX Warning: Citation `arribas2013antenna' on page 34 undefined on input line
+ 37.
+
+
+LaTeX Warning: Citation `chen2013adaptive' on page 34 undefined on input line 3
+8.
+
+
+LaTeX Warning: Citation `gorji2013widely' on page 34 undefined on input line 38
+.
+
+
+LaTeX Warning: Citation `zhou2013space' on page 34 undefined on input line 38.
+
+
+LaTeX Warning: Citation `kwon2013multi' on page 34 undefined on input line 39.
+
+
+LaTeX Warning: Citation `besson2005matched' on page 34 undefined on input line 
+41.
+
+
+LaTeX Warning: Citation `bandiera2007glrt' on page 34 undefined on input line 4
+1.
+
+
+LaTeX Warning: Citation `bandiera2007adaptive' on page 34 undefined on input li
+ne 41.
+
+
+LaTeX Warning: Citation `sirianunpiboon2013multiple' on page 34 undefined on in
+put line 42.
+
+
+LaTeX Warning: Citation `vazquez2011spatial' on page 34 undefined on input line
+ 42.
+
+
+LaTeX Warning: Citation `scharf1994matched' on page 34 undefined on input line 
+45.
+
+
+LaTeX Warning: Citation `vincent2008matched' on page 34 undefined on input line
+ 45.
+
+
+LaTeX Warning: Citation `besson2006cfar' on page 34 undefined on input line 45.
+
+
+
+LaTeX Warning: Citation `asendorf2013performance' on page 34 undefined on input
+ line 46.
+
+[34
+
+]
+
+LaTeX Warning: Citation `asendorf2013performance' on page 35 undefined on input
+ line 53.
+
+) (./taes_msd/prob_form.tex
+
+LaTeX Warning: Citation `cui2013performance' on page 35 undefined on input line
+ 8.
+
+
+LaTeX Warning: Citation `santiago2013noise' on page 35 undefined on input line 
+8.
+
+
+LaTeX Warning: Citation `arribas2013antenna' on page 35 undefined on input line
+ 8.
+
+
+LaTeX Warning: Citation `chen2013adaptive' on page 35 undefined on input line 8
+.
+
+
+LaTeX Warning: Citation `gorji2013widely' on page 35 undefined on input line 8.
+
+
+
+LaTeX Warning: Citation `zhou2013space' on page 35 undefined on input line 8.
+
+
+LaTeX Warning: Citation `kwon2013multi' on page 35 undefined on input line 8.
+
+
+LaTeX Warning: Citation `hu2013doa' on page 35 undefined on input line 8.
+
+
+LaTeX Warning: Citation `liao2013direction' on page 35 undefined on input line 
+8.
+
+
+LaTeX Warning: Citation `van1968detection' on page 35 undefined on input line 1
+0.
+
+[35]
+
+LaTeX Warning: Citation `cui2013performance' on page 36 undefined on input line
+ 83.
+
+
+LaTeX Warning: Citation `arribas2013antenna' on page 36 undefined on input line
+ 83.
+
+
+LaTeX Warning: Citation `zhou2013space' on page 36 undefined on input line 83.
+
+[36]) (./taes_msd/useful.tex [37] [38]
+<taes_msd/figures/dist1.pdf, id=293, 538.01pt x 462.72874pt>
+File: taes_msd/figures/dist1.pdf Graphic file (type pdf)
+
+<use taes_msd/figures/dist1.pdf>
+<taes_msd/figures/dist2.pdf, id=294, 538.01pt x 462.72874pt>
+File: taes_msd/figures/dist2.pdf Graphic file (type pdf)
+
+<use taes_msd/figures/dist2.pdf>
+<taes_msd/figures/dist3.pdf, id=295, 538.01pt x 462.72874pt>
+File: taes_msd/figures/dist3.pdf Graphic file (type pdf)
+
+<use taes_msd/figures/dist3.pdf>
+<taes_msd/figures/dist_roc.pdf, id=296, 541.02126pt x 462.72874pt>
+File: taes_msd/figures/dist_roc.pdf Graphic file (type pdf)
+
+<use taes_msd/figures/dist_roc.pdf> [39]
+<taes_msd/figures/nc_lines.pdf, id=300, 549.05125pt x 463.7325pt>
+File: taes_msd/figures/nc_lines.pdf Graphic file (type pdf)
+
+<use taes_msd/figures/nc_lines.pdf>) (./taes_msd/msd.tex
+
+LaTeX Warning: Citation `asendorf2013performance' on page 40 undefined on input
+ line 9.
+
+[40 <./taes_msd/figures/dist1.pdf> <./taes_msd/figures/dist2.pdf> <./taes_msd/f
+igures/dist3.pdf>]
+
+LaTeX Warning: Citation `chen2013adaptive' on page 41 undefined on input line 3
+1.
+
+
+LaTeX Warning: Citation `arribas2013antenna' on page 41 undefined on input line
+ 32.
+
+
+LaTeX Warning: Citation `he2013near' on page 41 undefined on input line 32.
+
+
+LaTeX Warning: Citation `liao2013direction' on page 41 undefined on input line 
+33.
+
+
+LaTeX Warning: Citation `kwon2013multi' on page 41 undefined on input line 33.
+
+[41 <./taes_msd/figures/dist_roc.pdf>]
+Overfull \hbox (32.35289pt too wide) in paragraph at lines 59--65
+\OT1/cmr/m/n/12 from the pro-vided train-ing data. Given the sig-nal bear-ing t
+rain-ing data $\OML/cmm/m/it/12 Y \OT1/cmr/m/n/12 = [] \OMS/cmsy/m/n/12 2
+ []
+
+
+LaTeX Warning: Citation `muirhead1982aspects' on page 42 undefined on input lin
+e 69.
+
+
+LaTeX Warning: Citation `asendorf2013performance' on page 42 undefined on input
+ line 73.
+
+[42 <./taes_msd/figures/nc_lines.pdf>]
+
+LaTeX Warning: Citation `asendorf2013performance' on page 43 undefined on input
+ line 83.
+
+
+LaTeX Warning: Citation `nadakuditi2008sample' on page 43 undefined on input li
+ne 83.
+
+
+LaTeX Warning: Citation `scharf1994matched' on page 43 undefined on input line 
+93.
+
+
+LaTeX Warning: Citation `vincent2008matched' on page 43 undefined on input line
+ 93.
+
+
+LaTeX Warning: Citation `fuchs2007robust' on page 43 undefined on input line 93
+.
+
+
+LaTeX Warning: Citation `asendorf2013performance' on page 43 undefined on input
+ line 101.
+
+
+LaTeX Warning: Citation `santiago2013noise' on page 43 undefined on input line 
+107.
+
+
+LaTeX Warning: Citation `arribas2013antenna' on page 43 undefined on input line
+ 107.
+
+
+LaTeX Warning: Citation `asendorf2013performance' on page 43 undefined on input
+ line 110.
+
+
+LaTeX Warning: Citation `asendorf2013performance' on page 43 undefined on input
+ line 126.
+
+[43] [44] <taes_msd/figures/taes_pd_v_m.pdf, id=362, 570.13pt x 463.7325pt>
+File: taes_msd/figures/taes_pd_v_m.pdf Graphic file (type pdf)
+
+<use taes_msd/figures/taes_pd_v_m.pdf>
+<taes_msd/figures/taes_d_v_m.pdf, id=363, 569.12625pt x 463.7325pt>
+File: taes_msd/figures/taes_d_v_m.pdf Graphic file (type pdf)
+
+<use taes_msd/figures/taes_d_v_m.pdf>) (./taes_msd/extensions.tex [45]
+
+LaTeX Warning: Citation `wood1993saddlepoint' on page 46 undefined on input lin
+e 41.
+
+
+LaTeX Warning: Citation `fawcett2006introduction' on page 46 undefined on input
+ line 55.
+
+<taes_msd/figures/weights_easy.pdf, id=367, 564.1075pt x 471.7625pt>
+File: taes_msd/figures/weights_easy.pdf Graphic file (type pdf)
+
+<use taes_msd/figures/weights_easy.pdf>
+<taes_msd/figures/weights_hard.pdf, id=368, 555.07375pt x 463.7325pt>
+File: taes_msd/figures/weights_hard.pdf Graphic file (type pdf)
+
+<use taes_msd/figures/weights_hard.pdf>) (./taes_msd/conclusion.tex [46]
+
+LaTeX Warning: Citation `asendorf2013performance' on page 47 undefined on input
+ line 33.
+
+)) [47] [48 <./taes_msd/figures/taes_pd_v_m.pdf> <./taes_msd/figures/taes_d_v_m
+.pdf>] [49 <./taes_msd/figures/weights_easy.pdf> <./taes_msd/figures/weights_ha
+rd.pdf>]
+CHAPTER IV.
+(./cca.tex
+
+LaTeX Warning: Citation `pezeshki2004empirical' on page 50 undefined on input l
+ine 4.
+
+
+LaTeX Warning: Citation `nadakuditi2011fundamental' on page 50 undefined on inp
+ut line 4.
+
+
+LaTeX Warning: Citation `nadakuditi2011fundamental' on page 50 undefined on inp
+ut line 6.
+
+[50
+
+]
+
+LaTeX Warning: Citation `nielsen2002multiset' on page 51 undefined on input lin
+e 58.
+
+
+LaTeX Warning: Citation `nadakuditi2011fundamental' on page 51 undefined on inp
+ut line 58.
+
+
+LaTeX Warning: Citation `welling2005kcca' on page 51 undefined on input line 58
+.
+
+
+LaTeX Warning: Citation `kettenring1971canonical' on page 51 undefined on input
+ line 58.
+
+
+LaTeX Warning: Citation `nielsen1994analysis' on page 51 undefined on input lin
+e 58.
+
+[51]
+
+LaTeX Warning: Citation `pezeshki2004empirical' on page 52 undefined on input l
+ine 139.
+
+[52] [53] <figures/cca_errorbars_low.pdf, id=426, 554.07pt x 461.725pt>
+File: figures/cca_errorbars_low.pdf Graphic file (type pdf)
+
+<use figures/cca_errorbars_low.pdf>
+<figures/cca_errorbars_high.pdf, id=427, 554.07pt x 461.725pt>
+File: figures/cca_errorbars_high.pdf Graphic file (type pdf)
+
+<use figures/cca_errorbars_high.pdf>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: Citation `pezeshki2004empirical' on page 54 undefined on input l
+ine 247.
+
+
+LaTeX Warning: Citation `nadakuditi2011fundamental' on page 54 undefined on inp
+ut line 256.
+
+<figures/cca_ks_heatmap.pdf, id=428, 541.02126pt x 461.725pt>
+File: figures/cca_ks_heatmap.pdf Graphic file (type pdf)
+
+<use figures/cca_ks_heatmap.pdf>
+
+LaTeX Warning: Citation `nadakuditi2011fundamental' on page 54 undefined on inp
+ut line 273.
+
+[54] <figures/cca_auc_heatmap.pdf, id=432, 540.0175pt x 484.81125pt>
+File: figures/cca_auc_heatmap.pdf Graphic file (type pdf)
+
+<use figures/cca_auc_heatmap.pdf> [55 <./figures/cca_errorbars_low.pdf> <./figu
+res/cca_errorbars_high.pdf>] [56 <./figures/cca_ks_heatmap.pdf> <./figures/cca_
+auc_heatmap.pdf>]
+
+LaTeX Warning: Citation `nadakuditi2011fundamental' on page 57 undefined on inp
+ut line 318.
+
+
+LaTeX Warning: Citation `nadakuditi2011fundamental' on page 57 undefined on inp
+ut line 323.
+
+
+LaTeX Warning: Citation `nadakuditi2011fundamental' on page 57 undefined on inp
+ut line 336.
+
+
+LaTeX Warning: Citation `nadakuditi2011fundamental' on page 57 undefined on inp
+ut line 345.
+
+[57] <figures/icca_errorbars_low.pdf, id=473, 545.03625pt x 455.7025pt>
+File: figures/icca_errorbars_low.pdf Graphic file (type pdf)
+
+<use figures/icca_errorbars_low.pdf>
+<figures/icca_errorbars_high.pdf, id=474, 545.03625pt x 455.7025pt>
+File: figures/icca_errorbars_high.pdf Graphic file (type pdf)
+
+<use figures/icca_errorbars_high.pdf> [58 <./figures/icca_errorbars_low.pdf> <.
+/figures/icca_errorbars_high.pdf>]
+File: figures/cca_ks_heatmap.pdf Graphic file (type pdf)
+ <use figures/cca_ks_heatmap.pdf>
+<figures/icca_ks_heatmap.pdf, id=489, 541.02126pt x 461.725pt>
+File: figures/icca_ks_heatmap.pdf Graphic file (type pdf)
+
+<use figures/icca_ks_heatmap.pdf>
+Overfull \hbox (3.8227pt too wide) in paragraph at lines 415--425
+[][] [] 
+ []
+
+
+LaTeX Warning: Citation `nadakuditi2011fundamental' on page 59 undefined on inp
+ut line 429.
+
+File: figures/cca_auc_heatmap.pdf Graphic file (type pdf)
+<use figures/cca_auc_heatmap.pdf>
+<figures/icca_auc_heatmap.pdf, id=490, 540.0175pt x 484.81125pt>
+File: figures/icca_auc_heatmap.pdf Graphic file (type pdf)
+
+<use figures/icca_auc_heatmap.pdf>
+Overfull \hbox (3.8227pt too wide) in paragraph at lines 448--455
+[][] [] 
+ []
+
+[59 <./figures/icca_ks_heatmap.pdf>]) [60 <./figures/icca_auc_heatmap.pdf>]
+CHAPTER V.
+(./detection.tex
+
+LaTeX Warning: Citation `besson2006cfar' on page 61 undefined on input line 7.
+
+
+LaTeX Warning: Citation `besson2005matched' on page 61 undefined on input line 
+7.
+
+
+LaTeX Warning: Citation `bandiera2007glrt' on page 61 undefined on input line 8
+.
+
+
+LaTeX Warning: Citation `bandiera2007adaptive' on page 61 undefined on input li
+ne 8.
+
+
+LaTeX Warning: Citation `elden2007matrix' on page 61 undefined on input line 8.
+
+
+
+LaTeX Warning: Citation `mcwhorter2003matched' on page 61 undefined on input li
+ne 10.
+
+
+LaTeX Warning: Citation `vincent2008matched' on page 61 undefined on input line
+ 10.
+
+
+LaTeX Warning: Citation `scharf1994matched' on page 61 undefined on input line 
+10.
+
+
+LaTeX Warning: Citation `jin2005cfar' on page 61 undefined on input line 10.
+
+
+LaTeX Warning: Citation `asendorf2013performance' on page 61 undefined on input
+ line 12.
+
+
+LaTeX Warning: Citation `asendorf2012performance' on page 61 undefined on input
+ line 12.
+
+
+LaTeX Warning: Citation `pezeshki2006canonical' on page 61 undefined on input l
+ine 18.
+
+[61
+
+]
+
+LaTeX Warning: Citation `van1968detection' on page 62 undefined on input line 6
+8.
+
+[62] [63]
+Overfull \hbox (0.97133pt too wide) detected at line 212
+\OML/cmm/m/it/12 R[] \OT1/cmr/m/n/12 = [] [] [][] [] [] \OML/cmm/m/it/12 :[] 
+ []
+
+[64] [65]
+Overfull \hbox (25.48688pt too wide) in paragraph at lines 333--339
+[]\OT1/cmr/m/n/12 Assume that we are given $\OML/cmm/m/it/12 n$ \OT1/cmr/m/n/12
+ ob-ser-va-tions of each dataset, $\OML/cmm/m/it/12 y[]; [] ; y[]$\OT1/cmr/m/n/
+12 , and $\OML/cmm/m/it/12 y[]; [] ; y[]$\OT1/cmr/m/n/12 .
+ []
+
+
+Overfull \hbox (4.82837pt too wide) detected at line 354
+[] []
+ []
+
+[66] [67]
+Overfull \hbox (32.33287pt too wide) detected at line 476
+[] []
+ []
+
+[68]
+
+LaTeX Warning: Citation `fawcett2006introduction' on page 69 undefined on input
+ line 504.
+
+
+LaTeX Warning: Citation `fawcett2006introduction' on page 69 undefined on input
+ line 510.
+
+[69] <figures/auc_lrt_high_rho.pdf, id=547, 540.0175pt x 484.81125pt>
+File: figures/auc_lrt_high_rho.pdf Graphic file (type pdf)
+
+<use figures/auc_lrt_high_rho.pdf>
+<figures/auc_icca_high_rho.pdf, id=548, 540.0175pt x 484.81125pt>
+File: figures/auc_icca_high_rho.pdf Graphic file (type pdf)
+
+<use figures/auc_icca_high_rho.pdf>
+<figures/auc_cca_high_rho.pdf, id=549, 540.0175pt x 484.81125pt>
+File: figures/auc_cca_high_rho.pdf Graphic file (type pdf)
+
+<use figures/auc_cca_high_rho.pdf>
+Overfull \hbox (3.8227pt too wide) in paragraph at lines 528--543
+[][] []
+ []
+
+
+LaTeX Warning: Citation `fawcett2006introduction' on page 70 undefined on input
+ line 543.
+
+
+LaTeX Warning: Citation `fawcett2006introduction' on page 70 undefined on input
+ line 543.
+
+<figures/auc_lrt_low_rho.pdf, id=550, 540.0175pt x 484.81125pt>
+File: figures/auc_lrt_low_rho.pdf Graphic file (type pdf)
+
+<use figures/auc_lrt_low_rho.pdf>
+<figures/auc_icca_low_rho.pdf, id=551, 540.0175pt x 484.81125pt>
+File: figures/auc_icca_low_rho.pdf Graphic file (type pdf)
+
+<use figures/auc_icca_low_rho.pdf>
+<figures/auc_cca_low_rho.pdf, id=552, 540.0175pt x 484.81125pt>
+File: figures/auc_cca_low_rho.pdf Graphic file (type pdf)
+
+<use figures/auc_cca_low_rho.pdf>
+Overfull \hbox (3.8227pt too wide) in paragraph at lines 551--566
+[][] []
+ []
+
+
+LaTeX Warning: Citation `fawcett2006introduction' on page 70 undefined on input
+ line 566.
+
+
+LaTeX Warning: Citation `fawcett2006introduction' on page 70 undefined on input
+ line 566.
+
+) [70] [71 <./figures/auc_lrt_high_rho.pdf> <./figures/auc_icca_high_rho.pdf> <
+./figures/auc_cca_high_rho.pdf>] [72 <./figures/auc_lrt_low_rho.pdf> <./figures
+/auc_icca_low_rho.pdf> <./figures/auc_cca_low_rho.pdf>] [73]
+CHAPTER VI.
+(./rcca.tex [74
+
+] [75] [76] [77]
+<figures/rcca_errorbars_low_snr_n_50.pdf, id=645, 531.9875pt x 462.72874pt>
+File: figures/rcca_errorbars_low_snr_n_50.pdf Graphic file (type pdf)
+
+<use figures/rcca_errorbars_low_snr_n_50.pdf>
+<figures/rcca_errorbars_low_snr_n_150.pdf, id=646, 531.9875pt x 462.72874pt>
+File: figures/rcca_errorbars_low_snr_n_150.pdf Graphic file (type pdf)
+
+<use figures/rcca_errorbars_low_snr_n_150.pdf>
+<figures/rcca_errorbars_low_snr_n_300.pdf, id=647, 531.9875pt x 462.72874pt>
+File: figures/rcca_errorbars_low_snr_n_300.pdf Graphic file (type pdf)
+
+<use figures/rcca_errorbars_low_snr_n_300.pdf>
+<figures/rcca_errorbars_low_snr_n_600.pdf, id=648, 531.9875pt x 462.72874pt>
+File: figures/rcca_errorbars_low_snr_n_600.pdf Graphic file (type pdf)
+
+<use figures/rcca_errorbars_low_snr_n_600.pdf>
+Overfull \hbox (3.8227pt too wide) in paragraph at lines 238--255
+[][] []
+ []
+
+
+Overfull \hbox (3.8227pt too wide) in paragraph at lines 238--255
+[] [] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<figures/rcca_errorbars_high_snr_n_50.pdf, id=649, 531.9875pt x 462.72874pt>
+File: figures/rcca_errorbars_high_snr_n_50.pdf Graphic file (type pdf)
+
+<use figures/rcca_errorbars_high_snr_n_50.pdf>
+<figures/rcca_errorbars_high_snr_n_150.pdf, id=650, 531.9875pt x 462.72874pt>
+File: figures/rcca_errorbars_high_snr_n_150.pdf Graphic file (type pdf)
+
+<use figures/rcca_errorbars_high_snr_n_150.pdf>
+<figures/rcca_errorbars_high_snr_n_300.pdf, id=651, 531.9875pt x 462.72874pt>
+File: figures/rcca_errorbars_high_snr_n_300.pdf Graphic file (type pdf)
+
+<use figures/rcca_errorbars_high_snr_n_300.pdf>
+<figures/rcca_errorbars_high_snr_n_600.pdf, id=652, 531.9875pt x 462.72874pt>
+File: figures/rcca_errorbars_high_snr_n_600.pdf Graphic file (type pdf)
+
+<use figures/rcca_errorbars_high_snr_n_600.pdf>
+Overfull \hbox (3.8227pt too wide) in paragraph at lines 262--279
+[][] []
+ []
+
+
+Overfull \hbox (3.8227pt too wide) in paragraph at lines 262--279
+[] [] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[78] <figures/rcca_auc_heatmap_n_50.pdf, id=656, 540.0175pt x 485.815pt>
+File: figures/rcca_auc_heatmap_n_50.pdf Graphic file (type pdf)
+
+<use figures/rcca_auc_heatmap_n_50.pdf>
+<figures/rcca_auc_heatmap_n_150.pdf, id=657, 540.0175pt x 485.815pt>
+File: figures/rcca_auc_heatmap_n_150.pdf Graphic file (type pdf)
+
+<use figures/rcca_auc_heatmap_n_150.pdf>
+<figures/rcca_auc_heatmap_n_300.pdf, id=658, 540.0175pt x 485.815pt>
+File: figures/rcca_auc_heatmap_n_300.pdf Graphic file (type pdf)
+
+<use figures/rcca_auc_heatmap_n_300.pdf>
+<figures/rcca_auc_heatmap_n_600.pdf, id=659, 540.0175pt x 485.815pt>
+File: figures/rcca_auc_heatmap_n_600.pdf Graphic file (type pdf)
+
+<use figures/rcca_auc_heatmap_n_600.pdf>
+Overfull \hbox (3.8227pt too wide) in paragraph at lines 320--334
+[][] []
+ []
+
+
+Overfull \hbox (3.8227pt too wide) in paragraph at lines 320--334
+[] [] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[79 <./figures/rcca_errorbars_low_snr_n_50.pdf> <./figures/rcca_errorbars_low_s
+nr_n_150.pdf> <./figures/rcca_errorbars_low_snr_n_300.pdf> <./figures/rcca_erro
+rbars_low_snr_n_600.pdf>] [80 <./figures/rcca_errorbars_high_snr_n_50.pdf> <./f
+igures/rcca_errorbars_high_snr_n_150.pdf> <./figures/rcca_errorbars_high_snr_n_
+300.pdf> <./figures/rcca_errorbars_high_snr_n_600.pdf>] [81 <./figures/rcca_auc
+_heatmap_n_50.pdf> <./figures/rcca_auc_heatmap_n_150.pdf> <./figures/rcca_auc_h
+eatmap_n_300.pdf> <./figures/rcca_auc_heatmap_n_600.pdf>] [82]
+<figures/ircca_errorbars_low_snr_n_50.pdf, id=797, 531.9875pt x 462.72874pt>
+File: figures/ircca_errorbars_low_snr_n_50.pdf Graphic file (type pdf)
+
+<use figures/ircca_errorbars_low_snr_n_50.pdf>
+<figures/ircca_errorbars_low_snr_n_150.pdf, id=798, 531.9875pt x 462.72874pt>
+File: figures/ircca_errorbars_low_snr_n_150.pdf Graphic file (type pdf)
+
+<use figures/ircca_errorbars_low_snr_n_150.pdf>
+<figures/ircca_errorbars_low_snr_n_300.pdf, id=799, 531.9875pt x 462.72874pt>
+File: figures/ircca_errorbars_low_snr_n_300.pdf Graphic file (type pdf)
+
+<use figures/ircca_errorbars_low_snr_n_300.pdf>
+<figures/ircca_errorbars_low_snr_n_600.pdf, id=800, 531.9875pt x 462.72874pt>
+File: figures/ircca_errorbars_low_snr_n_600.pdf Graphic file (type pdf)
+
+<use figures/ircca_errorbars_low_snr_n_600.pdf>
+Overfull \hbox (3.8227pt too wide) in paragraph at lines 437--454
+[][] []
+ []
+
+
+Overfull \hbox (3.8227pt too wide) in paragraph at lines 437--454
+[] [] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<figures/ircca_errorbars_high_snr_n_50.pdf, id=801, 531.9875pt x 462.72874pt>
+File: figures/ircca_errorbars_high_snr_n_50.pdf Graphic file (type pdf)
+
+<use figures/ircca_errorbars_high_snr_n_50.pdf>
+<figures/ircca_errorbars_high_snr_n_150.pdf, id=802, 531.9875pt x 462.72874pt>
+File: figures/ircca_errorbars_high_snr_n_150.pdf Graphic file (type pdf)
+
+<use figures/ircca_errorbars_high_snr_n_150.pdf>
+<figures/ircca_errorbars_high_snr_n_300.pdf, id=803, 531.9875pt x 462.72874pt>
+File: figures/ircca_errorbars_high_snr_n_300.pdf Graphic file (type pdf)
+
+<use figures/ircca_errorbars_high_snr_n_300.pdf>
+<figures/ircca_errorbars_high_snr_n_600.pdf, id=804, 531.9875pt x 462.72874pt>
+File: figures/ircca_errorbars_high_snr_n_600.pdf Graphic file (type pdf)
+
+<use figures/ircca_errorbars_high_snr_n_600.pdf>
+Overfull \hbox (3.8227pt too wide) in paragraph at lines 461--478
+[][] []
+ []
+
+
+Overfull \hbox (3.8227pt too wide) in paragraph at lines 461--478
+[] [] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<figures/ircca_auc_heatmap_n_50.pdf, id=805, 540.0175pt x 485.815pt>
+File: figures/ircca_auc_heatmap_n_50.pdf Graphic file (type pdf)
+
+<use figures/ircca_auc_heatmap_n_50.pdf>
+<figures/ircca_auc_heatmap_diff_n_50.pdf, id=806, 568.1225pt x 485.815pt>
+File: figures/ircca_auc_heatmap_diff_n_50.pdf Graphic file (type pdf)
+
+<use figures/ircca_auc_heatmap_diff_n_50.pdf>
+<figures/ircca_auc_heatmap_n_150.pdf, id=807, 540.0175pt x 485.815pt>
+File: figures/ircca_auc_heatmap_n_150.pdf Graphic file (type pdf)
+
+<use figures/ircca_auc_heatmap_n_150.pdf>
+<figures/ircca_auc_heatmap_diff_n_150.pdf, id=808, 568.1225pt x 485.815pt>
+File: figures/ircca_auc_heatmap_diff_n_150.pdf Graphic file (type pdf)
+
+<use figures/ircca_auc_heatmap_diff_n_150.pdf>
+Overfull \hbox (3.8227pt too wide) in paragraph at lines 522--538
+[][] []
+ []
+
+
+Overfull \hbox (3.8227pt too wide) in paragraph at lines 522--538
+[] [] 
+ []
+
+[83]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<figures/ircca_auc_heatmap_n_300.pdf, id=812, 540.0175pt x 485.815pt>
+File: figures/ircca_auc_heatmap_n_300.pdf Graphic file (type pdf)
+
+<use figures/ircca_auc_heatmap_n_300.pdf>
+<figures/ircca_auc_heatmap_diff_n_300.pdf, id=813, 554.07pt x 485.815pt>
+File: figures/ircca_auc_heatmap_diff_n_300.pdf Graphic file (type pdf)
+
+<use figures/ircca_auc_heatmap_diff_n_300.pdf>
+<figures/ircca_auc_heatmap_n_600.pdf, id=814, 540.0175pt x 485.815pt>
+File: figures/ircca_auc_heatmap_n_600.pdf Graphic file (type pdf)
+
+<use figures/ircca_auc_heatmap_n_600.pdf>
+<figures/ircca_auc_heatmap_diff_n_600.pdf, id=815, 554.07pt x 485.815pt>
+File: figures/ircca_auc_heatmap_diff_n_600.pdf Graphic file (type pdf)
+
+<use figures/ircca_auc_heatmap_diff_n_600.pdf>
+Overfull \hbox (3.8227pt too wide) in paragraph at lines 546--562
+[][] []
+ []
+
+
+Overfull \hbox (3.8227pt too wide) in paragraph at lines 546--562
+[] [] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[84 <./figures/ircca_errorbars_low_snr_n_50.pdf> <./figures/ircca_errorbars_low
+_snr_n_150.pdf> <./figures/ircca_errorbars_low_snr_n_300.pdf> <./figures/ircca_
+errorbars_low_snr_n_600.pdf>] [85 <./figures/ircca_errorbars_high_snr_n_50.pdf>
+ <./figures/ircca_errorbars_high_snr_n_150.pdf> <./figures/ircca_errorbars_high
+_snr_n_300.pdf> <./figures/ircca_errorbars_high_snr_n_600.pdf>] [86 <./figures/
+ircca_auc_heatmap_n_50.pdf> <./figures/ircca_auc_heatmap_diff_n_50.pdf> <./figu
+res/ircca_auc_heatmap_n_150.pdf> <./figures/ircca_auc_heatmap_diff_n_150.pdf>]
+[87 <./figures/ircca_auc_heatmap_n_300.pdf> <./figures/ircca_auc_heatmap_diff_n
+_300.pdf> <./figures/ircca_auc_heatmap_n_600.pdf> <./figures/ircca_auc_heatmap_
+diff_n_600.pdf>] [88]) [89]
+CHAPTER VII.
+(./sig_tests.tex
+
+LaTeX Warning: Citation `rao2008polynomial' on page 90 undefined on input line 
+34.
+
+
+Overfull \hbox (10.15982pt too wide) in paragraph at lines 43--46
+[]\OT1/cmr/m/n/12 Recall from (4.6[]) that the ma-trix of in-ter-est in em-pir-
+i-cal CCA is $\OML/cmm/m/it/12 C \OT1/cmr/m/n/12 = [][][][]$.
+ []
+
+[90
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 92--107
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--110
+
+ []
+
+[91]
+Overfull \hbox (19.10103pt too wide) detected at line 137
+\OML/cmm/m/it/12 z \OMS/cmsy/m/n/12 2 []
+ []
+
+
+LaTeX Warning: Citation `pezeshki2004empirical' on page 92 undefined on input l
+ine 147.
+
+
+Overfull \hbox (66.00856pt too wide) detected at line 156
+\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 z\OT1/cmr/m/n/12 ) = []
+ []
+
+[92]
+
+LaTeX Warning: Citation `johnstone2008multivariate' on page 93 undefined on inp
+ut line 161.
+
+
+LaTeX Warning: Citation `johnstone2008multivariate' on page 93 undefined on inp
+ut line 190.
+
+[93]
+Underfull \hbox (badness 10000) in paragraph at lines 231--244
+
+ []
+
+[94]
+Underfull \hbox (badness 10000) in paragraph at lines 280--296
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 298--299
+
+ []
+
+) [95]
+CHAPTER VIII.
+(./kcca.tex
+
+LaTeX Warning: Citation `akaho2006kernel' on page 96 undefined on input line 6.
+
+
+
+LaTeX Warning: Citation `melzer2001kernel' on page 96 undefined on input line 6
+.
+
+
+LaTeX Warning: Citation `melzer2001kernel' on page 96 undefined on input line 1
+8.
+
+
+LaTeX Warning: Citation `yu2007learning' on page 96 undefined on input line 19.
+
+
+
+LaTeX Warning: Citation `fyfe2000ica' on page 96 undefined on input line 20.
+
+
+LaTeX Warning: Citation `yu2007learning' on page 96 undefined on input line 21.
+
+
+
+LaTeX Warning: Citation `welling2005kcca' on page 96 undefined on input line 31
+.
+
+[96
+
+]
+Overfull \hbox (53.60358pt too wide) in paragraph at lines 42--49
+\OT1/cmr/m/n/12 ing the train-ing data ma-tri-ces, we use the ker-nel data ma-t
+ri-ces, $^^H(\OML/cmm/m/it/12 Y[]\OT1/cmr/m/n/12 ) = []$
+ []
+
+
+Overfull \hbox (22.0969pt too wide) in paragraph at lines 74--79
+\OT1/cmr/m/n/12 Gram ma-tri-ces of the ob-ser-va-tions in ker-nel space. The en
+-tries of $\OML/cmm/m/it/12 K[]$ \OT1/cmr/m/n/12 are $^^H [][] ^^H []$
+ []
+
+[97] [98]) [99]
+CHAPTER IX.
+(./mcca.tex
+
+LaTeX Warning: Citation `yu2007learning' on page 100 undefined on input line 5.
+
+
+
+LaTeX Warning: Citation `nielsen2002multiset' on page 100 undefined on input li
+ne 6.
+
+
+LaTeX Warning: Citation `correa2010canonical' on page 100 undefined on input li
+ne 7.
+
+
+LaTeX Warning: Citation `deleus2011functional' on page 100 undefined on input l
+ine 7.
+
+
+LaTeX Warning: Citation `vinograde1950canonical' on page 100 undefined on input
+ line 11.
+
+
+LaTeX Warning: Citation `steel1951minimum' on page 100 undefined on input line 
+13.
+
+
+LaTeX Warning: Citation `horst1961relations' on page 100 undefined on input lin
+e 16.
+
+
+LaTeX Warning: Citation `horst1961generalized' on page 100 undefined on input l
+ine 16.
+
+
+LaTeX Warning: Citation `kettenring1971canonical' on page 100 undefined on inpu
+t line 20.
+
+
+LaTeX Warning: Citation `hotelling1936relations' on page 100 undefined on input
+ line 21.
+
+
+LaTeX Warning: Citation `nielsen1994analysis' on page 100 undefined on input li
+ne 25.
+
+[100
+
+]
+
+LaTeX Warning: Citation `kettenring1971canonical' on page 101 undefined on inpu
+t line 54.
+
+
+LaTeX Warning: Citation `nielsen1994analysis' on page 101 undefined on input li
+ne 55.
+
+
+LaTeX Warning: Citation `nielsen2002multiset' on page 101 undefined on input li
+ne 72.
+
+
+LaTeX Warning: Citation `nielsen1994analysis' on page 101 undefined on input li
+ne 72.
+
+[101]
+
+LaTeX Warning: Reference `sec:mcca_derivs' on page 102 undefined on input line 
+102.
+
+
+LaTeX Warning: Citation `kettenring1971canonical' on page 102 undefined on inpu
+t line 113.
+
+
+LaTeX Warning: Citation `horst1961relations' on page 102 undefined on input lin
+e 125.
+
+
+LaTeX Warning: Citation `kettenring1971canonical' on page 102 undefined on inpu
+t line 141.
+
+[102]
+
+LaTeX Warning: Citation `horst1961relations' on page 103 undefined on input lin
+e 147.
+
+
+Overfull \hbox (2.68797pt too wide) in paragraph at lines 146--152
+\OT1/cmr/m/n/12 Horst's orig-i-nal name for this method was the ``rank one ap-p
+rox-i-ma-tion method''.
+ []
+
+
+LaTeX Warning: Citation `bach2003kernel' on page 103 undefined on input line 15
+9.
+
+
+LaTeX Warning: Citation `kettenring1971canonical' on page 103 undefined on inpu
+t line 162.
+
+
+LaTeX Warning: Citation `steel1951minimum' on page 103 undefined on input line 
+171.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: Citation `kettenring1971canonical' on page 103 undefined on inpu
+t line 219.
+
+
+LaTeX Warning: Citation `nielsen1994analysis' on page 103 undefined on input li
+ne 219.
+
+[103]
+
+LaTeX Warning: Reference `sec:mcca_derivs' on page 104 undefined on input line 
+233.
+
+
+LaTeX Warning: Reference `sec:mcca_derivs' on page 104 undefined on input line 
+237.
+
+[104]
+
+LaTeX Warning: Reference `sec:mcca_derivs' on page 105 undefined on input line 
+246.
+
+
+LaTeX Warning: Citation `boumal2013manopt' on page 105 undefined on input line 
+251.
+
+
+LaTeX Warning: Reference `sec:mcca_derivs' on page 105 undefined on input line 
+268.
+
+[105]
+Overfull \hbox (0.97154pt too wide) in paragraph at lines 304--309
+[]\OT1/cmr/m/n/12 Many of the SUM-CORR and SSQ-CORR the-o-ret-i-cal eigen-syste
+ms are non-normal,
+ []
+
+
+LaTeX Warning: Citation `nielsen2002multiset' on page 106 undefined on input li
+ne 316.
+
+
+LaTeX Warning: Citation `nielsen1994analysis' on page 106 undefined on input li
+ne 316.
+
+
+LaTeX Warning: Citation `nielsen1994analysis' on page 106 undefined on input li
+ne 320.
+
+
+LaTeX Warning: Citation `nielsen2002multiset' on page 106 undefined on input li
+ne 322.
+
+
+LaTeX Warning: Citation `kettenring1971canonical' on page 106 undefined on inpu
+t line 322.
+
+
+LaTeX Warning: Citation `nielsen1994analysis' on page 106 undefined on input li
+ne 322.
+
+
+LaTeX Warning: Citation `deleus2011functional' on page 106 undefined on input l
+ine 326.
+
+
+LaTeX Warning: Citation `nielsen2002multiset' on page 106 undefined on input li
+ne 326.
+
+
+LaTeX Warning: Citation `via2005canonical' on page 106 undefined on input line 
+326.
+
+
+LaTeX Warning: Citation `nielsen1994analysis' on page 106 undefined on input li
+ne 328.
+
+
+LaTeX Warning: Citation `yu2007learning' on page 106 undefined on input line 32
+8.
+
+
+LaTeX Warning: Citation `nielsen1994analysis' on page 106 undefined on input li
+ne 331.
+
+
+LaTeX Warning: Citation `nielsen1994analysis' on page 106 undefined on input li
+ne 333.
+
+
+LaTeX Warning: Citation `correa2010canonical' on page 106 undefined on input li
+ne 335.
+
+
+LaTeX Warning: Citation `kettenring1971canonical' on page 106 undefined on inpu
+t line 335.
+
+
+LaTeX Warning: Citation `nielsen1994analysis' on page 106 undefined on input li
+ne 335.
+
+
+LaTeX Warning: Citation `nielsen1994analysis' on page 106 undefined on input li
+ne 337.
+
+
+LaTeX Warning: Citation `nielsen1994analysis' on page 106 undefined on input li
+ne 341.
+
+
+LaTeX Warning: Citation `nielsen1994analysis' on page 106 undefined on input li
+ne 346.
+
+
+LaTeX Warning: Citation `kettenring1971canonical' on page 106 undefined on inpu
+t line 350.
+
+
+LaTeX Warning: Citation `nielsen1994analysis' on page 106 undefined on input li
+ne 350.
+
+
+LaTeX Warning: Citation `deleus2011functional' on page 106 undefined on input l
+ine 356.
+
+
+LaTeX Warning: Citation `via2005canonical' on page 106 undefined on input line 
+356.
+
+
+LaTeX Warning: Citation `nielsen1994analysis' on page 106 undefined on input li
+ne 356.
+
+
+LaTeX Warning: Citation `nielsen1994analysis' on page 106 undefined on input li
+ne 361.
+
+
+LaTeX Warning: Citation `nielsen1994analysis' on page 106 undefined on input li
+ne 365.
+
+
+LaTeX Warning: Citation `kettenring1971canonical' on page 106 undefined on inpu
+t line 370.
+
+
+LaTeX Warning: Citation `nielsen1994analysis' on page 106 undefined on input li
+ne 370.
+
+
+LaTeX Warning: Citation `nielsen1994analysis' on page 106 undefined on input li
+ne 374.
+
+
+LaTeX Warning: Citation `bach2003kernel' on page 106 undefined on input line 37
+4.
+
+
+LaTeX Warning: Citation `nielsen1994analysis' on page 106 undefined on input li
+ne 377.
+
+
+LaTeX Warning: Citation `nielsen1994analysis' on page 106 undefined on input li
+ne 378.
+
+
+LaTeX Warning: Citation `kettenring1971canonical' on page 106 undefined on inpu
+t line 380.
+
+
+LaTeX Warning: Citation `nielsen1994analysis' on page 106 undefined on input li
+ne 380.
+
+
+LaTeX Warning: Citation `nielsen1994analysis' on page 106 undefined on input li
+ne 381.
+
+
+Overfull \hbox (8.75566pt too wide) in paragraph at lines 312--391
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) [106]
+
+LaTeX Warning: Text page 107 contains only floats.
+
+[107]
+CHAPTER X.
+(./future_work.tex
+
+LaTeX Warning: Citation `sanderson2008biometric' on page 108 undefined on input
+ line 10.
+
+
+LaTeX Warning: Citation `chaudhuri2009multi' on page 108 undefined on input lin
+e 14.
+
+
+LaTeX Warning: Citation `turnbull2007towards' on page 108 undefined on input li
+ne 17.
+
+
+LaTeX Warning: Citation `torres2007finding' on page 108 undefined on input line
+ 20.
+
+
+LaTeX Warning: Citation `bertin2011million' on page 108 undefined on input line
+ 25.
+
+
+LaTeX Warning: Citation `van1998handwritten' on page 108 undefined on input lin
+e 30.
+
+
+Overfull \hbox (21.08029pt too wide) in paragraph at lines 24--31
+\OT1/cmr/m/n/12 datasets such as the Ya-hoo Mu-sic Rat-ings Dataset (\OT1/cmr/m
+/it/12 http://webscope.sandbox.yahoo.com/\OT1/cmr/m/n/12 ).
+ []
+
+[108
+
+]
+
+LaTeX Warning: Citation `hero2012hub' on page 109 undefined on input line 45.
+
+
+LaTeX Warning: Citation `asendorf2013performance' on page 109 undefined on inpu
+t line 52.
+
+
+LaTeX Warning: Citation `nadakuditi2010fundamental' on page 109 undefined on in
+put line 52.
+
+
+Overfull \hbox (51.61969pt too wide) in paragraph at lines 67--73
+\OT1/cmr/m/n/12 la-tion co-ef-fi-cient es-ti-mate un-der the noise dataset us-i
+ng RM-Tool (\OT1/cmr/m/it/12 http://web.eecs.umich.edu/ ra-
+ []
+
+[109]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) [110] [111] [112
+
+]
+APPENDIX A.
+(./appendix.tex [113
+
+]
+
+LaTeX Warning: Reference `eq:1a_prb' on page 114 undefined on input line 49.
+
+
+LaTeX Warning: Reference `eq:prob1b' on page 114 undefined on input line 89.
+
+[114] [115] [116]
+
+LaTeX Warning: Reference `eq:2a_grad' on page 117 undefined on input line 247.
+
+[117]
+
+LaTeX Warning: Reference `eq:2a_grad' on page 118 undefined on input line 265.
+
+
+LaTeX Warning: Reference `eq:2agrad' on page 118 undefined on input line 277.
+
+[118]
+
+LaTeX Warning: Reference `eq:2a_grad' on page 119 undefined on input line 296.
+
+
+LaTeX Warning: Reference `eq:2a_grad' on page 119 undefined on input line 323.
+
+[119]
+
+LaTeX Warning: Reference `eq:2a_grad' on page 120 undefined on input line 355.
+
+
+LaTeX Warning: Reference `eq:2a_grad' on page 120 undefined on input line 380.
+
+[120] [121] [122] [123] [124] [125] [126]
+
+LaTeX Warning: Reference `eq:genvar_cost' on page 127 undefined on input line 7
+18.
+
+
+LaTeX Warning: Reference `eq:genvar_grad' on page 127 undefined on input line 7
+19.
+
+
+LaTeX Warning: Reference `eq:genvar_cost' on page 127 undefined on input line 7
+24.
+
+
+LaTeX Warning: Reference `eq:genvar_grad' on page 127 undefined on input line 7
+25.
+
+
+LaTeX Warning: Reference `eq:genvar_cost' on page 127 undefined on input line 7
+40.
+
+
+LaTeX Warning: Reference `eq:genvar_grad' on page 127 undefined on input line 7
+41.
+
+
+LaTeX Warning: Reference `eq:genvar_cost' on page 127 undefined on input line 7
+57.
+
+
+LaTeX Warning: Reference `eq:genvar_grad' on page 127 undefined on input line 7
+58.
+
+) [127]
+No file rac_thesis.bbl.
+[128
+
+] (./rac_thesis.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 13277 strings out of 495061
+ 245205 string characters out of 1182622
+ 291981 words of memory out of 3000000
+ 16037 multiletter control sequences out of 15000+50000
+ 20078 words of font info for 71 fonts, out of 3000000 for 9000
+ 28 hyphenation exceptions out of 8191
+ 56i,20n,68p,1823b,1010s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texli
+ve/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-texlive/fonts/ty
+pe1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-texlive/fonts/type1/public/
+amsfonts/cm/cmbx8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/
+cmcsc10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmex10.pfb
+></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/
+share/texmf-texlive/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/t
+exmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-texliv
+e/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-texlive/fonts/typ
+e1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-texlive/fonts/type1/public/am
+sfonts/cm/cmmi7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cm
+mi8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
+r/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texm
+f-texlive/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-texlive/fon
+ts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-texlive/fonts/type1/publ
+ic/amsfonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy6.pfb
+></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share
+/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-texli
+ve/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-texlive/fonts/ty
+pe1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-texlive/fonts/type1/public/
+amsfonts/cm/cmti8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/
+cmtt12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/symbols/msam10
+.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/symbols/msbm10.pfb><
+/usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvr8a.pfb>
+Output written on rac_thesis.pdf (137 pages, 6684934 bytes).
+PDF statistics:
+ 1216 PDF objects out of 1440 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 333 words of extra memory for PDF output out of 10000 (max. 10000000)
+

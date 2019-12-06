@@ -1,0 +1,25 @@
+(TeX-add-style-hook "detection"
+ (lambda ()
+    (LaTeX-add-labels
+     "eq:cca_detect_model"
+     "eq:lrt"
+     "eq:lrt_stat"
+     "eq:lrt_detect"
+     "eq:cca_stat"
+     "eq:cca_detect"
+     "eq:cca_detec_C"
+     "eq:cca_stat_r"
+     "sec:param_estims"
+     "eq:plugin_lrt_stat"
+     "eq:emp_cca_detec_params"
+     "eq:cca_plugin_stat"
+     "eq:icca_plugin_stat"
+     "fig:auc_lrt_high_rho"
+     "fig:auc_icca_high_rho"
+     "fig:auc_cca_high_rho"
+     "fig:auc_high_rho"
+     "fig:auc_lrt_low_rho"
+     "fig:auc_icca_low_rho"
+     "fig:auc_cca_low_rho"
+     "fig:auc_low_rho")))
+

@@ -1,0 +1,281 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: thesis.aux
+The style file: IEEEtran.bst
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated field_info (elt_size=4) to 12200 items from 5000.
+Database file #1: IEEEabrv.bib
+Database file #2: thesis_bib.bib
+Repeated entry---line 1161 of file thesis_bib.bib
+ : @article{correa2010canonical
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1335 of file thesis_bib.bib
+ : @inproceedings{torres2007finding
+ :                                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1587 of file thesis_bib.bib
+ : @article{rao2008polynomial
+ :                           ,
+I'm skipping whatever remains of this entry
+Warning--string name "february" is undefined
+--line 1803 of file thesis_bib.bib
+Repeated entry---line 1945 of file thesis_bib.bib
+ : @inproceedings{yan2014accelerating
+ :                                   ,
+I'm skipping whatever remains of this entry
+Database file #3: taes_msd/taes_useful.bib
+Repeated entry---line 1 of file taes_msd/taes_useful.bib
+ : @article{paul2007asymptotics
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 21 of file taes_msd/taes_useful.bib
+ : @article{fawcett2006introduction
+ :                                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 61 of file taes_msd/taes_useful.bib
+ : @article{nadakuditi2010fundamental
+ :                                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 105 of file taes_msd/taes_useful.bib
+ : @book{van1968detection
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 153 of file taes_msd/taes_useful.bib
+ : @article{jin2005cfar
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 197 of file taes_msd/taes_useful.bib
+ : @book{mcwhorter2003matched
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 211 of file taes_msd/taes_useful.bib
+ : @article{vincent2008matched
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 233 of file taes_msd/taes_useful.bib
+ : @article{besson2006cfar
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 293 of file taes_msd/taes_useful.bib
+ : @article{scharf1994matched
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 315 of file taes_msd/taes_useful.bib
+ : @article{nadakuditi2008sample
+ :                              ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 337 of file taes_msd/taes_useful.bib
+ : @article{benaych2011eigenvalues
+ :                                ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 447 of file taes_msd/taes_useful.bib
+ : @article{bandiera2007glrt
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 469 of file taes_msd/taes_useful.bib
+ : @article{bandiera2007adaptive
+ :                              ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 491 of file taes_msd/taes_useful.bib
+ : @article{besson2005matched
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 629 of file taes_msd/taes_useful.bib
+ : @article{elden2007matrix
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 807 of file taes_msd/taes_useful.bib
+ : @article{asendorf2013performance
+ :                                 ,
+I'm skipping whatever remains of this entry
+Database file #4: ieee_msd/IEEE_RMT_MSD_bib.bib
+Repeated entry---line 1 of file ieee_msd/IEEE_RMT_MSD_bib.bib
+ : @article{paul2007asymptotics
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 21 of file ieee_msd/IEEE_RMT_MSD_bib.bib
+ : @article{fawcett2006introduction
+ :                                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 43 of file ieee_msd/IEEE_RMT_MSD_bib.bib
+ : @article{wood1993saddlepoint
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 61 of file ieee_msd/IEEE_RMT_MSD_bib.bib
+ : @article{nadakuditi2010fundamental
+ :                                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 83 of file ieee_msd/IEEE_RMT_MSD_bib.bib
+ : @article{johnstone2001distribution
+ :                                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 105 of file ieee_msd/IEEE_RMT_MSD_bib.bib
+ : @book{van1968detection
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 153 of file ieee_msd/IEEE_RMT_MSD_bib.bib
+ : @article{jin2005cfar
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 175 of file ieee_msd/IEEE_RMT_MSD_bib.bib
+ : @article{el2007tracy
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 197 of file ieee_msd/IEEE_RMT_MSD_bib.bib
+ : @book{mcwhorter2003matched
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 211 of file ieee_msd/IEEE_RMT_MSD_bib.bib
+ : @article{vincent2008matched
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 233 of file ieee_msd/IEEE_RMT_MSD_bib.bib
+ : @article{besson2006cfar
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 273 of file ieee_msd/IEEE_RMT_MSD_bib.bib
+ : @article{cox1973resolving
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 293 of file ieee_msd/IEEE_RMT_MSD_bib.bib
+ : @article{scharf1994matched
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 315 of file ieee_msd/IEEE_RMT_MSD_bib.bib
+ : @article{nadakuditi2008sample
+ :                              ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 337 of file ieee_msd/IEEE_RMT_MSD_bib.bib
+ : @article{benaych2011eigenvalues
+ :                                ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 353 of file ieee_msd/IEEE_RMT_MSD_bib.bib
+ : @article{benaych2011singular
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 367 of file ieee_msd/IEEE_RMT_MSD_bib.bib
+ : @inproceedings{balzano2010high
+ :                               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 385 of file ieee_msd/IEEE_RMT_MSD_bib.bib
+ : @inproceedings{asendorf2011msd
+ :                               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 399 of file ieee_msd/IEEE_RMT_MSD_bib.bib
+ : @book{scharf1991statistical
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 415 of file ieee_msd/IEEE_RMT_MSD_bib.bib
+ : @book{friedman2001elements
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 431 of file ieee_msd/IEEE_RMT_MSD_bib.bib
+ : @book{muirhead1982aspects
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 447 of file ieee_msd/IEEE_RMT_MSD_bib.bib
+ : @article{bandiera2007glrt
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 469 of file ieee_msd/IEEE_RMT_MSD_bib.bib
+ : @article{bandiera2007adaptive
+ :                              ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 493 of file ieee_msd/IEEE_RMT_MSD_bib.bib
+ : @article{besson2005matched
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 517 of file ieee_msd/IEEE_RMT_MSD_bib.bib
+ : @article{maris2003resampling
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 541 of file ieee_msd/IEEE_RMT_MSD_bib.bib
+ : @article{soong1995principal
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 565 of file ieee_msd/IEEE_RMT_MSD_bib.bib
+ : @article{thai2002invariant
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 587 of file ieee_msd/IEEE_RMT_MSD_bib.bib
+ : @article{healey1999models
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 609 of file ieee_msd/IEEE_RMT_MSD_bib.bib
+ : @article{kwon2006kernel
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 631 of file ieee_msd/IEEE_RMT_MSD_bib.bib
+ : @article{elden2007matrix
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 645 of file ieee_msd/IEEE_RMT_MSD_bib.bib
+ : @misc{hwritingurl
+ :                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 683 of file ieee_msd/IEEE_RMT_MSD_bib.bib
+ : @article{zhu2006automatic
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 723 of file ieee_msd/IEEE_RMT_MSD_bib.bib
+ : @article{barvinok2005measure
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 737 of file ieee_msd/IEEE_RMT_MSD_bib.bib
+ : @article{silverstein1985smallest
+ :                                 ,
+I'm skipping whatever remains of this entry
+-- IEEEtran.bst version 1.13 (2008/09/30) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty note in welling2005kcca
+Warning--empty journal in zhang2013l1
+Warning--empty journal in spuler2013spatial
+Warning--empty journal in elden2007matrix
+Warning--empty journal in nadakuditi2014optshrink
+Warning--empty journal in hehyperspectral
+Warning--empty year in hehyperspectral
+
+Done.
+You've used 160 entries,
+            4039 wiz_defined-function locations,
+            2035 strings with 44493 characters,
+and the built_in function-call counts, 129035 in all, are:
+= -- 10822
+> -- 2865
+< -- 1285
++ -- 1643
+- -- 458
+* -- 6139
+:= -- 19049
+add.period$ -- 349
+call.type$ -- 160
+change.case$ -- 154
+chr.to.int$ -- 2937
+cite$ -- 167
+duplicate$ -- 9148
+empty$ -- 9983
+format.name$ -- 566
+if$ -- 29912
+int.to.chr$ -- 0
+int.to.str$ -- 160
+missing$ -- 1459
+newline$ -- 503
+num.names$ -- 160
+pop$ -- 3127
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 2
+skip$ -- 10156
+stack$ -- 0
+substring$ -- 7135
+swap$ -- 7831
+text.length$ -- 306
+text.prefix$ -- 0
+top$ -- 5
+type$ -- 160
+warning$ -- 7
+while$ -- 628
+width$ -- 163
+write$ -- 1595
+(There were 54 error messages)

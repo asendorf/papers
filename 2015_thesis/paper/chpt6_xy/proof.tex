@@ -1,0 +1,378 @@
+\subsection{Proof of Theorem \ref{thm:lrcca}}\label{sec:lrcca_proof}
+We begin with the RCCA matrix $\Creg = \left(\Rxx+\eta
+  I_{p}\right)^{-1/2}\Rxy\left(\Ryy +\eta I_{q}\right)^{-1/2}$. Recall the data SVDs
+$\widetilde{X}=F_xK_xG_x^H$ and $\widetilde{Y}=F_yK_yG_y^H$. Substituting these into
+$\Creg$ yields
+\be\ba
+&\Creg &&= \left(F_xK_xK_x^HF_x^H + \eta
+  I_p\right)^{-1/2}F_xK_xG_x^HG_yK_y^HF_y^H\left(F_yK_yK_y^HF_y^H + \eta
+  I_q)\right)^{-1/2}\\
+&&& = F_x\left(K_xK_x^H + \eta I_p\right)^{-1/2}K_xG_x^HG_yK_y^H\left(K_yK_y^H + \eta I_q\right)^{-1/2}
+\ea\ee
+
+Define
+$\widetilde{F}_x = F_x(:,1:\min(p,n))$, $\widetilde{F}_y = F_y(:,1:\min(q,n))$,
+$\widetilde{G}_x = G_x(:,1:\min(p,n))$, and $\widetilde{G}_y =
+G_y:,1:\min(q,n))$. Then 
+\begin{equation}
+  \Creghat = \widetilde{F}_x\diag\left(\frac{k_{xi}}{\sqrt{k_{xi}^2 +
+        \eta}}\right)\widetilde{G}_x^H\widetilde{G}_y
+  \diag\left(\frac{k_{yi}}{\sqrt{k_{yi}^2 +\eta}}\right)\widetilde{F}_y^H. 
+\end{equation}
+Clearly, as $\eta\to\infty$, this matrix becomes the zero matrix. However, the ratio of
+the diagonal entries as $\eta\to\infty$ dictates the limiting form of $\Creg$. Examining
+this ratio of adjacent diagonal elements yields 
+\begin{equation*}
+\lim_{\eta\to\infty} \frac{\sqrt{\frac{k_{xi}^2}{\sigma_{xi}^2 +
+      \eta}}}{\sqrt{\frac{k_{x(i+1)}^2}{k_{x(i+1)}^2 + \eta}}} =
+\lim_{\eta\to\infty}
+\sqrt{\frac{k_{xi}^2\left(k_{x(i+1)}^2+\eta\right)}{k_{x(i+1)}^2\left(k_{xi}^2 +
+  \eta\right)} } = \frac{k_{xi}}{k_{x(i+1)}}
+\end{equation*}
+Thus, as $\eta\to\infty$, the ratio of entries along the diagonal matrix approaches the
+ratio between the singular values. Therefore, 
+\be
+\lim_{\eta\to\infty} \diag\left(\frac{k_{xi}}{\sqrt{k_{xi}^2 +
+        \eta}}\right) \propto \left(K_xK_x^H\right)^{1/2}.
+\ee
+A similar analysis yields an analogous results for the diagonal matrix of the singular
+values of $\widetilde{Y}$. Therefore, 
+\begin{equation*}
+  \lim_{\eta\to\infty}\Creghat \propto
+  \widetilde{F}_x\left(K_xK_x^H\right)^{1/2}\widetilde{G}_x^H\widetilde{G}_y\left(K_yK_y^H\right)^{1/2}\widetilde{F}_y^H
+  = \widetilde{X}\widetilde{Y}^H.
+\end{equation*}
+Therefore, as $\eta\to\infty$, the largest singular value of $\Creghat$ is proportional to
+the largest singular value of $\frac{1}{n}\widetilde{X}\widetilde{Y}^H$. 
+
+To complete the proof, we must show that the canonical vectors are proportional to the
+singular vectors of $\frac{1}{n}\widetilde{X}\widetilde{Y}^H$. The top
+canonical vector for dataset $X$ returned by RCCA is $w_x = \left(\Rxx+\eta
+  I_d\right)^{-1/2}f_1$, where $f_1$ is the top left singular vector of $\Creghat$. As
+$\eta\to\infty$, $\left(\Rxx+\eta I_d\right)^{-1/2}\to \frac{1}{\sqrt{\eta}}I_d$. Therefore,
+$\xI\propto f_1$. Similarly, $\xII\propto g_1$. Therefore, when $\eta\to\infty$, the
+solution to RCCA is
+\be\ba
+& \rho \propto k_1\\
+& \xI \propto f_1\\
+& \xII \propto g_1,\\
+\ea\ee
+where $k_1$ is the top singular value of $\frac{1}{n}\widetilde{X}\widetilde{Y}^H$ with
+corresponding left and right singular vectors $f_1$ and $g_1$. Successive canonical
+correlation and vector pairs are found via successive singular value-vector pairs.
+
+\subsection{Proof of Theorem \ref{thm:xy_sv}}\label{sec:xy_sv_proof}
+
+We remove the scaling $\frac{1}{n}$ for proof simplicity as this only scales the singular
+value. The singular values of $\Clrcca=\widetilde{X}\widetilde{Y}^H$ are the positive eigenvalues of
+\be\ba
+&C_n &&= \left[\begin{array}{cc} 0 &\widetilde{X}_n\widetilde{Y}_n^H\\
+\widetilde{Y}_n\widetilde{X}_n^H & 0 \end{array}\right] \\
+&&&= 
+\left[\begin{array}{cc} 0 & \left(U_x\Theta_xV_x^H+X_n\right)\left(U_y\Theta_yV_y^H + Y_n\right)^H\\
+\left(U_y\Theta_yV_y^H + Y_n\right)\left(U_x\Theta_xV_x^H+X_n\right)^H &
+0 \end{array}\right]\\
+&&& = \left[\begin{array}{cc}0 & X_nY_n^H \\ YX^H & 0\end{array}\right] + U_n\Lambda U_n^H,
+\ea\ee
+where
+\be
+U_n=\left[\begin{array}{cccc}U_x &X_nV_y& 0 & 0\\ 0 & 0 & Y_nV_x+U_y\Theta_yP &U_y \end{array}\right],\,\,
+\Lambda = \left[\begin{array}{cccc}0 & 0 & \Theta_x & 0 \\ 0 & 0 & 0 &\Theta_y\\
+\Theta_x & 0 & 0 & 0\\ 0 & \Theta_y & 0 & 0\end{array}\right].
+\ee
+If $\sigma$ is an eigenvalue of $C_n$, it must satisfy
+$\det\left(\sigma I_{p+q}-C_n\right)=0$. Using our expression above, this is
+\beq\label{eq:det1}
+\det\left(\sigma I_{p+q} - \left[\begin{array}{cc}0 & X_nY_n^H \\ Y_nX_n^H & 0\end{array}\right] -
+  U_n\Lambda U_n^H\right) = 0.
+\eeq
+Define
+\be
+B_n = \left(\sigma I_{p+q} - \left[\begin{array}{cc}0 & X_nY_n^H\\ Y_nX_n^H & 0\end{array}\right]\right).
+\ee
+Using properties of determinants, we may re-write (\ref{eq:det1}) as
+\be\ba
+&\det\left(B_n -U_n\Lambda U_n^H\right) &&=
+\det\left(\Lambda\right)\det\left(\Lambda^{-1}\right)\det\left(B -  U_n\Lambda U_n^H\right)\\
+&&& = \det(\Lambda)\det\left(\left[\begin{array}{cc}\Lambda^{-1} & U_n^H \\ U_n &
+      B_n \end{array}\right]\right)\\
+&&& = \det\left(B_n\right)\det(\Lambda)\det\left(\Lambda^{-1}-U_n^HB_n^{-1}U_n\right).
+\ea\ee
+
+If $\sigma>0$ is an eigenvalue of $C_n$, it is not a singular value of $X_nY_n^H$ as by
+assumption $\Lambda\neq0$. Therefore, $B_n$
+is not singular and its inverse exists and it has a nonzero determinant. Therefore for
+(\ref{eq:det1}) to hold,
+\beq\label{eq:det2}
+\det\left(\Lambda^{-1}-U_n^HB_n^{-1}U_n\right) = 0.
+\eeq
+Expanding $B_n^{-1}$ yields
+\be\ba
+&B_n^{-1} &&= \left[\begin{array}{cc}\sigma I_p & -X_nY_n^H\\ -Y_nX_n^H & \sigma I_q\end{array}\right]^{-1}\\
+&&& = \left[\begin{array}{cc}\left(\sigma I_p-\frac{1}{\sigma}X_nY_n^HY_nX_n^H\right)^{-1}
+    & \frac{1}{\sigma}\left(\sigma I_p-\frac{1}{\sigma}X_nY_n^HY_nX_n^H\right)^{-1}X_nY_n^H \\
+    \frac{1}{\sigma}Y_nX_n^H\left(\sigma I_p-\frac{1}{\sigma}X_nY_n^HY_nX_n^H\right)^{-1}
+    & \left(\sigma I_q - \frac{1}{\sigma}Y_nX_n^HX_nY_n^H\right)^{-1}
+  \end{array}\right]\\
+&&& = \left[\begin{array}{cc}\sigma\left(\sigma^2I_p-X_nY_n^HY_nX_n^H\right)^{-1}
+    & \left(\sigma^2I_p-X_nY_n^HY_nX_n^H\right)^{-1}X_nY_n^H\\
+    Y_nX_n^H\left(\sigma^2I_p-X_nY_n^HY_nX_n^H\right)^{-1} &
+    \sigma\left(\sigma^2I_q - Y_nX_n^HX_nY_n^H\right)^{-1}
+\end{array}\right].
+\ea\ee
+Define $A_n=\left(\sigma^2I_p-X_nY_n^HY_nX_n^H\right)^{-1}$ and $\widetilde{A}_n=\left(\sigma^2I_q -
+  Y_nX_n^HX_nY_n^H\right)^{-1}$. Next, we explore $Q_n=U_n^HB_n^{-1}U_n$, which is a
+$4r\times 4r$ matrix. Denote its block-columns $Q_n=[q_1,\dots,q_4]$. These block-columns are
+\be
+q_1 = \left[\begin{array}{c}
+    \sigma U_x^HA_nU_x\\
+    \sigma V_y^HX_n^HA_nU_x\\
+    V_x^HY^HY_nX_n^HA_nU_x + P\Theta_yU_y^HY_nX_n^HA_nU_x\\
+    U_y^HY_nX_n^HA_nU_x\\
+  \end{array}\right]
+\ee
+\be
+q_2 = \left[\begin{array}{c}
+    \sigma U_x^HA_nXV_y\\
+    \sigma V_y^HX_n^HA_nX_nV_y\\
+    V_x^HY_n^HY_nX_n^HA_nX_nV_y + P\Theta_yU_y^HY_nX_n^HA_nX_nV_y\\
+    U_y^HY_nX_n^HA_nX_nV_y\\
+\end{array}\right]
+\ee
+\be
+q_3 = \left[\begin{array}{c}
+    U_x^HA_nX_nY_n^HY_nV_x + U_x^HA_nX_nY_n^HU_y\Theta_yP\\
+    V_y^HX_n^HA_nX_nY_n^HY_nV_x + V_y^HX_n^HA_nX_nY_n^HU_y\Theta_yP\\
+    \sigma \left(V_x^HY_n^H+P\Theta_yU_y^H\right)\widetilde{A}_n\left(V_x^HY_n^H+P\Theta_yU_y^H\right)^H\\
+    \sigma U_y^H\widetilde{A}_nY_nV_x + \sigma U_y^H\widetilde{A}_nU_y\Theta_yP\\
+\end{array}\right]
+\ee
+\be
+q_4 = \left[\begin{array}{c}
+    U_x^HA_nX_nY_n^HU_y^H\\
+    V_y^HX_n^HA_nX_nY_n^HU_y^H\\
+    \sigma V_x^HY_n^H\widetilde{A}_nU_y^H + \sigma P\Theta_yU_y^H\widetilde{A}_nU_y^H\\
+    \sigma U_y^H\widetilde{A}_nU_y^H\\
+\end{array}\right].
+\ee
+Define
+\be\ba
+&G_n = U_x^HA_nU_x\\
+&F_n = V_y^HX_n^HA_nX_nV_y^H\\
+&H_n = U_y^H\widetilde{A}_nU_y\\
+&K_n = V_x^HY_n^HY_nX_n^HA_nX_nV_y\\
+&J_n = V_x^HY_n^H\widetilde{A}_nY_nV_x.\\
+\ea\ee
+Note that in the large matrix limit ($n,p,q\to\infty$), matrices of the form $U_x^HMU_y$,
+$V_x^HMU_y$, $U_x^HMV_y$, $U_x^HMV_x$, $U_y^HMV_y$ are zero in the large matrix limit
+because $U_x$, $U_y$, $V_x$, and $V_y$ are pairwise independent except for $V_x$ and
+$V_y$. Therefore in the large matrix limit,
+\be
+Q_n = \left[\begin{array}{cccc}
+    \sigma G_n & 0 & 0 & 0 \\
+    0 & \sigma F_n & K_n^H & 0 \\
+    0 & K_n & \sigma J_n + \sigma P\Theta_yH_n\Theta_yP & \sigma P\Theta_yH_n\\
+    0 & 0 & \sigma H_n\Theta_yP & \sigma H_n\\
+\end{array}\right].
+\ee
+Then define
+\be
+M_n(\sigma) = Q_n- \Lambda^{-1} = \left[\begin{array}{cccc}
+    \sigma G_n & 0 & -\Theta_x^{-1} & 0 \\
+    0 & \sigma F_n & K_n^H & -\Theta_y^{-1} \\
+    -\Theta_x^{-1} & K_n & \sigma J_n + \sigma P\Theta_yH_n\Theta_yP & \sigma P\Theta_yH_n\\
+    0 & -\Theta_y^{-1} & \sigma H_n\Theta_yP & \sigma H_n\\
+\end{array}\right],
+\ee
+which is a $4r\times 4r$ matrix. Then the solution to (\ref{eq:det2}) is 
+\be
+\det\left(M(\sigma)\right) = 0.
+\ee
+
+We would like to compute this determinant in closed form. To do so, we first note that in
+the large matrix limit,
+\be\ba
+&\sigma G_n\to\varphi_GI_r, && \varphi_G = \frac{\sigma}{p}\Tr(A_n)\\
+&\sigma F_n\to\varphi_FI_r, && \varphi_F = \frac{\sigma}{n}\Tr(X_n^HA_nX_n)\\
+&\sigma H_n\to\varphi_HI_r, && \varphi_H = \frac{\sigma}{q}\Tr(\widetilde{A}_n)\\
+&\sigma J_n\to\varphi_JI_r, && \varphi_J = \frac{\sigma}{n}\Tr(Y_n^H\widetilde{A}_nY_n)\\
+&K_n\to\varphi_KP, && \varphi_{K} = \frac{1}{n}\Tr(Y_n^HY_nX_n^HA_nX_n)\\
+\ea\ee
+Note that the expressions for $\varphi$ are implicitly dependent on $\sigma$. To simplify
+this determinant we will rely on the following property of determinants of block matrices,
+\be
+\det\left(\left[\begin{array}{cc}A & B \\ C & D\end{array}\right]\right) =
+\det(A)\det(D-CA^{-1}B). 
+\ee
+Using this,
+\begin{flalign*}
+&\det(M)&= &\det\left(\left[\begin{array}{cc}\varphi_GI_r & 0 \\ 0 &
+      \varphi_FI_r\end{array}\right]\right)\cdot\\
+&&&\det\left(\left[\begin{array}{cc}\varphi_J +
+      P\Theta_y\varphi_H\Theta_yP & P\Theta_y\varphi_H \\\varphi_H\Theta_yP &
+      \varphi_H\end{array}\right]  \right.\\
+&&&\left.- \,\,\,\,\left[\begin{array}{cc}-\Theta_x^{-1}
+      & \varphi_KP \\ 0 &\Theta_y^{-1}\end{array}\right]
+  \left[\begin{array}{cc}\frac{1}{\varphi_G}I_r & 0 \\ 0 &
+      \frac{1}{\varphi_F}I_r\end{array}\right]\left[\begin{array}{cc}-\Theta_x^{-1} & 0 \\ 
+      \varphi_KP & -\Theta_y^{-1}\end{array}\right]\right)\\
+&& = &{\small{\left(\varphi_G\varphi_F\right)^r\det\left(\begin{array}{cc} \underbrace{\varphi_JI_r +
+    \varphi_HP\Theta_y^2P - \frac{1}{\varphi_G}\Theta_x^{-2} - \frac{\varphi_K^2}{\varphi_F}P^2}_{a} &
+    \underbrace{\varphi_HP\Theta_y + \frac{\varphi_K}{\varphi_F}P\Theta_y^{-1}}_{b} \\
+    \underbrace{\varphi_H\Theta_yP + 
+    \frac{\varphi_K}{\varphi_F}\theta_y^{-1}P}_{c} & \underbrace{\varphi_HI_r -
+    \frac{1}{\varphi_F}\Theta_y^{-2}}_{d}\end{array}\right)}} \\
+&& = &\left(\varphi_G\varphi_F\right)^r\prod_{i=1}^r\left(\varphi_H -
+  \frac{1}{\varphi_F\theta_{yi}^2}\right)\det\left(a-bd^{-1}c\right)\\
+&& =
+&\left(\varphi_G\varphi_F\right)^r\prod_{i=1}^r\left(\frac{\varphi_H\varphi_F\theta_{yi}^2
+  -1}{\varphi_F\theta_{yi}^2}\right)\prod_{i=1}^r\left(
+  \frac{\varphi_J\varphi_G\theta_{xi}^2 -1}{\varphi_G\theta_{xi}^2} - \rho_i^2\frac{\varphi_H\theta_{yi}^2\left(1 +
+      \varphi_{K_i}\right)^2}{\varphi_H\varphi_F\theta_{yi}^2 - 1}\right)\\
+&& = &\left(\varphi_G\varphi_F\right)^r\prod_{i=1}^r\left(\frac{\varphi_H\varphi_F\theta_{yi}^2
+  -1}{\varphi_F\theta_{yi}^2}\right)\left(
+  \frac{\varphi_J\varphi_G\theta_{xi}^2 -1}{\varphi_G\theta_{xi}^2} - \rho_i^2\frac{\varphi_H\theta_{yi}^2\left(1 +
+      \varphi_{K_i}\right)^2}{\varphi_H\varphi_F\theta_{yi}^2 - 1}\right)\\
+&& =
+&\left(\varphi_G\varphi_F\right)^r\prod_{i=1}^r\left[\frac{\left(\varphi_H\varphi_F\theta_{yi}^2
+    -1\right)\left(\varphi_J\varphi_G\theta_{xi}^2-1\right)}{\varphi_F\varphi_G\theta_{xi}^2\theta_{yi}^2}
+-
+\frac{\rho_i^2\varphi_H\varphi_G\theta_{xi}^2\theta_{yi}^2(1+\varphi_K)^2}{\varphi_F\varphi_G\theta_{xi}^2\theta_{yi}^2}\right]\\
+&& = &\prod_{i=1}^r\left(\varphi_H\varphi_F -
+  \frac{1}{\theta_{yi}^2}\right)\left(\varphi_J\varphi_G - \frac{1}{\theta_{xi}^2}\right) - \rho_i^2\varphi_H\varphi_G\left(1+\varphi_K\right)^2
+\end{flalign*}
+
+This is the form of (\ref{eq:thm}). To evaluate $\det(M(\sigma)$ and to complete the
+theorem proof, we need closed form expressions for $\varphi_H$, $\varphi_F$, $\varphi_J$,
+$\varphi_G$, and $\varphi_K$ that do not rely on the noise matrices $X_n$ and $Y_n$. To
+accomplish this, we use proposition 10.11 in \cite{nadakuditi2007thesis}.
+
+\subsubsection{Expression for $\varphi_F$}
+By definition,
+\be\ba
+& \varphi_F && =\frac{\sigma}{n}\Tr\left(X_n^HA_nX_n\right)\\
+&&& = \frac{\sigma}{n}\Tr\left(A_nX_nX_n^H\right)\\
+&&& = \frac{\sigma}{n}\Tr\left(\left(\sigma^2I_p - X_nY_n^HY_nX_n^H\right)^{-1}X_nX_n^H\right).\\
+\ea\ee
+Let $U_X\Sigma_XV_X^H$ be the SVD of $X_n$. Using this definition,
+\beq\label{eq:phiF1}\ba
+  & \varphi_F &&= \frac{\sigma}{n}\Tr\left(\left(\sigma^2I_p -
+      U_X\Sigma_XV_X^HY_n^HY_nV_X\Sigma_X^HU_X^H\right)^{-1}U_X\Sigma_X\Sigma_X^HU_X^H\right)\\
+  &&& = \frac{\sigma}{n}\Tr\left(\left(\sigma^2I_p - \Sigma_XV_X^HY_n^HY_nV_X\Sigma_X^H\right)^{-1}\Sigma_X\Sigma_X^H\right)\\
+\ea\eeq
+Now define $R_n=X_n^HX_n$ and $S_n=Y_n^HY_n$ and the functions $h(L_n) = \left(\sigma^2I_n
+  - L_n\right)^{-1}$ and $g(L_n) = L_n$. Let $\mu_{R_n}$ and $\mu_{S_n}$ be the empirical
+eigenvalue distribution and assume that each converges almost surely weakly, as
+$n,p,q\to\infty$ as above, to the non-random compactly supported probability measures
+$\mu_R$ and $\mu_S$, respectively.With these definitions and the SVD of $X_n$, note that
+\be
+\mathcal{E}=\Tr(h(R_n^{1/2}S_nR_n^{1/2})g(R_n))
+\ee
+is equivalent to 
+\beq\label{eq:phiF2}\ba
+&\mathcal{E} &&= \Tr\left(\left(\sigma^2I_n -
+  \left(X_n^HX_n\right)^{1/2}Y_n^HY_n\left(X_n^HX_n\right)^{1/2}\right)^{-1}X_n^HX_n\right)\\
+&&& = \Tr\left(\left(\sigma^2I_n-
+    V_X\left(\Sigma_X^H\Sigma_X\right)^{1/2}V_X^HY_n^HY_nV_X\left(\Sigma_X^H\Sigma_X\right)^{1/2}V_X^H\right)^{-1}V_X\Sigma_X^H\Sigma_XV_X^H\right)\\
+&&& = \Tr\left(\left(\sigma^2I_n-
+    \left(\Sigma_X^H\Sigma_X\right)^{1/2}V_X^HY^HYV_X\left(\Sigma_X^H\Sigma_X\right)^{1/2}\right)^{-1}\Sigma_X^H\Sigma_X\right)\\
+\ea\eeq
+
+We now show that (\ref{eq:phiF1}) and (\ref{eq:phiF2}) are equivalent. We break this into
+two cases, one where $n>p$ and one where $p\geq n$. Define $\widetilde{\Sigma}_X$ to be the
+$\min(n,p)\times\min(n,p)$ diagonal matrix of the non-zero singular values found along the
+diagonal of $\Sigma_X$. Also define $\widetilde{V}_X$ to be the corresponding
+$\min(n,p)$ right singular vectors of X. 
+
+In case 1, $n>p$. Here
+\be
+\left(\Sigma_X^H\Sigma_X\right)^{1/2} = \left[\begin{array}{cc}\widetilde{\Sigma}_X & 0
+    \\ 0 & 0_{n-p}\end{array}\right]
+\ee
+and $\Sigma_X\Sigma_X^H=\widetilde{\Sigma}_X^2$. Using these expressions, (\ref{eq:phiF2}) becomes
+\be\ba
+&\Tr\left(\left(\left[\begin{array}{cc}\sigma^2I_p & 0 \\ 0 & \sigma^2I_{n-p}\end{array}\right] -
+      \left[\begin{array}{cc}\widetilde{\Sigma}_X\widetilde{V}_X^HY_n^HY_n\widetilde{V}_X\widetilde{\Sigma}_X
+          & 0 \\ 0 &
+          0 \end{array}\right]\right)^{-1}\left[\begin{array}{cc}\widetilde{\Sigma}_X^2 &
+        0 \\ 0 &0 \end{array}\right]\right)\\
+&= \Tr\left(\left(\sigma^2I_p-\widetilde{\Sigma}_X\widetilde{V}_x^HY_n^HY_n\widetilde{V}_X\widetilde{\Sigma}_X\right)^{-1}\widetilde{\Sigma}_X^2\right).
+\ea\ee
+Because $n>p$, $\Sigma_XV_X^H=\widetilde{\Sigma}_X\widetilde{V}_X^H$ and therefore
+(\ref{eq:phiF1})=(\ref{eq:phiF2}).
+
+In case 2, $n\leq p$. Here
+\be
+\left(\Sigma_X\Sigma_X^H\right)^{1/2} = \left[\begin{array}{cc}\widetilde{\Sigma}_X & 0
+    \\ 0 & 0_{n-p}\end{array}\right]
+\ee
+
+and $\Sigma_X^H\Sigma_X=\widetilde{\Sigma}_X^2$. In this setting,
+$\Sigma_XV_X^H=\widetilde{\Sigma}_XV_X^H$. Using these expressions, (\ref{eq:phiF2}) becomes
+\be\ba
+&&&\frac{\sigma}{n}\Tr\left(\left(\left[\begin{array}{cc}\sigma^2I_n & 0 \\ 0 &
+        \sigma^2I_{p-n}\end{array}\right] -
+    \left[\begin{array}{cc}\widetilde{\Sigma}_XV_X^HY_n^HY_nV_X\widetilde{\Sigma}_X^H&
+      0 \\ 0 &0 \end{array}\right]\right)^{-1}\left[\begin{array}{cc}\widetilde{\Sigma}_X & 0
+    \\ 0 & 0_{n-p}\end{array}\right]\right)\\
+&=&&\frac{\sigma}{n}\Tr\left(\left(\sigma^2I_n-\widetilde{\Sigma}_XV_X^HY_n^HY_nV_X\widetilde{\Sigma}_X^H\right)^{-1}\widetilde{\Sigma}_X^2\right)
+\ea\ee
+Therefore, in this second setting, (\ref{eq:phiF1})=(\ref{eq:phiF2}) as well. Therefore, 
+\be
+\varphi_F = \frac{\sigma}{n}\Tr(h(S_n^{1/2}B_nS_n^{1/2})g(S_n)).
+\ee
+By Proposition 10.11 of \cite{nadakuditi2007thesis}, as $n\to\infty$,
+\be
+\varphi_F \to \sigma\int g(x)h(y)\rho_{RS}(x,y)dxdy
+\ee
+where $\rho_{RS}(x,y) = k_{RS|R}(x,y)f_R(x)$, where $f_R(x)$ is the limiting eigenvalue
+density function of $R$ and $k_{RS|R}(x,y)$ is  the Markov transition kernel density
+function. Using these definitions yields
+\be\ba
+&\varphi_F && =  \frac{\sigma}{n}\Tr\left(h\left(R_n^{1/2}S_nR_n^{1/2}\right)g(R_n)\right)\\
+&&& \to \sigma\int g(x)h(y) \rho_{RS}(x,y)dxdy\\
+&&& = \sigma\int g(x)h(y)k_{RS|R}(x,y)f_R(x)dxdy\\
+&&& = \sigma\int\int\frac{x}{\sigma^2-y}k_{RS|R}(x,y)f_R(x)dxdy\\
+&&& = \sigma\int xf_R(x) \left(\frac{1}{\sigma^2-y}k_{RS|R}(x,y)dy\right)dx\\
+&&& = -\sigma\int xm_{\mu_{RS|R}}\left(\sigma^2,x\right)f_R(x)dx\\
+&&& = -\sigma\E{xm_{\mu_{RS|R}}\left(\sigma^2,x\right)}_{\mu_R}\\
+\ea\ee
+
+\subsubsection{Expression for $\varphi_J$}
+
+Using an analogous derivation, 
+\be
+\varphi_J\to -\sigma\E{xm_{\mu_{RS|S}}\left(\sigma^2,x\right)}_{\mu_S}.
+\ee
+
+\subsubsection{Expression for $\varphi_G$}
+
+Let $\mu_{M_1}$ be the limiting eigenvalue distribution of $X_nY_n^HY_nX_n^H$. By definition,
+\be\ba
+&\varphi_G && = \frac{\sigma}{p}\Tr\left(\left(\sigma^2I_p - X_nY_n^HY_nX_n^H\right)^{-1}\right)\\
+&&& \to \sigma\int\frac{1}{\sigma^2-x}\mu_{M_1}\\
+&&& = -\sigma m_{M_1}(\sigma^2) \\
+\ea\ee
+
+\subsubsection{Expression for $\varphi_H$}
+
+Let $\mu_{M_2}$ be the limiting eigenvalue distribution of $Y_nX_n^HX_nY_n^H$. By definition,
+\be\ba
+&\varphi_H && = \frac{\sigma}{p}\Tr\left(\left(\sigma^2I_p - Y_nX_n^HX_nY_n^H\right)^{-1}\right)\\
+&&& \to \sigma\int\frac{1}{\sigma^2-x}\mu_{M_2}\\
+&&& = -\sigma m_{M_2}(\sigma^2) \\
+\ea\ee
+
+\subsubsection{Expression for $\varphi_K$}
+
+Let $\mu_{M_2}$ be the limiting eigenvalue distribution of
+$XY^HYX^H\left(\sigma^2I_p-XY^HYX^H\right)^{-1}$. Note that $\mu_{M_3}$ is a mobius
+transform of $\mu_{M_1}$. By definition,
+\be\ba
+& \varphi_K && = \frac{1}{n}\Tr\left(Y^HYX^HAX\right)\\
+&&& = \frac{1}{n}\Tr\left(XY^HYX^H\left(\sigma^2I_p-XY^HYX^H\right)^{-1}\right)\\
+&&& \to \frac{p}{n}\int x \mu_{M_3}\\
+&&& = c_x\E{x}_{\mu_{M_3}}.\\
+\ea\ee
+
+This establishes the proof of Theorem \ref{thm:xy_sv}.

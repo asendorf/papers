@@ -1,0 +1,261 @@
+Multi-modal data fusion is a ubiquitous problem in signal processing and machine
+learning. In many applications, we have access to multiple datasets, possibly of different
+modalities, each of which describe some feature of the system. This setup is becoming
+increasingly more common today as data collection becomes cheaper and cheaper. We are no
+longer limited by the amount or variety of data that we can collect, but instead we are
+limited by how quickly and correctly we can process such a wide variety of data.
+
+The underlying assumption in such settings is that each dataset contains some signals that
+are correlated with the signals of other datasets. Data fusion algorithms hope that they
+can leverage this fact to extrude these correlated signals \textit{jointly} from the
+datasets more accurately than from the individual datasets alone. Of course, every
+application has a different goal. Sometimes we want to detect the presence of the
+correlated signals. Other times, we may wish to predict one modality from the other. Still
+other applications may wish to classify or cluster observations together. However, no
+matter the machine learning application, they all rely on correlated features between
+datasets. This thesis focuses on developing theoretically justified, robust algorithms to
+fuse features from multiple datasets, as motivated by Figure \ref{fig:data_fusion}.
+
+\begin{figure}
+\begin{center}  
+    \begin{tikzpicture}[
+      font=\sffamily, every matrix/.style={ampersand replacement=\&,column sep=3ex,row
+      sep=3ex}, dataset/.style={draw,thick,fill=yellow!20,inner sep=.3cm},
+      sink/.style={dataset,rounded corners,fill=black, text=white},
+      app/.style={dataset,rounded corners,fill=blue!20}, dots/.style={gray,scale=2},
+      to/.style={->,>=stealth',shorten >=1pt,semithick,font=\sffamily\footnotesize}, every
+      node/.style={align=center}]
+
+      \matrix{ \node[dataset] (dataset1) {Dataset 1}; \& \node[dataset] (dataset2)
+        {Dataset 2}; \& \node[dataset] (dataset3) {Dataset 3}; \\
+
+        \& \node[sink] (blackbox) {Black Box Data Fusion}; \& \\
+
+        \& \node[app] (application) {Learning Algorithm}; \& \\ };
+
+      \draw[to] (dataset1) -- (blackbox); \draw[to] (dataset2) -- (blackbox); \draw[to]
+      (dataset3) -- (blackbox); \draw[to] (blackbox) -- (application);
+
+    \end{tikzpicture}
+    \caption{Illustration of multi-modal data fusion}
+    \label{fig:data_fusion}
+\end{center}
+\end{figure}
+
+
+\section{Canonical Correlation Analysis (CCA)}
+
+\subsection{What is it? What is it not?}
+
+Canonical correlation analysis (CCA) is a joint dimensionality reduction algorithm for
+exactly two datasets that finds a linear transformation for each dataset such that the
+correlation between the two transformed feature sets is maximized
+\cite{hotelling1936relations}. CCA, however, \textit{is not} a data fusion algorithm. CCA
+returns two linear transformations and a set of correlations. In this light, CCA is
+extremely similar to principle component analysis (PCA), which returns a linear
+transformation that accounts for the directions of largest possible variance in a dataset. These
+principle components are typically used as features vectors in a variety of machine
+learning algorithm. Just as PCA is a dimensionality reduction algorithm and not the final
+machine learning algorithm that uses the principle components, CCA is a joint
+dimensionality reduction algorithm whose dimensionality reduction ensures that datasets
+are maximally correlated in their reduced spaces.
+
+The solution to CCA is easily found by solving a quadratic optimization problem. This
+solution is a closed form expression relying on the singular value decomposition (SVD) of
+a matrix product involving the covariance matrices of each dataset and the
+cross-covariance between the two datasets. As these covariance matrices are rarely known
+\textit{a priori}, practical uses of CCA rely on substituting sample covariance matrices
+formed from training data, which we call empirical CCA.
+
+The performance of empirical CCA has been studied previously, but insufficiently. When
+the number of training samples is large compared to the dimensions of the datasets, the
+performance is well understood \cite{gunderson1997estimating}. When the number of training
+samples is less than the sum of the dimension of each dataset (sample deficient regime),
+\cite{pezeshki2004empirical} proves that empirical CCA completely breaks down and always
+reports a perfect correlation between the datasets. This extremely undesirable
+characteristic of empirical CCA has lead many to abandon CCA as a reliable statistical
+analysis technique. 
+
+\subsection{Variations on CCA}
+
+Due to this undesirable breakdown of CCA in the low-sample high-dimensionality regime,
+many variations of CCA have been proposed. Most notably, \cite{nadakuditi2011fundamental}
+used recent results from random matrix theory to demonstrate that this performance
+breakdown may be avoided by trimming the sample covariance matrix estimates to only
+include informative components. This algorithm is the crux of this thesis. We will study
+its performance and develop theoretical tools in order to use it for real-world
+application. Throughout the thesis, we use the ubiquitous low-rank signal-plus-noise model for
+datasets
+\be
+X = UV^H + Z,
+\ee
+where $X=[x_1,\dots,x_n]$ is our observed data matrix whose columns are individual
+multidimensional observations, $U$ is a low-rank signal subspace, $V$ is a low-rank signal
+matrix, and $Z$ is a noise matrix. Surprisingly, correlation analysis for this classical
+low-rank signal-plus-noise model is not completely studied. This thesis seeks to complete
+the discussion. Here, we briefly touch on other variations based on CCA that do not assume the
+above linear low-rank signal-plus-noise model. Many of these algorithms are tuned for a
+specific application or seek to avoid the performance loss of CCA in a certain regime.
+
+Regularized CCA (RCCA) \cite{vinod1976canonical} adds a penalty term to the magnitude of
+the canonical vectors. This results in adding a scaled copy of the identity matrix to the
+sample covariance matrix of each dataset, which allows each matrix to be
+inverted. Therefore, RCCA returns non-trivial results in the sample-deficient
+regime. However, this approach introduces a parameter to the algorithm; the effect of this
+parameter is not well studied. Other variations of RCCA, such as supervised
+RCCA\cite{thum2014supervised}, fast RCCA \cite{cruz2014fast}, and a multi-block RCCA
+\cite{tenenhaus2014regularized}, have also been proposed.
+
+Kernel CCA (KCCA) \cite{akaho2006kernel} was proposed to deal with non-linear correlations
+existing between datasets. However, KCCA also introduces regularization parameters so as
+to not return trivial solutions (see \cite{welling2005kcca} for an excellent
+derivation). Besides the choice of regularization parameter, there is also ambiguity in
+the choice of the kernel function, which is a common problem among kernel methods. Other
+variations of KCCA have also been proposed, such as penalized KCCA
+\cite{waaijenborg2009correlating}, alpha-beta divergence \cite{mandal2013non}, and CCA
+based on kernel target alignment \cite{chang2013canonical}. 
+
+Sparse CCA \cite{hardoon2011sparse} finds linear transformations such that the number of
+features used is minimized. This problem is often motivated by the need for interpretable
+canonical vectors that is often driven by the application, such as in brain imaging
+\cite{yan2014accelerating}. There are many variations on sparse CCA, typically motivated
+by application or mathematical intrigue. Sun and Keates \cite{sun2013canonical} explore
+CCA in the context of censoring, Shin and Lee examine sparse functional data
+\cite{shin2015canonical}, Tao et al. consider joint sparse data in
+\cite{tao2014exploring}, Gao et al. explore efficient sparse CCA for high-dimensional
+data \cite{gao2014efficient}, and Zhang et al. extend the analysis to multi-class group
+sparse CCA \cite{zhang2013binary}. Other formulations include a penalized decomposition
+\cite{witten2009penalized}, Bayesian CCA via group sparsity\cite{klami2013bayesian}, and
+recursive sparse CCA \cite{chu2013sparse}.
+
+\subsection{Applications}
+
+CCA and its variants are widely used in a variety of fields where multiple datasets
+naturally arise, the most common of which is machine learning and computer vision. In
+\cite{hardoon2004canonical}, CCA is used to learn semantics of multimedia content by
+fusing image and text data. Related, \cite{dhillon2011multi} uses CCA to learn word
+embeddings for supervised natural language processing tasks. CCA has been widely applied
+to pose estimation \cite{melzer2001nonlinear,zhai2015instance}, as this is a natural
+examples where we have multiple views (image) of the same object. Other computer vision
+related tasks where correlation methods are natural fits include matching people across
+cameras \cite{lisanti2014matching}, clustering social event images
+\cite{ahsan2014clustering}, automatic image annotation \cite{hardoon2006correlation}, and
+audio-visual speaker clustering \cite{chaudhuri2009multi}.
+
+Medical analysis is another field where there are ripe opportunities for correlation
+analysis due to the vast number of modalities (EEG, MRI, CT, fMRI, MEG, etc.). CCA is
+often used to determine interactions, or connectivities, between brain areas in fMRI data
+\cite{deleus2011functional,arbabshirani2010comparison,khalid2013improving,guccione2013functional}
+and used to fuse fMRI, sMRI, and EEG data \cite{correa2010canonical}. CCA based methods
+have also been used to examine genetic connections
+\cite{lin2013identifying,seoane2014canonical,lin2013group}, relying heavily on sparse
+methods due to the high dimensionality of gene data and need to interpret which genes are
+``on''. CCA is also a popular way to detect frequencies in steady-state visual evoked
+potential (SSVEP) in brain-computer interfaces (BCIs)
+\cite{zhang2013l1,nakanishi2014enhancing,zhang2014frequency}. Still further, CCA is used
+in de-noising and analysis of EEG, MEG and ECG data
+\cite{spuler2013spatial,campi2013non,chen2014removal,kuzilek2014comparison}.
+
+CCA also has roots in classical signal processing applications. The authors of
+\cite{via2005canonical} apply CCA to to the common communications problem of blind
+equalization of single-input multiple-output (SIMO) channels. Pezeshki et al.
+\cite{pezeshki2006canonical} showed that the CCA coordinates are the correct coordinates
+for low-rank Gauss-Gauss detection and estimation. Scharf and Thomas
+\cite{scharf1998wiener} provide a wonderful exposition on using the canonical coordinates
+for Wiener filters, transform coding, filtering, and quantizing. CCA and multiset CCA have
+been used to achieve joint blind source separation (BSS) in \cite{li2009joint}. CCA has
+also been applied to hyperspectral imaging \cite{nielsen2002multiset}, array processing
+\cite{ge2009does}, Gaussian channel capacity \cite{scharf2000canonical}, and cognitive
+radio networks \cite{manco2014kernel}.
+
+Other fun and interesting applications include climatology, finance, and music. Todros and
+Hero define a new measure transformed based CCA and show its utility on financial data in
+\cite{todros2012measure}. Torres et al. \cite{torres2007finding} use sparse CCA to label
+portions of musical songs with meaningful words or phrases. In the field of climatology,
+CCA has been used to study sea temperatures \cite{wilks2014probabilistic}, forest planning
+\cite{prera2014using}, and tropical cyclones \cite{steward2014assimilating}. Finally, I
+would be remiss if I didn't share my personal favorite application of CCA to date: using
+CCA to analyze bovine growth \cite{li2010canonical}.
+
+\section{Contributions of this thesis}
+
+This thesis considers the performance of empirical correlation algorithms in the
+low-sample, high dimensional setting. We will demonstrate, both theoretically and
+empirically, that multi-modal correlation analysis in this regime is a possibility. We
+remark that statements labeled as theorems represent, to the best of our knowledge, new
+results while important results from literature are labeled as propositions or
+lemmas. Chapters II-III are self contained and may be read independently. Chapters IV-X
+consider the problem of correlation analysis.
+
+Chapters \ref{sec:chpt_msd} and \ref{sec:chpt_msd_exten} consider the classical problem of
+matched subspace detectors. We use insights from random matrix theory on the accuracy of
+subspace estimates to derive new, optimal detectors that demonstrate the sub-optimality of
+the classical plug-in detectors that simply substitute maximum likelihood estimates for
+unknown parameters. Under both a stochastic and deterministic data model, we argue that
+only the \textit{informative} subspace components should be used in a detector. We extend
+this analysis to the case where our observations may contain missing data.
+
+In Chapters \ref{sec:chpt_cca_det} and \ref{sec:chpt_cca_vects}, we explore the
+performance of CCA and re-present informative CCA (ICCA). We demonstrate the extreme
+sub-optimality of CCA in the low-sample, high dimensionality regime. Specifically, we
+provide a statistical test for both CCA and ICCA, that determines whether the correlations
+returned by the algorithms do indeed represent a true underlying correlation in the
+datasets. We also provide an analogous statistical test to use when the datasets have
+missing data entries. We create 3 new real-world, multi-modal datasets involving video and audio to
+verify the performance of ICCA. Finally, we provide a new algorithm for estimating the
+population canonical vectors that greatly outperforms the canonical vectors estimates
+returned by empirical CCA.
+
+Next, we explore the performance of regularized CCA (RCCA) in Chapter
+\ref{sec:chpt_rcca}. When the number of training samples is limited but data fusion is
+still desired, a common strategy is to regularize CCA by adding a penalty to the magnitude
+of the linear transformation. However, we demonstrate that setting the regularization
+parameter to infinity results in the best performance. In fact, in this setting, the
+solution to RCCA may be found by taking the SVD of the sample cross-covariance matrix
+between the two datasets. We then predict the behavior of the largest singular values of
+this cross-covariance matrix assuming a low-rank signal-plus-noise model on the individual
+datasets. We argue that using the top singular values of this cross-covariance matrix to
+detect correlations is sub-optimal because the correlation coefficients are coupled with
+the individual data signal strengths. 
+
+Using a similar proof technique, we predict the behavior of the largest singular values of
+the projection of low-rank signal plus noise matrices to a smaller dimension in Chapter
+\ref{sec:chpt_svd_proj}. Specifically, we consider two types of projection matrices: one
+with standard normal Gaussian entries and one with orthonormal columns. We are able to
+provide a closed form expression for the largest singular values in the case where the
+projection matrix is unitary. Through numerical simulations, we demonstrate the
+superiority of the unitary projection matrix over the Gaussian projection matrix. The
+unitary projection matrix can reliably detect the signals at a lower signal-to-noise ratio
+than the Gaussian projection matrix. 
+
+In Chapter \ref{sec:chpt_det_reg} we apply CCA and ICCA to the classical problems of
+detection and regression. First, we consider the low-rank signal-versus-noise subspace
+detection problem given two datasets. We prove that the standard likelihood ratio test
+(LRT) detector may be written using the canonical basis returned by CCA. We show that when
+using empirical parameter estimates, the CCA detector is extremely suboptimal but that the
+ICCA detector is equivalent to the plug-in LRT detector. We then show that the classical
+Gaussian regression problem may be written in terms of the CCA basis. However, similar to
+the detection problem, empirical CCA degrades the performance significantly while ICCA
+matches the classical plug-in detector. We show this via mean squared error prediction
+plots.
+
+We then consider the joint problems of image retrieval and image annotation in Chapter
+\ref{sec:chpt_ia}. Correlation based methods are typically overlooked as solutions to such
+problems due to the problems with CCA outlined in this thesis. We show that using ICCA to
+solve these problems results in non-trivial solutions. We compare the performance of CCA
+and ICCA on four different image-text datasets and describe the capabilities and
+limitations of ICCA in this application. When the datasets contain multiple images of the
+same objects and meaningful captions, ICCA is able to capture correlations between images
+and text. However, ICCA fails to capture semantic meanings between documents and
+captions. We argue that with clever feature engineering and improved NLP techniques,
+correlation based methods may be relevant for image retrieval and image annotation.
+
+Lastly, we consider multi-set CCA (MCCA) in Chapter \ref{sec:chpt_mcca}. Unfortunately,
+unlike CCA, there is no clear objective function to use in an optimization problem;
+Kettenring \cite{kettenring1971canonical} proposes five such objective functions. Nielsen
+also provides a nice formulation of MCCA in \cite{nielsen1994analysis} where he proposes
+four constraint functions.  We provide derivations for these 20 formulations, in both a
+theoretical and empirical setting. We then choose to consider the MAXVAR problem as we are
+able to directly apply our insights from ICCA to create an informative version of it,
+which we call informative MCCA (IMCCA). We demonstrate the superior performance of IMCCA
+on a real-world video dataset that we created. 

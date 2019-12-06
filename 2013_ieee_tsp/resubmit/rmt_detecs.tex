@@ -1,0 +1,100 @@
+\textcolor{blue}{We saw in Section \ref{sec:std_detecs} that the plug-in detectors rely on the statistic $\widehat{w}=\widehat{U}^Hy$. Instead of deriving the LRT statistic using the conditional distributions of $y$, we will instead use the conditional distributions of $\widehat{w}$; this will reveal the importance of the matrix $\widehat{U}^HU$. The plug-in detectors assume that $\widehat{U}^HU=I_{\widehat{k}}$, however, the analysis in Section \ref{sec:eigvect_aspects} shows that this assumption is incorrect. Knowing the importance of only using $\keff$ subspace components and armed with the asymptotic diagonal approximation of Corrolary \ref{corr:matrix} and the improved signal variance estimates in (\ref{eq:cov}), we are now in position to answer Problem 1 and derive a new RMT detector for both testing settings.}
+
+\subsection{Stochastic RMT Detector}\label{sec:rmt_stoch}
+
+We begin with the stochastic test setting and form the test vector $\widehat{w}=\widehat{U}^Hy$ where $\widehat{U}$ is the subspace estimated from (\ref{eq:param_estims_stoch}) and $y$ is generated from (\ref{eq:stoch_setup}). The LRT statistic using $\widehat{w}$ depends on the conditional distributions under each hypothesis, which by properties of Gaussian random variables are simply
+\begin{equation}\label{eq:stoch_distr}
+\begin{aligned}
+&\widehat{w}|H_0\sim\mathcal{N}\left(0,I_{\widehat{k}}\right)\,\,\,\text{ and }\,\,\,\widehat{w}|H_1\sim\mathcal{N}\left(0, \widehat{U}^HU\Sigma U^H\widehat{U} +I_{\widehat{k}}\right).\\
+\end{aligned}
+\end{equation}
+
+We immediately see the matrix of interest, $\widehat{U}^HU\Sigma U^H\widehat{U}$. The plug-in detector substitutes $\widehat{U}$ for $U$ and $\widehat{\Sigma}$ for $\Sigma$; this results in $\widehat{w}|H_1\sim\mathcal{N}(0,\widehat{\Sigma} +I_{\widehat{k}})$. However, Corollary 5.1 shows that this is incorrect by providing the asymptotic limit of the covariance matrix in (\ref{eq:stoch_distr}):
+\begin{equation}\label{eq:cov mat}
+\widehat{U}^HU\Sigma U^H\widehat{U}+I_{\widehat{k}} \convas \diag\left(|\langle u_i,\widehat{u}_i\rangle|^2\sigma_i^2 + 1\right).
+\end{equation}
+If $\sigma_i^{2}$ were assumed known, this limit would suffice because we could plug in the results in Proposition \ref{th:angles} to get the desired statistic. However, the signal variances are unknown so $\sigma_i^2$ and subsequently $|\langle u_i,\widehat{u}_i\rangle|^2$ must be estimated from data. For the $\widehat{k}_{\text{eff}}$ subspace components estimated from `Algorithm 2' of \cite{nadakuditi2010fundamental}, we form an improved signal variance estimate, $\widehat{\sigma}_{i_\text{rmt}}^2$,  obtained via (\ref{eq:cov}) and use it to estimate $|\langle u_i,\widehat{u}_i\rangle|^2$, denoted by $|\langle u_i,\widehat{u}_i\rangle|^2_\text{rmt}$. Of course, there are correction terms due to finite system size effects, which we ignore, that affect the convergence properties but not the asymptotic form of the detector.
+
+We obtain the RMT detector by computing the LRT statistic using the conditional distributions of (\ref{eq:stoch_distr}). The covariance matrix of $\widehat{w}|H_1$ is computed by substituting  $|\langle u_i,\widehat{u}_i\rangle|^2_\text{rmt}$ and $\widehat{\sigma}_{i_\text{rmt}}^2$ into the diagonal covariance matrix (\ref{eq:cov mat}). After some straightforward algebra we obtain the desired RMT statistic
+\begin{equation*}
+\Lambda_{\text{rmt}}(\widehat{w})= \sum_{i=1}^{\widehat{k}}\left(\frac{|\langle u_i,\widehat{u}_i\rangle|^2_{\text{rmt}}\widehat{\sigma}_{i_\text{rmt}}^2}{|\langle u_i,\widehat{u}_i\rangle|^2_{\text{rmt}}\widehat{\sigma}_{i_\text{rmt}}^2 + 1}\right)\widehat{w}_i^2.
+\end{equation*}
+As seen in Proposition \ref{th:angles}, when $i>k_\text{eff}$, $|\langle u_i,\widehat{u}_i\rangle|^2 \convas 0$. The sum on the right hand side (asymptotically) discards the uninformative subspace components. Thus the RMT detector only uses the $\widehat{k}_{\text{eff}}$ informative components given by (\ref{eq:keff}). Consequently, we obtain the test statistic
+\begin{equation}\label{eq:optimal_stat_stoch}
+\boxed{\Lambda_{\text{rmt}}(\widehat{w})= \sum_{i=1}^{\widehat{k}_{\text{eff}}}\left(\frac{|\langle u_i,\widehat{u}_i\rangle|^2_{\text{rmt}}\widehat{\sigma}_{i_\text{rmt}}^2}{|\langle u_i,\widehat{u}_i\rangle|^2_{\text{rmt}}\widehat{\sigma}_{i_\text{rmt}}^2 + 1}\right)\widehat{w}_i^2}
+\end{equation}
+and the RMT detector becomes $\Lambda_{\text{rmt}}(\widehat{w}) \detgtrless \gamma_{\text{rmt}}$
+%\begin{equation}\label{eq:optimal_class_stoch}
+%\Lambda_{\text{rmt}}(\widehat{w}) \detgtrless \gamma_{\text{rmt}},
+%\end{equation}
+where the threshold $\gamma_{\text{rmt}}$ is chosen in the usual manner. Note that the stochastic RMT detector also takes the form of (\ref{eq:detector_form}). The principal difference between the RMT test statistic in (\ref{eq:optimal_stat_stoch}) and the plug-in test statistic in (\ref{eq:plugin_stat_stoch}) is the role of $\widehat{k}_{\text{eff}}$ in the former. The scaling factors associated with each $\widehat{w}_i^{2}$ for both detectors are about the same; this is why the plug-in detector that uses $\widehat{k}_{\text{eff}}$ components exhibits the same (asymptotic) performance as the RMT detector, which incorporates knowledge of the subspace estimate accuracy. However, our analysis shows that overcompensating and ``playing-it-safe'' by setting $\widehat{k}>\widehat{k}_{\text{eff}}$ can lead to performance loss.
+
+
+
+\begin{table*}[ht!]
+\centering
+\begin{tabular}{clll}\toprule
+ Detector & Detector Statistic $\Lambda(\widehat{w})$  & Distribution  of $\Lambda|H_0$ & Distribution of $\Lambda|H_1$\\
+\midrule
+%Oracle & $ w^H\left[I-\left(\widehat{U}^HU\Sigma U^H\widehat{U}+I\right)^{-1}\right]w$ &  & \\
+Plug-in & $\sum_{i=1}^{\widehat{k}}\left(\frac{\widehat{\sigma}_i^2}{\widehat{\sigma}_i^2+1}\right)\widehat{w}_i^2$ & $\sum_{i=1}^{\widehat{k}}\left(\frac{\widehat{\sigma}_i^2}{\widehat{\sigma}_i^2+1}\right)\chi^2_{1i}$ & $\sum_{i=1}^{\widehat{k}}\left(\frac{\widehat{\sigma}_i^2\left(\sigma^2_i|\langle u_i,\widehat{u}_i\rangle|^2+1\right)}{\widehat{\sigma}_i^2+1}\right)\chi^2_{1i}$\\
+ RMT & $\sum_{i=1}^{\widehat{k}_{\text{eff}}}\left(\frac{|\langle u_i,\widehat{u}_i\rangle|^2_{\text{rmt}}\widehat{\sigma}_{i_\text{rmt}}^2}{|\langle u_i,\widehat{u}_i\rangle|^2_{\text{rmt}}\widehat{\sigma}_{i_\text{rmt}}^2+1 }\right)\widehat{w}_i^2$ & $\sum_{i=1}^{\widehat{k}_{\text{eff}}}\left(\frac{\widehat{\sigma}_{i_\text{rmt}}^2|\langle u_i,\widehat{u}_i\rangle|^2_{\text{rmt}}}{\widehat{\sigma}_{i_\text{rmt}}^2|\langle u_i,\widehat{u}_i\rangle|^2_{\text{rmt}}+1}\right)\chi^2_{1i}$ & $\sum_{i=1}^{\widehat{k}_{\text{eff}}}\left(\widehat{\sigma}^2_{i_\text{rmt}}|\langle u_i,\widehat{u}_i\rangle|^2_{\text{rmt}}\right)\chi^2_{1i}$\\
+\bottomrule
+\end{tabular}
+\caption{Summary of the plug-in and RMT stochastic MSDs. See Sections \ref{sec:plugin_stoch} and \ref{sec:rmt_stoch} for derivations.}\vskip-0.2cm
+\label{table:summary_stoch}
+\vspace{-0.1in}
+\end{table*}
+
+
+%Given an observation vector $y$ from (\ref{eq:stoch_setup}), we form the vector $\widehat{w}=\widehat{U}^Hy$ where $\widehat{U}$ is an estimate of the signal subspace. The table summarizes the test statistic associated with each detector when using testing data generated from the stochastic model. The plug-in and RMT detectors have the form of (\ref{eq:detector_form}). In the CFAR setting, the threshold is  set to obtain the desired false alarm probability. Note the appearance of $k_\text{eff}$ in the random matrix theory detector. The associated distribution of each test statistic under $H_0$ and $H_1$ is provided in the last two columns.
+
+
+\subsection{Deterministic RMT Detector}\label{sec:rmt_detec_determ}
+
+When forming $\widehat{w}$ with $y$ generated from (\ref{eq:determ_setup}), the conditional distributions of $\widehat{w}$ under each hypothesis are $\widehat{w}|H_0\sim\mathcal{N}(0,I_{\widehat{k}})$ and $\widehat{w}|H_1\sim\mathcal{N}(\widehat{U}^HU\Sigma^{1/2} x, I_{\widehat{k}})$. Again, as $x$ is unknown, we use a GLRT. Employing maximum likelihood estimation on $x$ yields the estimate \textcolor{blue}{$\widehat{x}=\left(\Sigma^{1/2} U^H\widehat{U}\widehat{U}^HU\Sigma^{1/2}\right)^{\dagger}\Sigma^{1/2} U^H\widehat{U}\widehat{w}$ where $\dagger$ denotes the Moore-Penrose pseudoinverse}. After simplifying using $\widehat{x}$ and using the natural logarithm operator as a monotonic operation, the GLRT statistic becomes
+\begin{equation*}
+\textcolor{blue}{\Lambda(\widehat{w}) = \widehat{w}^H\left(\widehat{U}^HU\Sigma^{1/2}\left(\Sigma^{1/2} U^H\widehat{U}\widehat{U}^HU\Sigma^{1/2}\right)^{\dagger}\Sigma^{1/2} U^H\widehat{U}\right)\widehat{w}}.
+\end{equation*}
+
+Consider the term $\widehat{U}^HU$. By Proposition \ref{th:angles} and Claim \ref{conj:angles} and by noting that the eigenvectors are unique up to a phase, \textcolor{blue}{we have that $\widehat{U}^HU \convas BA$ where $B$ is a $\widehat{k}\times k$ matrix and $A$ is a $k \times k$ matrix defined as
+\small\begin{equation*}
+B_{i\ell}:=\begin{cases} b_i=\exp(j\psi_i) & i=\ell \\ 0 & \text{otherwise} \\ \end{cases},\,A_{i\ell}:=\begin{cases} a_i=|\langle u_i,\widehat{u}_i\rangle| & i=\ell \\ 0 & \text{otherwise} \\ \end{cases}.
+\end{equation*}\normalsize
+For some $\psi_{i}$, $b_i$ denotes the random phase ambiguity in the eigenvector computation (since eigenvectors are unique up to a phase).}
+
+The plug-in detector assumes that $A=B=I_{\widehat{k}}$, that is $b_i=1$ and $|\langle u_i,\widehat{u}_i\rangle|=1$ . However, as seen in Section \ref{sec:rmt}, we have knowledge of $|\langle u_i,\widehat{u}_i\rangle|$ which we may exploit in deriving a new detector. Using the notation just developed, the GLRT statistic may be written as
+\begin{equation*}
+\textcolor{blue}{\Lambda(\widehat{w})=\widehat{w}^HBA\Sigma^{1/2}(\Sigma^{1/2}A^HB^HBA\Sigma^{1/2})^{\dagger}\Sigma^{1/2}A^HB^H\widehat{w}.}
+\end{equation*}
+We use (\ref{eq:cov}) and Proposition \ref{th:angles} to estimate $a_i=\sqrt{|\langle u_i,\widehat{u}_i\rangle|^2_{\text{rmt}}}$. Recall that $\widehat{k}_{\text{eff}}$ is an estimate for the number of $\sigma_i^2$ above the phase transition and note that $a_i=0$ when $\sigma_i^2\leq\sqrt{c}$. Incorporating this into the detector, and noting that $A$, $B$, and $\Sigma$ contain only diagonal elements, the GLRT simplifies to
+%\begin{equation*}
+%\Lambda(\widehat{w})=\widehat{w}^H\left[\begin{array}{cc} I_{\widehat{k}_{\text{eff}}} & 0 \\ 0 & 0_{\widehat{k}-\widehat{k}_{\text{eff}}}\end{array}\right]\widehat{w},
+%\end{equation*}
+%which may be written
+\begin{equation}\label{eq:optimal_stat_determ}
+\boxed{\Lambda_{\text{rmt}}(\widehat{w}) = \sum_{i=1}^{\widehat{k}_{\text{eff}}}\widehat{w}_i^2}
+\end{equation}
+and the deterministic RMT detector is $\Lambda_{\text{rmt}}(\widehat{w}) \detgtrless \gamma_{\text{rmt}}$
+%\begin{equation}\label{eq:optimal_class_determ}
+%\Lambda_{\text{rmt}}(\widehat{w}) \detgtrless \gamma_{\text{rmt}},
+%\end{equation}
+where the threshold $\gamma_{\text{rmt}}$ is chosen in the usual manner. This addresses the problem posed in Section \ref{sec:ps_prob2} for the deterministic test vector setting.  We note that this deterministic RMT detector also takes on the form of (\ref{eq:detector_form}). \textcolor{blue}{In fact, in the deterministic setting, the plug-in and RMT detectors are both `energy detectors' and have the same statistic except for the upper bound in the summation.} As in the stochastic setting, the principal difference between the RMT test statistic in (\ref{eq:optimal_stat_determ}) and the plug-in test statistic in (\ref{eq:plugin_stat_determ}) is the role of $\widehat{k}_{\text{eff}}$ in the former. This is also why the plug-in detector that uses $\widehat{k}_{\text{eff}}$ components exhibits the same performance as the RMT detector, which incorporates knowledge of the subspace estimates. 
+\begin{table*}[ht!]
+\centering
+\begin{tabular}{clll}\toprule
+ Detector & Detector Statistic $\Lambda(\widehat{w})$  & Distribution of $\Lambda|H_0$ & Distribution of $\Lambda|H_1$\\
+\midrule
+%Oracle & $ w^H\left(\widehat{U}^HU\left(U^H\widehat{U}\widehat{U}^HU\right)^{-1}U^H\widehat{U}\right)w$ &  & \\
+Plug-in & $\sum_{i=1}^{\widehat{k}}\widehat{w}_i^2$ & $\chi^2_{\widehat{k}}$ & $\chi^2_{\widehat{k}}\left(\sum_{i=1}^{\widehat{k}_{\text{eff}}}\sigma_i^2|\langle u_i,\widehat{u}_i\rangle|^2x_i^2\right)$\\
+ RMT& $\sum_{i=1}^{\widehat{k}_{\text{eff}}}\widehat{w}_i^2$ & $\chi^2_{\widehat{k}_{\text{eff}}}$ & $\chi^2_{\widehat{k}_{\text{eff}}}\left(\sum_{i=1}^{\widehat{k}_{\text{eff}}}\sigma_i^2|\langle u_i,\widehat{u}_i\rangle|^2x_i^2\right)$\\
+\bottomrule
+\end{tabular}
+\caption{Summary of the plug-in and RMT deterministic MSDs. See Sections \ref{sec:plugin_determ} and \ref{sec:rmt_detec_determ} for derivations.}\vskip-0.2cm
+\label{table:summary_determ}
+\vspace{-0.3in}
+\end{table*}
+
+
+
+%Given an observation vector $y$ from (\ref{eq:determ_setup}), we form the vector $\widehat{w}=\widehat{U}^Hy$ where $\widehat{U}$ is an estimate of the signal subspace. The table summarizes the test statistic associated with each detector for the deterministic setting. The plug-in and RMT detectors have the form of (\ref{eq:detector_form}). In the CFAR setting, the threshold is  set to obtain the desired false alarm probability. Note the appearance of $k_\text{eff}$ in the RMT detector. The associated distribution of each test statistic under $H_0$ and $H_1$ is provided in the last two columns. The notation $\chi^2_{k}(\delta)$ is a noncentral chi-square random variable with $k$ degrees of freedom and non-centrality parameter $\delta$.

@@ -1,0 +1,79 @@
+We now derive a family of detectors for the stochastic observation vector model in (\ref{eq:stoch_setup}). Recall that we form a test vector $w=\widehat{U}^Hy$; the elements of $w$ are the `co-ordinates' of $y$ in the subspace spanned by the columns of $\widehat{U}$. In the Neyman-Pearson setting, the oracle detector is a LRT which relies on the conditional distributions of our test vector $w$ under each hypothesis. By properties of Gaussian random variables these distributions are simply
+\begin{equation}\label{eq:stoch_distr}
+\begin{aligned}
+&w|H_0\sim\mathcal{N}\left(0,I_{\widehat{k}}\right)\\
+&w|H_1\sim\mathcal{N}\left(0, \widehat{U}^HU\Sigma U^H\widehat{U} +I_{\widehat{k}}\right).\\
+\end{aligned}
+\end{equation}
+We obtain a family of detectors by placing various assumptions on the covariance of $w|H_1$, as described next.
+%Given a dimension estimate $\widehat{k}$, $\widehat{U}$ is a $n\times\widehat{k}$ matrix formed by stacking the top $\widehat{k}$ eigenvectors of the sample covariance matrix of the training data alongside each other.
+
+\subsection{Oracle Detector}\label{sec:oracle_stoch}
+The oracle detector assumes that $k$, $\Sigma$, and $\widehat{U}^{H}U$ are all known in (\ref{eq:stoch_distr}). The LRT statistic is
+\begin{equation*}
+\Lambda(w)=\frac{\mathcal{N}(0,\widehat{U}^HU\Sigma U^H\widehat{U} + I_k)}{\mathcal{N}(0,I_{k})}.
+\end{equation*}
+After simplification of this expression using the natural logarithm operator as a monotonic operation, the oracle statistic becomes
+\begin{equation}\label{eq:oracle_stat_stoch}
+\boxed{\Lambda_{\text{oracle}}(w) = w^H\left[I_k-\left(\widehat{U}^HU\Sigma U^H\widehat{U}+I_k\right)^{-1}\right]w}
+\end{equation}
+and the oracle detector is
+\begin{equation}\label{eq:oracle_class_stoch}
+\Lambda_{\text{oracle}}(w) \detgtrless \gamma_{\text{oracle}}
+\end{equation}
+where the threshold $\gamma_{\text{oracle}}$ is chosen in the usual manner, \ie, so that satisfies $P(\Lambda_{\text{oracle}}(w)>\gamma_{\text{oracle}}|H_0)=\alpha$ with $\alpha$ a desired false alarm rate. We note that the oracle statistic assumes that the matrix $\widehat{U}^HU\Sigma U^H\widehat{U}$ is known. \textcolor{blue}{Corollary \ref{corr:matrix} states that in the large system limit, this matrix converges almost surely to a diagonal matrix showing that asymptotically the oracle detector is of the form given by (\ref{eq:detector_form})}.  We exploit this in Section \ref{sec:optimal_stoch} to address the problem posed in Section \ref{sec:ps_prob2}.
+
+\subsection{Plug-in Detector}\label{sec:plugin_stoch}
+When the parameters $\Sigma$ and $U$ (and the implicit variable $k$) in (\ref{eq:stoch_distr}) are unknown, the expression in (\ref{eq:oracle_stat_stoch}) cannot be computed. Given a dimension estimate $\widehat{k}$ we form parameters estimates of $U$ and $\Sigma$ as in (\ref{eq:param_estims_stoch}). We then substitute these ML estimates for the unknown parameters in (\ref{eq:oracle_stat_stoch}) as in \cite{jin2005cfar} and \cite{mcwhorter2003matched}. \textcolor{blue}{This results in the following plug-in detector LRT statistic:}
+\begin{equation*}
+\textcolor{blue}{\Lambda_{\text{plugin}}(w)= w^H\left(I_{\widehat{k}}-\left[\widehat{U}^H\widehat{U}\widehat{\Sigma}\widehat{U}^H\widehat{U} + I_{\widehat{k}}\right]^{-1}\right)w.}
+\end{equation*}
+This simplifies to
+\begin{equation}\label{eq:plugin_stat_stoch}
+\boxed{\Lambda_{\text{plugin}}(w) = w^H\diag\left(\frac{\widehat{\sigma}^2_i}{\widehat{\sigma}^2_i+1}\right)w=\sum_{i=1}^{\widehat{k}}\left(\frac{\widehat{\sigma}_i^2}{\widehat{\sigma}_i^2+1}\right)w_i^2}
+\end{equation}
+and our detector takes the form
+\begin{equation}\label{eq:plugin_class_stoch}
+{\Lambda_{\text{plugin}}(w) \detgtrless \gamma_{\text{plugin}}}
+\end{equation}
+where the threshold $\gamma_{\text{plugin}}$ is chosen in the usual manner. The stochastic plug-in detector clearly takes the form of (\ref{eq:detector_form}).
+
+The plug-in detector assumes that the estimated signal subspace, $\widehat{U}$, is equal to the true signal subspace, $U$, and that the estimated signal covariance, $\widehat{\Sigma}$, is equal to the true signal covariance, $\Sigma$. In other words,  the plug-in detector derivation assumes that $|\langle u_i,\widehat{u}_i\rangle|^2=1$ and $\widehat{\sigma}_i^2=\sigma_i^2$ and that the provided subspace dimension estimate, $\widehat{k}$, is equal to the true underlying dimension of our signal subspace, $k$. Perhaps unsurprisingly, (as discussed in Section \ref{sec:rmt}) choosing $\widehat{k} > k_\text{eff}$ degrades the performance of the plug-in detector. Next we discuss an alternate viewpoint on the optimality of choosing $\keff$ components.
+
+\subsection{Random Matrix Theory Detector}\label{sec:optimal_stoch}
+Consider the covariance matrix of the conditional distribution $w|H_1$ in (\ref{eq:stoch_distr}). By Corollary \ref{corr:matrix}, we have that in the large matrix limit
+\begin{equation}\label{eq:cov mat}
+\widehat{U}^HU\Sigma U^H\widehat{U}+I_{\widehat{k}} \convas \diag\left(|\langle u_i,\widehat{u}_i\rangle|^2\sigma_i^2 + 1\right).
+\end{equation}
+If $\sigma_i^{2}$ were assumed known, this would suffice because we could plug in the results in Proposition \ref{th:angles} to get the desired statistic. We consider the setting where $\sigma_i^{2}$ and $|\langle u_i,\widehat{u}_i\rangle|^2$ are estimated from data and analyze the detector in the large matrix setting. In this setting, the estimate $\widehat{\sigma}_{i_\text{rmt}}^2$,  obtained via (\ref{eq:cov}), is provably consistent so that the `plug-in' estimate of $|\langle u_i,\widehat{u}_i\rangle|^2$ based on $\widehat{\sigma}_{i_\text{rmt}}^2$, denoted by $|\langle u_i,\widehat{u}_i\rangle|^2_\text{rmt}$, is also consistent (we omit the relatively straightforward proof). Of course, there are correction terms due to finite system size effects, which we ignore, that affect the convergence properties but not the asymptotic form of the detector.
+
+
+
+We are now in a position to address the problem posed in Section \ref{sec:ps_prob2}. We obtain the RMT detector by substituting the aforementioned RMT estimates into the diagonal covariance matrix (\ref{eq:cov mat}) which is subsequently used in the LRT. After some straightforward algebra we obtain the desired RMT statistic
+\begin{equation*}
+\Lambda_{\text{rmt}}(w)= \sum_{i=1}^{\widehat{k}}\left(\frac{|\langle u_i,\widehat{u}_i\rangle|^2_{\text{rmt}}\widehat{\sigma}_{i_\text{rmt}}^2}{|\langle u_i,\widehat{u}_i\rangle|^2_{\text{rmt}}\widehat{\sigma}_{i_\text{rmt}}^2 + 1}\right)w_i^2.
+\end{equation*}
+Note that when $i>k_\text{eff}$, $|\langle u_i,\widehat{u}_i\rangle|^2 \convas 0$ so that the sum on the right hand side (asymptotically) discards the uninformative components. Thus the RMT detector only uses the $\keff$ informative components given by (\ref{eq:keff}). Consequently, we obtain the test statistic
+\begin{equation}\label{eq:optimal_stat_stoch}
+\boxed{\Lambda_{\text{rmt}}(w)= \sum_{i=1}^{\min(k_\text{eff},\widehat{k})}\left(\frac{|\langle u_i,\widehat{u}_i\rangle|^2_{\text{rmt}}\widehat{\sigma}_{i_\text{rmt}}^2}{|\langle u_i,\widehat{u}_i\rangle|^2_{\text{rmt}}\widehat{\sigma}_{i_\text{rmt}}^2 + 1}\right)w_i^2}
+\end{equation}
+and the random matrix theory detector becomes
+\begin{equation}\label{eq:optimal_class_stoch}
+{\Lambda_{\text{rmt}}(w) \detgtrless \gamma_{\text{rmt}}},
+\end{equation}
+where the threshold $\gamma_{\text{rmt}}$ is chosen in the usual manner. Note that the stochastic RMT detector also takes the form of (\ref{eq:detector_form}). The principal difference between the RMT test statistic in (\ref{eq:optimal_stat_stoch}) and the plug-in test statistic in (\ref{eq:plugin_stat_stoch}) is the role of $\keff$ in the former. The scaling factor associated with each $w_i^{2}$ for either detector is about the same; this is why the plug-in detector that uses $\keff$ components exhibits the same (asymptotic) performance as the RMT detector, which incorporates knowledge of the subspace estimate accuracy.
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{clll}\toprule
+ Detector & Detector Statistic $\Lambda(w)$  & Distribution  of $\Lambda|H_0$ & Distribution of $\Lambda|H_1$\\
+\midrule
+Oracle & $ w^H\left[I-\left(\widehat{U}^HU\Sigma U^H\widehat{U}+I\right)^{-1}\right]w$ &  & \\
+Plug-in & $\sum_{i=1}^{\widehat{k}}\left(\frac{\widehat{\sigma}_i^2}{\widehat{\sigma}_i^2+1}\right)w_i^2$ & $\sum_{i=1}^{\widehat{k}}\left(\frac{\widehat{\sigma}_i^2}{\widehat{\sigma}_i^2+1}\right)\chi^2_{1i}$ & $\sum_{i=1}^{\widehat{k}}\left(\frac{\widehat{\sigma}_i^2\left(\sigma^2_i|\langle u_i,\widehat{u}_i\rangle|^2+1\right)}{\widehat{\sigma}_i^2+1}\right)\chi^2_{1i}$\\
+ RMT & $\sum_{i=1}^{\min(k_\text{eff},\widehat{k})}\left(\frac{|\langle u_i,\widehat{u}_i\rangle|^2_{\text{rmt}}\widehat{\sigma}_{i_\text{rmt}}^2}{|\langle u_i,\widehat{u}_i\rangle|^2_{\text{rmt}}\widehat{\sigma}_{i_\text{rmt}}^2+1 }\right)w_i^2$ & $\sum_{i=1}^{\min(k_\text{eff},\widehat{k})}\left(\frac{\widehat{\sigma}_{i_\text{rmt}}^2|\langle u_i,\widehat{u}_i\rangle|^2_{\text{rmt}}}{\widehat{\sigma}_{i_\text{rmt}}^2|\langle u_i,\widehat{u}_i\rangle|^2_{\text{rmt}}+1}\right)\chi^2_{1i}$ & $\sum_{i=1}^{\min(k_\text{eff},\widehat{k})}\left(\widehat{\sigma}^2_{i_\text{rmt}}|\langle u_i,\widehat{u}_i\rangle|^2_{\text{rmt}}\right)\chi^2_{1i}$\\
+\bottomrule
+\end{tabular}
+\caption{Given an observation vector $y$ from (\ref{eq:stoch_setup}), we form the vector $w=\widehat{U}^Hy$ where $\widehat{U}$ is an estimate of the signal subspace. The table summarizes the test statistic associated with each detector when using testing data generated from the stochastic model. The plug-in and RMT detectors have the form of (\ref{eq:detector_form}). In the CFAR setting, the threshold is  set to obtain the desired false alarm probability. Note the appearance of $k_\text{eff}$ in the random matrix theory detector. The associated distribution of each test statistic under $H_0$ and $H_1$ is provided in the last two columns.}\vskip-0.2cm
+\label{table:summary_stoch}
+\end{table}

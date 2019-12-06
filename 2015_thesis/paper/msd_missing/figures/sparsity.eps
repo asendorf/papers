@@ -1,0 +1,457 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%Creator: MATLAB, The Mathworks, Inc. Version 7.10.0.499 (R2010a). Operating System: Microsoft Windows 7.
+%%Title: C:\Users\asendorf\Dropbox\Research\Writeups_Papers_Conferences\SSP_2012\SSP2012_LaTeXTemplate\LaTexTemplate\figures\sparsity.eps
+%%CreationDate: 01/21/2012  12:26:32
+%%DocumentNeededFonts: Helvetica
+%%DocumentProcessColors: Cyan Magenta Yellow Black
+%%LanguageLevel: 2
+%%Pages: 1
+%%BoundingBox:   -11   182   624   608
+%%EndComments
+
+%%BeginProlog
+% MathWorks dictionary
+/MathWorks 160 dict begin
+% definition operators
+/bdef {bind def} bind def
+/ldef {load def} bind def
+/xdef {exch def} bdef
+/xstore {exch store} bdef
+% operator abbreviations
+/c  /clip ldef
+/cc /concat ldef
+/cp /closepath ldef
+/gr /grestore ldef
+/gs /gsave ldef
+/mt /moveto ldef
+/np /newpath ldef
+/cm /currentmatrix ldef
+/sm /setmatrix ldef
+/rm /rmoveto ldef
+/rl /rlineto ldef
+/s {show newpath} bdef
+/sc {setcmykcolor} bdef
+/sr /setrgbcolor ldef
+/sg /setgray ldef
+/w /setlinewidth ldef
+/j /setlinejoin ldef
+/cap /setlinecap ldef
+/rc {rectclip} bdef
+/rf {rectfill} bdef
+% page state control
+/pgsv () def
+/bpage {/pgsv save def} bdef
+/epage {pgsv restore} bdef
+/bplot /gsave ldef
+/eplot {stroke grestore} bdef
+% orientation switch
+/portraitMode 0 def /landscapeMode 1 def /rotateMode 2 def
+% coordinate system mappings
+/dpi2point 0 def
+% font control
+/FontSize 0 def
+/FMS {/FontSize xstore findfont [FontSize 0 0 FontSize neg 0 0]
+  makefont setfont} bdef
+/ISOLatin1Encoding where {pop /WindowsLatin1Encoding 256 array bdef
+ISOLatin1Encoding WindowsLatin1Encoding copy pop
+/.notdef/.notdef/quotesinglbase/florin/quotedblbase/ellipsis/dagger
+/daggerdbl/circumflex/perthousand/Scaron/guilsinglleft/OE/.notdef/.notdef
+/.notdef/.notdef/quoteleft/quoteright/quotedblleft/quotedblright/bullet
+/endash/emdash/tilde/trademark/scaron/guilsinglright/oe/.notdef/.notdef
+/Ydieresis WindowsLatin1Encoding 128 32 getinterval astore pop}
+{/WindowsLatin1Encoding StandardEncoding bdef} ifelse
+/reencode {exch dup where {pop load} {pop StandardEncoding} ifelse
+  exch dup 3 1 roll findfont dup length dict begin
+  { 1 index /FID ne {def}{pop pop} ifelse } forall
+  /Encoding exch def currentdict end definefont pop} bdef
+/isroman {findfont /CharStrings get /Agrave known} bdef
+/FMSR {3 1 roll 1 index dup isroman {reencode} {pop pop} ifelse
+  exch FMS} bdef
+/csm {1 dpi2point div -1 dpi2point div scale neg translate
+ dup landscapeMode eq {pop -90 rotate}
+  {rotateMode eq {90 rotate} if} ifelse} bdef
+% line types: solid, dotted, dashed, dotdash
+/SO { [] 0 setdash } bdef
+/DO { [.5 dpi2point mul 4 dpi2point mul] 0 setdash } bdef
+/DA { [6 dpi2point mul] 0 setdash } bdef
+/DD { [.5 dpi2point mul 4 dpi2point mul 6 dpi2point mul 4
+  dpi2point mul] 0 setdash } bdef
+% macros for lines and objects
+/L {lineto stroke} bdef
+/MP {3 1 roll moveto 1 sub {rlineto} repeat} bdef
+/AP {{rlineto} repeat} bdef
+/PDlw -1 def
+/W {/PDlw currentlinewidth def setlinewidth} def
+/PP {closepath eofill} bdef
+/DP {closepath stroke} bdef
+/MR {4 -2 roll moveto dup  0 exch rlineto exch 0 rlineto
+  neg 0 exch rlineto closepath} bdef
+/FR {MR stroke} bdef
+/PR {MR fill} bdef
+/L1i {{currentfile picstr readhexstring pop} image} bdef
+/tMatrix matrix def
+/MakeOval {newpath tMatrix currentmatrix pop translate scale
+0 0 1 0 360 arc tMatrix setmatrix} bdef
+/FO {MakeOval stroke} bdef
+/PO {MakeOval fill} bdef
+/PD {currentlinewidth 2 div 0 360 arc fill
+   PDlw -1 eq not {PDlw w /PDlw -1 def} if} def
+/FA {newpath tMatrix currentmatrix pop translate scale
+  0 0 1 5 -2 roll arc tMatrix setmatrix stroke} bdef
+/PA {newpath tMatrix currentmatrix pop	translate 0 0 moveto scale
+  0 0 1 5 -2 roll arc closepath tMatrix setmatrix fill} bdef
+/FAn {newpath tMatrix currentmatrix pop translate scale
+  0 0 1 5 -2 roll arcn tMatrix setmatrix stroke} bdef
+/PAn {newpath tMatrix currentmatrix pop translate 0 0 moveto scale
+  0 0 1 5 -2 roll arcn closepath tMatrix setmatrix fill} bdef
+/vradius 0 def /hradius 0 def /lry 0 def
+/lrx 0 def /uly 0 def /ulx 0 def /rad 0 def
+/MRR {/vradius xdef /hradius xdef /lry xdef /lrx xdef /uly xdef
+  /ulx xdef newpath tMatrix currentmatrix pop ulx hradius add uly
+  vradius add translate hradius vradius scale 0 0 1 180 270 arc 
+  tMatrix setmatrix lrx hradius sub uly vradius add translate
+  hradius vradius scale 0 0 1 270 360 arc tMatrix setmatrix
+  lrx hradius sub lry vradius sub translate hradius vradius scale
+  0 0 1 0 90 arc tMatrix setmatrix ulx hradius add lry vradius sub
+  translate hradius vradius scale 0 0 1 90 180 arc tMatrix setmatrix
+  closepath} bdef
+/FRR {MRR stroke } bdef
+/PRR {MRR fill } bdef
+/MlrRR {/lry xdef /lrx xdef /uly xdef /ulx xdef /rad lry uly sub 2 div def
+  newpath tMatrix currentmatrix pop ulx rad add uly rad add translate
+  rad rad scale 0 0 1 90 270 arc tMatrix setmatrix lrx rad sub lry rad
+  sub translate rad rad scale 0 0 1 270 90 arc tMatrix setmatrix
+  closepath} bdef
+/FlrRR {MlrRR stroke } bdef
+/PlrRR {MlrRR fill } bdef
+/MtbRR {/lry xdef /lrx xdef /uly xdef /ulx xdef /rad lrx ulx sub 2 div def
+  newpath tMatrix currentmatrix pop ulx rad add uly rad add translate
+  rad rad scale 0 0 1 180 360 arc tMatrix setmatrix lrx rad sub lry rad
+  sub translate rad rad scale 0 0 1 0 180 arc tMatrix setmatrix
+  closepath} bdef
+/FtbRR {MtbRR stroke } bdef
+/PtbRR {MtbRR fill } bdef
+/stri 6 array def /dtri 6 array def
+/smat 6 array def /dmat 6 array def
+/tmat1 6 array def /tmat2 6 array def /dif 3 array def
+/asub {/ind2 exch def /ind1 exch def dup dup
+  ind1 get exch ind2 get sub exch } bdef
+/tri_to_matrix {
+  2 0 asub 3 1 asub 4 0 asub 5 1 asub
+  dup 0 get exch 1 get 7 -1 roll astore } bdef
+/compute_transform {
+  dmat dtri tri_to_matrix tmat1 invertmatrix 
+  smat stri tri_to_matrix tmat2 concatmatrix } bdef
+/ds {stri astore pop} bdef
+/dt {dtri astore pop} bdef
+/db {2 copy /cols xdef /rows xdef mul dup 3 mul string
+  currentfile 
+  3 index 0 eq {/ASCIIHexDecode filter}
+  {/ASCII85Decode filter 3 index 2 eq {/RunLengthDecode filter} if }
+  ifelse exch readstring pop
+  dup 0 3 index getinterval /rbmap xdef
+  dup 2 index dup getinterval /gbmap xdef
+  1 index dup 2 mul exch getinterval /bbmap xdef pop pop}bdef
+/it {gs np dtri aload pop moveto lineto lineto cp c
+  cols rows 8 compute_transform 
+  rbmap gbmap bbmap true 3 colorimage gr}bdef
+/il {newpath moveto lineto stroke}bdef
+currentdict end def
+%%EndProlog
+
+%%BeginSetup
+MathWorks begin
+
+0 cap
+
+end
+%%EndSetup
+
+%%Page: 1 1
+%%BeginPageSetup
+%%PageBoundingBox:   -11   182   624   608
+MathWorks begin
+bpage
+%%EndPageSetup
+
+%%BeginObject: obj1
+bplot
+
+/dpi2point 12 def
+portraitMode -0132 7296 csm
+
+    0     0  7621  5112 rc
+85 dict begin %Colortable dictionary
+/c0 { 0.000000 0.000000 0.000000 sr} bdef
+/c1 { 1.000000 1.000000 1.000000 sr} bdef
+/c2 { 0.900000 0.000000 0.000000 sr} bdef
+/c3 { 0.000000 0.820000 0.000000 sr} bdef
+/c4 { 0.000000 0.000000 0.800000 sr} bdef
+/c5 { 0.910000 0.820000 0.320000 sr} bdef
+/c6 { 1.000000 0.260000 0.820000 sr} bdef
+/c7 { 0.000000 0.820000 0.820000 sr} bdef
+c0
+1 j
+1 sg
+   0    0 7622 5113 rf
+6 w
+0 4139 5906 0 0 -4139 991 4522 4 MP
+PP
+-5906 0 0 4139 5906 0 0 -4139 991 4522 5 MP stroke
+4 w
+DO
+0 sg
+2124 4522 mt 2124  383 L
+2124  383 mt 2124  383 L
+3317 4522 mt 3317  383 L
+3317  383 mt 3317  383 L
+4510 4522 mt 4510  383 L
+4510  383 mt 4510  383 L
+5703 4522 mt 5703  383 L
+5703  383 mt 5703  383 L
+6897 4522 mt 6897  383 L
+6897  383 mt 6897  383 L
+ 991 4466 mt 6897 4466 L
+6897 4466 mt 6897 4466 L
+ 991 3867 mt 6897 3867 L
+6897 3867 mt 6897 3867 L
+ 991 3267 mt 6897 3267 L
+6897 3267 mt 6897 3267 L
+ 991 2668 mt 6897 2668 L
+6897 2668 mt 6897 2668 L
+ 991 2068 mt 6897 2068 L
+6897 2068 mt 6897 2068 L
+ 991 1468 mt 6897 1468 L
+6897 1468 mt 6897 1468 L
+ 991  869 mt 6897  869 L
+6897  869 mt 6897  869 L
+SO
+6 w
+ 991  383 mt 6897  383 L
+ 991 4522 mt 6897 4522 L
+6897 4522 mt 6897  383 L
+ 991 4522 mt  991  383 L
+ 991 4522 mt 6897 4522 L
+ 991 4522 mt  991  383 L
+2124 4522 mt 2124 4462 L
+2124  383 mt 2124  442 L
+%%IncludeResource: font Helvetica
+/Helvetica /WindowsLatin1Encoding 240 FMSR
+
+1958 4779 mt 
+(0.2) s
+3317 4522 mt 3317 4462 L
+3317  383 mt 3317  442 L
+3151 4779 mt 
+(0.4) s
+4510 4522 mt 4510 4462 L
+4510  383 mt 4510  442 L
+4344 4779 mt 
+(0.6) s
+5703 4522 mt 5703 4462 L
+5703  383 mt 5703  442 L
+5537 4779 mt 
+(0.8) s
+6897 4522 mt 6897 4462 L
+6897  383 mt 6897  442 L
+6831 4779 mt 
+(1) s
+ 991 4466 mt 1050 4466 L
+6897 4466 mt 6837 4466 L
+ 623 4555 mt 
+(0.1) s
+ 991 3867 mt 1050 3867 L
+6897 3867 mt 6837 3867 L
+ 623 3956 mt 
+(0.2) s
+ 991 3267 mt 1050 3267 L
+6897 3267 mt 6837 3267 L
+ 623 3356 mt 
+(0.3) s
+ 991 2668 mt 1050 2668 L
+6897 2668 mt 6837 2668 L
+ 623 2757 mt 
+(0.4) s
+ 991 2068 mt 1050 2068 L
+6897 2068 mt 6837 2068 L
+ 623 2157 mt 
+(0.5) s
+ 991 1468 mt 1050 1468 L
+6897 1468 mt 6837 1468 L
+ 623 1557 mt 
+(0.6) s
+ 991  869 mt 1050  869 L
+6897  869 mt 6837  869 L
+ 623  958 mt 
+(0.7) s
+ 991  383 mt 6897  383 L
+ 991 4522 mt 6897 4522 L
+6897 4522 mt 6897  383 L
+ 991 4522 mt  991  383 L
+gs 991 383 5907 4140 rc
+24 w
+/c8 { 0.000000 0.000000 1.000000 sr} bdef
+c8
+60 17 60 -27 59 7 60 -16 60 -7 59 1 60 32 60 -9 
+59 -25 60 29 60 -33 59 -6 60 18 60 -17 59 -11 60 -17 
+60 20 59 -1 60 -35 60 6 59 -22 60 1 60 7 59 -17 
+60 -2 60 -1 59 6 60 -23 60 -14 59 4 60 -26 60 6 
+59 15 60 -1 59 -52 60 28 60 -43 59 24 60 -33 60 6 
+59 -7 60 -2 60 -12 59 -33 60 8 60 -38 59 19 60 -20 
+60 -8 59 -38 60 -24 60 4 59 -14 60 -24 60 -11 59 2 
+60 -6 60 -73 59 -9 60 -25 60 -26 59 -6 60 -63 60 16 
+59 -49 60 -40 59 -76 60 3 60 -20 59 -95 60 8 60 -76 
+59 -79 60 13 60 -116 59 -34 60 -27 60 -141 59 -192 60 65 
+60 -243 59 -131 60 -217 60 -120 59 -137 60 -237 60 -149 59 -311 
+60 -166 60 -86 59 -88 60 -37 60 7 59 -49 60 -25 60 17 
+59 -20 60 -6 59 -14 991 4462 100 MP stroke
+/c9 { 1.000000 0.000000 0.000000 sr} bdef
+c9
+60 -11 60 -4 59 -10 60 7 60 -11 59 -5 60 27 60 -23 
+59 -7 60 15 60 -20 59 7 60 4 60 -9 59 3 60 -23 
+60 16 59 -7 60 -44 60 19 59 -21 60 13 60 1 59 -23 
+60 5 60 -12 59 -4 60 -17 60 4 59 -20 60 11 60 8 
+59 -7 60 -3 59 -26 60 16 60 -62 59 37 60 -38 60 9 
+59 -9 60 -1 60 0 59 -35 60 4 60 -32 59 20 60 -27 
+60 -15 59 -12 60 -51 60 19 59 -7 60 -19 60 -17 59 -14 
+60 -3 60 -64 59 -1 60 -17 60 -22 59 -26 60 -54 60 6 
+59 -31 60 -57 59 -49 60 -19 60 -9 59 -118 60 17 60 -86 
+59 -77 60 11 60 -123 59 -32 60 -29 60 -164 59 -192 60 29 
+60 -242 59 -177 60 -274 60 -142 59 -215 60 -348 60 -168 59 -475 
+60 -472 60 0 59 0 60 0 60 0 59 0 60 0 60 0 
+59 0 60 0 59 0 991 4466 100 MP stroke
+DA
+c8
+60 -4 60 -3 59 -3 60 -3 60 -3 59 -4 60 -3 60 -4 
+59 -4 60 -3 60 -4 59 -4 60 -4 60 -4 59 -4 60 -5 
+60 -4 59 -5 60 -5 60 -4 59 -5 60 -5 60 -6 59 -5 
+60 -5 60 -6 59 -6 60 -6 60 -6 59 -7 60 -6 60 -7 
+59 -7 60 -7 59 -8 60 -8 60 -8 59 -8 60 -9 60 -9 
+59 -9 60 -10 60 -10 59 -10 60 -11 60 -11 59 -12 60 -12 
+60 -13 59 -13 60 -14 60 -15 59 -15 60 -16 60 -17 59 -18 
+60 -18 60 -20 59 -21 60 -21 60 -24 59 -24 60 -26 60 -28 
+59 -30 60 -31 59 -34 60 -36 60 -39 59 -42 60 -45 60 -50 
+59 -53 60 -58 60 -64 59 -70 60 -77 60 -86 59 -95 60 -107 
+60 -120 59 -136 60 -155 60 -177 59 -205 60 -237 60 -277 59 -324 
+60 -331 60 0 59 0 60 0 60 0 59 0 60 0 60 0 
+59 0 60 0 59 0 991 4466 100 MP stroke
+c9
+60 -3 60 -3 59 -3 60 -3 60 -3 59 -3 60 -3 60 -3 
+59 -3 60 -4 60 -3 59 -4 60 -3 60 -4 59 -4 60 -4 
+60 -4 59 -4 60 -4 60 -5 59 -4 60 -5 60 -4 59 -5 
+60 -5 60 -6 59 -5 60 -5 60 -6 59 -6 60 -6 60 -6 
+59 -7 60 -6 59 -7 60 -7 60 -8 59 -8 60 -7 60 -9 
+59 -8 60 -9 60 -10 59 -9 60 -10 60 -11 59 -11 60 -11 
+60 -12 59 -13 60 -13 60 -14 59 -14 60 -15 60 -16 59 -17 
+60 -18 60 -19 59 -20 60 -21 60 -22 59 -24 60 -26 60 -27 
+59 -29 60 -31 59 -33 60 -36 60 -39 59 -43 60 -46 60 -50 
+59 -55 60 -60 60 -66 59 -74 60 -82 60 -92 59 -104 60 -118 
+60 -134 59 -155 60 -179 60 -210 59 -249 60 -298 60 -360 59 -439 
+1647 3991 89 MP stroke
+gr
+
+24 w
+c9
+DA
+0 sg
+%%IncludeResource: font Helvetica
+/Helvetica /WindowsLatin1Encoding 288 FMSR
+
+3863 5046 mt 
+(p) s
+ 373 2631 mt  -90 rotate
+(P) s
+90 rotate
+%%IncludeResource: font Helvetica
+/Helvetica /WindowsLatin1Encoding 228 FMSR
+
+ 517 2439 mt  -90 rotate
+(D) s
+90 rotate
+%%IncludeResource: font Helvetica
+/Helvetica /WindowsLatin1Encoding 120 FMSR
+
+ 974 4565 mt 
+( ) s
+6881  425 mt 
+( ) s
+SO
+6 w
+1 sg
+0 1182 2141 0 0 -1182 4697 4463 4 MP
+PP
+-2141 0 0 1182 2141 0 0 -1182 4697 4463 5 MP stroke
+4 w
+DO
+SO
+6 w
+0 sg
+4697 3281 mt 6838 3281 L
+4697 4463 mt 6838 4463 L
+6838 4463 mt 6838 3281 L
+4697 4463 mt 4697 3281 L
+4697 4463 mt 6838 4463 L
+4697 4463 mt 4697 3281 L
+4697 3281 mt 6838 3281 L
+4697 4463 mt 6838 4463 L
+6838 4463 mt 6838 3281 L
+4697 4463 mt 4697 3281 L
+%%IncludeResource: font Helvetica
+/Helvetica /WindowsLatin1Encoding 240 FMSR
+
+5155 3528 mt 
+(Plug-in) s
+gs 4697 3281 2142 1183 rc
+24 w
+c8
+352 0 4767 3443 2 MP stroke
+gr
+
+24 w
+c8
+0 sg
+5155 3814 mt 
+(Optimal) s
+gs 4697 3281 2142 1183 rc
+c9
+352 0 4767 3729 2 MP stroke
+gr
+
+c9
+0 sg
+5155 4101 mt 
+(Plug-in theory) s
+gs 4697 3281 2142 1183 rc
+DA
+c8
+352 0 4767 4014 2 MP stroke
+SO
+gr
+
+c8
+0 sg
+5155 4387 mt 
+(Optimal Theory) s
+gs 4697 3281 2142 1183 rc
+DA
+c9
+352 0 4767 4300 2 MP stroke
+SO
+6 w
+gr
+
+6 w
+c9
+
+end %%Color Dict
+
+eplot
+%%EndObject
+
+epage
+end
+
+showpage
+
+%%Trailer
+%%EOF
